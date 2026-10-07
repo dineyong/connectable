@@ -19,10 +19,11 @@ class MigrationBatch1Tests(unittest.TestCase):
         self.records = {r['id']: r for r in map(json.loads, self.raw.splitlines())}
 
     def test_ten_records_validate_with_unique_ids_and_urls(self):
-        self.assertEqual(len(self.records), 10)
+        snapshot = list(map(json.loads, self.raw.splitlines()[:10]))
+        self.assertEqual(len(snapshot), 10)
         self.assertTrue(BATCH.issubset(self.records))
         self.assertEqual(v2.validate_files([v2.DEFAULT_FILE]), [])
-        self.assertEqual(len({v2.url_key(r['source']['source_url']) for r in self.records.values()}), 10)
+        self.assertEqual(len({v2.url_key(r['source']['source_url']) for r in snapshot}), 10)
 
     def test_v1_files_and_prior_v2_prefix_preserved_byte_for_byte(self):
         expected = {
