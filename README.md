@@ -87,9 +87,17 @@ main은 이전 기준선으로 남아 있으며 최신 진행 현황과 다를 �
 [연결 경로 모델 v1 제안](docs/CONNECTION_PATH_MODEL_V1_PROPOSAL.md)과
 [30개 골든 조합 계획](docs/CONNECTION_GOLD_SET_PLAN.md)을 작성했다.
 제안 스키마는 정식 catalog를 대체하지 않으며, 승인된 골든 정답은 아직 0건이다.
-다음은 대표 모니터·독·케이블의 소수 공식 자료로 모델을 검증하는 작업이다.
+대표 모니터·독·케이블의 소수 공식 자료로 모델 검증을 완료했다.
 
 [실제 제품 9개 경로 모델 검증](docs/CONNECTION_MODEL_STRESS_PILOT_REPORT.md)을 완료했다.
 모니터 3·독/허브 3·케이블/어댑터 3의 사실 29개는 별도 RESEARCH_PILOT 원본이며,
 Mac 기준 catalog나 공개 판정에 합치지 않았다. 8개 typed payload를 정의했고 포트 바인딩·공유 자원·PD 협상은 남아 있다.
 검증: `python3 scripts/validate_connection_model_pilot.py`. 골든 정답은 계속 0/30이다.
+
+
+[Path Instance v1 내부 실행 보고서](docs/PATH_INSTANCE_V1_REPORT.md)와
+[최초 5건 검토 자료](docs/PATH_INSTANCE_GOLD_BATCH_1_REVIEW.md)를 작성했다.
+실제 제품·로컬 포트 ID·claim을 연결한 계획 구성 5건을 검증한다.
+내부 후보 UNKNOWN 4건 / INCOMPATIBLE 1건이며 공개 상태는 모두 UNKNOWN이다.
+**사람 승인 골든 0/30**, 검토 대기 인스턴스 5건이다. 기존 연구용 원본과 사이트는 보존한다.
+검증: `python3 scripts/path_instance_v1.py --check`.

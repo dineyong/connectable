@@ -193,3 +193,18 @@ main의 현황 갱신은 추후 검수된 PR과 merge 승인 절차로 수행한
 기존 Mac catalog 및 path v1 스키마는 대체하지 않는다. 공급/통과/케이블 한도, 패널/포트/동시 출력,
 MST/DisplayLink routing과 OS·드라이버를 분리한다. 미확정 케이블 식별 기준은 완화하지 않는다.
 실행 조건·공유 자원·PD 협상은 여전히 미완료이며 골든 정답 0/30과 공개 UNKNOWN을 유지한다.
+
+
+## ADR-013: Path Instance v1은 내부 검토 슬라이스로 진행한다
+
+- 날짜: 2026-10-08
+- 상태: 이전 stress pilot 사용자 통과 승인 / 새 경로 사람 검수 대기
+
+사용자가 이전 pilot을 통과로 판정하고 포트 바인딩·최소 predicate·독 자원·PD 흐름의
+실행 단계 진행을 요청했다. [내부 실행 보고서](PATH_INSTANCE_V1_REPORT.md)와
+[5건 검토 자료](PATH_INSTANCE_GOLD_BATCH_1_REVIEW.md)를 만든다.
+PORT_CLASS_MEMBER와 실제 위치 확정을 구분하고 케이블 PARTIAL/UNKNOWN은 유지한다.
+개별 포트 능력과 동시 구성, 전력 상한과 실제 충전 결과를 구분한다.
+사람이 각각 검수해야 한다는 사용자 요구에 따라 새 5건은 승인하지 않는다.
+검토안은 AI가 작성한 제안이고 acceptance 계산의 정답이 아니다. 승인 골든 0/30을 유지한다.
+공개 COMPATIBLE·대량 수집·main merge는 계속 보류한다.
