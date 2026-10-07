@@ -33,11 +33,14 @@ def validate_catalog(data):
         url = urlsplit(source['source_url'])
         if url.scheme != 'https' or url.hostname != 'support.apple.com' or url.username or url.password:
             errors.append(f"{source['source_id']}: unapproved official URL")
-        if source['applies_to_model'] not in products:
+        if not set(source['applies_to_models']).issubset(products):
             errors.append(f"{source['source_id']}: missing product")
+        expected_grade = 'A' if source['source_type'] == 'MANUFACTURER_SPEC' else 'B'
+        if source['reliability_grade'] != expected_grade:
+            errors.append(f"{source['source_id']}: source type/grade mismatch")
     for p in products.values():
         for ref in p['source_refs']:
-            if ref not in sources or sources[ref]['applies_to_model'] != p['product_id']:
+            if ref not in sources or p['product_id'] not in sources[ref]['applies_to_models']:
                 errors.append(f"{p['product_id']}: invalid source reference")
         for c in p['claims']:
             if c['claim_id'] in claim_ids:
@@ -48,7 +51,19 @@ def validate_catalog(data):
             profile = {'external_count', 'resolution_label', 'refresh_hz'}
             if c['property'] == 'NATIVE_EXTERNAL_DISPLAY_PROFILE' and not profile.issubset(c):
                 errors.append(f"{c['claim_id']}: incomplete simultaneous display profile")
-            if c['property'] != 'NATIVE_EXTERNAL_DISPLAY_PROFILE' and profile.intersection(c):
+            if c['property'] == 'CONDITIONAL_NATIVE_DISPLAY_PROFILE':
+                if not {'external_count', 'display_groups', 'prerequisites'}.issubset(c):
+                    errors.append(f"{c['claim_id']}: incomplete conditional profile")
+                elif sum(g['count'] for g in c['display_groups']) != c['external_count']:
+                    errors.append(f"{c['claim_id']}: group count mismatch")
+                if {'resolution_label', 'refresh_hz'}.intersection(c):
+                    errors.append(f"{c['claim_id']}: flattened conditional profile")
+                pre = c.get('prerequisites', {})
+                if pre.get('lid_state') == 'CLOSED' and pre.get('builtin_state') != 'OFF':
+                    errors.append(f"{c['claim_id']}: closed lid with builtin ON")
+            elif {'display_groups', 'prerequisites'}.intersection(c):
+                errors.append(f"{c['claim_id']}: conditional fields on unrelated claim")
+            if c['property'] == 'PORT_FUNCTIONS' and profile.intersection(c):
                 errors.append(f"{c['claim_id']}: display profile fields on unrelated claim")
     return errors
 
@@ -56,6 +71,7 @@ def validate_catalog(data):
 if __name__ == '__main__':
     import sys
     sys.path.insert(0, str(ROOT))
-    errors = validate_catalog(load_catalog())
-    print('\n'.join(errors) if errors else 'PASS: official product foundation (2 products)')
+    catalog = load_catalog()
+    errors = validate_catalog(catalog)
+    print('\n'.join(errors) if errors else f"PASS: official product foundation ({len(catalog['products'])} products)")
     raise SystemExit(bool(errors))

@@ -14,7 +14,7 @@
 - 한국어 질문 파일럿: 20건 수집, 정식 v2 전환 20건
 - 질문 코퍼스 v2: 채택 완료 (JSONL 원본, CSV 파생)
 - 기존 20건 v2 이전: 완료 · 21~100번 수집: 미진행
-- 공식 출처 목록 및 초기 데이터 구축: 1차 기반 완료 (Air 2모델, 사람 검수 대기)
+- 공식 출처 목록 및 초기 데이터 구축: 1차 기반 완료 (Air·Pro 5모델 변형, 사람 검수 대기)
 - MVP 개발: 대기
 
 ## 핵심 원칙
@@ -76,3 +76,5 @@ python3 scripts/serve_mockup.py
 [1차 기반 문서](docs/OFFICIAL_DATA_FOUNDATION.md)에 공식 제품 원본·스키마·검수용 규칙을 정리했다.
 사용자 코퍼스와 분리하며 사이트 공개 판정에는 아직 연결하지 않는다.
 검증: `python3 -m scripts.validate_official_products`.
+
+[공식 데이터 2차 배치](docs/OFFICIAL_DATA_BATCH_2_REPORT.md): 칩별 출력 그룹과 M3 덮개·OS·전원 조건을 추가했다.

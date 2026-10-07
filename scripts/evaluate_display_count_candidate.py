@@ -15,9 +15,22 @@ def evaluate(request, catalog=None):
         raise ValueError('external_independent_count must be a positive integer')
     products = {p['product_id']: p for p in catalog['products']}
     p = products.get(request.get('product_id'))
-    if not p or request.get('output_method') != 'NATIVE' or request.get('builtin_active') is not True:
+    if not p or request.get('output_method') != 'NATIVE' or type(request.get('builtin_active')) is not bool:
         return result
-    profiles = [c for c in p['claims'] if c['property'] == 'NATIVE_EXTERNAL_DISPLAY_PROFILE']
+    if request.get('lid_state') == 'CLOSED' and request['builtin_active'] is True:
+        return result
+    profiles = []
+    for c in p['claims']:
+        if c['property'] == 'NATIVE_EXTERNAL_DISPLAY_PROFILE' and request['builtin_active'] is True:
+            profiles.append(c)
+        elif c['property'] == 'CONDITIONAL_NATIVE_DISPLAY_PROFILE':
+            pre = c['prerequisites']
+            # Only builtin ON profiles are currently evaluated. Closed-lid profiles
+            # retain OS/power/input requirements but cannot produce a verdict yet.
+            if pre['builtin_state'] == 'ON' and request['builtin_active'] is True:
+                if pre['lid_state'] == 'NOT_SPECIFIED' and not set(pre).intersection({'minimum_macos'}):
+                    if pre['power_required'] == pre['external_input_required'] == 'NOT_SPECIFIED':
+                        profiles.append(c)
     if len(profiles) != 1:
         return result
     profile = profiles[0]
