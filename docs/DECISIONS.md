@@ -81,3 +81,44 @@ AI가 생성한 호환성 답변을 직접 공개하거나 데이터베이스의
 정규화는 원문 표기 정리이며 사양 확정이 아니다. 공식 대조·사람 검수 전에는
 판정 재사용을 승인하지 않는다. 조사 결과와 검증은
 [기반 작업 기록](QUESTION_CORPUS_FOUNDATION_REPORT.md)에 남긴다.
+
+## ADR-006: 질문 코퍼스 v2를 JSONL 기준으로 채택한다
+
+- 날짜: 2026-10-07
+- 상태: 승인 (사용자 명시적 채택, 호환성 판정 승인과 별개)
+
+### 결정
+
+1. [정식 v2 JSON Schema](../schemas/user-question-v2.schema.json)와
+   [v2 JSONL](../data/research/user_questions_v2.jsonl)이 활성 기준이다.
+   JSONL이 유일한 코퍼스 원본이며 CSV는 필요할 때 생성하는 파생 요약으로 직접 수정하지 않는다.
+2. 부분 경로와 부분 순서 재구성을 허용한다. `topology_completeness`, `sequence_basis`,
+   객체별 `evidence_refs`로 불확실성을 유지한다. 필드별 claim registry는 후순위다.
+3. `mirrored`는 복제 그룹 전체 물리 화면 수다. `independent_extended`와 중복 계산하지 않는다.
+4. `LONG_TERM_REPORT`는 작성자가 사용 기간 또는 지속 사용을 명시했을 때만 부여한다.
+5. 판매·제휴 링크가 있어도 구체적인 본인 사용 과정과 결과가 확인되면 포함할 수 있다.
+   판매·제휴·광고성 여부와 포함 근거를 `review.commercial_context`에 기록한다.
+   상품 소개·판매 유도가 중심이며 실사용 근거가 부족한 자료는 제외한다.
+6. FAILURE 목표 비율은 없다. 작성자의 명시적인 최종 실패 또는 사용 포기 근거가 있을 때만 분류한다.
+7. 사용자 관측과 공식 제조사 사양은 별도 데이터셋으로 유지한다. 모델 문자열만으로 공식 지원을 확정하지 않는다.
+
+### 구성별 결론
+
+선택 배열 `configuration_conclusions`를 도입한다. 각 항목에는 `configuration_id`, `status`,
+`termination_type`, `evidence_refs`, 짧은 `summary`를 저장하고 `observation_ids`는 선택이다.
+게시물 `outcome`과 독립적이며 한 구성의 포기로 전체 게시물 결과를 자동 변경하지 않는다.
+FAILURE는 해당 구성·종결 유형을 명시한 `evidence.author_configuration_terminations`와
+작성자 역할의 연결이 있어야 한다. 무신호·답변 부재·타인의 조언만으로 만들 수 없다.
+전체 outcome의 FAILURE 역시 별도의 `evidence.author_case_termination`이 필요하다.
+이 구조는 명시 진술의 기록을 강제하며 진술의 진위는 원문을 읽는 사람 검수로 확인한다.
+
+### 기록 보존과 적용 범위
+
+제안 스키마와 5건 예시는 각각 `schemas/archive/`, `data/research/archive/`로 이동하여
+바이트 그대로 보존한다. archived proposed는 기준 파일이 아니다. 제안서·이전 마이그레이션 보고서는
+채택 전 역사 기록으로 유지하고 정식 기준 링크를 표시한다.
+v1 CSV·Schema·검증기·테스트는 기존 경로에서 보존한다. v1 CSV는 직접 수정하지 않는 과거 기록이다.
+
+이번 적용은 기존 5건의 정식화만 수행한다. 나머지 15건 이전, 21~100번 수집, 공식 사양 대조,
+호환성 판정, 웹사이트/UI, main merge는 수행하지 않는다. 기존 MVP 범위와 승인 정책은 유지한다.
+[정식 스키마 문서](QUESTION_CORPUS_SCHEMA_V2.md)와 [수집 지침 v2](QUESTION_COLLECTION_GUIDE_V2.md)를 따른다.

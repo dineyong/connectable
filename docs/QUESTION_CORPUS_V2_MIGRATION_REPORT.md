@@ -1,5 +1,11 @@
 # 질문 코퍼스 v2 소규모 마이그레이션 검증 보고서
 
+> 채택 전 역사 기록이다. 현재 기준은 [정식 v2 스키마](../schemas/user-question-v2.schema.json),
+> [유일한 JSONL 원본](../data/research/user_questions_v2.jsonl), [수집 지침 v2](QUESTION_COLLECTION_GUIDE_V2.md)다.
+> 아래 상태·권고·검증 명령은 제안 당시 기록이며 현재 채택 여부를 나타내지 않는다.
+> proposed 파일은 archive로 이동했으며 활성 기준으로 사용하지 않는다.
+
+
 - 작성일: 2026-10-07
 - 상태: **PROPOSED / 미채택**, 조사 데이터 공개·호환 판정 승인 아님
 - 브랜치: `research/question-corpus-foundation`
@@ -8,8 +14,8 @@
 ## 결과와 경계
 
 [제안서](QUESTION_CORPUS_SCHEMA_V2_PROPOSAL.md)와
-[제안 JSON Schema](../schemas/user-question-v2.proposed.schema.json)를 만들고,
-[JSONL 예시](../data/research/user_questions_v2.example.jsonl)에 지정된
+[제안 JSON Schema](../schemas/archive/user-question-v2.proposed.schema.json)를 만들고,
+[JSONL 예시](../data/research/archive/user_questions_v2.example.jsonl)에 지정된
 UQ-0007·0009·0010·0012·0022 **5건만** 별도 표현했다.
 원문을 새로 수집하거나 공식 제조사 자료와 비교하지 않았다.
 기존 한국어 20행·영어 예시 5행·v1 스키마·검증기·26개 테스트·결정 문서는 그대로다.

@@ -11,7 +11,9 @@
 - 한국 내 직접 경쟁 서비스 조사: 완료
 - 서비스 범위 확정: 완료
 - 조사 및 데이터 수집 절차 정의: 완료
-- 실제 사용자 질문 100건 수집: 다음 작업
+- 한국어 질문 파일럿: 20건 수집, 정식 v2 전환 5건
+- 질문 코퍼스 v2: 채택 완료 (JSONL 원본, CSV 파생)
+- 나머지 15건 이전 및 21~100번 수집: 미진행
 - 공식 출처 목록 및 초기 데이터 구축: 대기
 - MVP 개발: 대기
 
@@ -30,3 +32,24 @@
 - [조사 작업 절차](docs/RESEARCH_WORKFLOW.md)
 - [의사결정 기록](docs/DECISIONS.md)
 
+
+## 질문 코퍼스의 기준 파일
+
+- **Authoritative schema:** [schemas/user-question-v2.schema.json](schemas/user-question-v2.schema.json)
+- **유일한 기준 원본:** [data/research/user_questions_v2.jsonl](data/research/user_questions_v2.jsonl)
+- [정식 스키마 설명](docs/QUESTION_CORPUS_SCHEMA_V2.md) · [수집 지침 v2](docs/QUESTION_COLLECTION_GUIDE_V2.md)
+- [채택 및 검증 기록](docs/QUESTION_CORPUS_V2_ADOPTION_REPORT.md)
+
+현재 v2 원본은 기존 20건 중 지정한 복잡 사례 5건만 담는다. 전체 수집 이력 20건과 혼동하지 않는다.
+나머지 15건은 아직 이전하지 않았다. v1 한국어 CSV와 영어 예시 5건은 과거 자료로 보존하며 직접 수정하지 않는다.
+향후 CSV 요약은 v2 JSONL에서 파생하며 역으로 원본에 쓰지 않는다. 이번에는 CSV 생성기를 구현하지 않았다.
+
+[제안 스키마 아카이브](schemas/archive/user-question-v2.proposed.schema.json)와
+[제안 예시 아카이브](data/research/archive/user_questions_v2.example.jsonl)는 채택 전 기록으로,
+활성 검증·수집·집계의 기준이 아니다. v2 검증기는 정식 스키마와 정식 JSONL만 기본 검사한다.
+
+```sh
+python3 -m unittest discover -s tests -v
+python3 scripts/validate_question_corpus.py
+python3 scripts/validate_question_corpus_v2.py
+```
