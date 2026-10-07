@@ -22,13 +22,13 @@
 
 ```sh
 python3 scripts/build_mockup_cases.py
-python3 -m http.server 8873 --bind 127.0.0.1 --directory web
+python3 scripts/serve_mockup.py
 ```
 
 브라우저에서 http://127.0.0.1:8873 을 연다. Python 표준 라이브러리 외 설치가 필요 없다.
 재시작 후 미리보기 서버가 종료돼 있으면 위 명령으로 다시 실행한다.
 `web/index.html`을 직접 열어도 기본 인터랙션이 동작한다.
-Google Fonts를 사용하며 네트워크가 없으면 로컬 sans-serif 글꼴로 대체된다.
+외부 글꼴 요청을 제거하고 시스템 sans-serif 글꼴을 사용한다.
 
 [첫 화면 검수 스크린샷](screenshots/connectable-mockup.png)을 보존했다.
 
@@ -49,3 +49,5 @@ HTML·CSS·JavaScript는 [web](../web/index.html)에 있으며 UI 제목은 편�
 입력에서 생산한 결과는 조건 체크리스트다. 공식 판정 구현·공식 사양 데이터 구축·남은 4건 마이그레이션과
 21~100번 수집은 완료되지 않았다. 실제 운영·공개 승인을 의미하지 않는다.
 이 단계에서 사용자 입력을 저장하지 않으므로 재방문 시 선택은 초기화된다.
+
+후속 보강·20건 반영 현황은 [보강 보고서](SITE_HARDENING_REPORT.md)를 기준으로 확인한다.

@@ -11,7 +11,7 @@
 [수집 지침 v2](QUESTION_COLLECTION_GUIDE_V2.md)와 [ADR-006](DECISIONS.md)을 따른다.
 
 CSV는 JSONL에서 만드는 파생 요약으로 직접 수정하지 않는다. 현재 정식 JSONL에는 채택 당시 5건과 [1차 배치](QUESTION_CORPUS_V2_MIGRATION_BATCH_1_REPORT.md) 5건,
-[2차 배치](QUESTION_CORPUS_V2_MIGRATION_BATCH_2_REPORT.md) 6건으로 총 16건이 있다. 나머지 4건 이전과 추가 수집은 수행하지 않았다. v1과 proposed 아카이브는 과거 기록이다.
+[2차 배치](QUESTION_CORPUS_V2_MIGRATION_BATCH_2_REPORT.md) 6건과 [3차 배치](QUESTION_CORPUS_V2_MIGRATION_BATCH_3_REPORT.md) 4건으로 총 20건이 있다. 추가 수집은 수행하지 않았다. v1과 proposed 아카이브는 과거 기록이다.
 채택은 조사 구조의 확정이며 호환성 승인이나 공식 사양 확인을 의미하지 않는다.
 [정식화 검증 기록](QUESTION_CORPUS_V2_ADOPTION_REPORT.md)을 참고한다.
 
@@ -301,3 +301,8 @@ notes는 선택 검토 메모다. 판매 링크 존재와 협찬·광고성 의�
 현재 자료에 상업성 정보가 없으면 UNKNOWN을 기록하고 원문 재검수 필요를 notes에 남긴다.
 이 상태만으로 자료를 홍보 글이라고 단정하거나 수집에서 자동 제외하지 않는다.
 본인 실사용 근거가 부족한 상품 소개·판매 유도 글은 코퍼스에 넣지 않는다.
+
+## 파일럿 이전 완료 현황
+
+2026-10-07 [3차 배치](QUESTION_CORPUS_V2_MIGRATION_BATCH_3_REPORT.md)로 정식 JSONL은 20건이 됐다.
+기존 20건 이전은 완료됐으며 추가 수집·공식 대조는 미진행이다.
