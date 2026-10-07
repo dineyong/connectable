@@ -1,0 +1,909 @@
+{
+  "dataset_version": "1-proposed",
+  "status": "RESEARCH_PILOT",
+  "sources": [
+    {
+      "source_id": "SRC-dell-u2723qe",
+      "url": "https://www.dell.com/en-gb/shop/dell-ultrasharp-27-4k-usb-c-hub-monitor-u2723qe/apd/210-bcxk/monitors-monitor-accessories",
+      "title": "Dell UltraSharp 27 4K USB-C Hub Monitor - U2723QE",
+      "publisher": "Dell",
+      "region": "GB",
+      "source_type": "MANUFACTURER_SPEC",
+      "reliability_grade": "A",
+      "accessed_at": "2026-10-08",
+      "source_status": "DIRECT_CHECK",
+      "location": "Resolution / Refresh Rate; Ports; Tech Specs"
+    },
+    {
+      "source_id": "SRC-lg-27up850-w",
+      "url": "https://www.lg.com/my/monitors/ultrafine-uhd-4k-5k/27up850-w/",
+      "title": "27\" UHD 4K IPS Monitor with VESA DisplayHDR 400 - 27UP850-W",
+      "publisher": "LG",
+      "region": "MY",
+      "source_type": "MANUFACTURER_SPEC",
+      "reliability_grade": "A",
+      "accessed_at": "2026-10-08",
+      "source_status": "DIRECT_CHECK",
+      "location": "All Spec / INPUT/OUTPUT; PICTURE QUALITY"
+    },
+    {
+      "source_id": "SRC-dell-g2724d",
+      "url": "https://www.dell.com/en-us/shop/dell-27-gaming-monitor-g2724d/apd/210-bhxc/monitors-monitor-accessories",
+      "title": "Dell 27 Gaming Monitor - G2724D",
+      "publisher": "Dell",
+      "region": "US",
+      "source_type": "MANUFACTURER_SPEC",
+      "reliability_grade": "A",
+      "accessed_at": "2026-10-08",
+      "source_status": "DIRECT_CHECK",
+      "location": "Resolution / Refresh Rate; Ports"
+    },
+    {
+      "source_id": "SRC-caldigit-ts4",
+      "url": "https://www.caldigit.com/thunderbolt-station-4/",
+      "title": "Thunderbolt 4 Dock | TS4 | CalDigit",
+      "publisher": "CalDigit",
+      "region": "UNSPECIFIED",
+      "source_type": "MANUFACTURER_SPEC",
+      "reliability_grade": "A",
+      "accessed_at": "2026-10-08",
+      "source_status": "DIRECT_CHECK",
+      "location": "Single 8K or Dual 6K 60Hz Displays; Charging"
+    },
+    {
+      "source_id": "SRC-plugable-ud-6950h",
+      "url": "https://plugable.com/products/ud-6950h/",
+      "title": "Plugable USB 3.0 and USB-C 4K Dual Monitor Docking Station",
+      "publisher": "Plugable",
+      "region": "US",
+      "source_type": "MANUFACTURER_SPEC",
+      "reliability_grade": "A",
+      "accessed_at": "2026-10-08",
+      "source_status": "DIRECT_CHECK",
+      "location": "Features; 12 Ports; Monitor Compatibility; Power and Charging"
+    },
+    {
+      "source_id": "SRC-startech-mst14cd122hd",
+      "url": "https://media.startech.com/cms/pdfs/mst14cd122hd_datasheet.pdf",
+      "title": "USB-C to Dual HDMI Adapter, USB Type-C Multi-Monitor MST Hub - MST14CD122HD",
+      "publisher": "StarTech.com",
+      "region": "UNSPECIFIED",
+      "source_type": "MANUFACTURER_SPEC",
+      "reliability_grade": "A",
+      "accessed_at": "2026-10-08",
+      "source_status": "DIRECT_CHECK",
+      "location": "PDF pp.1–3 / Features; Power; Performance; Hardware"
+    },
+    {
+      "source_id": "SRC-cablematters-201036",
+      "url": "https://kb.cablematters.com/index.php?EntryID=79&View=entry",
+      "title": "Cable Matters 201036 USB-C to 8K DisplayPort Cable",
+      "publisher": "Cable Matters",
+      "region": "UNSPECIFIED",
+      "source_type": "MANUFACTURER_SUPPORT",
+      "reliability_grade": "B",
+      "accessed_at": "2026-10-08",
+      "source_status": "DIRECT_CHECK",
+      "location": "Article 79 / introductory specification; full 8K troubleshooting",
+      "published_or_updated_at": "2022-08-17"
+    },
+    {
+      "source_id": "SRC-belkin-avc002",
+      "url": "https://www.belkin.com/tw/en/p/usb-c-to-hdmi-charge-adapter/P-AVC002.html",
+      "title": "USB-C to HDMI + Charge Adapter",
+      "publisher": "Belkin",
+      "region": "TW",
+      "source_type": "MANUFACTURER_SPEC",
+      "reliability_grade": "A",
+      "accessed_at": "2026-10-08",
+      "source_status": "DIRECT_CHECK",
+      "location": "POWER AND VIDEO; CHARGE WHILE YOU WORK; ULTRA-HIGH-DEFINITION VIDEO"
+    },
+    {
+      "source_id": "SRC-apple-tb4-pro-cable",
+      "url": "https://support.apple.com/en-gb/118204",
+      "title": "About the Apple Thunderbolt Pro Cables",
+      "publisher": "Apple",
+      "region": "GB",
+      "source_type": "MANUFACTURER_SUPPORT",
+      "reliability_grade": "B",
+      "accessed_at": "2026-10-08",
+      "source_status": "DIRECT_CHECK",
+      "location": "Video; Data transfer; Charging / Thunderbolt 4-specific paragraphs",
+      "published_or_updated_at": "2024-11-25"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "product:dell-u2723qe",
+      "kind": "DISPLAY",
+      "manufacturer": "Dell",
+      "model": "U2723QE",
+      "region": "GB",
+      "source_refs": [
+        "SRC-dell-u2723qe"
+      ],
+      "missing_fields": [
+        "두 번째 USB-C upstream 영상 지원 명시",
+        "DSC/레인 설정 및 DP 출력 라우팅",
+        "PD 전압·전류 프로파일",
+        "포트별 픽셀 타이밍"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "identity_status": "EXACT"
+    },
+    {
+      "product_id": "product:lg-27up850-w",
+      "kind": "DISPLAY",
+      "manufacturer": "LG",
+      "model": "27UP850-W",
+      "region": "MY",
+      "source_refs": [
+        "SRC-lg-27up850-w"
+      ],
+      "missing_fields": [
+        "입력별 최대 타이밍",
+        "DP 버전·레인·DSC",
+        "PD 전압·전류",
+        "한국 지역 모델 대조"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "identity_status": "EXACT"
+    },
+    {
+      "product_id": "product:dell-g2724d",
+      "kind": "DISPLAY",
+      "manufacturer": "Dell",
+      "model": "G2724D",
+      "region": "US",
+      "source_refs": [
+        "SRC-dell-g2724d"
+      ],
+      "missing_fields": [
+        "색 깊이·chroma·DSC 조건",
+        "포트별 EDID 타이밍",
+        "동봉 USB-C→DP 케이블 모델"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "identity_status": "EXACT"
+    },
+    {
+      "product_id": "product:caldigit-ts4",
+      "kind": "DOCK",
+      "manufacturer": "CalDigit",
+      "model": "TS4",
+      "region": "UNSPECIFIED",
+      "source_refs": [
+        "SRC-caldigit-ts4"
+      ],
+      "missing_fields": [
+        "내부 독립 스트림 토폴로지와 공유 자원",
+        "포트별 simultaneous allocation",
+        "PD 전압·전류",
+        "지원 표와 FAQ의 조건 정합성 검토"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "identity_status": "EXACT"
+    },
+    {
+      "product_id": "product:plugable-ud-6950h",
+      "kind": "DOCK",
+      "manufacturer": "Plugable",
+      "model": "UD-6950H",
+      "region": "US",
+      "source_refs": [
+        "SRC-plugable-ud-6950h"
+      ],
+      "missing_fields": [
+        "DP/HDMI 쌍별 채널 매핑",
+        "DisplayLink 버전·권한·DRM 조건",
+        "제품 단종 후 문서 갱신"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "identity_status": "EXACT"
+    },
+    {
+      "product_id": "product:startech-mst14cd122hd",
+      "kind": "HUB",
+      "manufacturer": "StarTech.com",
+      "model": "MST14CD122HD",
+      "region": "UNSPECIFIED",
+      "source_refs": [
+        "SRC-startech-mst14cd122hd"
+      ],
+      "missing_fields": [
+        "MST 공유 대역폭 계산",
+        "macOS 복제 동작 별도 근거",
+        "DSC 조건별 resolution chart"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "identity_status": "EXACT"
+    },
+    {
+      "product_id": "product:cablematters-201036",
+      "kind": "CABLE",
+      "manufacturer": "Cable Matters",
+      "model": "201036",
+      "region": "UNSPECIFIED",
+      "source_refs": [
+        "SRC-cablematters-201036"
+      ],
+      "missing_fields": [
+        "세부 길이·하드웨어 리비전·펌웨어",
+        "역방향 지원 여부",
+        "lane/encoding·픽셀 타이밍",
+        "고주사율 색 조건"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "identity_status": "EXACT"
+    },
+    {
+      "product_id": "product:belkin-avc002",
+      "kind": "ADAPTER",
+      "manufacturer": "Belkin",
+      "model": "AVC002BK-BL / AVC002btBK",
+      "region": "TW",
+      "source_refs": [
+        "SRC-belkin-avc002"
+      ],
+      "missing_fields": [
+        "입력 PD 프로파일·자체 소비",
+        "DP/HDMI 협상 버전·DSC",
+        "역방향 사용",
+        "리비전별 조건"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "identity_status": "EXACT"
+    },
+    {
+      "product_id": "product:apple-tb4-pro-cable",
+      "kind": "CABLE",
+      "manufacturer": "Apple",
+      "model": "Thunderbolt 4 Pro Cable (제품군)",
+      "region": "GB",
+      "source_refs": [
+        "SRC-apple-tb4-pro-cable"
+      ],
+      "missing_fields": [
+        "정확한 SKU·길이·리비전",
+        "PD voltage/current·e-marker 세부",
+        "DSC 처리 역할"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "identity_status": "PARTIAL"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "dell-u2723qe:1",
+      "product_id": "product:dell-u2723qe",
+      "property": "VIDEO_PROFILE",
+      "summary": "패널 기본 해상도 3840×2160 60Hz",
+      "source_refs": [
+        "SRC-dell-u2723qe"
+      ],
+      "location": "Resolution / Refresh Rate; Ports; Tech Specs",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "scope": "PANEL",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "interface": "UNKNOWN"
+      }
+    },
+    {
+      "fact_id": "dell-u2723qe:2",
+      "product_id": "product:dell-u2723qe",
+      "property": "PROTOCOL",
+      "summary": "영상용 USB-C upstream은 DP 1.4 Alt Mode",
+      "source_refs": [
+        "SRC-dell-u2723qe"
+      ],
+      "location": "Resolution / Refresh Rate; Ports; Tech Specs",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "interface": "USB_C_VIDEO_UPSTREAM",
+        "protocol": "DISPLAYPORT",
+        "version": "1.4",
+        "mode": "ALT_MODE",
+        "support": "SUPPORTED"
+      }
+    },
+    {
+      "fact_id": "dell-u2723qe:3",
+      "product_id": "product:dell-u2723qe",
+      "property": "POWER_TRANSFER",
+      "summary": "영상용 USB-C upstream에서 최대 90W 공급",
+      "source_refs": [
+        "SRC-dell-u2723qe"
+      ],
+      "location": "Resolution / Refresh Rate; Ports; Tech Specs",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "mode": "OFFER",
+        "interface": "USB_C_VIDEO_UPSTREAM",
+        "watts": 90,
+        "rating_basis": "UP_TO"
+      }
+    },
+    {
+      "fact_id": "dell-u2723qe:4",
+      "product_id": "product:dell-u2723qe",
+      "property": "POWER_TRANSFER",
+      "summary": "USB-C downstream은 최대 15W 충전",
+      "source_refs": [
+        "SRC-dell-u2723qe"
+      ],
+      "location": "Resolution / Refresh Rate; Ports; Tech Specs",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "mode": "OFFER",
+        "interface": "USB_C_DOWNSTREAM",
+        "watts": 15,
+        "rating_basis": "UP_TO"
+      }
+    },
+    {
+      "fact_id": "lg-27up850-w:1",
+      "product_id": "product:lg-27up850-w",
+      "property": "VIDEO_PROFILE",
+      "summary": "패널 3840×2160, 60Hz",
+      "source_refs": [
+        "SRC-lg-27up850-w"
+      ],
+      "location": "All Spec / INPUT/OUTPUT; PICTURE QUALITY",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "scope": "PANEL",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "interface": "UNKNOWN"
+      }
+    },
+    {
+      "fact_id": "lg-27up850-w:2",
+      "product_id": "product:lg-27up850-w",
+      "property": "PROTOCOL",
+      "summary": "USB-C DP Alternate Mode 지원",
+      "source_refs": [
+        "SRC-lg-27up850-w"
+      ],
+      "location": "All Spec / INPUT/OUTPUT; PICTURE QUALITY",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "interface": "USB_C",
+        "protocol": "DISPLAYPORT",
+        "mode": "ALT_MODE",
+        "support": "SUPPORTED"
+      }
+    },
+    {
+      "fact_id": "lg-27up850-w:3",
+      "product_id": "product:lg-27up850-w",
+      "property": "POWER_TRANSFER",
+      "summary": "USB-C PD 표기 96W",
+      "source_refs": [
+        "SRC-lg-27up850-w"
+      ],
+      "location": "All Spec / INPUT/OUTPUT; PICTURE QUALITY",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "mode": "OFFER",
+        "interface": "USB_C",
+        "watts": 96,
+        "rating_basis": "RATED"
+      }
+    },
+    {
+      "fact_id": "dell-g2724d:1",
+      "product_id": "product:dell-g2724d",
+      "property": "VIDEO_PROFILE",
+      "summary": "DisplayPort에서 2560×1440 165Hz",
+      "source_refs": [
+        "SRC-dell-g2724d"
+      ],
+      "location": "Resolution / Refresh Rate; Ports",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "scope": "PORT",
+        "width": 2560,
+        "height": 1440,
+        "refresh_hz": 165,
+        "interface": "DISPLAYPORT"
+      }
+    },
+    {
+      "fact_id": "dell-g2724d:2",
+      "product_id": "product:dell-g2724d",
+      "property": "VIDEO_PROFILE",
+      "summary": "HDMI에서 2560×1440 144Hz",
+      "source_refs": [
+        "SRC-dell-g2724d"
+      ],
+      "location": "Resolution / Refresh Rate; Ports",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "scope": "PORT",
+        "width": 2560,
+        "height": 1440,
+        "refresh_hz": 144,
+        "interface": "HDMI"
+      }
+    },
+    {
+      "fact_id": "caldigit-ts4:1",
+      "product_id": "product:caldigit-ts4",
+      "property": "ROUTING",
+      "summary": "TB 독에서 듀얼 화면 지원은 호스트 지원에 의존",
+      "source_refs": [
+        "SRC-caldigit-ts4"
+      ],
+      "location": "Single 8K or Dual 6K 60Hz Displays; Charging",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "호스트 제조사 듀얼 출력 지원 확인",
+        "Mac 칩별 제약과 M3 덮개 조건 별도 확인"
+      ],
+      "payload": {
+        "mechanism": "THUNDERBOLT",
+        "max_independent_displays": 2,
+        "driver_required": "UNKNOWN"
+      }
+    },
+    {
+      "fact_id": "caldigit-ts4:2",
+      "product_id": "product:caldigit-ts4",
+      "property": "VIDEO_PROFILE",
+      "summary": "듀얼 6K 60Hz에는 host GPU와 모니터 DSC 1.2 및 DP 1.4 HBR3 요구",
+      "source_refs": [
+        "SRC-caldigit-ts4"
+      ],
+      "location": "Single 8K or Dual 6K 60Hz Displays; Charging",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "해당 Mac 칩별 조건 확인",
+        "색 깊이·픽셀 타이밍 미상"
+      ],
+      "payload": {
+        "scope": "SIMULTANEOUS",
+        "resolution_label": "6K",
+        "refresh_hz": 60,
+        "interface": "UNKNOWN",
+        "display_count": 2,
+        "requirements": [
+          {
+            "target": "HOST",
+            "feature": "DSC",
+            "version": "1.2"
+          },
+          {
+            "target": "DISPLAY",
+            "feature": "DSC",
+            "version": "1.2"
+          },
+          {
+            "target": "HOST",
+            "feature": "DP_HBR3"
+          },
+          {
+            "target": "DISPLAY",
+            "feature": "DP_HBR3"
+          }
+        ]
+      }
+    },
+    {
+      "fact_id": "caldigit-ts4:3",
+      "product_id": "product:caldigit-ts4",
+      "property": "POWER_TRANSFER",
+      "summary": "호스트 충전 98W",
+      "source_refs": [
+        "SRC-caldigit-ts4"
+      ],
+      "location": "Single 8K or Dual 6K 60Hz Displays; Charging",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "mode": "OFFER",
+        "interface": "HOST_UPSTREAM",
+        "watts": 98,
+        "rating_basis": "RATED"
+      }
+    },
+    {
+      "fact_id": "plugable-ud-6950h:1",
+      "product_id": "product:plugable-ud-6950h",
+      "property": "ROUTING",
+      "summary": "DP/HDMI 출력은 독립 외장 화면 최대 2대, DisplayLink 드라이버 필요",
+      "source_refs": [
+        "SRC-plugable-ud-6950h"
+      ],
+      "location": "Features; 12 Ports; Monitor Compatibility; Power and Charging",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "HDMI/DP 출력 네 개를 화면 네 개로 계산하지 않음",
+        "드라이버 설치 및 버전 추가 확인"
+      ],
+      "payload": {
+        "mechanism": "DISPLAYLINK",
+        "max_independent_displays": 2,
+        "driver_required": "YES",
+        "minimum_macos": "10.14"
+      }
+    },
+    {
+      "fact_id": "plugable-ud-6950h:2",
+      "product_id": "product:plugable-ud-6950h",
+      "property": "VIDEO_PROFILE",
+      "summary": "지원 모니터에서 3840×2160 60Hz 두 대",
+      "source_refs": [
+        "SRC-plugable-ud-6950h"
+      ],
+      "location": "Features; 12 Ports; Monitor Compatibility; Power and Charging",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "모니터와 케이블이 목표 모드 지원",
+        "DisplayLink 드라이버 필요"
+      ],
+      "payload": {
+        "scope": "SIMULTANEOUS",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "interface": "UNKNOWN",
+        "display_count": 2
+      }
+    },
+    {
+      "fact_id": "plugable-ud-6950h:3",
+      "product_id": "product:plugable-ud-6950h",
+      "property": "POWER_TRANSFER",
+      "summary": "호스트 노트북 충전 미제공",
+      "source_refs": [
+        "SRC-plugable-ud-6950h"
+      ],
+      "location": "Features; 12 Ports; Monitor Compatibility; Power and Charging",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "mode": "NONE",
+        "interface": "HOST"
+      }
+    },
+    {
+      "fact_id": "plugable-ud-6950h:4",
+      "product_id": "product:plugable-ud-6950h",
+      "property": "DEVICE_POWER",
+      "summary": "독 전원 어댑터 포함, 노트북은 별도 충전기 필요",
+      "source_refs": [
+        "SRC-plugable-ud-6950h"
+      ],
+      "location": "Features; 12 Ports; Monitor Compatibility; Power and Charging",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "supply": "EXTERNAL_ADAPTER",
+        "host_charger_required": "YES"
+      }
+    },
+    {
+      "fact_id": "startech-mst14cd122hd:1",
+      "product_id": "product:startech-mst14cd122hd",
+      "property": "ROUTING",
+      "summary": "MST 분기, macOS 비호환 표기, Windows에서 드라이버 불필요",
+      "source_refs": [
+        "SRC-startech-mst14cd122hd"
+      ],
+      "location": "PDF pp.1–3 / Features; Power; Performance; Hardware",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "Windows DP Alt Mode 호스트",
+        "GPU의 지원 화면 수 확인"
+      ],
+      "payload": {
+        "mechanism": "MST",
+        "max_independent_displays": 2,
+        "driver_required": "NO",
+        "excluded_os": [
+          "macOS"
+        ]
+      }
+    },
+    {
+      "fact_id": "startech-mst14cd122hd:2",
+      "product_id": "product:startech-mst14cd122hd",
+      "property": "VIDEO_PROFILE",
+      "summary": "듀얼 3840×2160 60Hz에 DP 1.4 및 DSC 호스트 요구",
+      "source_refs": [
+        "SRC-startech-mst14cd122hd"
+      ],
+      "location": "PDF pp.1–3 / Features; Power; Performance; Hardware",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "공식 문서의 GPU 조건 추가 검수"
+      ],
+      "payload": {
+        "scope": "SIMULTANEOUS",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "interface": "HDMI",
+        "display_count": 2,
+        "requirements": [
+          {
+            "target": "HOST",
+            "feature": "DSC"
+          },
+          {
+            "target": "HOST",
+            "feature": "DISPLAYPORT",
+            "version": "1.4"
+          }
+        ]
+      }
+    },
+    {
+      "fact_id": "startech-mst14cd122hd:3",
+      "product_id": "product:startech-mst14cd122hd",
+      "property": "POWER_TRANSFER",
+      "summary": "PD pass-through 없음",
+      "source_refs": [
+        "SRC-startech-mst14cd122hd"
+      ],
+      "location": "PDF pp.1–3 / Features; Power; Performance; Hardware",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "mode": "NONE",
+        "interface": "PD_PASS_THROUGH"
+      }
+    },
+    {
+      "fact_id": "startech-mst14cd122hd:4",
+      "product_id": "product:startech-mst14cd122hd",
+      "property": "DEVICE_POWER",
+      "summary": "USB bus-powered",
+      "source_refs": [
+        "SRC-startech-mst14cd122hd"
+      ],
+      "location": "PDF pp.1–3 / Features; Power; Performance; Hardware",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [],
+      "payload": {
+        "supply": "BUS_POWERED",
+        "host_charger_required": "UNKNOWN"
+      }
+    },
+    {
+      "fact_id": "cablematters-201036:1",
+      "product_id": "product:cablematters-201036",
+      "property": "CONVERSION",
+      "summary": "USB-C 소스에서 DP 입력 화면으로 연결하는 케이블",
+      "source_refs": [
+        "SRC-cablematters-201036"
+      ],
+      "location": "Article 79 / introductory specification; full 8K troubleshooting",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "호스트 USB-C 영상 지원 확인"
+      ],
+      "payload": {
+        "from_connector": "USB_C",
+        "to_connector": "DISPLAYPORT",
+        "reverse_supported": "UNKNOWN"
+      }
+    },
+    {
+      "fact_id": "cablematters-201036:2",
+      "product_id": "product:cablematters-201036",
+      "property": "DSC",
+      "summary": "DSC 1.2 지원 표기",
+      "source_refs": [
+        "SRC-cablematters-201036"
+      ],
+      "location": "Article 79 / introductory specification; full 8K troubleshooting",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "호스트와 디스플레이도 DSC 1.2 필요"
+      ],
+      "payload": {
+        "support": "SUPPORTED",
+        "version": "1.2",
+        "role": "UNSPECIFIED"
+      }
+    },
+    {
+      "fact_id": "cablematters-201036:3",
+      "product_id": "product:cablematters-201036",
+      "property": "VIDEO_PROFILE",
+      "summary": "8K 60Hz 또는 4K 240Hz 표기; host와 display DP 1.4·DSC 1.2 조건",
+      "source_refs": [
+        "SRC-cablematters-201036"
+      ],
+      "location": "Article 79 / introductory specification; full 8K troubleshooting",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "DP 1.4 호스트와 디스플레이",
+        "공식 문서의 오래된 GPU 독점 설명은 일반 사실로 승계하지 않음"
+      ],
+      "payload": {
+        "scope": "ADAPTER",
+        "resolution_label": "8K",
+        "refresh_hz": 60,
+        "interface": "DISPLAYPORT",
+        "requirements": [
+          {
+            "target": "HOST",
+            "feature": "DSC",
+            "version": "1.2"
+          },
+          {
+            "target": "DISPLAY",
+            "feature": "DSC",
+            "version": "1.2"
+          }
+        ]
+      }
+    },
+    {
+      "fact_id": "belkin-avc002:1",
+      "product_id": "product:belkin-avc002",
+      "property": "CONVERSION",
+      "summary": "호스트 USB-C→HDMI 영상, 별도 USB-C 전원 입력",
+      "source_refs": [
+        "SRC-belkin-avc002"
+      ],
+      "location": "POWER AND VIDEO; CHARGE WHILE YOU WORK; ULTRA-HIGH-DEFINITION VIDEO",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "호스트 기기 디스플레이 사양 확인"
+      ],
+      "payload": {
+        "from_connector": "USB_C",
+        "to_connector": "HDMI",
+        "reverse_supported": "UNKNOWN"
+      }
+    },
+    {
+      "fact_id": "belkin-avc002:2",
+      "product_id": "product:belkin-avc002",
+      "property": "VIDEO_PROFILE",
+      "summary": "3840×2160 60Hz 출력 표기",
+      "source_refs": [
+        "SRC-belkin-avc002"
+      ],
+      "location": "POWER AND VIDEO; CHARGE WHILE YOU WORK; ULTRA-HIGH-DEFINITION VIDEO",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "호환 소스·디스플레이 조건 확인"
+      ],
+      "payload": {
+        "scope": "ADAPTER",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "interface": "HDMI"
+      }
+    },
+    {
+      "fact_id": "belkin-avc002:3",
+      "product_id": "product:belkin-avc002",
+      "property": "POWER_TRANSFER",
+      "summary": "별도 PD 입력을 통과해 최대 60W 공급",
+      "source_refs": [
+        "SRC-belkin-avc002"
+      ],
+      "location": "POWER AND VIDEO; CHARGE WHILE YOU WORK; ULTRA-HIGH-DEFINITION VIDEO",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "외부 PD 공급 장치 필요",
+        "내부 소비와 협상 세부값 미상"
+      ],
+      "payload": {
+        "mode": "PASS_THROUGH",
+        "interface": "USB_C_POWER_TO_HOST",
+        "watts": 60,
+        "rating_basis": "UP_TO"
+      }
+    },
+    {
+      "fact_id": "apple-tb4-pro-cable:1",
+      "product_id": "product:apple-tb4-pro-cable",
+      "property": "LINK_MODE",
+      "summary": "Thunderbolt 4/3 및 USB4 데이터 전송 최대 40Gb/s",
+      "source_refs": [
+        "SRC-apple-tb4-pro-cable"
+      ],
+      "location": "Video; Data transfer; Charging / Thunderbolt 4-specific paragraphs",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "영상 payload 대역폭으로 직접 사용하지 않음"
+      ],
+      "payload": {
+        "protocol": "THUNDERBOLT_USB4",
+        "max_gbps": 40,
+        "rate_scope": "AGGREGATE_DATA"
+      }
+    },
+    {
+      "fact_id": "apple-tb4-pro-cable:2",
+      "product_id": "product:apple-tb4-pro-cable",
+      "property": "POWER_TRANSFER",
+      "summary": "케이블 전력 전달 최대 100W",
+      "source_refs": [
+        "SRC-apple-tb4-pro-cable"
+      ],
+      "location": "Video; Data transfer; Charging / Thunderbolt 4-specific paragraphs",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "실제 전원 공급 장치 출력 아님"
+      ],
+      "payload": {
+        "mode": "TRANSPORT_LIMIT",
+        "interface": "CABLE",
+        "watts": 100,
+        "rating_basis": "UP_TO"
+      }
+    },
+    {
+      "fact_id": "apple-tb4-pro-cable:3",
+      "product_id": "product:apple-tb4-pro-cable",
+      "property": "PROTOCOL",
+      "summary": "DisplayPort HBR3 영상 출력 지원",
+      "source_refs": [
+        "SRC-apple-tb4-pro-cable"
+      ],
+      "location": "Video; Data transfer; Charging / Thunderbolt 4-specific paragraphs",
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "conditions": [
+        "호스트와 디스플레이 요구 확인"
+      ],
+      "payload": {
+        "interface": "USB_C",
+        "protocol": "DISPLAYPORT",
+        "mode": "HBR3",
+        "support": "SUPPORTED"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1001 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Typed capability facts v1 proposal",
+  "$defs": {
+    "PROTOCOL": {
+      "type": "object",
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "product_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "PROTOCOL"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "DIRECT_CHECK"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "PENDING_HUMAN_REVIEW"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "interface": {
+              "type": "string",
+              "minLength": 1
+            },
+            "protocol": {
+              "type": "string",
+              "enum": [
+                "DISPLAYPORT",
+                "HDMI",
+                "THUNDERBOLT",
+                "USB4",
+                "USB_DATA"
+              ]
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "mode": {
+              "type": "string",
+              "minLength": 1
+            },
+            "support": {
+              "type": "string",
+              "enum": [
+                "SUPPORTED",
+                "UNSUPPORTED",
+                "UNKNOWN"
+              ]
+            }
+          },
+          "required": [
+            "interface",
+            "protocol",
+            "support"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "fact_id",
+        "product_id",
+        "property",
+        "summary",
+        "source_refs",
+        "location",
+        "source_status",
+        "review_status",
+        "conditions",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "LINK_MODE": {
+      "type": "object",
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "product_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "LINK_MODE"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "DIRECT_CHECK"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "PENDING_HUMAN_REVIEW"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "protocol": {
+              "type": "string",
+              "enum": [
+                "DISPLAYPORT",
+                "HDMI",
+                "THUNDERBOLT_USB4",
+                "USB_DATA"
+              ]
+            },
+            "max_gbps": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "rate_scope": {
+              "type": "string",
+              "enum": [
+                "AGGREGATE_DATA",
+                "PER_LANE_SIGNAL",
+                "VIDEO_PAYLOAD"
+              ]
+            },
+            "lane_count": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "encoding": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "protocol",
+            "rate_scope"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "fact_id",
+        "product_id",
+        "property",
+        "summary",
+        "source_refs",
+        "location",
+        "source_status",
+        "review_status",
+        "conditions",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "VIDEO_PROFILE": {
+      "type": "object",
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "product_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "VIDEO_PROFILE"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "DIRECT_CHECK"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "PENDING_HUMAN_REVIEW"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "scope": {
+              "type": "string",
+              "enum": [
+                "PANEL",
+                "PORT",
+                "ADAPTER",
+                "SIMULTANEOUS"
+              ]
+            },
+            "interface": {
+              "type": "string",
+              "minLength": 1
+            },
+            "width": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "resolution_label": {
+              "type": "string",
+              "minLength": 1
+            },
+            "refresh_hz": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "display_count": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "requirements": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "target": {
+                    "type": "string",
+                    "enum": [
+                      "HOST",
+                      "DISPLAY",
+                      "CABLE",
+                      "ADAPTER"
+                    ]
+                  },
+                  "feature": {
+                    "type": "string",
+                    "enum": [
+                      "DSC",
+                      "DP_HBR3",
+                      "DISPLAYPORT"
+                    ]
+                  },
+                  "version": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "target",
+                  "feature"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 0
+            },
+            "color_depth_bits": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "chroma": {
+              "type": "string",
+              "enum": [
+                "RGB",
+                "444",
+                "422",
+                "420"
+              ]
+            },
+            "hdr": {
+              "type": "string",
+              "enum": [
+                "ON",
+                "OFF"
+              ]
+            },
+            "dsc": {
+              "type": "string",
+              "enum": [
+                "REQUIRED",
+                "NOT_REQUIRED"
+              ]
+            }
+          },
+          "required": [
+            "scope",
+            "interface",
+            "refresh_hz"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "fact_id",
+        "product_id",
+        "property",
+        "summary",
+        "source_refs",
+        "location",
+        "source_status",
+        "review_status",
+        "conditions",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "POWER_TRANSFER": {
+      "type": "object",
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "product_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "POWER_TRANSFER"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "DIRECT_CHECK"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "PENDING_HUMAN_REVIEW"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": [
+                "OFFER",
+                "PASS_THROUGH",
+                "TRANSPORT_LIMIT",
+                "NONE"
+              ]
+            },
+            "interface": {
+              "type": "string",
+              "minLength": 1
+            },
+            "watts": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "rating_basis": {
+              "type": "string",
+              "enum": [
+                "UP_TO",
+                "RATED"
+              ]
+            },
+            "pd_profiles": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "volts": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "amps": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  }
+                },
+                "required": [
+                  "volts",
+                  "amps"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "mode",
+            "interface"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "fact_id",
+        "product_id",
+        "property",
+        "summary",
+        "source_refs",
+        "location",
+        "source_status",
+        "review_status",
+        "conditions",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "ROUTING": {
+      "type": "object",
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "product_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "ROUTING"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "DIRECT_CHECK"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "PENDING_HUMAN_REVIEW"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "mechanism": {
+              "type": "string",
+              "enum": [
+                "THUNDERBOLT",
+                "MST",
+                "DISPLAYLINK",
+                "SINGLE_STREAM",
+                "UNKNOWN"
+              ]
+            },
+            "max_independent_displays": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "driver_required": {
+              "type": "string",
+              "enum": [
+                "YES",
+                "NO",
+                "UNKNOWN"
+              ]
+            },
+            "minimum_macos": {
+              "type": "string",
+              "pattern": "^[0-9]+\\.[0-9]+$"
+            },
+            "excluded_os": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "channel_groups": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "output_refs": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                  },
+                  "max_active_outputs": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "output_refs",
+                  "max_active_outputs"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "mechanism",
+            "driver_required"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "fact_id",
+        "product_id",
+        "property",
+        "summary",
+        "source_refs",
+        "location",
+        "source_status",
+        "review_status",
+        "conditions",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "DSC": {
+      "type": "object",
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "product_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "DSC"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "DIRECT_CHECK"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "PENDING_HUMAN_REVIEW"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "support": {
+              "type": "string",
+              "enum": [
+                "SUPPORTED",
+                "UNSUPPORTED",
+                "UNKNOWN"
+              ]
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "role": {
+              "type": "string",
+              "enum": [
+                "ENCODE",
+                "DECODE",
+                "PASS_THROUGH",
+                "UNSPECIFIED"
+              ]
+            }
+          },
+          "required": [
+            "support",
+            "role"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "fact_id",
+        "product_id",
+        "property",
+        "summary",
+        "source_refs",
+        "location",
+        "source_status",
+        "review_status",
+        "conditions",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "CONVERSION": {
+      "type": "object",
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "product_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "CONVERSION"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "DIRECT_CHECK"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "PENDING_HUMAN_REVIEW"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "from_connector": {
+              "type": "string",
+              "enum": [
+                "USB_C",
+                "DISPLAYPORT",
+                "HDMI"
+              ]
+            },
+            "to_connector": {
+              "type": "string",
+              "enum": [
+                "USB_C",
+                "DISPLAYPORT",
+                "HDMI"
+              ]
+            },
+            "reverse_supported": {
+              "type": "string",
+              "enum": [
+                "YES",
+                "NO",
+                "UNKNOWN"
+              ]
+            },
+            "active": {
+              "type": "string",
+              "enum": [
+                "YES",
+                "NO",
+                "UNKNOWN"
+              ]
+            }
+          },
+          "required": [
+            "from_connector",
+            "to_connector",
+            "reverse_supported"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "fact_id",
+        "product_id",
+        "property",
+        "summary",
+        "source_refs",
+        "location",
+        "source_status",
+        "review_status",
+        "conditions",
+        "payload"
+      ],
+      "additionalProperties": false
+    },
+    "DEVICE_POWER": {
+      "type": "object",
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "product_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "DEVICE_POWER"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "DIRECT_CHECK"
+          ]
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "PENDING_HUMAN_REVIEW"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "supply": {
+              "type": "string",
+              "enum": [
+                "BUS_POWERED",
+                "EXTERNAL_ADAPTER",
+                "UNKNOWN"
+              ]
+            },
+            "host_charger_required": {
+              "type": "string",
+              "enum": [
+                "YES",
+                "NO",
+                "UNKNOWN"
+              ]
+            },
+            "adapter_watts": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "supply",
+            "host_charger_required"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "fact_id",
+        "product_id",
+        "property",
+        "summary",
+        "source_refs",
+        "location",
+        "source_status",
+        "review_status",
+        "conditions",
+        "payload"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/PROTOCOL"
+    },
+    {
+      "$ref": "#/$defs/LINK_MODE"
+    },
+    {
+      "$ref": "#/$defs/VIDEO_PROFILE"
+    },
+    {
+      "$ref": "#/$defs/POWER_TRANSFER"
+    },
+    {
+      "$ref": "#/$defs/ROUTING"
+    },
+    {
+      "$ref": "#/$defs/DSC"
+    },
+    {
+      "$ref": "#/$defs/CONVERSION"
+    },
+    {
+      "$ref": "#/$defs/DEVICE_POWER"
+    }
+  ]
+}

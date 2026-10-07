@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Connection model stress pilot",
+  "type": "object",
+  "properties": {
+    "dataset_version": {
+      "type": "string",
+      "enum": [
+        "1-proposed"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "RESEARCH_PILOT"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publisher": {
+            "type": "string",
+            "minLength": 1
+          },
+          "region": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "MANUFACTURER_SPEC",
+              "MANUFACTURER_SUPPORT"
+            ]
+          },
+          "reliability_grade": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B"
+            ]
+          },
+          "accessed_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "published_or_updated_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "source_status": {
+            "type": "string",
+            "enum": [
+              "DIRECT_CHECK"
+            ]
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source_id",
+          "url",
+          "title",
+          "publisher",
+          "region",
+          "source_type",
+          "reliability_grade",
+          "accessed_at",
+          "source_status",
+          "location"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "DISPLAY",
+              "DOCK",
+              "HUB",
+              "CABLE",
+              "ADAPTER"
+            ]
+          },
+          "manufacturer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model": {
+            "type": "string",
+            "minLength": 1
+          },
+          "identity_status": {
+            "type": "string",
+            "enum": [
+              "EXACT",
+              "PARTIAL"
+            ]
+          },
+          "region": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "missing_fields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "PENDING_HUMAN_REVIEW"
+            ]
+          }
+        },
+        "required": [
+          "product_id",
+          "kind",
+          "manufacturer",
+          "model",
+          "identity_status",
+          "region",
+          "source_refs",
+          "missing_fields",
+          "review_status"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "$ref": "typed-capability-v1.proposed.schema.json"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "dataset_version",
+    "status",
+    "sources",
+    "products",
+    "facts"
+  ],
+  "additionalProperties": false
+}
