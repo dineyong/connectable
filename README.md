@@ -54,3 +54,16 @@ python3 -m unittest discover -s tests -v
 python3 scripts/validate_question_corpus.py
 python3 scripts/validate_question_corpus_v2.py
 ```
+
+## 사이트 목업
+
+사용자 요청에 따라 조사 기반 한국어 목업을 제작했다. 연결 조건 입력·미확인 조건 요약·실제 사례 검색과
+상세 원문 확인을 제공한다. [목업 검증·실행 안내](docs/SITE_MOCKUP_REPORT.md)를 참고한다.
+공식 호환 판정과 운영 서비스는 아직 구현하지 않았다.
+
+```sh
+python3 scripts/build_mockup_cases.py
+python3 -m http.server 8873 --bind 127.0.0.1 --directory web
+```
+
+로컬 미리보기: http://127.0.0.1:8873
