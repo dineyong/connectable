@@ -1,0 +1,737 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://connectable.example/schemas/user-question.schema.json",
+  "title": "Connectable user question v1",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "내부 불변 ID",
+      "examples": [
+        "UQ-0001"
+      ],
+      "pattern": "^UQ-[0-9]{4,}$"
+    },
+    "source_url": {
+      "type": "string",
+      "description": "개인 식별값·추적값을 제거한 공개 원문 URL",
+      "examples": [
+        "https://discussions.apple.com/thread/254292556"
+      ],
+      "format": "uri"
+    },
+    "site_name": {
+      "type": "string",
+      "description": "사이트명",
+      "examples": [
+        "Apple Support Community"
+      ]
+    },
+    "published_at": {
+      "type": "string",
+      "description": "원문 게시일; 댓글 사례는 해당 댓글 날짜",
+      "examples": [
+        "2022-10-16"
+      ],
+      "format": "date"
+    },
+    "checked_at": {
+      "type": "string",
+      "description": "공개 본문을 확인한 한국 날짜",
+      "examples": [
+        "2026-10-07"
+      ],
+      "format": "date"
+    },
+    "public_access": {
+      "type": "string",
+      "description": "로그인 없이 본문 접근 가능 여부",
+      "examples": [
+        "Y"
+      ],
+      "enum": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ]
+    },
+    "reliability_grade": {
+      "type": "string",
+      "description": "출처 등급; 단일 사례는 C",
+      "examples": [
+        "A"
+      ],
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "X"
+      ]
+    },
+    "original_language": {
+      "type": "string",
+      "description": "원문 언어",
+      "examples": [
+        "k"
+      ],
+      "enum": [
+        "ko",
+        "en",
+        "ja",
+        "zh",
+        "OTHER",
+        "UNKNOWN"
+      ]
+    },
+    "source_status": {
+      "type": "string",
+      "description": "현재 접근 상태",
+      "examples": [
+        "A"
+      ],
+      "enum": [
+        "AVAILABLE",
+        "DELETED",
+        "INACCESSIBLE",
+        "UNKNOWN"
+      ]
+    },
+    "source_location": {
+      "type": "string",
+      "description": "원글 또는 댓글 날짜 등 익명 원문 위치",
+      "examples": [
+        "원글"
+      ]
+    },
+    "source_manufacturer": {
+      "type": "string",
+      "description": "소스 기기 제조사",
+      "examples": [
+        "Apple"
+      ]
+    },
+    "source_family": {
+      "type": "string",
+      "description": "제품군",
+      "examples": [
+        "MacBook Air"
+      ]
+    },
+    "source_display_model": {
+      "type": "string",
+      "description": "원문 모델명",
+      "examples": [
+        "MacBook Air 13-inch 2020 M1"
+      ]
+    },
+    "source_normalized_model": {
+      "type": "string",
+      "description": "명시된 항목만 정규화",
+      "examples": [
+        "MacBook Air (M1, 2020)"
+      ]
+    },
+    "source_release_year": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "출시 연도; 구매 연도와 구분",
+      "examples": [
+        2020
+      ]
+    },
+    "source_chip": {
+      "type": "string",
+      "description": "원문에서 식별한 칩",
+      "examples": [
+        "M1"
+      ]
+    },
+    "source_variant": {
+      "type": "string",
+      "description": "화면 크기 또는 하위 모델",
+      "examples": [
+        "13-inch"
+      ]
+    },
+    "os_name": {
+      "type": "string",
+      "description": "운영체제",
+      "examples": [
+        "macOS"
+      ]
+    },
+    "os_version": {
+      "type": "string",
+      "description": "보고된 버전",
+      "examples": [
+        "15.1.1"
+      ]
+    },
+    "source_identity_certainty": {
+      "type": "string",
+      "description": "소스 기기 모델 식별 확실성",
+      "examples": [
+        "E"
+      ],
+      "enum": [
+        "EXACT",
+        "PARTIAL",
+        "UNKNOWN"
+      ]
+    },
+    "displays": {
+      "type": "array",
+      "description": "디스플레이별 조건",
+      "items": {
+        "type": "object",
+        "description": "디스플레이 한 대. 동일 제품 여러 대도 각각 기록",
+        "properties": {
+          "manufacturer": {
+            "type": "string",
+            "description": "제조사",
+            "examples": [
+              "BenQ"
+            ]
+          },
+          "display_model": {
+            "type": "string",
+            "description": "원문 모델 표기",
+            "examples": [
+              "EW3280U"
+            ]
+          },
+          "normalized_model": {
+            "type": "string",
+            "description": "명시된 모델의 표기 정리; 공식 검증 아님",
+            "examples": [
+              "EW3280U"
+            ]
+          },
+          "resolution": {
+            "type": "string",
+            "description": "관측 또는 목표 픽셀 해상도; 4K만 언급되면 비움",
+            "examples": [
+              "3840x2160"
+            ],
+            "pattern": "^[1-9][0-9]*x[1-9][0-9]*$"
+          },
+          "resolution_label": {
+            "type": "string",
+            "description": "원문 해상도 표현",
+            "examples": [
+              "4K"
+            ]
+          },
+          "target_hz": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "목표 Hz",
+            "examples": [
+              60
+            ]
+          },
+          "actual_hz": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "보고된 실제 Hz; 변동 범위는 메모",
+            "examples": [
+              30
+            ]
+          },
+          "input_ports": {
+            "type": "array",
+            "description": "명시된 입력 포트",
+            "items": {
+              "type": "string",
+              "description": "원문에 명시된 포트. 단자명으로 프로토콜을 추정하지 않음",
+              "examples": [
+                "U"
+              ],
+              "enum": [
+                "USB_C",
+                "HDMI",
+                "DISPLAYPORT",
+                "THUNDERBOLT",
+                "USB_A",
+                "VGA",
+                "UNKNOWN"
+              ]
+            },
+            "examples": [
+              []
+            ]
+          },
+          "hdr": {
+            "type": "string",
+            "description": "HDR 사용 여부",
+            "examples": [
+              "Y"
+            ],
+            "enum": [
+              "YES",
+              "NO",
+              "UNKNOWN"
+            ]
+          },
+          "identity_certainty": {
+            "type": "string",
+            "description": "제품 식별 확실성",
+            "examples": [
+              "E"
+            ],
+            "enum": [
+              "EXACT",
+              "PARTIAL",
+              "UNKNOWN"
+            ]
+          }
+        },
+        "required": [
+          "identity_certainty"
+        ],
+        "additionalProperties": false
+      },
+      "examples": [
+        []
+      ]
+    },
+    "connection_devices": {
+      "type": "array",
+      "description": "케이블·어댑터·허브·독 배열",
+      "items": {
+        "type": "object",
+        "description": "신호 경로 순서대로 배열. 추정 사양 입력 금지",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "description": "연결 장치 유형",
+            "examples": [
+              "C"
+            ],
+            "enum": [
+              "CABLE",
+              "ADAPTER",
+              "USB_C_HUB",
+              "THUNDERBOLT_DOCK",
+              "DISPLAYLINK_DEVICE",
+              "UNKNOWN"
+            ]
+          },
+          "manufacturer": {
+            "type": "string",
+            "description": "제조사",
+            "examples": [
+              "Dell"
+            ]
+          },
+          "display_model": {
+            "type": "string",
+            "description": "표시 모델",
+            "examples": [
+              "D6000"
+            ]
+          },
+          "normalized_model": {
+            "type": "string",
+            "description": "정리 모델",
+            "examples": [
+              "D6000"
+            ]
+          },
+          "input_ports": {
+            "type": "array",
+            "description": "호스트 측 입력",
+            "items": {
+              "type": "string",
+              "description": "원문에 명시된 포트. 단자명으로 프로토콜을 추정하지 않음",
+              "examples": [
+                "U"
+              ],
+              "enum": [
+                "USB_C",
+                "HDMI",
+                "DISPLAYPORT",
+                "THUNDERBOLT",
+                "USB_A",
+                "VGA",
+                "UNKNOWN"
+              ]
+            },
+            "examples": [
+              []
+            ]
+          },
+          "output_ports": {
+            "type": "array",
+            "description": "디스플레이 측 출력",
+            "items": {
+              "type": "string",
+              "description": "원문에 명시된 포트. 단자명으로 프로토콜을 추정하지 않음",
+              "examples": [
+                "U"
+              ],
+              "enum": [
+                "USB_C",
+                "HDMI",
+                "DISPLAYPORT",
+                "THUNDERBOLT",
+                "USB_A",
+                "VGA",
+                "UNKNOWN"
+              ]
+            },
+            "examples": [
+              []
+            ]
+          },
+          "driver_used": {
+            "type": "string",
+            "description": "드라이버 실제 사용; 필요 여부와 구분",
+            "examples": [
+              "Y"
+            ],
+            "enum": [
+              "YES",
+              "NO",
+              "UNKNOWN"
+            ]
+          },
+          "power_supplied": {
+            "type": "string",
+            "description": "장치 전원 공급 여부",
+            "examples": [
+              "Y"
+            ],
+            "enum": [
+              "YES",
+              "NO",
+              "UNKNOWN"
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "description": "분기 경로·드라이버·전원 조건",
+            "examples": [
+              "드라이버 설치 여부 미상"
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "driver_used",
+          "power_supplied"
+        ],
+        "additionalProperties": false
+      },
+      "examples": [
+        []
+      ]
+    },
+    "desired_configuration": {
+      "type": "string",
+      "description": "사용자가 원하는 구성의 사실 요약",
+      "examples": [
+        "외장 화면 두 대 연결"
+      ]
+    },
+    "symptoms": {
+      "type": "string",
+      "description": "보고된 증상 요약",
+      "examples": [
+        "두 화면을 함께 사용하지 못함"
+      ]
+    },
+    "problem_type": {
+      "type": "string",
+      "description": "주요 문제 분류",
+      "examples": [
+        "N"
+      ],
+      "enum": [
+        "NO_SIGNAL",
+        "RESOLUTION",
+        "REFRESH_RATE",
+        "MULTI_DISPLAY",
+        "FLICKER",
+        "PD_CHARGING",
+        "HDR",
+        "OTHER",
+        "UNKNOWN"
+      ]
+    },
+    "attempted_solutions": {
+      "type": "array",
+      "description": "실제로 시도한 해결 방법; 제안만 받은 방법 제외",
+      "items": {
+        "type": "string",
+        "description": "시도",
+        "examples": [
+          "케이블 교체"
+        ]
+      },
+      "examples": [
+        []
+      ]
+    },
+    "outcome": {
+      "type": "string",
+      "description": "관측 결과이며 제품 호환 판정 아님",
+      "examples": [
+        "S"
+      ],
+      "enum": [
+        "SUCCESS",
+        "LIMITED_SUCCESS",
+        "FAILURE",
+        "UNRESOLVED",
+        "UNKNOWN"
+      ]
+    },
+    "outcome_evidence": {
+      "type": "string",
+      "description": "원문 내 결과 판단 근거; 제3자와 분리",
+      "examples": [
+        "원글에서 연결 실패를 보고하며 후속 확인 없음"
+      ]
+    },
+    "solution_devices_or_settings": {
+      "type": "array",
+      "description": "결과에 기여한 장치나 설정",
+      "items": {
+        "type": "string",
+        "description": "장치 또는 설정",
+        "examples": [
+          "60Hz 항목 재선택"
+        ]
+      },
+      "examples": [
+        []
+      ]
+    },
+    "output_mode": {
+      "type": "string",
+      "description": "관측 출력 방식",
+      "examples": [
+        "N"
+      ],
+      "enum": [
+        "NATIVE",
+        "DISPLAYLINK",
+        "MIXED",
+        "UNKNOWN"
+      ]
+    },
+    "display_mode": {
+      "type": "string",
+      "description": "화면 모드",
+      "examples": [
+        "M"
+      ],
+      "enum": [
+        "MIRROR",
+        "EXTEND",
+        "MIXED",
+        "UNKNOWN"
+      ]
+    },
+    "clamshell": {
+      "type": "string",
+      "description": "클램쉘 사용 여부",
+      "examples": [
+        "Y"
+      ],
+      "enum": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ]
+    },
+    "target_external_display_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "원한 외장 화면 수",
+      "examples": [
+        1
+      ]
+    },
+    "actual_external_display_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "실제로 동작했다고 확인한 외장 화면 수",
+      "examples": [
+        1
+      ]
+    },
+    "pd_charging": {
+      "type": "string",
+      "description": "소스 기기 충전 관측",
+      "examples": [
+        "Y"
+      ],
+      "enum": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ]
+    },
+    "pd_watts": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "description": "관측 또는 명시된 PD 공급 W",
+      "examples": [
+        65
+      ]
+    },
+    "pd_conditions": {
+      "type": "string",
+      "description": "충전기·포트·케이블 등 조건",
+      "examples": [
+        "원문 미기재"
+      ]
+    },
+    "official_alignment": {
+      "type": "string",
+      "description": "별도 공식 자료와 대조한 결과",
+      "examples": [
+        "M"
+      ],
+      "enum": [
+        "MATCH",
+        "CONFLICT",
+        "UNKNOWN",
+        "NOT_CHECKED"
+      ]
+    },
+    "official_source_urls": {
+      "type": "array",
+      "description": "실제로 읽고 대조한 공식 문서",
+      "items": {
+        "type": "string",
+        "description": "공식 URL",
+        "examples": [
+          "https://support.apple.com/"
+        ],
+        "format": "uri"
+      },
+      "examples": [
+        []
+      ]
+    },
+    "independent_case_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "동일 조건의 독립 사례 수; 본 사례 포함, 좋아요 수 제외",
+      "examples": [
+        1
+      ]
+    },
+    "independent_case_urls": {
+      "type": "array",
+      "description": "추가로 확인한 독립 사례 URL",
+      "items": {
+        "type": "string",
+        "description": "사례 URL",
+        "examples": [
+          "https://discussions.apple.com/"
+        ],
+        "format": "uri"
+      },
+      "examples": [
+        []
+      ]
+    },
+    "missing_fields": {
+      "type": "array",
+      "description": "결측 필드 경로; 와일드카드 허용",
+      "items": {
+        "type": "string",
+        "description": "경로",
+        "examples": [
+          "os_version"
+        ]
+      },
+      "examples": [
+        []
+      ]
+    },
+    "conflict_status": {
+      "type": "string",
+      "description": "검증 충돌 여부",
+      "examples": [
+        "N"
+      ],
+      "enum": [
+        "NONE",
+        "CONFLICT",
+        "UNKNOWN"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "description": "검토 상태",
+      "examples": [
+        "P"
+      ],
+      "enum": [
+        "PENDING",
+        "NEEDS_REVIEW",
+        "REVIEWED",
+        "REJECTED"
+      ]
+    },
+    "review_notes": {
+      "type": "string",
+      "description": "검토 근거 및 제한",
+      "examples": [
+        "단일 자기보고 사례; 공식 대조 전"
+      ]
+    },
+    "usable_for_compatibility": {
+      "type": "string",
+      "description": "향후 판정 근거 사용 승인 여부",
+      "examples": [
+        "Y"
+      ],
+      "enum": [
+        "YES",
+        "NO",
+        "UNKNOWN"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "source_url",
+    "site_name",
+    "checked_at",
+    "public_access",
+    "reliability_grade",
+    "original_language",
+    "source_status",
+    "source_location",
+    "source_display_model",
+    "source_identity_certainty",
+    "displays",
+    "connection_devices",
+    "desired_configuration",
+    "symptoms",
+    "problem_type",
+    "outcome",
+    "outcome_evidence",
+    "output_mode",
+    "display_mode",
+    "clamshell",
+    "pd_charging",
+    "official_alignment",
+    "official_source_urls",
+    "independent_case_count",
+    "independent_case_urls",
+    "missing_fields",
+    "conflict_status",
+    "review_status",
+    "review_notes",
+    "usable_for_compatibility"
+  ],
+  "additionalProperties": false
+}
