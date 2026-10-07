@@ -11,7 +11,7 @@
 [수집 지침 v2](QUESTION_COLLECTION_GUIDE_V2.md)와 [ADR-006](DECISIONS.md)을 따른다.
 
 CSV는 JSONL에서 만드는 파생 요약으로 직접 수정하지 않는다. 현재 정식 JSONL에는 채택 당시 5건과 [1차 배치](QUESTION_CORPUS_V2_MIGRATION_BATCH_1_REPORT.md) 5건,
-총 10건이 있다. 나머지 10건 이전과 추가 수집은 수행하지 않았다. v1과 proposed 아카이브는 과거 기록이다.
+[2차 배치](QUESTION_CORPUS_V2_MIGRATION_BATCH_2_REPORT.md) 6건으로 총 16건이 있다. 나머지 4건 이전과 추가 수집은 수행하지 않았다. v1과 proposed 아카이브는 과거 기록이다.
 채택은 조사 구조의 확정이며 호환성 승인이나 공식 사양 확인을 의미하지 않는다.
 [정식화 검증 기록](QUESTION_CORPUS_V2_ADOPTION_REPORT.md)을 참고한다.
 

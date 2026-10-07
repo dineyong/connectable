@@ -9,8 +9,8 @@
 [정식 JSONL](../data/research/user_questions_v2.jsonl)이 질문 코퍼스의 유일한 기준 원본이다.
 UTF-8, LF, 한 줄 한 사례, schema_version="2"로 저장한다. CSV는 필요할 때 생성하는 파생 요약이며
 직접 수정하거나 JSONL로 역수입하지 않는다. v1 CSV는 과거 자료로 동결 보존한다.
-채택 시 정식화한 5건에 [1차 배치](QUESTION_CORPUS_V2_MIGRATION_BATCH_1_REPORT.md) 5건을 추가하여 현재 10건이다.
-나머지 10건 이전·21~100번 수집·공식 사양 대조·호환성 판정은 이번 배치에서 수행하지 않는다. 조사 구조 채택을 제품/UI 개발 착수로 해석하지 않는다.
+채택 시 정식화한 5건에 [1차 배치](QUESTION_CORPUS_V2_MIGRATION_BATCH_1_REPORT.md) 5건과 [2차 배치](QUESTION_CORPUS_V2_MIGRATION_BATCH_2_REPORT.md) 6건을 추가하여 현재 16건이다.
+나머지 4건 이전·21~100번 수집·공식 사양 대조·호환성 판정은 이번 배치에서 수행하지 않는다. 조사 구조 채택을 제품/UI 개발 착수로 해석하지 않는다.
 
 ## 포함과 제외
 
