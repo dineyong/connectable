@@ -1,7 +1,7 @@
-"""Validate the proposed v2 JSONL structure and corpus semantics (stdlib only).
+"""Validate the authoritative v2 JSONL structure and corpus semantics (stdlib only).
 
 A bounded JSON Schema subset, not a general engine. It checks all validation
-keywords used by this proposal and rejects unsupported keywords at schema load.
+keywords used by this schema and rejects unsupported keywords at schema load.
 Source truth, authorship and catalog matches still require human review.
 """
 import argparse
@@ -14,16 +14,16 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-SCHEMA_PATH = ROOT / 'schemas/user-question-v2.proposed.schema.json'
-DEFAULT_FILE = ROOT / 'data/research/user_questions_v2.example.jsonl'
+SCHEMA_PATH = ROOT / 'schemas/user-question-v2.schema.json'
+DEFAULT_FILE = ROOT / 'data/research/user_questions_v2.jsonl'
 SUPPORTED = {'$schema', '$id', '$defs', '$ref', 'title', 'description', 'examples',
              'type', 'properties', 'required', 'additionalProperties', 'items',
-             'enum', 'pattern', 'format', 'minLength', 'minimum',
+             'enum', 'pattern', 'format', 'minLength', 'maxLength', 'minimum',
              'exclusiveMinimum', 'minItems', 'uniqueItems'}
 
 
 def audit_schema(spec):
-    """Fail closed if a later proposal adds validation we do not implement."""
+    """Fail closed if a later schema adds validation we do not implement."""
     unknown = set(spec) - SUPPORTED
     if unknown:
         raise ValueError(f'unsupported schema keywords: {sorted(unknown)}')
@@ -101,6 +101,8 @@ def check_value(value, spec, root, path='$'):
     elif kind == 'string':
         if not value.strip() or len(value) < spec.get('minLength', 0):
             errors.append(f'{path}: blank/short value; omit unknown optional fields')
+        if len(value) > spec.get('maxLength', len(value)):
+            errors.append(f'{path}: exceeds maximum string length')
         if value.startswith(('=', '+', '-', '@')):
             errors.append(f'{path}: spreadsheet formula prefix forbidden')
         if 'pattern' in spec and not re.fullmatch(spec['pattern'], value):
@@ -184,6 +186,23 @@ def check_semantics(r):
             error('$.evidence', 'OTHER_COMMENT requires OTHER')
         if e.get('published_at', e['checked_at']) > e['checked_at']:
             error('$.evidence', 'publication after check date')
+    for e in evidence.values():
+        if ('author_configuration_terminations' in e or 'author_case_termination' in e) and e['actor'] != 'CASE_AUTHOR':
+            error('$.evidence', 'explicit termination must be a CASE_AUTHOR declaration')
+        declared_configs = set()
+        for declaration in e.get('author_configuration_terminations', []):
+            cid = declaration['configuration_id']
+            if cid in declared_configs:
+                error('$.evidence.author_configuration_terminations', 'duplicate configuration declaration')
+            declared_configs.add(cid)
+            if cid not in configs or configs[cid]['role'] != 'OBSERVED':
+                error('$.evidence.author_configuration_terminations', 'declaration requires OBSERVED configuration')
+    classification = r['case_classification']
+    if 'LONG_TERM_REPORT' in classification['types'] and 'long_term_basis' not in classification:
+        error('$.case_classification', 'LONG_TERM_REPORT requires explicit duration or continued-use basis')
+    if 'long_term_basis' in classification:
+        author_refs(classification['long_term_basis'], '$.case_classification.long_term_basis')
+    author_refs(r['review']['commercial_context'], '$.review.commercial_context')
     source = r['source']
     if source.get('published_at', source['checked_at']) > source['checked_at']:
         error('$.source', 'publication after check date')
@@ -281,13 +300,32 @@ def check_semantics(r):
                 error(path, f'{low} exceeds {high}')
         if all(k in c for k in ('independent_extended', 'mirrored', 'lit')) and c['independent_extended'] + c['mirrored'] > c['lit']:
             error(path, 'extended and mirrored membership exceeds lit count')
+    def mode_counts(c, states, path):
+        if c['scope'] == 'UNKNOWN':
+            return
+        scoped = [state for state in states if state['node_id'] in nodes and
+                  (c['scope'] == 'INCLUDING_INTERNAL' or
+                   nodes[state['node_id']].get('display_scope') == 'EXTERNAL')]
+        known_mirror = sum(state['lit'] == 'YES' and state.get('display_mode') == 'MIRROR' for state in scoped)
+        known_extended = sum(state['lit'] == 'YES' and state.get('display_mode') == 'EXTEND' for state in scoped)
+        for key, known in [('mirrored', known_mirror), ('independent_extended', known_extended)]:
+            if key in c and c[key] < known:
+                error(path, 'counts contradict known per-display mode')
+        for bound in ('lit', 'connected'):
+            if bound in c:
+                if c.get('independent_extended', 0) + known_mirror > c[bound] or c.get('mirrored', 0) + known_extended > c[bound]:
+                    error(path, 'mirror and extended membership overlap known display states')
+                if all(key in c for key in ('independent_extended', 'mirrored')) and c['independent_extended'] + c['mirrored'] > c[bound]:
+                    error(path, 'extended and mirrored membership exceeds physical bound')
     counts(r['goal']['counts'], '$.goal.counts')
+    mode_counts(r['goal']['counts'], r['goal']['display_states'], '$.goal.counts')
     for o in observations.values():
         author_refs(o, '$.observations')
         cfg = configs.get(o['configuration_id'])
         if not cfg or cfg['role'] != 'OBSERVED':
             error('$.observations.configuration_id', 'actual state must reference OBSERVED configuration')
         counts(o['counts'], '$.observations.counts')
+        mode_counts(o['counts'], o['display_states'], '$.observations.counts')
         seen = set()
         for state in o['display_states']:
             nid = state['node_id']
@@ -331,8 +369,35 @@ def check_semantics(r):
                'UNRESOLVED': {'OPEN'}, 'UNKNOWN': {'UNKNOWN'}}
     if outcome['closure'] not in allowed[outcome['status']]:
         error('$.outcome', 'status/closure mismatch; no signal is not final FAILURE')
-    if outcome['status'] != 'UNKNOWN' and not outcome['observation_ids']:
+    if outcome['status'] not in ('UNKNOWN', 'FAILURE') and not outcome['observation_ids']:
         error('$.outcome', 'reported outcome requires observation evidence')
+    if outcome['status'] == 'FAILURE':
+        if not any(evidence[eid].get('author_case_termination', {}).get('termination_type') == outcome['closure']
+                   for eid in outcome['evidence_refs'] if eid in author_ids):
+            error('$.outcome', 'FAILURE requires an explicit author case termination; configuration failure alone is insufficient')
+    concluded = set()
+    for conclusion in r.get('configuration_conclusions', []):
+        cid = conclusion['configuration_id']
+        path = '$.configuration_conclusions'
+        if cid in concluded:
+            error(path, 'one conclusion per configuration; conflicting duplicates forbidden')
+        concluded.add(cid)
+        if cid not in configs or configs[cid]['role'] != 'OBSERVED':
+            error(path, 'conclusion requires OBSERVED configuration')
+        author_refs(conclusion, path)
+        for oid in conclusion.get('observation_ids', []):
+            if oid not in observations or observations[oid]['configuration_id'] != cid:
+                error(path + '.observation_ids', 'observation must belong to concluded configuration')
+        if conclusion['termination_type'] not in allowed[conclusion['status']]:
+            error(path, 'status/termination_type mismatch')
+        if conclusion['status'] == 'FAILURE':
+            supported = any(declaration['configuration_id'] == cid and
+                            declaration['termination_type'] == conclusion['termination_type']
+                            for eid in conclusion['evidence_refs'] if eid in author_ids
+                            for declaration in evidence[eid].get('author_configuration_terminations', []))
+            if not supported:
+                error(path, 'FAILURE requires a scoped explicit author configuration termination; NO_SIGNAL or silence is insufficient')
+        # Never infer or overwrite the case outcome from this array.
     for link in r['product_links']:
         if link['node_id'] not in nodes:
             error('$.product_links', 'dangling node reference')
@@ -390,7 +455,7 @@ def validate_files(paths):
                         urls.add(key)
                     errors.extend(f'{prefix}: {e}' for e in local)
                 if not any_line:
-                    errors.append(f'{path}: empty v2 example file')
+                    errors.append(f'{path}: empty v2 corpus file')
         except (OSError, UnicodeError) as exc:
             errors.append(f'{path}: file error: {type(exc).__name__}')
     return errors
@@ -409,7 +474,7 @@ def main(argv=None):
     for error in errors:
         print(error, file=sys.stderr)
     if not errors:
-        print('PASS: proposed v2 JSONL: ' + ', '.join(str(p) for p in paths))
+        print('PASS: authoritative v2 JSONL: ' + ', '.join(str(p) for p in paths))
     return int(bool(errors))
 
 
