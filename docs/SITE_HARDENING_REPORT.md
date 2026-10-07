@@ -62,3 +62,8 @@ python3 scripts/serve_mockup.py
 생산용 도메인과 인프라를 선택한 뒤 별도 실제 배포 검수가 필요하다.
 
 [최신 브라우저 검수 화면](screenshots/connectable-hardened.png)을 보존했다.
+
+GitHub 검사에서 기존 Actions의 Node 20 런타임 경고가 발견돼
+[checkout](https://github.com/actions/checkout), [setup-node](https://github.com/actions/setup-node),
+[setup-python](https://github.com/actions/setup-python) 공식 사용 예시의 v7으로 갱신했다.
+Ubuntu 24.04를 고정하고 checkout 인증정보 지속 저장을 끈다.
