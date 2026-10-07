@@ -1,0 +1,1308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://connectable.example/schemas/user-question-v2.proposed.schema.json",
+  "title": "User question corpus v2 — proposed, not adopted",
+  "description": "User-reported configurations and observations; official specifications belong to a separate dataset.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "2-proposed"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^UQ-[0-9]{4,}$"
+    },
+    "case_classification": {
+      "type": "object",
+      "properties": {
+        "types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "QUESTION",
+              "TROUBLESHOOTING_REPORT",
+              "PRE_PURCHASE_QUESTION",
+              "LONG_TERM_REPORT",
+              "UNKNOWN"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "types",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "$ref": "#/$defs/source"
+    },
+    "problem_type": {
+      "type": "string",
+      "description": "주요 문제 분류",
+      "examples": [
+        "NO_SIGNAL"
+      ],
+      "enum": [
+        "NO_SIGNAL",
+        "RESOLUTION",
+        "REFRESH_RATE",
+        "MULTI_DISPLAY",
+        "FLICKER",
+        "PD_CHARGING",
+        "HDR",
+        "OTHER",
+        "UNKNOWN"
+      ]
+    },
+    "environment": {
+      "$ref": "#/$defs/environment"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/node"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "ports": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/port"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "configurations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/configuration"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "goal": {
+      "$ref": "#/$defs/goal"
+    },
+    "attempts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/attempt"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/observation"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "outcome": {
+      "$ref": "#/$defs/outcome"
+    },
+    "product_links": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/product_link"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "review": {
+      "$ref": "#/$defs/review"
+    },
+    "migration": {
+      "$ref": "#/$defs/migration"
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "case_classification",
+    "source",
+    "problem_type",
+    "environment",
+    "evidence",
+    "nodes",
+    "ports",
+    "configurations",
+    "goal",
+    "attempts",
+    "observations",
+    "outcome",
+    "product_links",
+    "review"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "ORIGINAL_POST",
+            "AUTHOR_COMMENT",
+            "EDITED_POST",
+            "OTHER_COMMENT"
+          ]
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "CASE_AUTHOR",
+            "OTHER",
+            "UNKNOWN"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "checked_at": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "published_at": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "publication_sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "MIGRATED_V1",
+            "DIRECT_CHECK"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "actor",
+        "location",
+        "checked_at",
+        "summary",
+        "origin"
+      ],
+      "additionalProperties": false
+    },
+    "node": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "SOURCE",
+            "DISPLAY",
+            "CABLE",
+            "ADAPTER",
+            "HUB",
+            "DOCK",
+            "POWER_SOURCE",
+            "UNKNOWN_DEVICE"
+          ]
+        },
+        "display_model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manufacturer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normalized_model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chip": {
+          "type": "string",
+          "minLength": 1
+        },
+        "variant": {
+          "type": "string",
+          "minLength": 1
+        },
+        "release_year": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "identity_certainty": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "EXACT",
+            "PARTIAL",
+            "UNKNOWN"
+          ]
+        },
+        "display_scope": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "EXTERNAL",
+            "INTERNAL",
+            "UNKNOWN"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "identity_certainty",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "port": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "node_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "connector": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "USB_C",
+            "USB_A",
+            "HDMI",
+            "DISPLAYPORT",
+            "MINI_DISPLAYPORT",
+            "THUNDERBOLT_REPORTED",
+            "VGA",
+            "INTERNAL",
+            "UNKNOWN"
+          ]
+        },
+        "reported_protocol": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "node_id",
+        "connector",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "edge": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "from_port": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "to_port": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "VIDEO",
+            "POWER",
+            "VIDEO_AND_POWER",
+            "UNKNOWN"
+          ]
+        },
+        "path_status": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "REPORTED_LINK",
+            "UNKNOWN_GAP"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "from_port",
+        "to_port",
+        "purpose",
+        "path_status",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "setting": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "key",
+        "value",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "TARGET",
+            "OBSERVED",
+            "ADVICE"
+          ]
+        },
+        "node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "settings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/setting"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "topology_completeness": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "COMPLETE_REPORTED",
+            "PARTIAL",
+            "UNKNOWN"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "role",
+        "node_ids",
+        "edges",
+        "settings",
+        "topology_completeness",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "counts": {
+      "type": "object",
+      "properties": {
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "EXTERNAL_ONLY",
+            "INCLUDING_INTERNAL",
+            "UNKNOWN"
+          ]
+        },
+        "connected": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lit": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "independent_extended": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mirrored": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "internal_screen_lit": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "AUTHOR_REPORT",
+            "SUMMARY_INTERPRETATION",
+            "UNKNOWN"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "scope",
+        "internal_screen_lit",
+        "basis",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "display_state": {
+      "type": "object",
+      "properties": {
+        "node_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "lit": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        },
+        "resolution": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[1-9][0-9]*x[1-9][0-9]*$"
+        },
+        "resolution_label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hz": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "hdr": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        },
+        "display_mode": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "MIRROR",
+            "EXTEND",
+            "UNKNOWN"
+          ]
+        },
+        "output_mode": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "NATIVE",
+            "DISPLAYLINK",
+            "UNKNOWN"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "node_id",
+        "lit",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "observation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sequence_basis": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "REPORTED_SEQUENCE",
+            "RECONSTRUCTED_PARTIAL",
+            "UNORDERED"
+          ]
+        },
+        "configuration_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "signal_state": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "NORMAL",
+            "NO_SIGNAL",
+            "INTERMITTENT",
+            "DEGRADED",
+            "UNKNOWN"
+          ]
+        },
+        "durability": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "TEMPORARY",
+            "RECURRENT",
+            "NO_RECURRENCE_REPORTED",
+            "UNKNOWN"
+          ]
+        },
+        "recurrence_of": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "display_states": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/display_state"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "clamshell": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        },
+        "pd_charging": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        },
+        "pd_watts": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "observed_on": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "relative_time": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "sequence",
+        "sequence_basis",
+        "configuration_id",
+        "summary",
+        "signal_state",
+        "durability",
+        "counts",
+        "display_states",
+        "clamshell",
+        "pd_charging",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "attempt": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sequence_basis": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "REPORTED_SEQUENCE",
+            "RECONSTRUCTED_PARTIAL",
+            "UNORDERED"
+          ]
+        },
+        "stage": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "INITIAL",
+            "INTERMEDIATE",
+            "FINAL",
+            "COMPARISON",
+            "UNKNOWN"
+          ]
+        },
+        "configuration_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observation_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "author_confirmed_on": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "relative_time": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "sequence",
+        "sequence_basis",
+        "stage",
+        "configuration_id",
+        "action",
+        "observation_ids",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "goal": {
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "configuration_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "display_states": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/display_state"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "summary",
+        "configuration_ids",
+        "counts",
+        "display_states",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "outcome": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "SUCCESS",
+            "LIMITED_SUCCESS",
+            "FAILURE",
+            "UNRESOLVED",
+            "UNKNOWN"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observation_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "closure": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "GOAL_MET_REPORTED",
+            "PARTIAL_OR_CONDITIONAL",
+            "FINAL_FAILURE_REPORTED",
+            "ABANDONED_REPORTED",
+            "OPEN",
+            "UNKNOWN"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "status",
+        "summary",
+        "observation_ids",
+        "closure",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "product_link": {
+      "type": "object",
+      "properties": {
+        "node_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z][a-z0-9_-]*$"
+        },
+        "catalog_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^product:[A-Za-z0-9._-]+$"
+        },
+        "resolution": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "CANDIDATE"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "node_id",
+        "catalog_id",
+        "resolution",
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "source_url": {
+          "type": "string",
+          "description": "개인 식별값·추적값을 제거한 공개 원문 URL",
+          "examples": [
+            "https://discussions.apple.com/thread/254292556"
+          ],
+          "format": "uri",
+          "minLength": 1
+        },
+        "site_name": {
+          "type": "string",
+          "description": "사이트명",
+          "examples": [
+            "Apple Support Community"
+          ],
+          "minLength": 1
+        },
+        "published_at": {
+          "type": "string",
+          "description": "원문 게시일; 댓글 사례는 해당 댓글 날짜",
+          "examples": [
+            "2022-10-16"
+          ],
+          "format": "date",
+          "minLength": 1
+        },
+        "checked_at": {
+          "type": "string",
+          "description": "공개 본문을 확인한 한국 날짜",
+          "examples": [
+            "2026-10-07"
+          ],
+          "format": "date",
+          "minLength": 1
+        },
+        "public_access": {
+          "type": "string",
+          "description": "로그인 없이 본문 접근 가능 여부",
+          "examples": [
+            "YES"
+          ],
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ],
+          "minLength": 1
+        },
+        "original_language": {
+          "type": "string",
+          "description": "원문 언어",
+          "examples": [
+            "ko"
+          ],
+          "enum": [
+            "ko",
+            "en",
+            "ja",
+            "zh",
+            "OTHER",
+            "UNKNOWN"
+          ],
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "description": "현재 접근 상태",
+          "examples": [
+            "AVAILABLE"
+          ],
+          "enum": [
+            "AVAILABLE",
+            "DELETED",
+            "INACCESSIBLE",
+            "UNKNOWN"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "source_url",
+        "site_name",
+        "checked_at",
+        "public_access",
+        "original_language",
+        "source_status"
+      ],
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "os_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "os_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9_-]*$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "evidence_refs"
+      ],
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "reliability_grade": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "PENDING",
+            "NEEDS_REVIEW",
+            "REVIEWED",
+            "REJECTED"
+          ]
+        },
+        "usable_for_compatibility": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "NO"
+          ]
+        },
+        "official_comparison": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "NOT_CHECKED"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "missing_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "reliability_grade",
+        "status",
+        "usable_for_compatibility",
+        "official_comparison",
+        "notes",
+        "missing_fields"
+      ],
+      "additionalProperties": false
+    },
+    "migration": {
+      "type": "object",
+      "properties": {
+        "from_schema": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "v1"
+          ]
+        },
+        "source_file": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "data/research/user_questions.csv"
+          ]
+        },
+        "source_record_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^UQ-[0-9]{4,}$"
+        },
+        "row_sha256": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "migrated_at": {
+          "type": "string",
+          "minLength": 1,
+          "format": "date"
+        },
+        "legacy_outcome": {
+          "type": "string",
+          "minLength": 1,
+          "enum": [
+            "SUCCESS",
+            "LIMITED_SUCCESS",
+            "FAILURE",
+            "UNRESOLVED",
+            "UNKNOWN"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "from_schema",
+        "source_file",
+        "source_record_id",
+        "row_sha256",
+        "migrated_at",
+        "legacy_outcome",
+        "notes"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
