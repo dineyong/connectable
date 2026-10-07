@@ -182,3 +182,14 @@ v1 CSV·Schema·검증기·테스트는 기존 경로에서 보존한다. v1 CSV
 [골든 계획](CONNECTION_GOLD_SET_PLAN.md)은 PROPOSED/DRAFT이며 실제 제품 정답이나 공개 승인으로 취급하지 않는다.
 main은 기존 기준선이고 진행 현황은 현재 research 브랜치 README와 보고서에서 확인한다.
 main의 현황 갱신은 추후 검수된 PR과 merge 승인 절차로 수행한다.
+
+## ADR-012: 실제 제품 소수 배치로 typed capability를 검증한다
+
+- 날짜: 2026-10-08
+- 상태: 사용자 요청에 따른 조사 구조 작업 기록 (운영 스키마/판정 승인 아님)
+
+서로 다른 모니터 3·독/허브 3·케이블/어댑터 3의 공식 자료를 조사했다.
+[별도 pilot 보고서](CONNECTION_MODEL_STRESS_PILOT_REPORT.md)와 typed payload를 적용한 조사 원본을 만든다.
+기존 Mac catalog 및 path v1 스키마는 대체하지 않는다. 공급/통과/케이블 한도, 패널/포트/동시 출력,
+MST/DisplayLink routing과 OS·드라이버를 분리한다. 미확정 케이블 식별 기준은 완화하지 않는다.
+실행 조건·공유 자원·PD 협상은 여전히 미완료이며 골든 정답 0/30과 공개 UNKNOWN을 유지한다.

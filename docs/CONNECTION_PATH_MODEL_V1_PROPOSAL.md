@@ -113,3 +113,9 @@ Python 164개 PASS(기존 154 + 구조 회귀 10). 공식 데이터·코퍼스�
 claim_ref의 실제 catalog 존재·적용성, 방향별 프로토콜 협상, cycle/중복 스트림·PD 흐름·승인은 아직 검증하지 않는다.
 이 검사 통과는 topology 구조의 일부 무결성일 뿐 물리 연결이나 호환성 통과가 아니다.
 브라우저 변경이 없어 e2e는 재실행하지 않았다. 문서 경로·JSON 구문·diff·원본 무변경을 확인했다.
+
+## 실제 자료 후속 검증
+
+[9개 제품 stress pilot](CONNECTION_MODEL_STRESS_PILOT_REPORT.md)에서 value_label만으로 손실되는 관계를 확인했다.
+8개 typed fact payload는 별도 파일에서 검증했으며 이 v1 스키마를 임의로 변경하거나 정식 채택하지 않았다.
+다음은 typed facts의 포트 바인딩·실행 조건·공유 자원·power flow를 소수 경로로 검증하는 단계다.
