@@ -1,0 +1,247 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Official product foundation v1",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": [
+        "1"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "source_title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publisher": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "MANUFACTURER_SPEC"
+            ]
+          },
+          "reliability_grade": {
+            "type": "string",
+            "enum": [
+              "A"
+            ]
+          },
+          "accessed_at": {
+            "type": "string",
+            "format": "date"
+          },
+          "published_or_updated_at": {
+            "type": "string"
+          },
+          "applies_to_model": {
+            "type": "string",
+            "minLength": 1
+          },
+          "claim_summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quoted_fragment_or_location": {
+            "type": "string",
+            "minLength": 1
+          },
+          "archived_or_snapshot_reference": {
+            "type": "string"
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "PENDING_HUMAN_REVIEW"
+            ]
+          },
+          "review_notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source_id",
+          "source_url",
+          "source_title",
+          "publisher",
+          "source_type",
+          "reliability_grade",
+          "accessed_at",
+          "applies_to_model",
+          "claim_summary",
+          "quoted_fragment_or_location",
+          "review_status",
+          "review_notes"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "pattern": "^product:[a-z0-9-]+$"
+          },
+          "manufacturer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model_number": {
+            "type": "string",
+            "minLength": 1
+          },
+          "release_year": {
+            "type": "integer",
+            "minimum": 2020
+          },
+          "chip": {
+            "type": "string",
+            "minLength": 1
+          },
+          "region": {
+            "type": "string",
+            "enum": [
+              "KR"
+            ]
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "claims": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "claim_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "property": {
+                  "type": "string",
+                  "enum": [
+                    "NATIVE_EXTERNAL_DISPLAY_PROFILE",
+                    "PORT_FUNCTIONS"
+                  ]
+                },
+                "summary": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_refs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
+                },
+                "location": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "conditions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
+                },
+                "external_count": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "resolution_label": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "refresh_hz": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "claim_id",
+                "property",
+                "summary",
+                "source_refs",
+                "location",
+                "conditions"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "missing_fields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "PENDING_HUMAN_REVIEW"
+            ]
+          }
+        },
+        "required": [
+          "product_id",
+          "manufacturer",
+          "model_name",
+          "model_number",
+          "release_year",
+          "chip",
+          "region",
+          "source_refs",
+          "claims",
+          "missing_fields",
+          "review_status"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "version",
+    "sources",
+    "products"
+  ],
+  "additionalProperties": false
+}

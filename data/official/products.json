@@ -1,0 +1,137 @@
+{
+  "version": "1",
+  "sources": [
+    {
+      "source_id": "APPLE-111883",
+      "source_url": "https://support.apple.com/ko-kr/111883",
+      "source_title": "MacBook Air (M1, 2020) - 기술 사양",
+      "publisher": "Apple",
+      "source_type": "MANUFACTURER_SPEC",
+      "reliability_grade": "A",
+      "accessed_at": "2026-10-08",
+      "applies_to_model": "product:air-m1-2020",
+      "claim_summary": "외장 출력 프로파일과 포트 기능 확인",
+      "quoted_fragment_or_location": "비디오 지원; 충전 및 확장; 상품정보표시",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "review_notes": "공개 공식 원문 직접 확인. 사람 최종 검수와 조합 판정은 미완료. 페이지 갱신일은 확인되지 않음."
+    },
+    {
+      "source_id": "APPLE-111867",
+      "source_url": "https://support.apple.com/ko-kr/111867",
+      "source_title": "MacBook Air (M2, 2022) - 기술 사양",
+      "publisher": "Apple",
+      "source_type": "MANUFACTURER_SPEC",
+      "reliability_grade": "A",
+      "accessed_at": "2026-10-08",
+      "applies_to_model": "product:air-m2-2022",
+      "claim_summary": "외장 출력 프로파일과 포트 기능 확인",
+      "quoted_fragment_or_location": "디스플레이 지원; 충전 및 확장; 상품정보표시",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "review_notes": "공개 공식 원문 직접 확인. 사람 최종 검수와 조합 판정은 미완료. 페이지 갱신일은 확인되지 않음."
+    }
+  ],
+  "products": [
+    {
+      "product_id": "product:air-m1-2020",
+      "manufacturer": "Apple",
+      "model_name": "MacBook Air (M1, 2020)",
+      "model_number": "A2337",
+      "release_year": 2020,
+      "chip": "M1",
+      "region": "KR",
+      "source_refs": [
+        "APPLE-111883"
+      ],
+      "claims": [
+        {
+          "claim_id": "product:air-m1-2020:display",
+          "property": "NATIVE_EXTERNAL_DISPLAY_PROFILE",
+          "summary": "내장 화면과 동시에 외장 1대, 최대 6K 60Hz",
+          "source_refs": [
+            "APPLE-111883"
+          ],
+          "location": "비디오 지원",
+          "conditions": [
+            "네이티브 출력",
+            "내장 디스플레이 동시 사용",
+            "개별 케이블·모니터 조합 보증 아님"
+          ],
+          "external_count": 1,
+          "resolution_label": "6K",
+          "refresh_hz": 60
+        },
+        {
+          "claim_id": "product:air-m1-2020:ports",
+          "property": "PORT_FUNCTIONS",
+          "summary": "Thunderbolt/USB 4 포트 2개에서 충전 및 DisplayPort 지원",
+          "source_refs": [
+            "APPLE-111883"
+          ],
+          "location": "충전 및 확장",
+          "conditions": [
+            "포트 수는 외장 화면 수가 아님",
+            "충전 가능 표기는 최소 PD 전력 확정이 아님"
+          ]
+        }
+      ],
+      "missing_fields": [
+        "최소 PD 입력 전력",
+        "HDMI 어댑터별 해상도·주사율",
+        "모니터·케이블·독별 동시 조건",
+        "클램쉘 별도 조건"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "product_id": "product:air-m2-2022",
+      "manufacturer": "Apple",
+      "model_name": "MacBook Air (M2, 2022)",
+      "model_number": "A2681",
+      "release_year": 2022,
+      "chip": "M2",
+      "region": "KR",
+      "source_refs": [
+        "APPLE-111867"
+      ],
+      "claims": [
+        {
+          "claim_id": "product:air-m2-2022:display",
+          "property": "NATIVE_EXTERNAL_DISPLAY_PROFILE",
+          "summary": "내장 화면과 동시에 외장 1대, 최대 6K 60Hz",
+          "source_refs": [
+            "APPLE-111867"
+          ],
+          "location": "디스플레이 지원",
+          "conditions": [
+            "네이티브 출력",
+            "내장 디스플레이 동시 사용",
+            "개별 케이블·모니터 조합 보증 아님"
+          ],
+          "external_count": 1,
+          "resolution_label": "6K",
+          "refresh_hz": 60
+        },
+        {
+          "claim_id": "product:air-m2-2022:ports",
+          "property": "PORT_FUNCTIONS",
+          "summary": "Thunderbolt/USB 4 포트 2개에서 충전 및 DisplayPort 지원",
+          "source_refs": [
+            "APPLE-111867"
+          ],
+          "location": "충전 및 확장",
+          "conditions": [
+            "포트 수는 외장 화면 수가 아님",
+            "충전 가능 표기는 최소 PD 전력 확정이 아님"
+          ]
+        }
+      ],
+      "missing_fields": [
+        "최소 PD 입력 전력",
+        "HDMI 어댑터별 해상도·주사율",
+        "모니터·케이블·독별 동시 조건",
+        "클램쉘 별도 조건"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW"
+    }
+  ]
+}
