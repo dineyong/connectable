@@ -1,15 +1,337 @@
 <!doctype html>
 <html lang="ko">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>connectable — 연결 전에, 확인하세요.</title><link rel="stylesheet" href="styles.css"></head>
-<body>
-<header class="header"><a class="brand" href="#home" aria-label="connectable 홈"><span class="brand-icon">c<span>↗</span></span>connectable<span class="brand-dot">.</span></a><nav aria-label="주요 메뉴"><a href="#checker">연결 확인</a><a href="#stories">사용자 사례</a><a href="#principles">확인하는 방법</a></nav><span class="preview-tag">PREVIEW <i></i></span></header>
-<main id="home">
-<section class="hero"><div class="hero-copy"><div class="eyebrow"><span></span> YOUR SETUP, CONNECTED.</div><h1>연결 전에,<br>확인하세요<span class="green">.</span></h1><p>맥북부터 모니터, 그 사이의 케이블까지.<br>내 구성에서 가능한 연결을 근거와 함께 확인하세요.</p><a class="button primary" href="#checker">내 연결 구성 확인하기 <span>↗</span></a><div class="hero-foot"><span class="tiny-circle">✓</span> 공식 사양과 실제 사용 경험을 구분해 확인합니다</div></div><div class="setup-art" aria-label="노트북에서 허브를 거쳐 두 모니터로 연결되는 구성 그림"><div class="art-top"><span>YOUR WORKSPACE</span><span class="art-pill">02 DISPLAYS</span></div><div class="monitor monitor-one"><div class="screen screen-one"><div class="screen-nav"></div><div class="screen-block large"></div><div class="screen-lines"></div><div class="screen-block small"></div></div><div class="stand"></div></div><div class="monitor monitor-two"><div class="screen screen-two"><span>make<br>room.</span><div class="screen-circle"></div></div><div class="stand"></div></div><div class="wire wire-one"></div><div class="wire wire-two"></div><div class="hub"><i></i><i></i><i></i><span>USB-C</span></div><div class="wire wire-three"></div><div class="laptop"><div class="laptop-screen"><span>hello<span class="green">.</span></span></div><div class="laptop-base"></div></div><span class="art-label label-one">모니터</span><span class="art-label label-two">허브 · 독</span><span class="art-label label-three">맥북</span><div class="art-bottom"><span>하나의 구성, 모든 연결 조건.</span><span>↗</span></div></div></section>
-<div class="facts"><div><span class="fact-icon">↗</span><span>해상도 · 주사율<strong>화면의 가능성을 확인</strong></span></div><div><span class="fact-icon">▣</span><span>외장 디스플레이<strong>복제와 독립 확장을 구분</strong></span></div><div><span class="fact-icon">ϟ</span><span>USB-C · PD 충전<strong>영상과 충전 조건을 함께</strong></span></div><div><span class="fact-icon">◎</span><span>추측 대신 근거<strong>출처와 확인 날짜까지</strong></span></div></div>
-<section id="checker" class="checker section"><div class="section-heading"><div><div class="eyebrow muted">BUILD YOUR CONNECTION</div><h2>어떤 구성으로 연결할까요?</h2><p>가지고 있는 기기와 원하는 화면 구성을 알려주세요.</p></div><span class="section-index">01 / CONNECTION</span></div><div class="checker-layout"><form id="connection-form" class="form-card"><div class="card-title"><span class="step">01</span><h3>내 연결 구성</h3><span class="optional-note">모델 미상도 입력 가능</span></div><div class="fields"><label>맥북 모델<select id="source" name="source"><option value="">모델을 선택하세요</option><option>MacBook Air</option><option>MacBook Pro</option><option>모델을 잘 모르겠어요</option></select></label><label>칩<select id="chip" name="chip"><option value="">칩을 선택하세요</option><option>M1</option><option>M1 Pro</option><option>M1 Max</option><option>M2</option><option>M2 Pro</option><option>M2 Max</option><option>M3</option><option>M3 Pro</option><option>M3 Max</option><option>M4</option><option>M4 Pro</option><option>M4 Max</option><option>모르겠어요</option></select></label><label class="full">모니터 모델 <span class="label-note">선택</span><input id="display" name="display" maxlength="120" placeholder="예: Dell U2723QE 또는 모델 미상"></label><label>연결 방식<select id="connection" name="connection"><option value="">방식을 선택하세요</option><option>HDMI 직접 연결</option><option>USB-C 직접 연결</option><option>USB-C → DisplayPort</option><option>USB-C → HDMI 어댑터</option><option>USB-C 허브</option><option>Thunderbolt 독</option><option>아직 정하지 않았어요</option></select></label><label>외장 모니터 수<select id="count" name="count"><option value="1">1대</option><option value="2">2대</option><option value="3">3대 이상</option></select></label><label>목표 해상도<select id="resolution" name="resolution"><option>4K</option><option>FHD</option><option>QHD</option><option>5K 이상</option><option>미정</option></select></label><label>목표 주사율<select id="refresh" name="refresh"><option>60Hz</option><option>120Hz</option><option>144Hz 이상</option><option>미정</option></select></label></div><label class="checkbox"><input id="charging" type="checkbox"> 케이블 하나로 충전도 하고 싶어요</label><div id="form-error" class="error" role="alert"></div><button class="button primary form-button" type="submit">확인할 연결 조건 보기 <span>↗</span></button><p class="form-disclaimer">현재는 화면 목업입니다. 입력은 서버에 전송되거나 저장되지 않습니다.</p></form><aside class="result-card" id="result" aria-live="polite"><div class="result-header"><span>CONNECTION OVERVIEW</span><span class="status-dot"></span></div><div class="result-empty"><div class="empty-icon">↗</div><h3>좋은 연결의 시작은<br>정확한 구성에서.</h3><p>왼쪽에서 구성을 선택하면<br>확인이 필요한 항목을 정리해 드립니다.</p></div><div class="result-note"><span>ⓘ</span><p>공식 사양 대조 전에는 연결 가능 여부를 확정하지 않습니다.</p></div></aside></div></section>
-<section id="stories" class="stories section"><div class="section-heading"><div><div class="eyebrow muted">REAL SETUPS, REAL EXPERIENCES</div><h2>실제 연결에서 발견한 것들</h2><p>성공한 구성부터 풀리지 않은 문제까지, 공개 원문을 바탕으로 정리했습니다.</p></div><span class="section-index">02 / FIELD NOTES</span></div><div class="story-toolbar"><div class="filters" role="group" aria-label="사례 결과 필터"><button class="active" data-filter="ALL" aria-pressed="true">전체 <span id="total-count"></span></button><button data-filter="SUCCESS" aria-pressed="false">성공</button><button data-filter="LIMITED_SUCCESS" aria-pressed="false">제한적 성공</button><button data-filter="UNRESOLVED" aria-pressed="false">미해결</button></div><label class="search-label"><span>⌕</span><input type="search" id="case-search" aria-label="기기 또는 사례 검색" placeholder="기기 또는 문제 검색"></label></div><p class="corpus-notice">사용자 관측 사례 · 공식 호환 판정 전 · 단일 사례로 연결 가능을 보장하지 않습니다.</p><div id="story-grid" class="story-grid"></div><p id="empty-search" class="empty-search" hidden>일치하는 사례가 없습니다. 다른 검색어나 필터를 선택해 주세요.</p><button id="show-more" class="button secondary">사례 더 보기 <span>↓</span></button></section>
-<section id="principles" class="principles section"><div class="section-heading"><div><div class="eyebrow muted">EVIDENCE BEFORE ANSWERS</div><h2>‘될 것 같아요’ 대신,<br>확인할 수 있는 근거.</h2></div><p class="principles-intro">같은 USB-C라도 조건은 다릅니다.<br>제품의 사양과 사용자의 관측을<br>각각 확인하고 함께 살펴봅니다.</p></div><div class="principle-grid"><article><span class="principle-number">01</span><h3>공식 사양을 먼저</h3><p>제조사가 명시한 모델별 출력·충전 조건을 확인합니다. 아직 대조되지 않은 사양은 미확인으로 남깁니다.</p><span class="principle-status">공식 데이터 구축 예정</span></article><article><span class="principle-number">02</span><h3>실사용은 별도의 근거로</h3><p>원문과 작성자의 결과를 연결합니다. 다른 사람의 제안을 실제로 실행한 해결 방법으로 기록하지 않습니다.</p><span class="principle-status">한국어 파일럿 20건 수집</span></article><article><span class="principle-number">03</span><h3>모르면, 모른다고</h3><p>정확한 모델, 케이블, 설정이 빠져 있다면 추정으로 채우지 않습니다. 미확인 조건을 분명하게 보여줍니다.</p><span class="principle-status">v2 구조화 사례 16건</span></article></div></section>
-<section class="closing"><div><div class="eyebrow">LESS GUESSWORK. MORE CLARITY.</div><h2>책상 위의 다음 연결,<br>조금 더 확실하게.</h2></div><a class="button light" href="#checker">내 구성 살펴보기 <span>↗</span></a></section>
-</main><footer><a class="brand" href="#home">connectable<span class="brand-dot">.</span></a><p>연결의 가능성을, 근거와 함께.</p><span>조사 기반 목업 · 2026</span></footer>
-<dialog id="case-dialog"><div class="dialog-top"><span id="dialog-id"></span><button id="close-dialog" aria-label="사례 상세 닫기">×</button></div><div id="dialog-body"></div></dialog>
-<script src="cases.js"></script><script src="app.js"></script></body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      name="description"
+      content="맥북과 모니터 연결 조건을 살펴보고 출처가 있는 실사용 사례를 확인하는 connectable 목업."
+    />
+    <title>connectable — 연결 전에, 확인하세요.</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#checker">연결 구성 입력으로 바로가기</a>
+    <header class="header">
+      <a class="brand" href="#home" aria-label="connectable 홈"
+        ><span class="brand-icon">c<span>↗</span></span
+        >connectable<span class="brand-dot">.</span></a
+      >
+      <nav aria-label="주요 메뉴">
+        <a href="#checker">연결 확인</a><a href="#stories">사용자 사례</a
+        ><a href="#principles">확인하는 방법</a>
+      </nav>
+      <span class="preview-tag">PREVIEW <i></i></span>
+    </header>
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> YOUR SETUP, CONNECTED.</div>
+          <h1>연결 전에,<br />확인하세요<span class="green">.</span></h1>
+          <p>
+            맥북부터 모니터, 그 사이의 케이블까지.<br />내 구성에서 가능한
+            연결을 근거와 함께 확인하세요.
+          </p>
+          <a class="button primary" href="#checker"
+            >내 연결 구성 확인하기 <span>↗</span></a
+          >
+          <div class="hero-foot">
+            <span class="tiny-circle">✓</span> 공식 사양과 실제 사용 경험을
+            구분해 확인합니다
+          </div>
+        </div>
+        <div
+          class="setup-art"
+          aria-label="노트북에서 허브를 거쳐 두 모니터로 연결되는 구성 그림"
+        >
+          <div class="art-top">
+            <span>YOUR WORKSPACE</span><span class="art-pill">02 DISPLAYS</span>
+          </div>
+          <div class="monitor monitor-one">
+            <div class="screen screen-one">
+              <div class="screen-nav"></div>
+              <div class="screen-block large"></div>
+              <div class="screen-lines"></div>
+              <div class="screen-block small"></div>
+            </div>
+            <div class="stand"></div>
+          </div>
+          <div class="monitor monitor-two">
+            <div class="screen screen-two">
+              <span>make<br />room.</span>
+              <div class="screen-circle"></div>
+            </div>
+            <div class="stand"></div>
+          </div>
+          <div class="wire wire-one"></div>
+          <div class="wire wire-two"></div>
+          <div class="hub"><i></i><i></i><i></i><span>USB-C</span></div>
+          <div class="wire wire-three"></div>
+          <div class="laptop">
+            <div class="laptop-screen">
+              <span>hello<span class="green">.</span></span>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+          <span class="art-label label-one">모니터</span
+          ><span class="art-label label-two">허브 · 독</span
+          ><span class="art-label label-three">맥북</span>
+          <div class="art-bottom">
+            <span>하나의 구성, 모든 연결 조건.</span><span>↗</span>
+          </div>
+        </div>
+      </section>
+      <div class="facts">
+        <div>
+          <span class="fact-icon">↗</span
+          ><span>해상도 · 주사율<strong>화면의 가능성을 확인</strong></span>
+        </div>
+        <div>
+          <span class="fact-icon">▣</span
+          ><span>외장 디스플레이<strong>복제와 독립 확장을 구분</strong></span>
+        </div>
+        <div>
+          <span class="fact-icon">ϟ</span
+          ><span>USB-C · PD 충전<strong>영상과 충전 조건을 함께</strong></span>
+        </div>
+        <div>
+          <span class="fact-icon">◎</span
+          ><span>추측 대신 근거<strong>출처와 확인 날짜까지</strong></span>
+        </div>
+      </div>
+      <section id="checker" class="checker section">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow muted">BUILD YOUR CONNECTION</div>
+            <h2>어떤 구성으로 연결할까요?</h2>
+            <p>가지고 있는 기기와 원하는 화면 구성을 알려주세요.</p>
+          </div>
+          <span class="section-index">01 / CONNECTION</span>
+        </div>
+        <div class="checker-layout">
+          <form autocomplete="off" id="connection-form" class="form-card">
+            <div class="card-title">
+              <span class="step">01</span>
+              <h3>내 연결 구성</h3>
+              <span class="optional-note">모델 미상도 입력 가능</span>
+            </div>
+            <div class="fields">
+              <label
+                >맥북 모델<select id="source" name="source">
+                  <option value="">모델을 선택하세요</option>
+                  <option>MacBook Air</option>
+                  <option>MacBook Pro</option>
+                  <option>모델을 잘 모르겠어요</option>
+                </select></label
+              ><label
+                >칩<select id="chip" name="chip">
+                  <option value="">칩을 선택하세요</option>
+                  <option>M1</option>
+                  <option>M1 Pro</option>
+                  <option>M1 Max</option>
+                  <option>M2</option>
+                  <option>M2 Pro</option>
+                  <option>M2 Max</option>
+                  <option>M3</option>
+                  <option>M3 Pro</option>
+                  <option>M3 Max</option>
+                  <option>M4</option>
+                  <option>M4 Pro</option>
+                  <option>M4 Max</option>
+                  <option>모르겠어요</option>
+                </select></label
+              ><label class="full"
+                >모니터 모델 <span class="label-note">선택</span
+                ><input
+                  id="display"
+                  name="display"
+                  maxlength="120"
+                  placeholder="예: Dell U2723QE 또는 모델 미상" /></label
+              ><label
+                >연결 방식<select id="connection" name="connection">
+                  <option value="">방식을 선택하세요</option>
+                  <option>HDMI 직접 연결</option>
+                  <option>USB-C 직접 연결</option>
+                  <option>USB-C → DisplayPort</option>
+                  <option>USB-C → HDMI 어댑터</option>
+                  <option>USB-C 허브</option>
+                  <option>Thunderbolt 독</option>
+                  <option>아직 정하지 않았어요</option>
+                </select></label
+              ><label
+                >외장 모니터 수<select id="count" name="count">
+                  <option value="1">1대</option>
+                  <option value="2">2대</option>
+                  <option value="3">3대 이상</option>
+                </select></label
+              ><label
+                >목표 해상도<select id="resolution" name="resolution">
+                  <option>4K</option>
+                  <option>FHD</option>
+                  <option>QHD</option>
+                  <option>5K 이상</option>
+                  <option>미정</option>
+                </select></label
+              ><label
+                >목표 주사율<select id="refresh" name="refresh">
+                  <option>60Hz</option>
+                  <option>120Hz</option>
+                  <option>144Hz 이상</option>
+                  <option>미정</option>
+                </select></label
+              >
+            </div>
+            <label class="checkbox"
+              ><input id="charging" type="checkbox" /> 케이블 하나로 충전도 하고
+              싶어요</label
+            >
+            <div id="form-error" class="error" role="alert"></div>
+            <button class="button primary form-button" type="submit">
+              확인할 연결 조건 보기 <span>↗</span>
+            </button>
+            <p class="form-disclaimer">
+              현재는 화면 목업입니다. 입력은 서버에 전송되거나 저장되지
+              않습니다.
+            </p>
+          </form>
+          <aside class="result-card" id="result" aria-live="polite">
+            <div class="result-header">
+              <span>CONNECTION OVERVIEW</span><span class="status-dot"></span>
+            </div>
+            <div class="result-empty">
+              <div class="empty-icon">↗</div>
+              <h3>좋은 연결의 시작은<br />정확한 구성에서.</h3>
+              <p>
+                왼쪽에서 구성을 선택하면<br />확인이 필요한 항목을 정리해
+                드립니다.
+              </p>
+            </div>
+            <div class="result-note">
+              <span>ⓘ</span>
+              <p>공식 사양 대조 전에는 연결 가능 여부를 확정하지 않습니다.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section id="stories" class="stories section">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow muted">REAL SETUPS, REAL EXPERIENCES</div>
+            <h2>실제 연결에서 발견한 것들</h2>
+            <p>
+              성공한 구성부터 풀리지 않은 문제까지, 공개 원문을 바탕으로
+              정리했습니다.
+            </p>
+          </div>
+          <span class="section-index">02 / FIELD NOTES</span>
+        </div>
+        <div class="story-toolbar">
+          <div class="filters" role="group" aria-label="사례 결과 필터">
+            <button class="active" data-filter="ALL" aria-pressed="true">
+              전체 <span id="total-count"></span></button
+            ><button data-filter="SUCCESS" aria-pressed="false">성공</button
+            ><button data-filter="LIMITED_SUCCESS" aria-pressed="false">
+              제한적 성공</button
+            ><button data-filter="UNRESOLVED" aria-pressed="false">
+              미해결
+            </button>
+          </div>
+          <label class="search-label"
+            ><span>⌕</span
+            ><input
+              type="search"
+              id="case-search"
+              aria-label="기기 또는 사례 검색"
+              placeholder="기기 또는 문제 검색"
+          /></label>
+        </div>
+        <p class="corpus-notice">
+          사용자 관측 사례 · 공식 호환 판정 전 · 단일 사례로 연결 가능을
+          보장하지 않습니다.
+        </p>
+        <p
+          id="search-count"
+          class="corpus-notice"
+          role="status"
+          aria-live="polite"
+        ></p>
+        <div id="story-grid" class="story-grid"></div>
+        <p id="empty-search" class="empty-search" hidden>
+          일치하는 사례가 없습니다. 다른 검색어나 필터를 선택해 주세요.
+        </p>
+        <button id="show-more" class="button secondary">
+          사례 더 보기 <span>↓</span>
+        </button>
+      </section>
+      <section id="principles" class="principles section">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow muted">EVIDENCE BEFORE ANSWERS</div>
+            <h2>‘될 것 같아요’ 대신,<br />확인할 수 있는 근거.</h2>
+          </div>
+          <p class="principles-intro">
+            같은 USB-C라도 조건은 다릅니다.<br />제품의 사양과 사용자의
+            관측을<br />각각 확인하고 함께 살펴봅니다.
+          </p>
+        </div>
+        <div class="principle-grid">
+          <article>
+            <span class="principle-number">01</span>
+            <h3>공식 사양을 먼저</h3>
+            <p>
+              제조사가 명시한 모델별 출력·충전 조건을 확인합니다. 아직 대조되지
+              않은 사양은 미확인으로 남깁니다.
+            </p>
+            <span class="principle-status">공식 데이터 구축 예정</span>
+          </article>
+          <article>
+            <span class="principle-number">02</span>
+            <h3>실사용은 별도의 근거로</h3>
+            <p>
+              원문과 작성자의 결과를 연결합니다. 다른 사람의 제안을 실제로
+              실행한 해결 방법으로 기록하지 않습니다.
+            </p>
+            <span class="principle-status">한국어 파일럿 20건 수집</span>
+          </article>
+          <article>
+            <span class="principle-number">03</span>
+            <h3>모르면, 모른다고</h3>
+            <p>
+              정확한 모델, 케이블, 설정이 빠져 있다면 추정으로 채우지 않습니다.
+              미확인 조건을 분명하게 보여줍니다.
+            </p>
+            <span class="principle-status"
+              >v2 구조화 사례 <span id="corpus-count">20</span>건</span
+            >
+          </article>
+        </div>
+      </section>
+      <section class="closing">
+        <div>
+          <div class="eyebrow">LESS GUESSWORK. MORE CLARITY.</div>
+          <h2>책상 위의 다음 연결,<br />조금 더 확실하게.</h2>
+        </div>
+        <a class="button light" href="#checker"
+          >내 구성 살펴보기 <span>↗</span></a
+        >
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="#home"
+        >connectable<span class="brand-dot">.</span></a
+      >
+      <p>연결의 가능성을, 근거와 함께.</p>
+      <span>조사 기반 목업 · 2026</span>
+    </footer>
+    <dialog id="case-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-top">
+        <span id="dialog-id"></span
+        ><button id="close-dialog" aria-label="사례 상세 닫기">×</button>
+      </div>
+      <div id="dialog-body"></div>
+    </dialog>
+    <script src="cases.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
