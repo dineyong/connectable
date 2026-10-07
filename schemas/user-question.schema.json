@@ -47,7 +47,7 @@
       "type": "string",
       "description": "로그인 없이 본문 접근 가능 여부",
       "examples": [
-        "Y"
+        "YES"
       ],
       "enum": [
         "YES",
@@ -73,7 +73,7 @@
       "type": "string",
       "description": "원문 언어",
       "examples": [
-        "k"
+        "ko"
       ],
       "enum": [
         "ko",
@@ -88,7 +88,7 @@
       "type": "string",
       "description": "현재 접근 상태",
       "examples": [
-        "A"
+        "AVAILABLE"
       ],
       "enum": [
         "AVAILABLE",
@@ -172,7 +172,7 @@
       "type": "string",
       "description": "소스 기기 모델 식별 확실성",
       "examples": [
-        "E"
+        "EXACT"
       ],
       "enum": [
         "EXACT",
@@ -210,7 +210,7 @@
           },
           "resolution": {
             "type": "string",
-            "description": "관측 또는 목표 픽셀 해상도; 4K만 언급되면 비움",
+            "description": "목표 픽셀 해상도; 원문이 4K라고만 하면 비움",
             "examples": [
               "3840x2160"
             ],
@@ -246,7 +246,7 @@
               "type": "string",
               "description": "원문에 명시된 포트. 단자명으로 프로토콜을 추정하지 않음",
               "examples": [
-                "U"
+                "USB_C"
               ],
               "enum": [
                 "USB_C",
@@ -266,7 +266,7 @@
             "type": "string",
             "description": "HDR 사용 여부",
             "examples": [
-              "Y"
+              "YES"
             ],
             "enum": [
               "YES",
@@ -278,12 +278,20 @@
             "type": "string",
             "description": "제품 식별 확실성",
             "examples": [
-              "E"
+              "EXACT"
             ],
             "enum": [
               "EXACT",
               "PARTIAL",
               "UNKNOWN"
+            ]
+          },
+          "actual_resolution": {
+            "type": "string",
+            "description": "실제로 영상이 나온 픽셀 해상도; 목표와 구분",
+            "pattern": "^[1-9][0-9]*x[1-9][0-9]*$",
+            "examples": [
+              "2560x1080"
             ]
           }
         },
@@ -307,7 +315,7 @@
             "type": "string",
             "description": "연결 장치 유형",
             "examples": [
-              "C"
+              "CABLE"
             ],
             "enum": [
               "CABLE",
@@ -346,7 +354,7 @@
               "type": "string",
               "description": "원문에 명시된 포트. 단자명으로 프로토콜을 추정하지 않음",
               "examples": [
-                "U"
+                "USB_C"
               ],
               "enum": [
                 "USB_C",
@@ -369,7 +377,7 @@
               "type": "string",
               "description": "원문에 명시된 포트. 단자명으로 프로토콜을 추정하지 않음",
               "examples": [
-                "U"
+                "USB_C"
               ],
               "enum": [
                 "USB_C",
@@ -389,7 +397,7 @@
             "type": "string",
             "description": "드라이버 실제 사용; 필요 여부와 구분",
             "examples": [
-              "Y"
+              "YES"
             ],
             "enum": [
               "YES",
@@ -401,7 +409,7 @@
             "type": "string",
             "description": "장치 전원 공급 여부",
             "examples": [
-              "Y"
+              "YES"
             ],
             "enum": [
               "YES",
@@ -446,7 +454,7 @@
       "type": "string",
       "description": "주요 문제 분류",
       "examples": [
-        "N"
+        "NO_SIGNAL"
       ],
       "enum": [
         "NO_SIGNAL",
@@ -478,7 +486,7 @@
       "type": "string",
       "description": "관측 결과이며 제품 호환 판정 아님",
       "examples": [
-        "S"
+        "SUCCESS"
       ],
       "enum": [
         "SUCCESS",
@@ -513,7 +521,7 @@
       "type": "string",
       "description": "관측 출력 방식",
       "examples": [
-        "N"
+        "NATIVE"
       ],
       "enum": [
         "NATIVE",
@@ -526,7 +534,7 @@
       "type": "string",
       "description": "화면 모드",
       "examples": [
-        "M"
+        "MIRROR"
       ],
       "enum": [
         "MIRROR",
@@ -539,7 +547,7 @@
       "type": "string",
       "description": "클램쉘 사용 여부",
       "examples": [
-        "Y"
+        "YES"
       ],
       "enum": [
         "YES",
@@ -567,7 +575,7 @@
       "type": "string",
       "description": "소스 기기 충전 관측",
       "examples": [
-        "Y"
+        "YES"
       ],
       "enum": [
         "YES",
@@ -594,7 +602,7 @@
       "type": "string",
       "description": "별도 공식 자료와 대조한 결과",
       "examples": [
-        "M"
+        "MATCH"
       ],
       "enum": [
         "MATCH",
@@ -659,7 +667,7 @@
       "type": "string",
       "description": "검증 충돌 여부",
       "examples": [
-        "N"
+        "NONE"
       ],
       "enum": [
         "NONE",
@@ -671,7 +679,7 @@
       "type": "string",
       "description": "검토 상태",
       "examples": [
-        "P"
+        "PENDING"
       ],
       "enum": [
         "PENDING",
@@ -691,7 +699,7 @@
       "type": "string",
       "description": "향후 판정 근거 사용 승인 여부",
       "examples": [
-        "Y"
+        "YES"
       ],
       "enum": [
         "YES",

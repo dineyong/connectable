@@ -20,10 +20,10 @@
 | `site_name` | 사이트명 | string | 필수 | `자유 값` | `"Apple Support Community"` |
 | `published_at` | 원문 게시일; 댓글 사례는 해당 댓글 날짜 | string | 선택 | `date` | `"2022-10-16"` |
 | `checked_at` | 공개 본문을 확인한 한국 날짜 | string | 필수 | `date` | `"2026-10-07"` |
-| `public_access` | 로그인 없이 본문 접근 가능 여부 | string | 필수 | `YES, NO, UNKNOWN` | `"Y"` |
+| `public_access` | 로그인 없이 본문 접근 가능 여부 | string | 필수 | `YES, NO, UNKNOWN` | `"YES"` |
 | `reliability_grade` | 출처 등급; 단일 사례는 C | string | 필수 | `A, B, C, D, X` | `"A"` |
-| `original_language` | 원문 언어 | string | 필수 | `ko, en, ja, zh, OTHER, UNKNOWN` | `"k"` |
-| `source_status` | 현재 접근 상태 | string | 필수 | `AVAILABLE, DELETED, INACCESSIBLE, UNKNOWN` | `"A"` |
+| `original_language` | 원문 언어 | string | 필수 | `ko, en, ja, zh, OTHER, UNKNOWN` | `"ko"` |
+| `source_status` | 현재 접근 상태 | string | 필수 | `AVAILABLE, DELETED, INACCESSIBLE, UNKNOWN` | `"AVAILABLE"` |
 | `source_location` | 원글 또는 댓글 날짜 등 익명 원문 위치 | string | 필수 | `자유 값` | `"원글"` |
 | `source_manufacturer` | 소스 기기 제조사 | string | 선택 | `자유 값` | `"Apple"` |
 | `source_family` | 제품군 | string | 선택 | `자유 값` | `"MacBook Air"` |
@@ -34,33 +34,33 @@
 | `source_variant` | 화면 크기 또는 하위 모델 | string | 선택 | `자유 값` | `"13-inch"` |
 | `os_name` | 운영체제 | string | 선택 | `자유 값` | `"macOS"` |
 | `os_version` | 보고된 버전 | string | 선택 | `자유 값` | `"15.1.1"` |
-| `source_identity_certainty` | 소스 기기 모델 식별 확실성 | string | 필수 | `EXACT, PARTIAL, UNKNOWN` | `"E"` |
+| `source_identity_certainty` | 소스 기기 모델 식별 확실성 | string | 필수 | `EXACT, PARTIAL, UNKNOWN` | `"EXACT"` |
 | `displays` | 디스플레이별 조건 | array | 필수 | `Schema 참조` | `[]` |
 | `connection_devices` | 케이블·어댑터·허브·독 배열 | array | 필수 | `Schema 참조` | `[]` |
 | `desired_configuration` | 사용자가 원하는 구성의 사실 요약 | string | 필수 | `자유 값` | `"외장 화면 두 대 연결"` |
 | `symptoms` | 보고된 증상 요약 | string | 필수 | `자유 값` | `"두 화면을 함께 사용하지 못함"` |
-| `problem_type` | 주요 문제 분류 | string | 필수 | `NO_SIGNAL, RESOLUTION, REFRESH_RATE, MULTI_DISPLAY, FLICKER, PD_CHARGING, HDR, OTHER, UNKNOWN` | `"N"` |
+| `problem_type` | 주요 문제 분류 | string | 필수 | `NO_SIGNAL, RESOLUTION, REFRESH_RATE, MULTI_DISPLAY, FLICKER, PD_CHARGING, HDR, OTHER, UNKNOWN` | `"NO_SIGNAL"` |
 | `attempted_solutions` | 실제로 시도한 해결 방법; 제안만 받은 방법 제외 | array | 선택 | `Schema 참조` | `[]` |
-| `outcome` | 관측 결과이며 제품 호환 판정 아님 | string | 필수 | `SUCCESS, LIMITED_SUCCESS, FAILURE, UNRESOLVED, UNKNOWN` | `"S"` |
+| `outcome` | 관측 결과이며 제품 호환 판정 아님 | string | 필수 | `SUCCESS, LIMITED_SUCCESS, FAILURE, UNRESOLVED, UNKNOWN` | `"SUCCESS"` |
 | `outcome_evidence` | 원문 내 결과 판단 근거; 제3자와 분리 | string | 필수 | `자유 값` | `"원글에서 연결 실패를 보고하며 후속 확인 없음"` |
 | `solution_devices_or_settings` | 결과에 기여한 장치나 설정 | array | 선택 | `Schema 참조` | `[]` |
-| `output_mode` | 관측 출력 방식 | string | 필수 | `NATIVE, DISPLAYLINK, MIXED, UNKNOWN` | `"N"` |
-| `display_mode` | 화면 모드 | string | 필수 | `MIRROR, EXTEND, MIXED, UNKNOWN` | `"M"` |
-| `clamshell` | 클램쉘 사용 여부 | string | 필수 | `YES, NO, UNKNOWN` | `"Y"` |
+| `output_mode` | 관측 출력 방식 | string | 필수 | `NATIVE, DISPLAYLINK, MIXED, UNKNOWN` | `"NATIVE"` |
+| `display_mode` | 화면 모드 | string | 필수 | `MIRROR, EXTEND, MIXED, UNKNOWN` | `"MIRROR"` |
+| `clamshell` | 클램쉘 사용 여부 | string | 필수 | `YES, NO, UNKNOWN` | `"YES"` |
 | `target_external_display_count` | 원한 외장 화면 수 | integer | 선택 | `Schema 참조` | `1` |
 | `actual_external_display_count` | 실제로 동작했다고 확인한 외장 화면 수 | integer | 선택 | `Schema 참조` | `1` |
-| `pd_charging` | 소스 기기 충전 관측 | string | 필수 | `YES, NO, UNKNOWN` | `"Y"` |
+| `pd_charging` | 소스 기기 충전 관측 | string | 필수 | `YES, NO, UNKNOWN` | `"YES"` |
 | `pd_watts` | 관측 또는 명시된 PD 공급 W | number | 선택 | `Schema 참조` | `65` |
 | `pd_conditions` | 충전기·포트·케이블 등 조건 | string | 선택 | `자유 값` | `"원문 미기재"` |
-| `official_alignment` | 별도 공식 자료와 대조한 결과 | string | 필수 | `MATCH, CONFLICT, UNKNOWN, NOT_CHECKED` | `"M"` |
+| `official_alignment` | 별도 공식 자료와 대조한 결과 | string | 필수 | `MATCH, CONFLICT, UNKNOWN, NOT_CHECKED` | `"MATCH"` |
 | `official_source_urls` | 실제로 읽고 대조한 공식 문서 | array | 필수 | `Schema 참조` | `[]` |
 | `independent_case_count` | 동일 조건의 독립 사례 수; 본 사례 포함, 좋아요 수 제외 | integer | 필수 | `Schema 참조` | `1` |
 | `independent_case_urls` | 추가로 확인한 독립 사례 URL | array | 필수 | `Schema 참조` | `[]` |
 | `missing_fields` | 결측 필드 경로; 와일드카드 허용 | array | 필수 | `Schema 참조` | `[]` |
-| `conflict_status` | 검증 충돌 여부 | string | 필수 | `NONE, CONFLICT, UNKNOWN` | `"N"` |
-| `review_status` | 검토 상태 | string | 필수 | `PENDING, NEEDS_REVIEW, REVIEWED, REJECTED` | `"P"` |
+| `conflict_status` | 검증 충돌 여부 | string | 필수 | `NONE, CONFLICT, UNKNOWN` | `"NONE"` |
+| `review_status` | 검토 상태 | string | 필수 | `PENDING, NEEDS_REVIEW, REVIEWED, REJECTED` | `"PENDING"` |
 | `review_notes` | 검토 근거 및 제한 | string | 필수 | `자유 값` | `"단일 자기보고 사례; 공식 대조 전"` |
-| `usable_for_compatibility` | 향후 판정 근거 사용 승인 여부 | string | 필수 | `YES, NO, UNKNOWN` | `"Y"` |
+| `usable_for_compatibility` | 향후 판정 근거 사용 승인 여부 | string | 필수 | `YES, NO, UNKNOWN` | `"YES"` |
 
 ### displays 배열 항목
 
@@ -69,26 +69,27 @@
 | `displays[].manufacturer` | 제조사 | string | 선택 | `자유 값` | `"BenQ"` |
 | `displays[].display_model` | 원문 모델 표기 | string | 선택 | `자유 값` | `"EW3280U"` |
 | `displays[].normalized_model` | 명시된 모델의 표기 정리; 공식 검증 아님 | string | 선택 | `자유 값` | `"EW3280U"` |
-| `displays[].resolution` | 관측 또는 목표 픽셀 해상도; 4K만 언급되면 비움 | string | 선택 | `^[1-9][0-9]*x[1-9][0-9]*$` | `"3840x2160"` |
+| `displays[].resolution` | 목표 픽셀 해상도; 4K만 언급되면 비움 | string | 선택 | `^[1-9][0-9]*x[1-9][0-9]*$` | `"3840x2160"` |
 | `displays[].resolution_label` | 원문 해상도 표현 | string | 선택 | `자유 값` | `"4K"` |
 | `displays[].target_hz` | 목표 Hz | number | 선택 | `Schema 참조` | `60` |
 | `displays[].actual_hz` | 보고된 실제 Hz; 변동 범위는 메모 | number | 선택 | `Schema 참조` | `30` |
 | `displays[].input_ports` | 명시된 입력 포트 | array | 선택 | `Schema 참조` | `[]` |
-| `displays[].hdr` | HDR 사용 여부 | string | 선택 | `YES, NO, UNKNOWN` | `"Y"` |
-| `displays[].identity_certainty` | 제품 식별 확실성 | string | 필수 | `EXACT, PARTIAL, UNKNOWN` | `"E"` |
+| `displays[].hdr` | HDR 사용 여부 | string | 선택 | `YES, NO, UNKNOWN` | `"YES"` |
+| `displays[].identity_certainty` | 제품 식별 확실성 | string | 필수 | `EXACT, PARTIAL, UNKNOWN` | `"EXACT"` |
+| `displays[].actual_resolution` | 실제 영상이 나온 픽셀 해상도 | string | 선택 | `^[1-9][0-9]*x[1-9][0-9]*$` | `2560x1080` |
 
 ### connection_devices 배열 항목
 
 | 필드 | 설명 | 자료형 | 값 필수 | 허용값/제약 | 예시 |
 |---|---|---|---|---|---|
-| `connection_devices[].kind` | 연결 장치 유형 | string | 필수 | `CABLE, ADAPTER, USB_C_HUB, THUNDERBOLT_DOCK, DISPLAYLINK_DEVICE, UNKNOWN` | `"C"` |
+| `connection_devices[].kind` | 연결 장치 유형 | string | 필수 | `CABLE, ADAPTER, USB_C_HUB, THUNDERBOLT_DOCK, DISPLAYLINK_DEVICE, UNKNOWN` | `"CABLE"` |
 | `connection_devices[].manufacturer` | 제조사 | string | 선택 | `자유 값` | `"Dell"` |
 | `connection_devices[].display_model` | 표시 모델 | string | 선택 | `자유 값` | `"D6000"` |
 | `connection_devices[].normalized_model` | 정리 모델 | string | 선택 | `자유 값` | `"D6000"` |
 | `connection_devices[].input_ports` | 호스트 측 입력 | array | 선택 | `Schema 참조` | `[]` |
 | `connection_devices[].output_ports` | 디스플레이 측 출력 | array | 선택 | `Schema 참조` | `[]` |
-| `connection_devices[].driver_used` | 드라이버 실제 사용; 필요 여부와 구분 | string | 필수 | `YES, NO, UNKNOWN` | `"Y"` |
-| `connection_devices[].power_supplied` | 장치 전원 공급 여부 | string | 필수 | `YES, NO, UNKNOWN` | `"Y"` |
+| `connection_devices[].driver_used` | 드라이버 실제 사용; 필요 여부와 구분 | string | 필수 | `YES, NO, UNKNOWN` | `"YES"` |
+| `connection_devices[].power_supplied` | 장치 전원 공급 여부 | string | 필수 | `YES, NO, UNKNOWN` | `"YES"` |
 | `connection_devices[].notes` | 분기 경로·드라이버·전원 조건 | string | 선택 | `자유 값` | `"드라이버 설치 여부 미상"` |
 
 ## 개인정보·중복·신뢰 기준
