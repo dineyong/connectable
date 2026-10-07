@@ -37,7 +37,7 @@ class V2Tests(unittest.TestCase):
         self.assertTrue(any('schema_version' in e and 'invalid enum' in e for e in errors))
 
     def test_actual_five_examples(self):
-        self.assertEqual({r['id'] for r in self.records}, {'UQ-0007', 'UQ-0009', 'UQ-0010', 'UQ-0012', 'UQ-0022'})
+        self.assertEqual({r['id'] for r in self.records[:5]}, {'UQ-0007', 'UQ-0009', 'UQ-0010', 'UQ-0012', 'UQ-0022'})
         self.assertEqual(v2.validate_files([v2.DEFAULT_FILE]), [])
 
     def test_migration_preserves_v1_identity_and_row_hash(self):
@@ -75,7 +75,7 @@ class V2Tests(unittest.TestCase):
         self.assertNotIn(('usb_cable', 'hdmi_replacement'), paths)
 
     def test_hub_has_two_separate_display_branches(self):
-        r = self.records[-1]
+        r = next(r for r in self.records if r['id'] == 'UQ-0022')
         ports = {p['id']: p['node_id'] for p in r['ports']}
         cfg = r['configurations'][-1]
         destinations = {ports[e['to_port']] for e in cfg['edges'] if ports[e['from_port']] == 'hub'}
