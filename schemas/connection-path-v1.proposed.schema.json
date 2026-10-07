@@ -1,0 +1,446 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Connection/Port/Capability/Path v1 proposal",
+  "type": "object",
+  "properties": {
+    "model_version": {
+      "type": "string",
+      "enum": [
+        "1-proposed"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PROPOSED"
+      ]
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "SOURCE",
+              "CABLE",
+              "ADAPTER",
+              "HUB",
+              "DOCK",
+              "DISPLAY"
+            ]
+          },
+          "identity_status": {
+            "type": "string",
+            "enum": [
+              "EXACT",
+              "PARTIAL",
+              "UNKNOWN"
+            ]
+          },
+          "product_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "identity_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "ports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "device_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "connector": {
+            "type": "string",
+            "enum": [
+              "USB_C",
+              "HDMI",
+              "DISPLAYPORT",
+              "UNKNOWN"
+            ]
+          },
+          "video_direction": {
+            "type": "string",
+            "enum": [
+              "INPUT",
+              "OUTPUT",
+              "BIDIRECTIONAL",
+              "UNKNOWN"
+            ]
+          },
+          "power_role": {
+            "type": "string",
+            "enum": [
+              "SOURCE",
+              "SINK",
+              "DUAL_ROLE",
+              "NONE",
+              "UNKNOWN"
+            ]
+          },
+          "capability_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "device_id",
+          "connector",
+          "video_direction",
+          "power_role",
+          "capability_refs"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subject_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "property": {
+            "type": "string",
+            "enum": [
+              "PROTOCOL",
+              "LINK_MODE",
+              "VIDEO_PROFILE",
+              "DSC",
+              "POWER_OFFER",
+              "POWER_REQUIREMENT",
+              "ROUTING",
+              "SOURCE_DISPLAY_LIMIT"
+            ]
+          },
+          "claim_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "source_status": {
+            "type": "string",
+            "enum": [
+              "DIRECT_CHECK",
+              "UNAVAILABLE",
+              "STALE",
+              "CONFLICT",
+              "UNKNOWN"
+            ]
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "PENDING_HUMAN_REVIEW",
+              "APPROVED",
+              "REJECTED"
+            ]
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "value_label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "W",
+              "Gb/s",
+              "Hz",
+              "COUNT"
+            ]
+          },
+          "details": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "subject_id",
+          "property",
+          "claim_refs",
+          "source_status",
+          "review_status",
+          "conditions",
+          "value_label"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "from_port": {
+            "type": "string",
+            "minLength": 1
+          },
+          "to_port": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "PHYSICAL",
+              "INTERNAL_ROUTING"
+            ]
+          },
+          "output_method": {
+            "type": "string",
+            "enum": [
+              "NATIVE",
+              "DISPLAYLINK",
+              "UNKNOWN"
+            ]
+          },
+          "protocol": {
+            "type": "string",
+            "enum": [
+              "DISPLAYPORT",
+              "HDMI",
+              "THUNDERBOLT",
+              "USB4",
+              "USB_DATA",
+              "UNKNOWN"
+            ]
+          },
+          "capability_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "from_port",
+          "to_port",
+          "kind",
+          "output_method",
+          "protocol",
+          "capability_refs"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_device_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "edge_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "display_targets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "display_device_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "width": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "height": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "refresh_hz": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "color_depth_bits": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "chroma": {
+                  "type": "string",
+                  "enum": [
+                    "RGB",
+                    "444",
+                    "422",
+                    "420",
+                    "UNKNOWN"
+                  ]
+                },
+                "hdr": {
+                  "type": "string",
+                  "enum": [
+                    "ON",
+                    "OFF",
+                    "UNKNOWN"
+                  ]
+                },
+                "dsc": {
+                  "type": "string",
+                  "enum": [
+                    "REQUIRED",
+                    "NOT_REQUIRED",
+                    "UNKNOWN"
+                  ]
+                }
+              },
+              "required": [
+                "display_device_id"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "topology_completeness": {
+            "type": "string",
+            "enum": [
+              "COMPLETE",
+              "PARTIAL",
+              "UNKNOWN"
+            ]
+          },
+          "context": {
+            "type": "object",
+            "properties": {
+              "os_version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "lid_state": {
+                "type": "string",
+                "enum": [
+                  "OPEN",
+                  "CLOSED",
+                  "UNKNOWN"
+                ]
+              },
+              "builtin_state": {
+                "type": "string",
+                "enum": [
+                  "ON",
+                  "OFF",
+                  "UNKNOWN"
+                ]
+              },
+              "external_power": {
+                "type": "string",
+                "enum": [
+                  "PRESENT",
+                  "ABSENT",
+                  "UNKNOWN"
+                ]
+              },
+              "external_input": {
+                "type": "string",
+                "enum": [
+                  "PRESENT",
+                  "ABSENT",
+                  "UNKNOWN"
+                ]
+              }
+            },
+            "required": [
+              "lid_state",
+              "builtin_state",
+              "external_power",
+              "external_input"
+            ],
+            "additionalProperties": false
+          },
+          "independent_external_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "requested_charging_w": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "source_device_id",
+          "edge_ids",
+          "display_targets",
+          "topology_completeness",
+          "context"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "model_version",
+    "status",
+    "devices",
+    "ports",
+    "capabilities",
+    "edges",
+    "paths"
+  ],
+  "additionalProperties": false
+}

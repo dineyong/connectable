@@ -78,3 +78,13 @@ python3 scripts/serve_mockup.py
 검증: `python3 -m scripts.validate_official_products`.
 
 [공식 데이터 2차 배치](docs/OFFICIAL_DATA_BATCH_2_REPORT.md): 칩별 출력 그룹과 M3 덮개·OS·전원 조건을 추가했다.
+
+## 다음 단계와 진행 현황 기준
+
+현재 진행 현황의 기준은 **research/question-corpus-foundation 브랜치의 README와 작업 보고서**다.
+main은 이전 기준선으로 남아 있으며 최신 진행 현황과 다를 수 있다. 이번 작업은 main에 merge하지 않는다.
+
+[연결 경로 모델 v1 제안](docs/CONNECTION_PATH_MODEL_V1_PROPOSAL.md)과
+[30개 골든 조합 계획](docs/CONNECTION_GOLD_SET_PLAN.md)을 작성했다.
+제안 스키마는 정식 catalog를 대체하지 않으며, 승인된 골든 정답은 아직 0건이다.
+다음은 대표 모니터·독·케이블의 소수 공식 자료로 모델을 검증하는 작업이다.
