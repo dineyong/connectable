@@ -1,0 +1,532 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Path Instance v1 internal review schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": [
+        "1"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "REVIEW_CANDIDATES"
+      ]
+    },
+    "instances": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "gold_plan_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "PLANNED_CONFIGURATION"
+            ]
+          },
+          "review_status": {
+            "type": "string",
+            "enum": [
+              "PENDING_HUMAN_REVIEW"
+            ]
+          },
+          "source_device_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "devices": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "SOURCE",
+                    "CABLE",
+                    "ADAPTER",
+                    "DOCK",
+                    "HUB",
+                    "DISPLAY"
+                  ]
+                },
+                "product_ref": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "identity_status": {
+                  "type": "string",
+                  "enum": [
+                    "EXACT",
+                    "PARTIAL",
+                    "UNKNOWN"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "kind",
+                "identity_status"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "ports": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "device_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "connector": {
+                  "type": "string",
+                  "enum": [
+                    "USB_C",
+                    "DISPLAYPORT",
+                    "HDMI",
+                    "UNKNOWN"
+                  ]
+                },
+                "binding_precision": {
+                  "type": "string",
+                  "enum": [
+                    "PORT_CLASS_MEMBER",
+                    "DOCUMENTED_PORT",
+                    "UNKNOWN"
+                  ]
+                },
+                "claim_refs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "id",
+                "device_id",
+                "connector",
+                "binding_precision",
+                "claim_refs"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "bindings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "subject_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "claim_ref": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "id",
+                "subject_id",
+                "claim_ref"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "edges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "from_port": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "to_port": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "PHYSICAL",
+                    "INTERNAL_ROUTING"
+                  ]
+                },
+                "claim_refs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "from_port",
+                "to_port",
+                "kind",
+                "claim_refs"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "predicates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "context_key": {
+                  "type": "string",
+                  "enum": [
+                    "os_family",
+                    "os_version",
+                    "lid_state",
+                    "builtin_state",
+                    "external_power",
+                    "displaylink_driver",
+                    "host_dsc",
+                    "display_dsc"
+                  ]
+                },
+                "operator": {
+                  "type": "string",
+                  "enum": [
+                    "EQ",
+                    "VERSION_GTE",
+                    "NEQ"
+                  ]
+                },
+                "expected": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "claim_refs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "id",
+                "context_key",
+                "operator",
+                "expected",
+                "claim_refs"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "resources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "device_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "output_port_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "minItems": 0,
+                  "uniqueItems": true
+                },
+                "max_independent_displays": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "claim_ref": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "allocation_status": {
+                  "type": "string",
+                  "enum": [
+                    "AGGREGATE_ONLY",
+                    "CHANNEL_MAPPING_KNOWN"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "device_id",
+                "output_port_ids",
+                "max_independent_displays",
+                "claim_ref",
+                "allocation_status"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "power_flows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "from_port": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "to_port": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "mode": {
+                  "type": "string",
+                  "enum": [
+                    "OFFER",
+                    "PASS_THROUGH",
+                    "TRANSPORT_LIMIT",
+                    "REQUIREMENT_UNKNOWN"
+                  ]
+                },
+                "claim_refs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "from_port",
+                "to_port",
+                "mode",
+                "claim_refs"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "request": {
+            "type": "object",
+            "properties": {
+              "output_method": {
+                "type": "string",
+                "enum": [
+                  "NATIVE",
+                  "DISPLAYLINK",
+                  "UNKNOWN"
+                ]
+              },
+              "independent_external_count": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "display_device_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "context": {
+                "type": "object",
+                "properties": {
+                  "os_family": {
+                    "type": "string",
+                    "enum": [
+                      "macOS",
+                      "Windows",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "os_version": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "lid_state": {
+                    "type": "string",
+                    "enum": [
+                      "OPEN",
+                      "CLOSED",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "builtin_state": {
+                    "type": "string",
+                    "enum": [
+                      "ON",
+                      "OFF",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "external_power": {
+                    "type": "string",
+                    "enum": [
+                      "PRESENT",
+                      "ABSENT",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "displaylink_driver": {
+                    "type": "string",
+                    "enum": [
+                      "INSTALLED",
+                      "ABSENT",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "host_dsc": {
+                    "type": "string",
+                    "enum": [
+                      "SUPPORTED",
+                      "UNSUPPORTED",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "display_dsc": {
+                    "type": "string",
+                    "enum": [
+                      "SUPPORTED",
+                      "UNSUPPORTED",
+                      "UNKNOWN"
+                    ]
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              },
+              "targets": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "display_device_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "width": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "height": {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    "refresh_hz": {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    }
+                  },
+                  "required": [
+                    "display_device_id",
+                    "width",
+                    "height",
+                    "refresh_hz"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "output_method",
+              "independent_external_count",
+              "display_device_ids",
+              "context",
+              "targets"
+            ],
+            "additionalProperties": false
+          },
+          "missing_fields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "review_expectation": {
+            "type": "string",
+            "enum": [
+              "UNKNOWN",
+              "INCOMPATIBLE"
+            ]
+          },
+          "expectation_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "gold_plan_id",
+          "purpose",
+          "review_status",
+          "source_device_id",
+          "devices",
+          "ports",
+          "bindings",
+          "edges",
+          "predicates",
+          "resources",
+          "power_flows",
+          "request",
+          "missing_fields",
+          "review_expectation",
+          "expectation_reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "version",
+    "status",
+    "instances"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,1132 @@
+{
+  "version": "1",
+  "status": "REVIEW_CANDIDATES",
+  "instances": [
+    {
+      "id": "PI-001",
+      "gold_plan_id": "GP-02",
+      "purpose": "PLANNED_CONFIGURATION",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "source_device_id": "host",
+      "devices": [
+        {
+          "id": "host",
+          "kind": "SOURCE",
+          "product_ref": "product:air-m1-2020",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "middle",
+          "kind": "CABLE",
+          "product_ref": "product:cablematters-201036",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "screen1",
+          "kind": "DISPLAY",
+          "product_ref": "product:dell-g2724d",
+          "identity_status": "EXACT"
+        }
+      ],
+      "ports": [
+        {
+          "id": "host-usbc",
+          "device_id": "host",
+          "connector": "USB_C",
+          "binding_precision": "PORT_CLASS_MEMBER",
+          "claim_refs": [
+            "product:air-m1-2020:ports"
+          ]
+        },
+        {
+          "id": "middle-in",
+          "device_id": "middle",
+          "connector": "USB_C",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "cablematters-201036:1"
+          ]
+        },
+        {
+          "id": "middle-out",
+          "device_id": "middle",
+          "connector": "DISPLAYPORT",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "cablematters-201036:1"
+          ]
+        },
+        {
+          "id": "screen1-in",
+          "device_id": "screen1",
+          "connector": "DISPLAYPORT",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "dell-g2724d:1"
+          ]
+        }
+      ],
+      "bindings": [
+        {
+          "id": "binding1",
+          "subject_id": "host",
+          "claim_ref": "product:air-m1-2020:display"
+        },
+        {
+          "id": "binding2",
+          "subject_id": "middle-route",
+          "claim_ref": "cablematters-201036:1"
+        },
+        {
+          "id": "binding3",
+          "subject_id": "screen1-in",
+          "claim_ref": "dell-g2724d:1"
+        }
+      ],
+      "edges": [
+        {
+          "id": "host-to-middle",
+          "from_port": "host-usbc",
+          "to_port": "middle-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "middle-route",
+          "from_port": "middle-in",
+          "to_port": "middle-out",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": [
+            "cablematters-201036:1"
+          ]
+        },
+        {
+          "id": "middle-to-screen",
+          "from_port": "middle-out",
+          "to_port": "screen1-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        }
+      ],
+      "predicates": [],
+      "resources": [],
+      "power_flows": [],
+      "request": {
+        "output_method": "NATIVE",
+        "independent_external_count": 1,
+        "display_device_ids": [
+          "screen1"
+        ],
+        "context": {
+          "os_family": "macOS",
+          "os_version": "14.3",
+          "builtin_state": "ON",
+          "lid_state": "OPEN"
+        },
+        "targets": [
+          {
+            "display_device_id": "screen1",
+            "width": 2560,
+            "height": 1440,
+            "refresh_hz": 60
+          }
+        ]
+      },
+      "missing_fields": [
+        "포트별 상세 영상 협상·색 조건",
+        "최종 사람 검수"
+      ],
+      "review_expectation": "UNKNOWN",
+      "expectation_reason": "정확한 경로 전체 영상/전원 조건과 검수 근거 부족"
+    },
+    {
+      "id": "PI-002",
+      "gold_plan_id": "GP-03",
+      "purpose": "PLANNED_CONFIGURATION",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "source_device_id": "host",
+      "devices": [
+        {
+          "id": "host",
+          "kind": "SOURCE",
+          "product_ref": "product:air-m1-2020",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "middle",
+          "kind": "ADAPTER",
+          "product_ref": "product:belkin-avc002",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "screen1",
+          "kind": "DISPLAY",
+          "product_ref": "product:dell-g2724d",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "hdmi-cable",
+          "kind": "CABLE",
+          "identity_status": "UNKNOWN"
+        }
+      ],
+      "ports": [
+        {
+          "id": "host-usbc",
+          "device_id": "host",
+          "connector": "USB_C",
+          "binding_precision": "PORT_CLASS_MEMBER",
+          "claim_refs": [
+            "product:air-m1-2020:ports"
+          ]
+        },
+        {
+          "id": "middle-in",
+          "device_id": "middle",
+          "connector": "USB_C",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "belkin-avc002:1"
+          ]
+        },
+        {
+          "id": "middle-out",
+          "device_id": "middle",
+          "connector": "HDMI",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "belkin-avc002:1"
+          ]
+        },
+        {
+          "id": "screen1-in",
+          "device_id": "screen1",
+          "connector": "HDMI",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "dell-g2724d:2"
+          ]
+        },
+        {
+          "id": "hdmi-cable-a",
+          "device_id": "hdmi-cable",
+          "connector": "HDMI",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "hdmi-cable-b",
+          "device_id": "hdmi-cable",
+          "connector": "HDMI",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "middle-pd-in",
+          "device_id": "middle",
+          "connector": "USB_C",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "belkin-avc002:3"
+          ]
+        }
+      ],
+      "bindings": [
+        {
+          "id": "binding1",
+          "subject_id": "host",
+          "claim_ref": "product:air-m1-2020:display"
+        },
+        {
+          "id": "binding2",
+          "subject_id": "middle-route",
+          "claim_ref": "belkin-avc002:1"
+        },
+        {
+          "id": "binding3",
+          "subject_id": "screen1-in",
+          "claim_ref": "dell-g2724d:2"
+        },
+        {
+          "id": "adapter-pass-through",
+          "subject_id": "middle-pd-in",
+          "claim_ref": "belkin-avc002:3"
+        }
+      ],
+      "edges": [
+        {
+          "id": "host-to-middle",
+          "from_port": "host-usbc",
+          "to_port": "middle-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "middle-route",
+          "from_port": "middle-in",
+          "to_port": "middle-out",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": [
+            "belkin-avc002:1"
+          ]
+        },
+        {
+          "id": "middle-to-screen-a",
+          "from_port": "middle-out",
+          "to_port": "hdmi-cable-a",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "hdmi-cable-route",
+          "from_port": "hdmi-cable-a",
+          "to_port": "hdmi-cable-b",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": []
+        },
+        {
+          "id": "middle-to-screen-b",
+          "from_port": "hdmi-cable-b",
+          "to_port": "screen1-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        }
+      ],
+      "predicates": [],
+      "resources": [],
+      "power_flows": [
+        {
+          "id": "adapter-power-route",
+          "from_port": "middle-pd-in",
+          "to_port": "middle-in",
+          "mode": "PASS_THROUGH",
+          "claim_refs": [
+            "belkin-avc002:3"
+          ]
+        },
+        {
+          "id": "host-power-unknown",
+          "from_port": "middle-in",
+          "to_port": "host-usbc",
+          "mode": "REQUIREMENT_UNKNOWN",
+          "claim_refs": []
+        }
+      ],
+      "request": {
+        "output_method": "NATIVE",
+        "independent_external_count": 1,
+        "display_device_ids": [
+          "screen1"
+        ],
+        "context": {
+          "os_family": "macOS",
+          "os_version": "14.3",
+          "builtin_state": "ON",
+          "lid_state": "OPEN"
+        },
+        "targets": [
+          {
+            "display_device_id": "screen1",
+            "width": 2560,
+            "height": 1440,
+            "refresh_hz": 60
+          }
+        ]
+      },
+      "missing_fields": [
+        "포트별 상세 영상 협상·색 조건",
+        "최종 사람 검수",
+        "별도 HDMI 케이블 모델",
+        "외부 PD 공급 장치·입력 케이블",
+        "Mac PD accepted profiles·어댑터 자체 소비"
+      ],
+      "review_expectation": "UNKNOWN",
+      "expectation_reason": "정확한 경로 전체 영상/전원 조건과 검수 근거 부족"
+    },
+    {
+      "id": "PI-003",
+      "gold_plan_id": "GP-07",
+      "purpose": "PLANNED_CONFIGURATION",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "source_device_id": "host",
+      "devices": [
+        {
+          "id": "host",
+          "kind": "SOURCE",
+          "product_ref": "product:air-m2-2022",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "middle",
+          "kind": "CABLE",
+          "product_ref": "product:apple-tb4-pro-cable",
+          "identity_status": "PARTIAL"
+        },
+        {
+          "id": "screen1",
+          "kind": "DISPLAY",
+          "product_ref": "product:dell-u2723qe",
+          "identity_status": "EXACT"
+        }
+      ],
+      "ports": [
+        {
+          "id": "host-usbc",
+          "device_id": "host",
+          "connector": "USB_C",
+          "binding_precision": "PORT_CLASS_MEMBER",
+          "claim_refs": [
+            "product:air-m2-2022:ports"
+          ]
+        },
+        {
+          "id": "middle-in",
+          "device_id": "middle",
+          "connector": "USB_C",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "apple-tb4-pro-cable:3"
+          ]
+        },
+        {
+          "id": "middle-out",
+          "device_id": "middle",
+          "connector": "USB_C",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "apple-tb4-pro-cable:3"
+          ]
+        },
+        {
+          "id": "screen1-in",
+          "device_id": "screen1",
+          "connector": "USB_C",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "dell-u2723qe:2"
+          ]
+        }
+      ],
+      "bindings": [
+        {
+          "id": "binding1",
+          "subject_id": "host",
+          "claim_ref": "product:air-m2-2022:display"
+        },
+        {
+          "id": "binding2",
+          "subject_id": "middle-route",
+          "claim_ref": "apple-tb4-pro-cable:3"
+        },
+        {
+          "id": "binding3",
+          "subject_id": "screen1-in",
+          "claim_ref": "dell-u2723qe:2"
+        },
+        {
+          "id": "cable-power",
+          "subject_id": "middle-route",
+          "claim_ref": "apple-tb4-pro-cable:2"
+        },
+        {
+          "id": "monitor-power",
+          "subject_id": "screen1-in",
+          "claim_ref": "dell-u2723qe:3"
+        }
+      ],
+      "edges": [
+        {
+          "id": "host-to-middle",
+          "from_port": "host-usbc",
+          "to_port": "middle-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "middle-route",
+          "from_port": "middle-in",
+          "to_port": "middle-out",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": [
+            "apple-tb4-pro-cable:3"
+          ]
+        },
+        {
+          "id": "middle-to-screen",
+          "from_port": "middle-out",
+          "to_port": "screen1-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        }
+      ],
+      "predicates": [],
+      "resources": [],
+      "power_flows": [
+        {
+          "id": "monitor-offer",
+          "from_port": "screen1-in",
+          "to_port": "middle-out",
+          "mode": "OFFER",
+          "claim_refs": [
+            "dell-u2723qe:3"
+          ]
+        },
+        {
+          "id": "cable-ceiling",
+          "from_port": "middle-out",
+          "to_port": "middle-in",
+          "mode": "TRANSPORT_LIMIT",
+          "claim_refs": [
+            "apple-tb4-pro-cable:2"
+          ]
+        },
+        {
+          "id": "host-acceptance",
+          "from_port": "middle-in",
+          "to_port": "host-usbc",
+          "mode": "REQUIREMENT_UNKNOWN",
+          "claim_refs": []
+        }
+      ],
+      "request": {
+        "output_method": "NATIVE",
+        "independent_external_count": 1,
+        "display_device_ids": [
+          "screen1"
+        ],
+        "context": {
+          "os_family": "macOS",
+          "os_version": "14.3",
+          "builtin_state": "ON",
+          "lid_state": "OPEN"
+        },
+        "targets": [
+          {
+            "display_device_id": "screen1",
+            "width": 3840,
+            "height": 2160,
+            "refresh_hz": 60
+          }
+        ]
+      },
+      "missing_fields": [
+        "포트별 상세 영상 협상·색 조건",
+        "최종 사람 검수",
+        "케이블 SKU·길이",
+        "Mac PD 최소 요구·accepted profiles"
+      ],
+      "review_expectation": "UNKNOWN",
+      "expectation_reason": "정확한 경로 전체 영상/전원 조건과 검수 근거 부족"
+    },
+    {
+      "id": "PI-004",
+      "gold_plan_id": "GP-06",
+      "purpose": "PLANNED_CONFIGURATION",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "source_device_id": "host",
+      "devices": [
+        {
+          "id": "host",
+          "kind": "SOURCE",
+          "product_ref": "product:air-m1-2020",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "middle",
+          "kind": "DOCK",
+          "product_ref": "product:plugable-ud-6950h",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "screen1",
+          "kind": "DISPLAY",
+          "product_ref": "product:dell-g2724d",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "screen2",
+          "kind": "DISPLAY",
+          "product_ref": "product:dell-g2724d",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "cable1",
+          "kind": "CABLE",
+          "identity_status": "UNKNOWN"
+        },
+        {
+          "id": "cable2",
+          "kind": "CABLE",
+          "identity_status": "UNKNOWN"
+        },
+        {
+          "id": "upstream-cable",
+          "kind": "CABLE",
+          "identity_status": "UNKNOWN"
+        }
+      ],
+      "ports": [
+        {
+          "id": "host-usbc",
+          "device_id": "host",
+          "connector": "USB_C",
+          "binding_precision": "PORT_CLASS_MEMBER",
+          "claim_refs": [
+            "product:air-m1-2020:ports"
+          ]
+        },
+        {
+          "id": "middle-in",
+          "device_id": "middle",
+          "connector": "UNKNOWN",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": [
+            "plugable-ud-6950h:1"
+          ]
+        },
+        {
+          "id": "middle-out1",
+          "device_id": "middle",
+          "connector": "DISPLAYPORT",
+          "binding_precision": "PORT_CLASS_MEMBER",
+          "claim_refs": [
+            "plugable-ud-6950h:1"
+          ]
+        },
+        {
+          "id": "cable1-a",
+          "device_id": "cable1",
+          "connector": "DISPLAYPORT",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "cable1-b",
+          "device_id": "cable1",
+          "connector": "DISPLAYPORT",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "screen1-in",
+          "device_id": "screen1",
+          "connector": "DISPLAYPORT",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "dell-g2724d:1"
+          ]
+        },
+        {
+          "id": "middle-out2",
+          "device_id": "middle",
+          "connector": "DISPLAYPORT",
+          "binding_precision": "PORT_CLASS_MEMBER",
+          "claim_refs": [
+            "plugable-ud-6950h:1"
+          ]
+        },
+        {
+          "id": "cable2-a",
+          "device_id": "cable2",
+          "connector": "DISPLAYPORT",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "cable2-b",
+          "device_id": "cable2",
+          "connector": "DISPLAYPORT",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "screen2-in",
+          "device_id": "screen2",
+          "connector": "DISPLAYPORT",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "dell-g2724d:1"
+          ]
+        },
+        {
+          "id": "upstream-cable-a",
+          "device_id": "upstream-cable",
+          "connector": "USB_C",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "upstream-cable-b",
+          "device_id": "upstream-cable",
+          "connector": "UNKNOWN",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        }
+      ],
+      "bindings": [
+        {
+          "id": "binding1",
+          "subject_id": "host",
+          "claim_ref": "product:air-m1-2020:display"
+        },
+        {
+          "id": "binding2",
+          "subject_id": "middle-route1",
+          "claim_ref": "plugable-ud-6950h:1"
+        },
+        {
+          "id": "binding3",
+          "subject_id": "screen1-in",
+          "claim_ref": "dell-g2724d:1"
+        },
+        {
+          "id": "binding4",
+          "subject_id": "middle-route2",
+          "claim_ref": "plugable-ud-6950h:1"
+        },
+        {
+          "id": "binding5",
+          "subject_id": "screen2-in",
+          "claim_ref": "dell-g2724d:1"
+        }
+      ],
+      "edges": [
+        {
+          "id": "middle-route1",
+          "from_port": "middle-in",
+          "to_port": "middle-out1",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": [
+            "plugable-ud-6950h:1"
+          ]
+        },
+        {
+          "id": "out-to-cable1",
+          "from_port": "middle-out1",
+          "to_port": "cable1-a",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "cable1-route",
+          "from_port": "cable1-a",
+          "to_port": "cable1-b",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": []
+        },
+        {
+          "id": "cable-to-screen1",
+          "from_port": "cable1-b",
+          "to_port": "screen1-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "middle-route2",
+          "from_port": "middle-in",
+          "to_port": "middle-out2",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": [
+            "plugable-ud-6950h:1"
+          ]
+        },
+        {
+          "id": "out-to-cable2",
+          "from_port": "middle-out2",
+          "to_port": "cable2-a",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "cable2-route",
+          "from_port": "cable2-a",
+          "to_port": "cable2-b",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": []
+        },
+        {
+          "id": "cable-to-screen2",
+          "from_port": "cable2-b",
+          "to_port": "screen2-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "host-to-middle-a",
+          "from_port": "host-usbc",
+          "to_port": "upstream-cable-a",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "upstream-cable-route",
+          "from_port": "upstream-cable-a",
+          "to_port": "upstream-cable-b",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": []
+        },
+        {
+          "id": "host-to-middle-b",
+          "from_port": "upstream-cable-b",
+          "to_port": "middle-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        }
+      ],
+      "predicates": [
+        {
+          "id": "driver",
+          "context_key": "displaylink_driver",
+          "operator": "EQ",
+          "expected": "INSTALLED",
+          "claim_refs": [
+            "plugable-ud-6950h:1"
+          ]
+        },
+        {
+          "id": "os-version",
+          "context_key": "os_version",
+          "operator": "VERSION_GTE",
+          "expected": "10.14",
+          "claim_refs": [
+            "plugable-ud-6950h:1"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "video-pool",
+          "device_id": "middle",
+          "output_port_ids": [
+            "middle-out1",
+            "middle-out2"
+          ],
+          "max_independent_displays": 2,
+          "claim_ref": "plugable-ud-6950h:1",
+          "allocation_status": "AGGREGATE_ONLY"
+        }
+      ],
+      "power_flows": [],
+      "request": {
+        "output_method": "DISPLAYLINK",
+        "independent_external_count": 2,
+        "display_device_ids": [
+          "screen1",
+          "screen2"
+        ],
+        "context": {
+          "os_family": "macOS",
+          "os_version": "14.3",
+          "builtin_state": "ON",
+          "lid_state": "OPEN",
+          "displaylink_driver": "UNKNOWN"
+        },
+        "targets": [
+          {
+            "display_device_id": "screen1",
+            "width": 2560,
+            "height": 1440,
+            "refresh_hz": 60
+          },
+          {
+            "display_device_id": "screen2",
+            "width": 2560,
+            "height": 1440,
+            "refresh_hz": 60
+          }
+        ]
+      },
+      "missing_fields": [
+        "포트별 상세 영상 협상·색 조건",
+        "최종 사람 검수",
+        "물리 케이블과 독 출력 채널 쌍 매핑",
+        "독 실제 upstream 단자와 호스트 케이블"
+      ],
+      "review_expectation": "UNKNOWN",
+      "expectation_reason": "정확한 경로 전체 영상/전원 조건과 검수 근거 부족"
+    },
+    {
+      "id": "PI-005",
+      "gold_plan_id": "GP-25",
+      "purpose": "PLANNED_CONFIGURATION",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "source_device_id": "host",
+      "devices": [
+        {
+          "id": "host",
+          "kind": "SOURCE",
+          "product_ref": "product:air-m1-2020",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "middle",
+          "kind": "HUB",
+          "product_ref": "product:startech-mst14cd122hd",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "screen1",
+          "kind": "DISPLAY",
+          "product_ref": "product:dell-g2724d",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "screen2",
+          "kind": "DISPLAY",
+          "product_ref": "product:dell-g2724d",
+          "identity_status": "EXACT"
+        },
+        {
+          "id": "cable1",
+          "kind": "CABLE",
+          "identity_status": "UNKNOWN"
+        },
+        {
+          "id": "cable2",
+          "kind": "CABLE",
+          "identity_status": "UNKNOWN"
+        }
+      ],
+      "ports": [
+        {
+          "id": "host-usbc",
+          "device_id": "host",
+          "connector": "USB_C",
+          "binding_precision": "PORT_CLASS_MEMBER",
+          "claim_refs": [
+            "product:air-m1-2020:ports"
+          ]
+        },
+        {
+          "id": "middle-in",
+          "device_id": "middle",
+          "connector": "USB_C",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "startech-mst14cd122hd:1"
+          ]
+        },
+        {
+          "id": "middle-out1",
+          "device_id": "middle",
+          "connector": "HDMI",
+          "binding_precision": "PORT_CLASS_MEMBER",
+          "claim_refs": [
+            "startech-mst14cd122hd:1"
+          ]
+        },
+        {
+          "id": "cable1-a",
+          "device_id": "cable1",
+          "connector": "HDMI",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "cable1-b",
+          "device_id": "cable1",
+          "connector": "HDMI",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "screen1-in",
+          "device_id": "screen1",
+          "connector": "HDMI",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "dell-g2724d:2"
+          ]
+        },
+        {
+          "id": "middle-out2",
+          "device_id": "middle",
+          "connector": "HDMI",
+          "binding_precision": "PORT_CLASS_MEMBER",
+          "claim_refs": [
+            "startech-mst14cd122hd:1"
+          ]
+        },
+        {
+          "id": "cable2-a",
+          "device_id": "cable2",
+          "connector": "HDMI",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "cable2-b",
+          "device_id": "cable2",
+          "connector": "HDMI",
+          "binding_precision": "UNKNOWN",
+          "claim_refs": []
+        },
+        {
+          "id": "screen2-in",
+          "device_id": "screen2",
+          "connector": "HDMI",
+          "binding_precision": "DOCUMENTED_PORT",
+          "claim_refs": [
+            "dell-g2724d:2"
+          ]
+        }
+      ],
+      "bindings": [
+        {
+          "id": "binding1",
+          "subject_id": "host",
+          "claim_ref": "product:air-m1-2020:display"
+        },
+        {
+          "id": "binding2",
+          "subject_id": "middle-route1",
+          "claim_ref": "startech-mst14cd122hd:1"
+        },
+        {
+          "id": "binding3",
+          "subject_id": "screen1-in",
+          "claim_ref": "dell-g2724d:2"
+        },
+        {
+          "id": "binding4",
+          "subject_id": "middle-route2",
+          "claim_ref": "startech-mst14cd122hd:1"
+        },
+        {
+          "id": "binding5",
+          "subject_id": "screen2-in",
+          "claim_ref": "dell-g2724d:2"
+        }
+      ],
+      "edges": [
+        {
+          "id": "host-to-middle",
+          "from_port": "host-usbc",
+          "to_port": "middle-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "middle-route1",
+          "from_port": "middle-in",
+          "to_port": "middle-out1",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": [
+            "startech-mst14cd122hd:1"
+          ]
+        },
+        {
+          "id": "out-to-cable1",
+          "from_port": "middle-out1",
+          "to_port": "cable1-a",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "cable1-route",
+          "from_port": "cable1-a",
+          "to_port": "cable1-b",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": []
+        },
+        {
+          "id": "cable-to-screen1",
+          "from_port": "cable1-b",
+          "to_port": "screen1-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "middle-route2",
+          "from_port": "middle-in",
+          "to_port": "middle-out2",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": [
+            "startech-mst14cd122hd:1"
+          ]
+        },
+        {
+          "id": "out-to-cable2",
+          "from_port": "middle-out2",
+          "to_port": "cable2-a",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        },
+        {
+          "id": "cable2-route",
+          "from_port": "cable2-a",
+          "to_port": "cable2-b",
+          "kind": "INTERNAL_ROUTING",
+          "claim_refs": []
+        },
+        {
+          "id": "cable-to-screen2",
+          "from_port": "cable2-b",
+          "to_port": "screen2-in",
+          "kind": "PHYSICAL",
+          "claim_refs": []
+        }
+      ],
+      "predicates": [
+        {
+          "id": "os-family",
+          "context_key": "os_family",
+          "operator": "NEQ",
+          "expected": "macOS",
+          "claim_refs": [
+            "startech-mst14cd122hd:1"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "id": "video-pool",
+          "device_id": "middle",
+          "output_port_ids": [
+            "middle-out1",
+            "middle-out2"
+          ],
+          "max_independent_displays": 2,
+          "claim_ref": "startech-mst14cd122hd:1",
+          "allocation_status": "AGGREGATE_ONLY"
+        }
+      ],
+      "power_flows": [],
+      "request": {
+        "output_method": "NATIVE",
+        "independent_external_count": 2,
+        "display_device_ids": [
+          "screen1",
+          "screen2"
+        ],
+        "context": {
+          "os_family": "macOS",
+          "os_version": "14.3",
+          "builtin_state": "ON",
+          "lid_state": "OPEN"
+        },
+        "targets": [
+          {
+            "display_device_id": "screen1",
+            "width": 2560,
+            "height": 1440,
+            "refresh_hz": 60
+          },
+          {
+            "display_device_id": "screen2",
+            "width": 2560,
+            "height": 1440,
+            "refresh_hz": 60
+          }
+        ]
+      },
+      "missing_fields": [
+        "포트별 상세 영상 협상·색 조건",
+        "최종 사람 검수",
+        "물리 케이블과 독 출력 채널 쌍 매핑"
+      ],
+      "review_expectation": "INCOMPATIBLE",
+      "expectation_reason": "공식 MST hub의 macOS 비호환 조건에 대한 내부 부정 후보; 공개 승인 아님"
+    }
+  ]
+}

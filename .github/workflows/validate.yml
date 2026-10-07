@@ -24,6 +24,7 @@ jobs:
       - run: python3 scripts/validate_question_corpus_v2.py
       - run: python3 -m scripts.validate_official_products
       - run: python3 scripts/validate_connection_model_pilot.py
+      - run: python3 scripts/path_instance_v1.py --check
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
