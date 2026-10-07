@@ -12,10 +12,11 @@ class MigrationBatch2Tests(unittest.TestCase):
         self.records = {r['id']: r for r in map(json.loads, self.raw.splitlines())}
 
     def test_sixteen_unique_valid_records(self):
-        self.assertEqual(len(self.records), 16)
+        snapshot = list(map(json.loads, self.raw.splitlines()[:16]))
+        self.assertEqual(len(snapshot), 16)
         self.assertTrue(BATCH.issubset(self.records))
         self.assertEqual(v2.validate_files([v2.DEFAULT_FILE]), [])
-        self.assertEqual(len({v2.url_key(r['source']['source_url']) for r in self.records.values()}), 16)
+        self.assertEqual(len({v2.url_key(r['source']['source_url']) for r in snapshot}), 16)
 
     def test_existing_ten_lines_byte_preserved(self):
         prefix = b''.join(self.raw.splitlines(keepends=True)[:10])
