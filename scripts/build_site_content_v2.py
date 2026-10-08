@@ -7,6 +7,8 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scripts.site_content_validation import checked_date, https_url, payload, refs, validate_content
 from scripts.data_trust import linked_model_identity, require_official_source
+from scripts.site_input_validation import validate_inputs
+from scripts.validate_question_corpus_v2 import unique_object, reject_constant
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'data/site/content-v2.json'
@@ -18,7 +20,8 @@ INPUTS = ('data/official/connection_model_pilot.json', 'data/official/products.j
 
 def read(path):
     text = (ROOT / path).read_text(encoding='utf-8')
-    return [json.loads(line) for line in text.splitlines() if line.strip()] if path.endswith('.jsonl') else json.loads(text)
+    options = {'object_pairs_hook': unique_object, 'parse_constant': reject_constant}
+    return [json.loads(line, **options) for line in text.splitlines() if line.strip()] if path.endswith('.jsonl') else json.loads(text, **options)
 
 def reference(source, path, record_id):
     return {'url': source.get('source_url', source.get('url')), 'title': source.get('site_name', source.get('title', '공개 원문')),
@@ -28,6 +31,7 @@ def reference(source, path, record_id):
 def build():
     pilot, official, raw, mapped, corpus = [read(p) for p in INPUTS[:5]]
     batch = read(BATCH_PATH)
+    validate_inputs(pilot, official, raw, mapped, corpus, ROOT, INPUTS)
     sources = {s['source_id']: s for s in pilot['sources']}
     monitors = []
     for product in pilot['products']:

@@ -55,11 +55,22 @@ def validate(data):
                 raise ValueError('invalid target fact/hash')
             if any(f['payload'].get(k) != c['payload'][k] for k in c['verified_fields']):
                 raise ValueError('existing fact differs from verified fields')
+            if f['payload'] != c['payload']:
+                raise ValueError('reconfirmation cannot mutate unverified original payload')
+    # This isolated batch records only these two reviewed partial confirmations.
+    # New field approvals require a separate reviewed batch/policy, not edits to
+    # the unverified field lists of this historical reconfirmation.
+    partial_fields = {
+        'jooyon-v32ue:site-1': ({'resolution_label'}, {'width', 'height', 'refresh_hz'}),
+        'crossover-27uld950:site-2': ({'label'}, {'watts', 'interface', 'mode'}),
+    }
     for r in data['manual_reviews']:
         f = facts.get(r['fact_id'])
         if not f or r['original_fact_sha256'] != digest(f) or r['status'] != 'PARTIALLY_VERIFIED':
             raise ValueError('invalid original manual fact/hash/status')
         evidence(r, products[f['product_id']])
+        if r['fact_id'] not in partial_fields or (set(r['verified_fields']), set(r['unverified_fields'])) != partial_fields[r['fact_id']]:
+            raise ValueError('partial confirmation cannot silently promote unverified fields')
         refs(r['verified_fields'], 'verified_fields', f['payload'])
         refs(r['unverified_fields'], 'unverified_fields', f['payload'])
         if set(r['verified_fields']) & set(r['unverified_fields']) or any(f['payload'][k] == 'UNKNOWN' for k in r['verified_fields']):

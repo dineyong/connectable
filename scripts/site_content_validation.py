@@ -67,7 +67,7 @@ def payload(fact, path):
         'scope': {'PANEL', 'PORT'},
         'support': {'SUPPORTED', 'UNSUPPORTED', 'UNKNOWN'},
         'protocol': {'DISPLAYPORT', 'HDMI', 'THUNDERBOLT', 'USB4', 'USB_DATA', 'UNKNOWN'},
-        'mode': {'OFFER', 'PASS_THROUGH', 'TRANSPORT_LIMIT', 'UNKNOWN'} if prop == 'POWER_TRANSFER' else None,
+        'mode': {'OFFER', 'PASS_THROUGH', 'TRANSPORT_LIMIT', 'UNKNOWN'} if prop == 'POWER_TRANSFER' else {'ALT_MODE', 'UNKNOWN'} if prop == 'PROTOCOL' else None,
         'rating_basis': {'UP_TO', 'RATED', 'MANUFACTURER_STATED', 'PRODUCT_LABEL_ONLY', 'UNKNOWN'},
     }
     for key, value in p.items():
@@ -111,11 +111,19 @@ def validate_content(data):
     maps = {k: unique(data[k], 'id', k) for k in ('monitors', 'reviews', 'guides')}
     all_ids = [i for m in maps.values() for i in m]
     source_cache = {}
+    root = Path(__file__).resolve().parents[1]
+    official_products, official_facts = {}, {}
+    for origin_path in ('data/official/connection_model_pilot.json', 'data/site/monitor-batch-1-sources.json'):
+        origin = json.loads((root/origin_path).read_text())
+        official_products.update({p['product_id']: p for p in origin['products']})
+        official_facts.update({f['fact_id']: f for f in origin['facts']})
     if len(all_ids) != len(set(all_ids)):
         fail('$', 'duplicate global ID')
     for kind, records in maps.items():
         for ident, item in records.items():
             path = kind+'/'+ident
+            if item.get('public_status') != 'UNKNOWN' or item.get('review_status') != ('PENDING_HUMAN_REVIEW' if kind == 'monitors' else 'NEEDS_REVIEW'):
+                fail(path, 'public/human approval remains withheld')
             sources = item.get('source_refs')
             if not isinstance(sources, list) or not sources:
                 fail(path, 'missing source evidence')
@@ -145,10 +153,20 @@ def validate_content(data):
                 if field in item:
                     refs(item[field], path+'/'+field, maps[target], required=False)
             if kind == 'monitors':
+                original_product = official_products.get(ident)
+                if not original_product or (item['display_model'], item['manufacturer']) != (original_product['model'], original_product['manufacturer']):
+                    fail(path, 'official product identity differs from original')
+                refs(list(source_ids), path+'/official_sources', original_product['source_refs'])
                 for s in sources:
                     require_official_source(s, item['manufacturer'], path+'/source')
                 facts = unique(item['features'], 'fact_id', path+'/features')
                 for f in facts.values():
+                    original_fact = official_facts.get(f['fact_id'])
+                    if not original_fact or original_fact['product_id'] != ident:
+                        fail(path, 'fact belongs to another or unknown product')
+                    refs(f.get('source_refs'), path+'/fact.model_sources', original_fact['source_refs'])
+                    if f.get('review_status') != 'PENDING_HUMAN_REVIEW':
+                        fail(path, 'fact approval remains withheld')
                     payload(f, path+'/'+f['fact_id'])
                     refs(f.get('source_refs'), path+'/fact.source_refs', source_ids)
                     if f.get('basis') != 'MANUFACTURER_SPEC':
@@ -201,6 +219,8 @@ def validate_content(data):
                 for field in ('nodes', 'ports', 'configurations', 'observations', 'attempts', 'functional_observations', 'configuration_conclusions'):
                     walk(item.get(field, []))
                 for link in item.get('monitor_links', []):
+                    if link.get('variant_match') != 'UNKNOWN' or link.get('match_scope') != 'MODEL_ONLY' or link.get('review_status') != 'NEEDS_REVIEW':
+                        fail(path+'/monitor_links', 'SKU/variant approval remains withheld')
                     if link['review_id'] != ident or link['monitor_id'] not in item['monitor_ids'] or link['node_id'] not in local['nodes']:
                         fail(path+'/monitor_links', 'invalid review/product/node reference')
                     node = local['nodes'][link['node_id']]
