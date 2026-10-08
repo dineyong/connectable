@@ -75,7 +75,7 @@ def official_url_status(url, manufacturer):
         if u.query and (any(not part or '=' not in part for part in u.query.split('&'))
                         or re.search(r'%(?![0-9A-Fa-f]{2})', u.query)):
             return 'UNKNOWN'
-        query = parse_qsl(u.query, keep_blank_values=True, strict_parsing=True, errors='strict')
+        query = parse_qsl(u.query, keep_blank_values=True, strict_parsing=True, errors='strict') if u.query else []
         keys = [k for k, _ in query]
         if len(keys) != len(set(keys)) or not set(keys) <= ROUTE_QUERY_KEYS[manufacturer]:
             return 'UNKNOWN'
