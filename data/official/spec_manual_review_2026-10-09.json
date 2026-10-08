@@ -1,0 +1,430 @@
+{
+  "batch_id": "official-spec-manual-review-2026-10-09",
+  "checked_on": "2026-10-09",
+  "baseline_commit": "90136e84056bade3a48e1e57f442f96f9924f5da",
+  "catalog_application": "NOT_APPLIED",
+  "sources": [
+    {
+      "source_id": "SR-JYT",
+      "url": "https://www.jooyon.co.kr/bbs/board.php?bo_table=press&page=16&wr_id=227",
+      "model_scope": "V32UE",
+      "region": "KR",
+      "location": "본문 출시 설명: 32형·4K UHD·IPS",
+      "source_status": "DIRECT_CHECK",
+      "checked_at": "2026-10-09",
+      "notes": ""
+    },
+    {
+      "source_id": "SR-CROSS",
+      "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+      "model_scope": "27ULD950",
+      "region": "KR",
+      "location": "상품명 및 요약정보: PD65·USB PD 지원",
+      "source_status": "DIRECT_CHECK",
+      "checked_at": "2026-10-09",
+      "notes": "상세 이미지 링크는 도구 오류로 미확인"
+    },
+    {
+      "source_id": "SR-DELL-PL",
+      "url": "https://www.dell.com/pl-pl/shop/monitor-dell-ultrasharp-27-4k-z-koncentratorem-usb-c-u2723qe/apd/210-bcxk/monitory-i-akcesoria-do-monitor%C3%B3w",
+      "model_scope": "U2723QE",
+      "region": "PL",
+      "location": "Rozdzielczość / częstotliwość odświeżania; Złącza / Interfejsy",
+      "source_status": "DIRECT_CHECK",
+      "checked_at": "2026-10-09",
+      "notes": ""
+    },
+    {
+      "source_id": "SR-LG-LV",
+      "url": "https://www.lg.com/lv/monitori/lg-27up850-w",
+      "model_scope": "27UP850-W",
+      "region": "LV",
+      "location": "SAVIENOJAMĪBA: HDMI/DP/USB-C maks. izšķirtspēja; DP versija; USB-C DP režīms/elektrības padeve",
+      "source_status": "DIRECT_CHECK",
+      "checked_at": "2026-10-09",
+      "notes": "라트비아어 IR=지원, NAV=없음. 전체 지역 SKU 미확인"
+    },
+    {
+      "source_id": "SR-LG-PT",
+      "url": "https://www.lg.com/pt/monitores/uhd-4k-5k/27up850-w/",
+      "model_scope": "27UP850-W",
+      "region": "PT",
+      "location": "CONECTIVIDADE: USB-C fornecimento de energia",
+      "source_status": "DIRECT_CHECK",
+      "checked_at": "2026-10-09",
+      "notes": "사양표는 일치하지만 게임 홍보 본문에 27UP850N 명칭 혼입. 이번 typed assertion의 근거에서 제외"
+    },
+    {
+      "source_id": "SR-DELL-GB",
+      "url": "https://www.dell.com/en-gb/shop/dell-ultrasharp-27-4k-usb-c-hub-monitor-u2723qe/apd/210-bcxk/monitors-monitor-accessories",
+      "model_scope": "U2723QE",
+      "region": "GB",
+      "location": "판매 페이지",
+      "source_status": "ACCESS_FAILED",
+      "checked_at": "2026-10-09",
+      "notes": "웹 도구 접근 오류"
+    },
+    {
+      "source_id": "SR-LG-MY",
+      "url": "https://www.lg.com/my/monitors/ultrafine-uhd-4k-5k/27up850-w/",
+      "model_scope": "27UP850-W",
+      "region": "MY",
+      "location": "판매 페이지",
+      "source_status": "ACCESS_FAILED",
+      "checked_at": "2026-10-09",
+      "notes": "웹 도구 timeout"
+    },
+    {
+      "source_id": "SR-DELL-MANUAL",
+      "url": "https://dl.dell.com/content/manual12109242-dell-u2723qe-monitor-user-s-guide.pdf?language=en-us",
+      "model_scope": "U2723QE",
+      "region": "GLOBAL",
+      "location": "설명서 파일",
+      "source_status": "ACCESS_FAILED",
+      "checked_at": "2026-10-09",
+      "notes": "공식 지원 목록에서 링크 확인. 웹 도구는 10,811,030bytes 제한, 공개 curl 다운로드는403. 내용 근거로 사용하지 않음"
+    }
+  ],
+  "assertions": [
+    {
+      "assertion_id": "SR-dell-u2723qe:1",
+      "product_id": "product:dell-u2723qe",
+      "property": "VIDEO_PROFILE",
+      "summary": "패널 기본 해상도 3840×2160 60Hz",
+      "payload": {
+        "scope": "PANEL",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "interface": "UNKNOWN"
+      },
+      "verified_fields": [
+        "scope",
+        "width",
+        "height",
+        "refresh_hz"
+      ],
+      "source_refs": [
+        "SR-DELL-PL"
+      ],
+      "location": "해상도/주사율 표기 및 Interfejsy 연결 목록",
+      "status": "VERIFIED_MODEL_SCOPE",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO",
+      "variant_match": "UNKNOWN",
+      "target_fact_id": "dell-u2723qe:1",
+      "target_fact_sha256": "0dbec3f9e910a072306d310403a0a54ceea6407d04177bd68feada2f6feb9faf"
+    },
+    {
+      "assertion_id": "SR-dell-u2723qe:2",
+      "product_id": "product:dell-u2723qe",
+      "property": "PROTOCOL",
+      "summary": "영상용 USB-C upstream은 DP 1.4 Alt Mode",
+      "payload": {
+        "interface": "USB_C_VIDEO_UPSTREAM",
+        "protocol": "DISPLAYPORT",
+        "version": "1.4",
+        "mode": "ALT_MODE",
+        "support": "SUPPORTED"
+      },
+      "verified_fields": [
+        "interface",
+        "protocol",
+        "version",
+        "mode",
+        "support"
+      ],
+      "source_refs": [
+        "SR-DELL-PL"
+      ],
+      "location": "해상도/주사율 표기 및 Interfejsy 연결 목록",
+      "status": "VERIFIED_MODEL_SCOPE",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO",
+      "variant_match": "UNKNOWN",
+      "target_fact_id": "dell-u2723qe:2",
+      "target_fact_sha256": "4d2df1b5ad673babe1ef222e421f18e4d8f64d0099a5ca2be22a83dae025371b"
+    },
+    {
+      "assertion_id": "SR-dell-u2723qe:3",
+      "product_id": "product:dell-u2723qe",
+      "property": "POWER_TRANSFER",
+      "summary": "영상용 USB-C upstream에서 최대 90W 공급",
+      "payload": {
+        "mode": "OFFER",
+        "interface": "USB_C_VIDEO_UPSTREAM",
+        "watts": 90,
+        "rating_basis": "UP_TO"
+      },
+      "verified_fields": [
+        "mode",
+        "interface",
+        "watts",
+        "rating_basis"
+      ],
+      "source_refs": [
+        "SR-DELL-PL"
+      ],
+      "location": "해상도/주사율 표기 및 Interfejsy 연결 목록",
+      "status": "VERIFIED_MODEL_SCOPE",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO",
+      "variant_match": "UNKNOWN",
+      "target_fact_id": "dell-u2723qe:3",
+      "target_fact_sha256": "4088cc780000a54cd18b9835ed5bb08658109af70f84995cd7ea6b204ae7935f"
+    },
+    {
+      "assertion_id": "SR-dell-u2723qe:4",
+      "product_id": "product:dell-u2723qe",
+      "property": "POWER_TRANSFER",
+      "summary": "USB-C downstream은 최대 15W 충전",
+      "payload": {
+        "mode": "OFFER",
+        "interface": "USB_C_DOWNSTREAM",
+        "watts": 15,
+        "rating_basis": "UP_TO"
+      },
+      "verified_fields": [
+        "mode",
+        "interface",
+        "watts",
+        "rating_basis"
+      ],
+      "source_refs": [
+        "SR-DELL-PL"
+      ],
+      "location": "해상도/주사율 표기 및 Interfejsy 연결 목록",
+      "status": "VERIFIED_MODEL_SCOPE",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO",
+      "variant_match": "UNKNOWN",
+      "target_fact_id": "dell-u2723qe:4",
+      "target_fact_sha256": "d6b6f59deb3a16b4409ef00577282b2233454d1674890e7e1689de91c4b29137"
+    },
+    {
+      "assertion_id": "SR-LG-ALT",
+      "product_id": "product:lg-27up850-w",
+      "property": "PROTOCOL",
+      "summary": "USB-C DP Alternate Mode 지원",
+      "payload": {
+        "interface": "USB_C",
+        "protocol": "DISPLAYPORT",
+        "mode": "ALT_MODE",
+        "support": "SUPPORTED"
+      },
+      "verified_fields": [
+        "interface",
+        "protocol",
+        "mode",
+        "support"
+      ],
+      "source_refs": [
+        "SR-LG-LV"
+      ],
+      "location": "USB-C (DP papildu režīms): IR",
+      "status": "VERIFIED_MODEL_SCOPE",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO",
+      "variant_match": "UNKNOWN",
+      "target_fact_id": "lg-27up850-w:2",
+      "target_fact_sha256": "b063c1fef2cbcda2f002103a8a279e4c914db9cd5cf890cd617f4ecfc43296f5"
+    },
+    {
+      "assertion_id": "SR-LG-PD",
+      "product_id": "product:lg-27up850-w",
+      "property": "POWER_TRANSFER",
+      "summary": "USB-C에서 최대 96W 공급 표기",
+      "payload": {
+        "mode": "OFFER",
+        "interface": "USB_C",
+        "watts": 96,
+        "rating_basis": "UP_TO"
+      },
+      "verified_fields": [
+        "mode",
+        "interface",
+        "watts",
+        "rating_basis"
+      ],
+      "source_refs": [
+        "SR-LG-LV"
+      ],
+      "location": "USB Type-C 소개: līdz 96 W; USB-C (elektrības padeve):96 W",
+      "status": "VERIFIED_MODEL_SCOPE",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO",
+      "variant_match": "UNKNOWN"
+    },
+    {
+      "assertion_id": "SR-LG-HDMI",
+      "product_id": "product:lg-27up850-w",
+      "property": "VIDEO_PROFILE",
+      "summary": "HDMI 입력 최대 3840×2160 60Hz 표기",
+      "payload": {
+        "scope": "PORT",
+        "interface": "HDMI",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "rating_basis": "UP_TO"
+      },
+      "verified_fields": [
+        "scope",
+        "interface",
+        "width",
+        "height",
+        "refresh_hz",
+        "rating_basis"
+      ],
+      "source_refs": [
+        "SR-LG-LV"
+      ],
+      "location": "HDMI maximum resolution / Hz",
+      "status": "VERIFIED_MODEL_SCOPE",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO",
+      "variant_match": "UNKNOWN"
+    },
+    {
+      "assertion_id": "SR-LG-DISPLAYPORT",
+      "product_id": "product:lg-27up850-w",
+      "property": "VIDEO_PROFILE",
+      "summary": "DISPLAYPORT 입력 최대 3840×2160 60Hz 표기",
+      "payload": {
+        "scope": "PORT",
+        "interface": "DISPLAYPORT",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "rating_basis": "UP_TO"
+      },
+      "verified_fields": [
+        "scope",
+        "interface",
+        "width",
+        "height",
+        "refresh_hz",
+        "rating_basis"
+      ],
+      "source_refs": [
+        "SR-LG-LV"
+      ],
+      "location": "DISPLAYPORT maximum resolution / Hz",
+      "status": "VERIFIED_MODEL_SCOPE",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO",
+      "variant_match": "UNKNOWN"
+    },
+    {
+      "assertion_id": "SR-LG-USB_C",
+      "product_id": "product:lg-27up850-w",
+      "property": "VIDEO_PROFILE",
+      "summary": "USB_C 입력 최대 3840×2160 60Hz 표기",
+      "payload": {
+        "scope": "PORT",
+        "interface": "USB_C",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "rating_basis": "UP_TO"
+      },
+      "verified_fields": [
+        "scope",
+        "interface",
+        "width",
+        "height",
+        "refresh_hz",
+        "rating_basis"
+      ],
+      "source_refs": [
+        "SR-LG-LV"
+      ],
+      "location": "USB_C maximum resolution / Hz",
+      "status": "VERIFIED_MODEL_SCOPE",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO",
+      "variant_match": "UNKNOWN"
+    },
+    {
+      "assertion_id": "SR-LG-DP",
+      "product_id": "product:lg-27up850-w",
+      "property": "PROTOCOL",
+      "summary": "DisplayPort 입력 DP 1.4 표기",
+      "payload": {
+        "interface": "DISPLAYPORT",
+        "protocol": "DISPLAYPORT",
+        "version": "1.4",
+        "support": "SUPPORTED"
+      },
+      "verified_fields": [
+        "interface",
+        "protocol",
+        "version",
+        "support"
+      ],
+      "source_refs": [
+        "SR-LG-LV"
+      ],
+      "location": "DP versija:1.4",
+      "status": "VERIFIED_MODEL_SCOPE",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO",
+      "variant_match": "UNKNOWN"
+    }
+  ],
+  "manual_reviews": [
+    {
+      "fact_id": "jooyon-v32ue:site-1",
+      "original_fact_sha256": "9a89213b3a4a43c2362898ec58a7363b8be8c70f5472594f332836411470bd4a",
+      "source_refs": [
+        "SR-JYT"
+      ],
+      "status": "PARTIALLY_VERIFIED",
+      "verified_fields": [
+        "resolution_label"
+      ],
+      "unverified_fields": [
+        "width",
+        "height",
+        "refresh_hz"
+      ],
+      "notes": "32형 IPS·4K UHD 표현은 공식 본문과 일치. 숫자 픽셀·Hz를 확정하지 않음",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "fact_id": "crossover-27uld950:site-2",
+      "original_fact_sha256": "d1de1e84d1f083e5726855d364a40d33ee708c414c6ebd273b65b00901c5362d",
+      "source_refs": [
+        "SR-CROSS"
+      ],
+      "status": "PARTIALLY_VERIFIED",
+      "verified_fields": [
+        "label"
+      ],
+      "unverified_fields": [
+        "watts",
+        "interface",
+        "mode"
+      ],
+      "notes": "PD65 상품명과 USB PD 지원은 확인. 상세 공급W·방향·단자는 이번 공개 텍스트만으로 독립 확인하지 못함",
+      "public_status": "UNKNOWN",
+      "usable_for_compatibility": "NO"
+    }
+  ],
+  "remaining_unknowns": {
+    "product:dell-u2723qe": [
+      "GB/KR SKU 동일성",
+      "두 번째 USB-C upstream 영상 지원",
+      "DSC/레인 설정·DP 출력 라우팅",
+      "PD 전압·전류 profile",
+      "입력별 타이밍"
+    ],
+    "product:lg-27up850-w": [
+      "MY/KR SKU 동일성",
+      "레인·DSC",
+      "PD 전압·전류 profile",
+      "기존 RATED qualifier와 최대96W 표기의 적용 범위"
+    ]
+  }
+}
