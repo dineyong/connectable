@@ -1,6 +1,6 @@
 """Generate a public UI projection without changing source data or CSP."""
 from pathlib import Path
-import json, hashlib, sys
+import argparse, json, hashlib, sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scripts.site_content_validation import validate_content
 root = Path(__file__).resolve().parents[1]
@@ -31,5 +31,14 @@ for g in x['guides']:
     y['guides'].append(out)
 validate_content(y)
 encoded = json.dumps(y,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
-(root/'web/site-content-v2.js').write_text('// Derived from data/site/content-v2.json; sha256: '+hashlib.sha256(source.read_bytes()).hexdigest()+'\nwindow.CONNECTABLE_SITE_V2 = '+encoded+';\n')
+result = '// Derived from data/site/content-v2.json; sha256: '+hashlib.sha256(source.read_bytes()).hexdigest()+'\nwindow.CONNECTABLE_SITE_V2 = '+encoded+';\n'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--check', action='store_true', help='Verify asset without writing it')
+args = parser.parse_args()
+target = root/'web/site-content-v2.js'
+if args.check:
+    if not target.is_file() or target.read_text() != result:
+        raise SystemExit('site-content-v2.js is stale')
+else:
+    target.write_text(result)
 print('Derived',len(y['monitors']),'monitors,',len(y['reviews']),'reviews,',len(y['guides']),'guides')

@@ -1,10 +1,13 @@
 name: Validate corpus and mockup
 on:
   push:
-    branches: [research/question-corpus-foundation]
+    branches: [main, research/question-corpus-foundation, 'codex/**']
   pull_request:
 permissions:
   contents: read
+concurrency:
+  group: validation-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   checks:
     runs-on: ubuntu-24.04
@@ -25,6 +28,11 @@ jobs:
       - run: python3 -m scripts.validate_official_products
       - run: python3 scripts/validate_connection_model_pilot.py
       - run: python3 scripts/path_instance_v1.py --check
+      - run: python3 scripts/validate_public_usage_review.py
+      - run: python3 scripts/build_site_content_v2.py --check
+      - run: python3 web/derive-site-content.py --check
+      - run: python3 scripts/validate_official_spec_review.py
+      - run: python3 scripts/product_semantics.py
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
