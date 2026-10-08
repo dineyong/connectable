@@ -15,14 +15,14 @@ OFFICIAL_ROUTES = {
     'LG': {'www.lg.com': r'^/[a-z]{2}/(?:monitors/|monitori/|monitores/|support/)'},
     '주연테크': {'www.jooyon.co.kr': r'^/bbs/board\.php$'},
     '크로스오버': {
-        'www.crosslcd.co.kr': r'^/(?:shop/item\.php|bbs/board\.php)$',
-        'crosslcd.co.kr': r'^/(?:shop/item\.php|bbs/board\.php)$',
+        'www.crosslcd.co.kr': r'^/shop/item\.php$',
+        'crosslcd.co.kr': r'^/shop/item\.php$',
     },
     'MSI': {'www.msi.com': r'^/(?:Business-Productivity-Monitor/|support/)'},
 }
 ROUTE_QUERY_KEYS = {
     '주연테크': {'bo_table', 'page', 'wr_id'},
-    '크로스오버': {'it_id', 'bo_table', 'page', 'wr_id'},
+    '크로스오버': {'it_id'},
     'Dell': {'language'},
     'LG': set(),
     'MSI': set(),
@@ -73,6 +73,13 @@ def official_url_status(url, manufacturer):
         query = parse_qsl(u.query, keep_blank_values=True)
         keys = [k for k, _ in query]
         if len(keys) != len(set(keys)) or not set(keys) <= ROUTE_QUERY_KEYS[manufacturer]:
+            return 'UNKNOWN'
+        values = dict(query)
+        if manufacturer == '주연테크' and (values.get('bo_table') != 'press'
+                or not values.get('wr_id', '').isdigit()
+                or ('page' in values and not values['page'].isdigit())):
+            return 'UNKNOWN'
+        if manufacturer == '크로스오버' and not values.get('it_id', '').isdigit():
             return 'UNKNOWN'
         for _, value in query:
             decoded = value

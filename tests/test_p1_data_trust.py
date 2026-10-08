@@ -146,3 +146,8 @@ class TrustPolicyTests(unittest.TestCase):
         source['url'] = 'https://unreviewed.dell.com/support/spec'
         with self.assertRaisesRegex(ValueError, 'UNKNOWN'):
             validate(data)
+
+    def test_manufacturer_board_is_not_automatically_official_spec(self):
+        from scripts.data_trust import official_url_status
+        self.assertEqual(official_url_status('https://www.jooyon.co.kr/bbs/board.php?bo_table=user&wr_id=227', '주연테크'), 'UNKNOWN')
+        self.assertEqual(official_url_status('https://www.crosslcd.co.kr/bbs/board.php?bo_table=review&wr_id=1', '크로스오버'), 'UNKNOWN')
