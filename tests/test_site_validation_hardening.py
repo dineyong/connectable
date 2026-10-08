@@ -105,6 +105,19 @@ class SiteValidationHardeningTests(unittest.TestCase):
             with self.subTest(field=field), self.assertRaises(ValueError):
                 validate_content(d)
 
+    def test_capability_cannot_reference_another_property(self):
+        d = copy.deepcopy(self.data)
+        m = d['monitors'][3]
+        m['capabilities']['usb_c_video']['feature_refs'] = [m['features'][2]['fact_id']]
+        with self.assertRaises(ValueError):
+            validate_content(d)
+
+    def test_confirmed_capability_cannot_use_unsupported_fact(self):
+        d = copy.deepcopy(self.data)
+        d['monitors'][3]['features'][1]['payload']['support'] = 'UNSUPPORTED'
+        with self.assertRaises(ValueError):
+            validate_content(d)
+
 
 if __name__ == '__main__':
     unittest.main()

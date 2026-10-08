@@ -148,10 +148,27 @@ def validate_content(data):
                     refs(f.get('source_refs'), path+'/fact.source_refs', source_ids)
                     if f.get('basis') != 'MANUFACTURER_SPEC':
                         fail(path, 'official feature needs manufacturer basis')
-                for cap in item.get('capabilities', {}).values():
+                capability_properties = {'usb_c_video': 'PROTOCOL', 'pd_supply': 'POWER_TRANSFER', 'kvm': 'KVM', 'speakers': 'SPEAKERS', 'height_adjustment': 'HEIGHT_ADJUSTMENT'}
+                for name, cap in item.get('capabilities', {}).items():
+                    if name not in capability_properties:
+                        fail(path+'/capability', 'unsupported capability')
                     if cap.get('status') not in ('CONFIRMED_MANUFACTURER_STATEMENT', 'UNKNOWN'):
                         fail(path+'/capability', 'invalid capability status')
                     refs(cap.get('feature_refs'), path+'/capability', facts, required=cap.get('status') == 'CONFIRMED_MANUFACTURER_STATEMENT')
+                    for ref in cap['feature_refs']:
+                        fact = facts[ref]
+                        if fact['property'] != capability_properties[name]:
+                            fail(path+'/capability', 'feature property does not match capability')
+                        if cap['status'] == 'CONFIRMED_MANUFACTURER_STATEMENT':
+                            p = fact['payload']
+                            if name == 'pd_supply':
+                                valid = p['mode'] == 'OFFER'
+                            else:
+                                valid = p['support'] == 'SUPPORTED'
+                            if name == 'usb_c_video':
+                                valid = valid and p['interface'].startswith('USB_C')
+                            if not valid:
+                                fail(path+'/capability', 'confirmed capability lacks matching supported fact')
             if kind == 'reviews':
                 local = {k: unique(item[k], 'id', path+'/'+k) for k in ('nodes', 'ports', 'evidence', 'configurations', 'observations', 'attempts')}
                 ids = [i for objects in local.values() for i in objects]
