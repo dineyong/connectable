@@ -4,6 +4,7 @@ from math import isfinite
 from urllib.parse import urlsplit
 from pathlib import Path
 import json
+from scripts.product_semantics import validate_semantics
 
 
 def fail(path, message):
@@ -89,6 +90,7 @@ def payload(fact, path):
             fail(path, 'reversed tilt range')
     if prop == 'POWER_TRANSFER' and p['rating_basis'] == 'PRODUCT_LABEL_ONLY' and p['watts'] != 'UNKNOWN':
         fail(path, 'product label is not numeric power evidence')
+    validate_semantics(fact, path)
 
 
 def unique(items, field, path):

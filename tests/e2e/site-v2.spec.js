@@ -462,3 +462,22 @@ test('public data retains resolvable official and user evidence references', asy
   });
   expect(errors).toEqual([]);
 });
+
+test('official summary text reaches details and critical comparison cells unchanged', async ({page}) => {
+  await page.goto('/');
+  for (const m of content.monitors) {
+    await page.locator(`#monitor-list button[data-id="${m.id}"]`).click();
+    for (const f of m.features) await expect(page.locator('#detail-body')).toContainText(f.summary);
+    await page.keyboard.press('Escape');
+  }
+  const choices = page.locator('[data-compare]');
+  await choices.nth(0).check();
+  await choices.nth(2).check();
+  await page.locator('#compare-open').click();
+  const row = name => page.locator('.comparison tr').filter({has: page.getByRole('rowheader',{name,exact:true})});
+  await expect(row('공식 PD 공급 전력 상한·표기').locator('td').nth(0)).toContainText('최대 90W 공급');
+  await expect(row('공식 PD 공급 전력 상한·표기').locator('td').nth(0)).toContainText('downstream은 최대 15W 충전');
+  await expect(row('입력 포트별 해상도·Hz').locator('td').nth(1)).toContainText('DisplayPort에서 2560×1440 165Hz');
+  await expect(row('입력 포트별 해상도·Hz').locator('td').nth(1)).toContainText('HDMI에서 2560×1440 144Hz');
+  await expect(row('공식 PD 공급 전력 상한·표기').locator('td').nth(1)).toContainText('UNKNOWN');
+});
