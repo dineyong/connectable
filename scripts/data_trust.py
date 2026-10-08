@@ -56,7 +56,7 @@ def model_identity(*labels):
 def official_url_status(url, manufacturer):
     """A narrow URL authority policy, not a live redirect/content verifier."""
     try:
-        if not isinstance(url, str) or any(c.isspace() or ord(c) < 32 for c in url) or '\\' in url:
+        if not isinstance(url, str) or any(c.isspace() or ord(c) < 32 or ord(c) == 127 for c in url) or '\\' in url:
             return 'UNKNOWN'
         u = urlsplit(url)
         route = OFFICIAL_ROUTES.get(manufacturer, {}).get(u.hostname)
@@ -64,22 +64,29 @@ def official_url_status(url, manufacturer):
                 or not route or u.fragment):
             return 'UNKNOWN'
         # Encoded separators/dot segments can change routing after browser decoding.
-        path = unquote(u.path)
+        path = unquote(u.path, errors='strict')
         if (re.search(r'(?i)%(?:2f|5c|2e|3f|23|25)|%(?![0-9a-f]{2})', u.path)
                 or any(p in ('.', '..') for p in path.split('/')) or not re.search(route, path)):
             return 'UNKNOWN'
+        if any(c.isspace() or ord(c) < 32 or ord(c) == 127 for c in path):
+            return 'UNKNOWN'
         if re.search(r'(?i)(?:^|/)(?:redirect|redir|out|go|url|away)(?:[./]|$)', path):
             return 'UNKNOWN'
-        query = parse_qsl(u.query, keep_blank_values=True)
+        if u.query and (any(not part or '=' not in part for part in u.query.split('&'))
+                        or re.search(r'%(?![0-9A-Fa-f]{2})', u.query)):
+            return 'UNKNOWN'
+        query = parse_qsl(u.query, keep_blank_values=True, strict_parsing=True, errors='strict')
         keys = [k for k, _ in query]
         if len(keys) != len(set(keys)) or not set(keys) <= ROUTE_QUERY_KEYS[manufacturer]:
             return 'UNKNOWN'
         values = dict(query)
-        if manufacturer == '주연테크' and (values.get('bo_table') != 'press'
-                or not values.get('wr_id', '').isdigit()
-                or ('page' in values and not values['page'].isdigit())):
+        if manufacturer == 'Dell' and 'language' in values and not re.fullmatch(r'[a-z]{2}(?:-[a-z]{2})?', values['language']):
             return 'UNKNOWN'
-        if manufacturer == '크로스오버' and not values.get('it_id', '').isdigit():
+        if manufacturer == '주연테크' and (values.get('bo_table') != 'press'
+                or not re.fullmatch(r'[0-9]+', values.get('wr_id', ''))
+                or ('page' in values and not re.fullmatch(r'[0-9]+', values['page']))):
+            return 'UNKNOWN'
+        if manufacturer == '크로스오버' and not re.fullmatch(r'[0-9]+', values.get('it_id', '')):
             return 'UNKNOWN'
         for _, value in query:
             decoded = value
@@ -88,7 +95,7 @@ def official_url_status(url, manufacturer):
             if re.search(r'(?i)(?:https?:|//|\\)', decoded):
                 return 'UNKNOWN'
         return 'OFFICIAL_URL_SCOPE'
-    except (TypeError, ValueError):
+    except (TypeError, ValueError, UnicodeError):
         return 'UNKNOWN'
 
 
