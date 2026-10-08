@@ -193,6 +193,8 @@ def validate_content(data):
                             if not valid:
                                 fail(path+'/capability', 'confirmed capability lacks matching supported fact')
             if kind == 'reviews':
+                if 'usable_for_compatibility' in item and item['usable_for_compatibility'] != 'NO':
+                    fail(path, 'user observations remain unusable for compatibility approval')
                 local = {k: unique(item[k], 'id', path+'/'+k) for k in ('nodes', 'ports', 'evidence', 'configurations', 'observations', 'attempts')}
                 for monitor_id in item.get('monitor_ids', []):
                     target = maps['monitors'][monitor_id]

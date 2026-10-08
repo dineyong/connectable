@@ -86,3 +86,9 @@ class InputBoundaryTests(unittest.TestCase):
         f = {'property':'PROTOCOL','summary':'수동 문장', 'payload':{'interface':'USB_C','protocol':'DISPLAYPORT','mode':'NOT_A_MODE','support':'SUPPORTED'}}
         with self.assertRaises(ValueError):
             payload(f, 'test')
+
+    def test_user_report_cannot_be_promoted_to_compatibility_evidence(self):
+        d = builder.build()
+        d['reviews'][0]['usable_for_compatibility'] = 'YES'
+        with self.assertRaises(ValueError):
+            validate_content(d)
