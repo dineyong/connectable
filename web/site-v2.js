@@ -91,7 +91,18 @@
           String(p.interface).startsWith("USB_C") &&
           p.support === "SUPPORTED"
         );
-      if (key === "pd") return prop === "POWER_TRANSFER" && p.mode === "OFFER";
+      if (key === "pd")
+        return (
+          prop === "POWER_TRANSFER" &&
+          p.mode === "OFFER" &&
+          typeof p.watts === "number" &&
+          known(p.interface) &&
+          !array(f.field_review?.unverified_fields).some(
+            (k) =>
+              ["watts", "interface", "mode"].includes(k) &&
+              f.field_review?.status === "PARTIALLY_VERIFIED",
+          )
+        );
       if (key === "kvm") return prop === "KVM" && p.support === "SUPPORTED";
       if (key === "speaker")
         return (
@@ -325,6 +336,54 @@
     $("#compare-open").disabled = selected.size !== 2;
   }
   const unknown = "UNKNOWN · 아직 확인되지 않음 (미지원 아님)";
+  const fieldNames = {
+    resolution_label: "해상도 표기",
+    width: "가로 픽셀",
+    height: "세로 픽셀",
+    refresh_hz: "주사율",
+    label: "제품명 표기",
+    watts: "공급 전력",
+    interface: "단자",
+    mode: "공급 방향",
+    rating_basis: "전력 표현 종류",
+  };
+  function featureHTML(f) {
+    const p = f.payload || {},
+      r = f.field_review;
+    const names = (fields) =>
+      array(fields)
+        .map((k) => fieldNames[k] || k)
+        .join(" · ");
+    const power =
+      f.property === "POWER_TRANSFER"
+        ? `<p>전력 표현: ${esc({ RATED: "정격 (RATED)", UP_TO: "최대 상한 (UP_TO)", MANUFACTURER_STATED: "제조사 표기", PRODUCT_LABEL_ONLY: "제품명 표기만 확인" }[p.rating_basis] || "UNKNOWN · 표현 종류 미확인")} · ${typeof p.watts === "number" ? esc(String(p.watts)) + "W" : "공급 W 미확인"}</p>`
+        : "";
+    return `<div class="fact-review"><strong>${esc(f.summary)}</strong>${power}<p>${r?.status === "PARTIALLY_VERIFIED" ? "부분 검증 · MANUAL_REVIEW" : r?.status === "VERIFIED_MODEL_SCOPE" ? "모델 범위 공식 재확인" : "원본 공식 표기 · PENDING_HUMAN_REVIEW"}</p><p>확인된 필드: ${esc(names(r?.verified_fields) || "별도 재확인 없음")}</p><p>미확인·검토 대기 필드: ${esc(names(r?.unverified_fields) || (r ? "없음 (모델 범위만)" : "검토 정보 없음"))}</p><p>UNKNOWN · 한국 SKU 동일성 및 호환성 승인 보류</p>${array(
+      r?.source_refs,
+    )
+      .map(
+        (ref) =>
+          `<p>공식 재확인 근거: ${esc(ref.source_id)} · 지역 ${esc(ref.region)} · ${esc(ref.location)} · 확인 ${esc(ref.checked_at)}</p>`,
+      )
+      .join("")}</div>`;
+  }
+  function separateReviewHTML(m) {
+    return array(m.separate_spec_reviews)
+      .map(
+        (a) =>
+          `<div class="fact-review"><strong>별도 지역 공식 근거 · 기존 사양 대체 아님</strong><p>${esc(a.summary)} · 최대 상한 (UP_TO) · ${esc(String(a.payload.watts))}W</p>${array(
+            a.sources,
+          )
+            .map(
+              (ref) =>
+                `<p>지역 ${esc(ref.region)} · ${esc(ref.location)} · <a href="${esc(ref.url)}" target="_blank" rel="noopener noreferrer">공식 자료</a> · 확인 ${esc(ref.checked_at)}</p>`,
+            )
+            .join(
+              "",
+            )}<p>한국 판매 SKU 적용 미확인 · UNKNOWN · 기존 정격 (RATED) 표기와 통합하지 않음</p></div>`,
+      )
+      .join("");
+  }
   function comparisonRows() {
     return [
       [
@@ -370,9 +429,9 @@
                 (m) =>
                   `<td>${
                     extract(m)
-                      .map((f) => esc(f.summary))
+                      .map((f) => featureHTML(f))
                       .join("<br>") || unknown
-                  }</td>`,
+                  }${label === "공식 PD 공급 전력 상한·표기" ? separateReviewHTML(m) : ""}</td>`,
               )
               .join("")}</tr>`,
         )
@@ -442,15 +501,15 @@
       )
         .map(
           (f) =>
-            `<p><strong>${esc(f.summary)}</strong></p>${array(f.conditions).length ? listHTML(f.conditions) : ""}`,
+            `${featureHTML(f)}${array(f.conditions).length ? listHTML(f.conditions) : ""}`,
         )
-        .join("")}<ul>${Object.entries(addonLabels)
+        .join("")}${separateReviewHTML(r)}<ul>${Object.entries(addonLabels)
         .map(
           ([key, label]) =>
             `<li>${label}: ${
               addonFacts(r, key).length
                 ? addonFacts(r, key)
-                    .map((f) => esc(f.summary))
+                    .map((f) => featureHTML(f))
                     .join(" / ")
                 : "UNKNOWN · 아직 확인되지 않음 (미지원 아님)"
             }</li>`,

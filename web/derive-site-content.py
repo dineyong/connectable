@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse, json, hashlib, sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scripts.site_content_validation import validate_content
+from scripts.content_review import project, validate_ledger, REVIEW, LEDGER
 root = Path(__file__).resolve().parents[1]
 source = root / 'data/site/content-v2.json'
 x = validate_content(json.loads(source.read_text()))
@@ -17,6 +18,8 @@ for m in x['monitors']:
     out['source_refs'] = refs(m)
     out['features'] = [pick(f, ('fact_id','source_refs','property','summary','conditions','payload','review_status','basis')) for f in m.get('features',[])]
     y['monitors'].append(out)
+project(y['monitors'], json.loads(REVIEW.read_text()))
+validate_ledger(json.loads(LEDGER.read_text()))
 y['reviews'] = []
 for r in x['reviews']:
     out = pick(r, ('id','title','macbook_display_name','reported_monitor_models','monitor_ids','connection_summary','review_status','public_status','missing_fields','reported_outcome','configuration_conclusions','commercial_context','functional_observations','monitor_links'))

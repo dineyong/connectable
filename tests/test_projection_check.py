@@ -21,7 +21,7 @@ class ProjectionCheckTests(unittest.TestCase):
     def test_stale_asset_is_rejected_without_repair(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
-            for folder in ('data', 'scripts'):
+            for folder in ('data', 'scripts', 'schemas'):
                 shutil.copytree(ROOT/folder, root/folder, ignore=shutil.ignore_patterns('__pycache__'))
             (root/'web').mkdir()
             shutil.copy(ROOT/'web/derive-site-content.py', root/'web/derive-site-content.py')

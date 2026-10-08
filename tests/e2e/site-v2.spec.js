@@ -333,14 +333,12 @@ test("two product comparison retains independent panel, port, power and unknown 
   await expect(page.locator(".comparison")).toContainText(
     "UNKNOWN · 아직 확인되지 않음 (미지원 아님)",
   );
-  const power = page
-    .locator(".comparison tr")
-    .filter({
-      has: page.getByRole("rowheader", {
-        name: "공식 PD 공급 전력 상한·표기",
-        exact: true,
-      }),
-    });
+  const power = page.locator(".comparison tr").filter({
+    has: page.getByRole("rowheader", {
+      name: "공식 PD 공급 전력 상한·표기",
+      exact: true,
+    }),
+  });
   for (const m of content.monitors.slice(0, 2))
     for (const f of m.features.filter((f) => f.property === "POWER_TRANSFER"))
       await expect(power).toContainText(f.summary);
@@ -380,7 +378,11 @@ test("official addon filters, readable titles, evidence IDs and guide contents",
   await expect(page.locator("#monitor-list article")).toHaveCount(
     content.monitors.filter((m) =>
       m.features.some(
-        (f) => f.property === "POWER_TRANSFER" && f.payload?.mode === "OFFER",
+        (f) =>
+          f.property === "POWER_TRANSFER" &&
+          f.payload?.mode === "OFFER" &&
+          typeof f.payload.watts === "number" &&
+          f.payload.interface !== "UNKNOWN",
       ),
     ).length,
   );
@@ -438,24 +440,31 @@ test("new exact models connect official features to their source records", async
   }
 });
 
-test('public data retains resolvable official and user evidence references', async ({page}) => {
-  await page.goto('/');
+test("public data retains resolvable official and user evidence references", async ({
+  page,
+}) => {
+  await page.goto("/");
   const errors = await page.evaluate(() => {
-    const d = window.CONNECTABLE_SITE_V2, errors = [];
+    const d = window.CONNECTABLE_SITE_V2,
+      errors = [];
     for (const m of d.monitors) {
-      const facts = new Set(m.features.map(f => f.fact_id));
-      const sources = new Set(m.source_refs.map(s => s.record_id));
+      const facts = new Set(m.features.map((f) => f.fact_id));
+      const sources = new Set(m.source_refs.map((s) => s.record_id));
       for (const c of Object.values(m.capabilities || {}))
-        for (const id of c.feature_refs) if (!facts.has(id)) errors.push('fact:'+id);
+        for (const id of c.feature_refs)
+          if (!facts.has(id)) errors.push("fact:" + id);
       for (const f of m.features)
-        for (const id of f.source_refs) if (!sources.has(id)) errors.push('source:'+id);
+        for (const id of f.source_refs)
+          if (!sources.has(id)) errors.push("source:" + id);
     }
     for (const r of d.reviews) {
-      const evidence = new Set(r.evidence.map(e => e.id));
-      const configs = new Set(r.configurations.map(c => c.id));
+      const evidence = new Set(r.evidence.map((e) => e.id));
+      const configs = new Set(r.configurations.map((c) => c.id));
       for (const o of r.observations) {
-        if (!configs.has(o.configuration_id)) errors.push('configuration:'+o.configuration_id);
-        for (const id of o.evidence_refs) if (!evidence.has(id)) errors.push('evidence:'+id);
+        if (!configs.has(o.configuration_id))
+          errors.push("configuration:" + o.configuration_id);
+        for (const id of o.evidence_refs)
+          if (!evidence.has(id)) errors.push("evidence:" + id);
       }
     }
     return errors;
@@ -463,21 +472,37 @@ test('public data retains resolvable official and user evidence references', asy
   expect(errors).toEqual([]);
 });
 
-test('official summary text reaches details and critical comparison cells unchanged', async ({page}) => {
-  await page.goto('/');
+test("official summary text reaches details and critical comparison cells unchanged", async ({
+  page,
+}) => {
+  await page.goto("/");
   for (const m of content.monitors) {
     await page.locator(`#monitor-list button[data-id="${m.id}"]`).click();
-    for (const f of m.features) await expect(page.locator('#detail-body')).toContainText(f.summary);
-    await page.keyboard.press('Escape');
+    for (const f of m.features)
+      await expect(page.locator("#detail-body")).toContainText(f.summary);
+    await page.keyboard.press("Escape");
   }
-  const choices = page.locator('[data-compare]');
+  const choices = page.locator("[data-compare]");
   await choices.nth(0).check();
   await choices.nth(2).check();
-  await page.locator('#compare-open').click();
-  const row = name => page.locator('.comparison tr').filter({has: page.getByRole('rowheader',{name,exact:true})});
-  await expect(row('공식 PD 공급 전력 상한·표기').locator('td').nth(0)).toContainText('최대 90W 공급');
-  await expect(row('공식 PD 공급 전력 상한·표기').locator('td').nth(0)).toContainText('downstream은 최대 15W 충전');
-  await expect(row('입력 포트별 해상도·Hz').locator('td').nth(1)).toContainText('DisplayPort에서 2560×1440 165Hz');
-  await expect(row('입력 포트별 해상도·Hz').locator('td').nth(1)).toContainText('HDMI에서 2560×1440 144Hz');
-  await expect(row('공식 PD 공급 전력 상한·표기').locator('td').nth(1)).toContainText('UNKNOWN');
+  await page.locator("#compare-open").click();
+  const row = (name) =>
+    page
+      .locator(".comparison tr")
+      .filter({ has: page.getByRole("rowheader", { name, exact: true }) });
+  await expect(
+    row("공식 PD 공급 전력 상한·표기").locator("td").nth(0),
+  ).toContainText("최대 90W 공급");
+  await expect(
+    row("공식 PD 공급 전력 상한·표기").locator("td").nth(0),
+  ).toContainText("downstream은 최대 15W 충전");
+  await expect(row("입력 포트별 해상도·Hz").locator("td").nth(1)).toContainText(
+    "DisplayPort에서 2560×1440 165Hz",
+  );
+  await expect(row("입력 포트별 해상도·Hz").locator("td").nth(1)).toContainText(
+    "HDMI에서 2560×1440 144Hz",
+  );
+  await expect(
+    row("공식 PD 공급 전력 상한·표기").locator("td").nth(1),
+  ).toContainText("UNKNOWN");
 });
