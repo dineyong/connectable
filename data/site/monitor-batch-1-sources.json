@@ -1,0 +1,661 @@
+{
+  "batch_id": "monitor-batch-1",
+  "checked_on": "2026-10-09",
+  "status": "PENDING_HUMAN_REVIEW",
+  "sources": [
+    {
+      "source_id": "SITE-JYT-V32UE",
+      "url": "https://www.jooyon.co.kr/bbs/board.php?bo_table=press&page=16&wr_id=227",
+      "title": "주연테크 V32UE 출시 자료",
+      "source_type": "MANUFACTURER_RELEASE",
+      "location": "본문 USB-C 설명·인터페이스·리모컨·VESA",
+      "model_scope": "V32UE",
+      "checked_at": "2026-10-09",
+      "published_at": "2021-12-06",
+      "source_status": "DIRECT_CHECK",
+      "access": "BODY_DIRECT_CHECK",
+      "method": "WEB_TOOL_PUBLIC_BODY",
+      "notes": "출시 홍보 자료의 기능 표기만 사용. 행사 가격·추천 문구 제외. V32UE-E와 별도 모델."
+    },
+    {
+      "source_id": "SITE-CROSS-27ULD950",
+      "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+      "title": "크로스오버 27ULD950 일반 제품",
+      "source_type": "MANUFACTURER_PRODUCT",
+      "location": "요약정보 및 구매 / 스펙 요약",
+      "model_scope": "27ULD950",
+      "checked_at": "2026-10-09",
+      "published_at": "UNKNOWN",
+      "source_status": "DIRECT_CHECK",
+      "access": "BODY_DIRECT_CHECK",
+      "method": "WEB_TOOL_PUBLIC_BODY",
+      "notes": "일반 제품 페이지. 등외품 페이지는 사양 근거로 사용하지 않음. 상세 이미지 미검사; PD65 이름만으로 실제 협상 전력 확정 안 함."
+    },
+    {
+      "source_id": "SITE-MSI-MD271UL",
+      "url": "https://www.msi.com/Business-Productivity-Monitor/Modern-MD271UL/Specification",
+      "title": "MSI Modern MD271UL 공식 사양",
+      "source_type": "MANUFACTURER_SPEC",
+      "location": "Panel Resolution·Refresh Rate·Video Ports·Adjustment·Note",
+      "model_scope": "Modern MD271UL",
+      "checked_at": "2026-10-09",
+      "published_at": "UNKNOWN",
+      "source_status": "DIRECT_CHECK",
+      "access": "BODY_DIRECT_CHECK",
+      "method": "WEB_TOOL_PUBLIC_BODY",
+      "notes": "공식 글로벌 페이지는 지역·구성 차이 가능성을 명시. 한국 판매 SKU와 후기 실물 SKU는 UNKNOWN."
+    },
+    {
+      "source_id": "SITE-SAMSUNG-S43BM700UK",
+      "url": "https://www.samsung.com/sec/support/model/LS43BM700UKXKR/",
+      "title": "삼성 S43BM700UK 국내 지원 사양",
+      "source_type": "MANUFACTURER_SPEC",
+      "location": "모델명·디스플레이·입출력·음향",
+      "model_scope": "LS43BM700UKXKR / S43BM700UK",
+      "checked_at": "2026-10-09",
+      "published_at": "UNKNOWN",
+      "source_status": "DIRECT_CHECK",
+      "access": "BODY_DIRECT_CHECK",
+      "method": "WEB_TOOL_PUBLIC_BODY",
+      "notes": "직접 읽었으나 후기 S43BM700의 전체 SKU와 일치 미확인. 표시 모니터·기능으로 편입하지 않음."
+    },
+    {
+      "source_id": "SITE-CHECK-PUR-001",
+      "url": "https://makeany.tistory.com/97",
+      "title": "V32UE 공개 연결 기록",
+      "source_type": "PUBLIC_USER_REPORT",
+      "location": "제목·좋은점2/3·케이블 사진 설명",
+      "model_scope": "V32UE",
+      "checked_at": "2026-10-09",
+      "published_at": "2021-12-22",
+      "source_status": "DIRECT_CHECK",
+      "access": "BODY_DIRECT_CHECK",
+      "method": "WEB_TOOL_PUBLIC_BODY",
+      "notes": "M1 Air의 USB-C 영상·충전을 보고. 3008×1692는 보기 설정, 실제 Hz·수전W·복귀 UNKNOWN."
+    },
+    {
+      "source_id": "SITE-CHECK-PUR-005",
+      "url": "https://quasarzone.com/bbs/qf_dp/views/515378",
+      "title": "27ULD950 공개 문제 기록",
+      "source_type": "PUBLIC_USER_REPORT",
+      "location": "본문 모델명·연결상황·시도 목록",
+      "model_scope": "27ULD950",
+      "checked_at": "2026-10-09",
+      "published_at": "2024-10-12",
+      "source_status": "DIRECT_CHECK",
+      "access": "BODY_DIRECT_CHECK",
+      "method": "WEB_TOOL_PUBLIC_BODY",
+      "notes": "M2 Pro와 Windows HDMI 구성의 깜빡임을 보고. USB-C 비교 호스트는 UNKNOWN; Mac USB-C 성공으로 전환하지 않음."
+    },
+    {
+      "source_id": "SITE-CHECK-PUR-006",
+      "url": "https://quasarzone.com/bbs/qc_user/views/133467",
+      "title": "27ULD950 공개 연결 기록",
+      "source_type": "PUBLIC_USER_REPORT",
+      "location": "본문 모델명·클램쉘 연결 단락",
+      "model_scope": "27ULD950",
+      "checked_at": "2026-10-09",
+      "published_at": "2024-11-25",
+      "source_status": "DIRECT_CHECK",
+      "access": "BODY_DIRECT_CHECK",
+      "method": "WEB_TOOL_PUBLIC_BODY",
+      "notes": "Mac 클램쉘에서 번들 C-C 영상·충전을 보고. 칩·신호Hz·수전W·복귀 UNKNOWN. 구매 포인트·권유 맥락 보존."
+    },
+    {
+      "source_id": "SITE-CHECK-PUR-014",
+      "url": "https://seook.tistory.com/m/entry/맥북-4K-모니터-추천-MSI-MD271UL-4K-듀얼-모니터-실제-사용-후기",
+      "title": "MD271UL 공개 연결 기록",
+      "source_type": "PUBLIC_USER_REPORT",
+      "location": "제목·연결성·케이블 교체·Type C PD Charge",
+      "model_scope": "MD271UL",
+      "checked_at": "2026-10-09",
+      "published_at": "2026-01-18",
+      "source_status": "DIRECT_CHECK",
+      "access": "BODY_DIRECT_CHECK",
+      "method": "WEB_TOOL_PUBLIC_BODY",
+      "notes": "M2 Air/M4 mini를 언급하며 케이블 교체 뒤 화면 문제 해소와 충전을 보고. 교체 당시 호스트·케이블 세대·실측W·복귀 UNKNOWN."
+    },
+    {
+      "source_id": "SITE-CHECK-PUR-003",
+      "url": "https://quasarzone.com/bbs/qf_dp/views/369236",
+      "title": "S43BM700 공개 연결 기록",
+      "source_type": "PUBLIC_USER_REPORT",
+      "location": "본문 모델명·실험 목록",
+      "model_scope": "S43BM700",
+      "checked_at": "2026-10-09",
+      "published_at": "2022-08-23",
+      "source_status": "DIRECT_CHECK",
+      "access": "BODY_DIRECT_CHECK",
+      "method": "WEB_TOOL_PUBLIC_BODY",
+      "notes": "C-C/HDMI와 허브 경유 결과가 다르며 PC 무출력도 기록. 전체 SKU는 UNKNOWN이라 국내 UK 사양 자동 연결 보류."
+    }
+  ],
+  "products": [
+    {
+      "product_id": "product:jooyon-v32ue",
+      "manufacturer": "주연테크",
+      "model": "V32UE",
+      "kind": "DISPLAY",
+      "region": "KR",
+      "identity_status": "EXACT_MODEL",
+      "variant": "V32UE 기본 표시모델; V32UE-E 제외",
+      "source_refs": [
+        "SITE-JYT-V32UE"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "missing_fields": [
+        "공식 주사율·입력별 타이밍 UNKNOWN",
+        "실제 PD 협상·측정W UNKNOWN",
+        "KVM·높이조절·공식 스피커 사양 UNKNOWN",
+        "후기 실물 리비전 UNKNOWN"
+      ]
+    },
+    {
+      "product_id": "product:crossover-27uld950",
+      "manufacturer": "크로스오버",
+      "model": "27ULD950",
+      "kind": "DISPLAY",
+      "region": "KR",
+      "identity_status": "EXACT_MODEL",
+      "variant": "화이트 멀티스탠드 기본 표시모델; 일반/무결점 정책 차이를 성능 차이로 추정하지 않음",
+      "source_refs": [
+        "SITE-CROSS-27ULD950"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "missing_fields": [
+        "공식 USB-C 영상 프로토콜·입력별 타이밍 UNKNOWN",
+        "PD65 상품명과 USB PD 지원은 확인; 상세 공급W·협상 프로파일 UNKNOWN",
+        "KVM 구체 배선·OS별 동작 UNKNOWN",
+        "후기 리비전·실물 검사 UNKNOWN"
+      ]
+    },
+    {
+      "product_id": "product:msi-md271ul",
+      "manufacturer": "MSI",
+      "model": "MD271UL",
+      "kind": "DISPLAY",
+      "region": "GLOBAL",
+      "identity_status": "EXACT_MODEL",
+      "variant": "Modern MD271UL; MD271ULDE 등 다른 모델 제외; 지역 Part No UNKNOWN",
+      "source_refs": [
+        "SITE-MSI-MD271UL"
+      ],
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "missing_fields": [
+        "한국 판매 SKU·후기 실물 리비전 UNKNOWN",
+        "공식 KVM·스피커·높이조절 지원 UNKNOWN",
+        "PD 협상 프로파일·Mac 수전W UNKNOWN",
+        "잠자기 복귀·재연결 실물 확인 UNKNOWN"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "jooyon-v32ue:site-1",
+      "product_id": "product:jooyon-v32ue",
+      "property": "VIDEO_PROFILE",
+      "summary": "공식 출시 자료: 32형 IPS, 4K UHD 표기",
+      "payload": {
+        "scope": "PANEL",
+        "resolution_label": "4K UHD",
+        "width": "UNKNOWN",
+        "height": "UNKNOWN",
+        "refresh_hz": "UNKNOWN"
+      },
+      "source_refs": [
+        "SITE-JYT-V32UE"
+      ],
+      "location": "본문 패널 설명",
+      "conditions": [],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "jooyon-v32ue:site-2",
+      "product_id": "product:jooyon-v32ue",
+      "property": "PROTOCOL",
+      "summary": "USB-C 영상 연결 기능 표기",
+      "payload": {
+        "interface": "USB_C",
+        "support": "SUPPORTED",
+        "protocol": "UNKNOWN"
+      },
+      "source_refs": [
+        "SITE-JYT-V32UE"
+      ],
+      "location": "본문 USB-C 설명",
+      "conditions": [],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "jooyon-v32ue:site-3",
+      "product_id": "product:jooyon-v32ue",
+      "property": "POWER_TRANSFER",
+      "summary": "USB-C 충전 공급 65W 표기; 실제 수전W 미확인",
+      "payload": {
+        "mode": "OFFER",
+        "interface": "USB_C",
+        "watts": 65,
+        "rating_basis": "MANUFACTURER_STATED"
+      },
+      "source_refs": [
+        "SITE-JYT-V32UE"
+      ],
+      "location": "본문 USB-C 설명",
+      "conditions": [
+        "연결 대상·케이블별 실제 협상 전력 UNKNOWN"
+      ],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "jooyon-v32ue:site-4",
+      "product_id": "product:jooyon-v32ue",
+      "property": "PORTS",
+      "summary": "HDMI 2.0·DP 1.2·USB-C·USB-B·USB-A 2.0 제공",
+      "payload": {
+        "interfaces": [
+          "HDMI_2.0",
+          "DISPLAYPORT_1.2",
+          "USB_C",
+          "USB_B",
+          "USB_A_2.0"
+        ]
+      },
+      "source_refs": [
+        "SITE-JYT-V32UE"
+      ],
+      "location": "본문 인터페이스",
+      "conditions": [],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "jooyon-v32ue:site-5",
+      "product_id": "product:jooyon-v32ue",
+      "property": "REMOTE_CONTROL",
+      "summary": "리모컨으로 OSD·입력·볼륨 조절",
+      "payload": {
+        "support": "SUPPORTED"
+      },
+      "source_refs": [
+        "SITE-JYT-V32UE"
+      ],
+      "location": "본문 리모컨 설명",
+      "conditions": [],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "jooyon-v32ue:site-6",
+      "product_id": "product:jooyon-v32ue",
+      "property": "VESA",
+      "summary": "100×100mm VESA 홀 표기",
+      "payload": {
+        "width_mm": 100,
+        "height_mm": 100
+      },
+      "source_refs": [
+        "SITE-JYT-V32UE"
+      ],
+      "location": "본문 VESA 설명",
+      "conditions": [],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "crossover-27uld950:site-1",
+      "product_id": "product:crossover-27uld950",
+      "property": "VIDEO_PROFILE",
+      "summary": "27형 IPS 3840×2160, 60Hz 공식 표기",
+      "payload": {
+        "scope": "PANEL",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "interface": "UNKNOWN"
+      },
+      "source_refs": [
+        "SITE-CROSS-27ULD950"
+      ],
+      "location": "요약정보",
+      "conditions": [],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "crossover-27uld950:site-2",
+      "product_id": "product:crossover-27uld950",
+      "property": "POWER_TRANSFER",
+      "summary": "USB PD 지원 표기; PD65는 상품명, 상세 전력 UNKNOWN",
+      "payload": {
+        "mode": "OFFER",
+        "interface": "UNKNOWN",
+        "watts": "UNKNOWN",
+        "rating_basis": "PRODUCT_LABEL_ONLY",
+        "label": "PD65"
+      },
+      "source_refs": [
+        "SITE-CROSS-27ULD950"
+      ],
+      "location": "상품명·요약정보",
+      "conditions": [
+        "실제 수전W·상세 공급 조건 UNKNOWN"
+      ],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "crossover-27uld950:site-3",
+      "product_id": "product:crossover-27uld950",
+      "property": "KVM",
+      "summary": "KVM 스위치 기능 표기",
+      "payload": {
+        "support": "SUPPORTED"
+      },
+      "source_refs": [
+        "SITE-CROSS-27ULD950"
+      ],
+      "location": "요약정보",
+      "conditions": [
+        "구체 연결 조건·Mac 동작은 별도 확인"
+      ],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "crossover-27uld950:site-4",
+      "product_id": "product:crossover-27uld950",
+      "property": "SPEAKERS",
+      "summary": "내장 스피커 표기",
+      "payload": {
+        "support": "SUPPORTED"
+      },
+      "source_refs": [
+        "SITE-CROSS-27ULD950"
+      ],
+      "location": "요약정보",
+      "conditions": [
+        "구체 연결 조건·Mac 동작은 별도 확인"
+      ],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "crossover-27uld950:site-5",
+      "product_id": "product:crossover-27uld950",
+      "property": "HEIGHT_ADJUSTMENT",
+      "summary": "스탠드 높이 조절 기능 표기",
+      "payload": {
+        "support": "SUPPORTED"
+      },
+      "source_refs": [
+        "SITE-CROSS-27ULD950"
+      ],
+      "location": "요약정보",
+      "conditions": [
+        "구체 연결 조건·Mac 동작은 별도 확인"
+      ],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "crossover-27uld950:site-6",
+      "product_id": "product:crossover-27uld950",
+      "property": "PIP_PBP",
+      "summary": "PIP·PBP 기능 표기",
+      "payload": {
+        "support": "SUPPORTED"
+      },
+      "source_refs": [
+        "SITE-CROSS-27ULD950"
+      ],
+      "location": "요약정보",
+      "conditions": [
+        "구체 연결 조건·Mac 동작은 별도 확인"
+      ],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "crossover-27uld950:site-7",
+      "product_id": "product:crossover-27uld950",
+      "property": "VESA",
+      "summary": "75×75mm VESA 홀 표기",
+      "payload": {
+        "width_mm": 75,
+        "height_mm": 75
+      },
+      "source_refs": [
+        "SITE-CROSS-27ULD950"
+      ],
+      "location": "요약정보",
+      "conditions": [],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "msi-md271ul:site-1",
+      "product_id": "product:msi-md271ul",
+      "property": "VIDEO_PROFILE",
+      "summary": "27형 IPS 3840×2160, 60Hz 공식 표기",
+      "payload": {
+        "scope": "PANEL",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "interface": "UNKNOWN"
+      },
+      "source_refs": [
+        "SITE-MSI-MD271UL"
+      ],
+      "location": "Panel Resolution / Refresh Rate",
+      "conditions": [],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "msi-md271ul:site-2",
+      "product_id": "product:msi-md271ul",
+      "property": "PROTOCOL",
+      "summary": "USB-C DP Alternate 영상 입력 표기",
+      "payload": {
+        "interface": "USB_C",
+        "protocol": "DISPLAYPORT",
+        "mode": "ALT_MODE",
+        "support": "SUPPORTED"
+      },
+      "source_refs": [
+        "SITE-MSI-MD271UL"
+      ],
+      "location": "Video Ports",
+      "conditions": [],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "msi-md271ul:site-3",
+      "product_id": "product:msi-md271ul",
+      "property": "POWER_TRANSFER",
+      "summary": "USB-C 65W Power Delivery 공급 표기",
+      "payload": {
+        "mode": "OFFER",
+        "interface": "USB_C",
+        "watts": 65,
+        "rating_basis": "MANUFACTURER_STATED"
+      },
+      "source_refs": [
+        "SITE-MSI-MD271UL"
+      ],
+      "location": "Video Ports",
+      "conditions": [
+        "모니터 충전 옵션·연결 대상에 따른 실제 수전 조건 별도 확인"
+      ],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "msi-md271ul:site-4",
+      "product_id": "product:msi-md271ul",
+      "property": "VIDEO_PROFILE",
+      "summary": "HDMI 입력 최대 3840×2160 60Hz 표기",
+      "payload": {
+        "scope": "PORT",
+        "interface": "HDMI",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "rating_basis": "UP_TO"
+      },
+      "source_refs": [
+        "SITE-MSI-MD271UL"
+      ],
+      "location": "Note",
+      "conditions": [
+        "호스트·케이블이 해당 모드를 제공해야 함; 특정 Mac 구성 승인 아님"
+      ],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "msi-md271ul:site-5",
+      "product_id": "product:msi-md271ul",
+      "property": "VIDEO_PROFILE",
+      "summary": "DISPLAYPORT 입력 최대 3840×2160 60Hz 표기",
+      "payload": {
+        "scope": "PORT",
+        "interface": "DISPLAYPORT",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "rating_basis": "UP_TO"
+      },
+      "source_refs": [
+        "SITE-MSI-MD271UL"
+      ],
+      "location": "Note",
+      "conditions": [
+        "호스트·케이블이 해당 모드를 제공해야 함; 특정 Mac 구성 승인 아님"
+      ],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "msi-md271ul:site-6",
+      "product_id": "product:msi-md271ul",
+      "property": "VIDEO_PROFILE",
+      "summary": "USB_C 입력 최대 3840×2160 60Hz 표기",
+      "payload": {
+        "scope": "PORT",
+        "interface": "USB_C",
+        "width": 3840,
+        "height": 2160,
+        "refresh_hz": 60,
+        "rating_basis": "UP_TO"
+      },
+      "source_refs": [
+        "SITE-MSI-MD271UL"
+      ],
+      "location": "Note",
+      "conditions": [
+        "호스트·케이블이 해당 모드를 제공해야 함; 특정 Mac 구성 승인 아님"
+      ],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "fact_id": "msi-md271ul:site-7",
+      "product_id": "product:msi-md271ul",
+      "property": "TILT",
+      "summary": "스탠드 틸트 -5°~20° 표기",
+      "payload": {
+        "min_degrees": -5,
+        "max_degrees": 20
+      },
+      "source_refs": [
+        "SITE-MSI-MD271UL"
+      ],
+      "location": "Adjustment (Tilt)",
+      "conditions": [],
+      "source_status": "DIRECT_CHECK",
+      "review_status": "PENDING_HUMAN_REVIEW"
+    }
+  ],
+  "review_links": [
+    {
+      "review_id": "PUR-001",
+      "monitor_id": "product:jooyon-v32ue",
+      "node_id": "screen",
+      "reported_model": "주연테크 V32UE",
+      "match_basis": "DIRECT_CHECK_EXACT_MODEL_LABEL",
+      "match_scope": "MODEL_ONLY",
+      "variant_match": "UNKNOWN",
+      "checked_on": "2026-10-09",
+      "source_refs": [
+        "SITE-CHECK-PUR-001"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "notes": "같은 표시 모델의 기록 연결. 지역 SKU·실물 리비전 일치나 기능 승인 아님."
+    },
+    {
+      "review_id": "PUR-005",
+      "monitor_id": "product:crossover-27uld950",
+      "node_id": "screen",
+      "reported_model": "크로스오버 27ULD950",
+      "match_basis": "DIRECT_CHECK_EXACT_MODEL_LABEL",
+      "match_scope": "MODEL_ONLY",
+      "variant_match": "UNKNOWN",
+      "checked_on": "2026-10-09",
+      "source_refs": [
+        "SITE-CHECK-PUR-005"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "notes": "같은 표시 모델의 기록 연결. 지역 SKU·실물 리비전 일치나 기능 승인 아님."
+    },
+    {
+      "review_id": "PUR-006",
+      "monitor_id": "product:crossover-27uld950",
+      "node_id": "screen",
+      "reported_model": "크로스오버 27ULD950",
+      "match_basis": "DIRECT_CHECK_EXACT_MODEL_LABEL",
+      "match_scope": "MODEL_ONLY",
+      "variant_match": "UNKNOWN",
+      "checked_on": "2026-10-09",
+      "source_refs": [
+        "SITE-CHECK-PUR-006"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "notes": "같은 표시 모델의 기록 연결. 지역 SKU·실물 리비전 일치나 기능 승인 아님."
+    },
+    {
+      "review_id": "PUR-014",
+      "monitor_id": "product:msi-md271ul",
+      "node_id": "screen",
+      "reported_model": "MSI MD271UL",
+      "match_basis": "DIRECT_CHECK_EXACT_MODEL_LABEL",
+      "match_scope": "MODEL_ONLY",
+      "variant_match": "UNKNOWN",
+      "checked_on": "2026-10-09",
+      "source_refs": [
+        "SITE-CHECK-PUR-014"
+      ],
+      "review_status": "NEEDS_REVIEW",
+      "notes": "같은 표시 모델의 기록 연결. 지역 SKU·실물 리비전 일치나 기능 승인 아님."
+    }
+  ],
+  "deferred_candidates": [
+    {
+      "reported_model": "삼성 M7 S43BM700",
+      "review_ids": [
+        "PUR-003"
+      ],
+      "source_refs": [
+        "SITE-SAMSUNG-S43BM700UK",
+        "SITE-CHECK-PUR-003"
+      ],
+      "status": "DEFERRED_VARIANT_UNKNOWN",
+      "reason": "후기는 S43BM700까지만 표기. 국내 문서는 S43BM700UK/LS43BM700UKXKR. 접미사·지역 일치 근거 없어 자동 연결 안 함. PUR-002의 M7 43인치도 전체 모델 미상."
+    }
+  ]
+}

@@ -2,7 +2,7 @@ const { test, expect } = require("@playwright/test");
 const AxeBuilder = require("@axe-core/playwright").default;
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/legacy.html");
 });
 
 test("required fields, unknown result and stale summary", async ({ page }) => {
@@ -69,7 +69,7 @@ test("hostile input remains text", async ({ page }) => {
 test("no overflow or client errors; preview headers", async ({ page }) => {
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
-  const response = await page.goto("/");
+  const response = await page.goto("/legacy.html");
   expect(response.headers()["content-security-policy"]).toContain(
     "connect-src 'none'",
   );

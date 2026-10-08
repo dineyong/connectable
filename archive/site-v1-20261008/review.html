@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>connectable — 공개 사례 내부 검토</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="review.css" />
+  </head>
+  <body class="review-page">
+    <a class="skip-link" href="#review-filters">사례 탐색으로 바로가기</a>
+    <header class="header">
+      <a class="brand" href="index.html#home" aria-label="connectable 목업 홈"
+        ><span class="brand-icon">c<span>↗</span></span
+        >connectable<span class="brand-dot">.</span></a
+      >
+      <nav aria-label="검토 메뉴">
+        <a href="index.html#stories">기존 목업 사례</a
+        ><a href="review.html" aria-current="page">내부 검토</a>
+      </nav>
+      <span class="preview-tag">LOCAL REVIEW</span>
+    </header>
+    <main>
+      <section class="section review-intro">
+        <div class="eyebrow">OBSERVATIONS, SEPARATELY.</div>
+        <h1>
+          같은 연결도,<br />결과는 따로 살펴봅니다<span class="green">.</span>
+        </h1>
+        <p class="review-lead">
+          공개 사례 18건에서 작성자의 관측과 아직 모르는 조건을 살펴보세요.<br />영상·충전·잠자기
+          복귀는 각각의 근거가 필요합니다.
+        </p>
+        <div class="review-banner">
+          <strong>내부 검토 전용 · 단일 사용자 진술 C등급</strong>
+          <p>
+            공식 사양 대조와 사람 검수 전입니다. 공개 판정은 UNKNOWN, 사람 승인
+            골든은 0/30입니다.
+          </p>
+          <p>
+            이 화면은 읽기 전용입니다. 사례의 정상 보고가 다른 구성의 호환성
+            보장은 아닙니다.
+          </p>
+        </div>
+        <div class="review-legend" aria-label="정보 상태 안내">
+          <span
+            ><b class="review-chip">작성자 보고</b> 진술은 있으나 검토
+            대기</span
+          >
+          <span
+            ><b class="review-chip unknown">정보 없음 · UNKNOWN</b> 기록 누락
+            또는 범위 미상</span
+          >
+        </div>
+      </section>
+      <section class="section review-list" aria-labelledby="review-list-title">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow muted">REVIEW NOTES</div>
+            <h2 id="review-list-title">공개 사례 탐색</h2>
+          </div>
+          <span class="section-index">18 CASES / READ ONLY</span>
+        </div>
+        <form id="review-filters" class="review-toolbar" role="search">
+          <label
+            >기기·문제·사례 ID 검색<input
+              id="review-search"
+              type="search"
+              maxlength="160"
+              placeholder="예: V32UE, UGREEN, PUR-009"
+          /></label>
+          <label
+            >관측 항목<select id="review-feature">
+              <option value="ALL">모든 관측</option>
+              <option value="video_output">화면 출력</option>
+              <option value="signal_mode">해상도·주사율 표기</option>
+              <option value="ui_scale">UI 배율</option>
+              <option value="pd">충전 보고</option>
+              <option value="clamshell">클램쉘 사용</option>
+              <option value="sleep_wake">잠자기 복귀</option>
+              <option value="reconnect">재연결</option>
+            </select></label
+          >
+          <button id="review-reset" class="button secondary" type="reset">
+            필터 초기화
+          </button>
+        </form>
+        <p
+          id="review-count"
+          class="review-count"
+          role="status"
+          aria-live="polite"
+        >
+          자료를 불러오는 중입니다.
+        </p>
+        <div id="review-data-error" class="review-banner" role="alert" hidden>
+          <h3>검토 자료를 불러오지 못했습니다.</h3>
+          <p>
+            확인되지 않은 자료를 대신 표시하지 않습니다. 페이지를 다시 열어
+            주세요.
+          </p>
+          <button id="review-retry" class="button secondary" type="button">
+            다시 불러오기
+          </button>
+        </div>
+        <div id="review-grid" class="story-grid review-grid"></div>
+        <div id="review-empty" class="empty-search" hidden>
+          <h3>일치하는 사례가 없습니다.</h3>
+          <p>
+            검색어나 관측 항목을 바꿔 주세요. 필터 초기화로 18건 전체를 다시 볼
+            수 있습니다.
+          </p>
+        </div>
+        <noscript
+          ><p class="review-banner">
+            사례 탐색에는 JavaScript가 필요합니다. 공개 호환 판정은 제공하지
+            않습니다.
+          </p></noscript
+        >
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="index.html#home"
+        >connectable<span class="brand-dot">.</span></a
+      >
+      <p>사용자 진술 · 공식 사양 · 실물 검증을 구분합니다.</p>
+      <span>로컬 내부 검토 · 2026</span>
+    </footer>
+    <dialog id="review-dialog" aria-labelledby="review-detail-title">
+      <div class="dialog-top review-dialog-top">
+        <span id="review-detail-id"></span
+        ><button
+          id="review-close"
+          class="review-back"
+          aria-label="목록으로 돌아가기"
+        >
+          ← 목록으로
+        </button>
+      </div>
+      <div id="review-detail-body"></div>
+    </dialog>
+    <script src="review-data.js"></script>
+    <script src="review-app.js"></script>
+  </body>
+</html>
