@@ -6,6 +6,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scripts.site_content_validation import checked_date, https_url, payload, refs, validate_content
+from scripts.data_trust import linked_model_identity, require_official_source
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'data/site/content-v2.json'
@@ -95,6 +96,7 @@ def validate_monitor_batch(batch, reviews):
         for ref in product['source_refs']:
             if ref not in sources or not sources[ref]['source_type'].startswith('MANUFACTURER_'):
                 raise ValueError('product lacks manufacturer evidence')
+            require_official_source(sources[ref], product['manufacturer'], ref)
     for fact in batch['facts']:
         refs(fact.get('source_refs'), fact['fact_id']+'.source_refs', sources)
         payload(fact, fact['fact_id']+'.payload')
@@ -120,6 +122,9 @@ def validate_monitor_batch(batch, reviews):
         seen.add(pair)
         case = cases[pair[0]]
         node = next((n for n in case['nodes'] if n['id'] == link['node_id']), None)
+        if not node or linked_model_identity(products[pair[1]]['manufacturer'], products[pair[1]]['model'],
+                                             node.get('display_model'), link.get('reported_model')) != 'EXACT_MODEL_LABEL':
+            raise ValueError('MANUAL_REVIEW: review/node/target model identity unconfirmed')
         if (not node or node['kind'] != 'DISPLAY' or node.get('display_model') != link['reported_model']
                 or link['match_basis'] != 'DIRECT_CHECK_EXACT_MODEL_LABEL'
                 or link['match_scope'] != 'MODEL_ONLY' or link['variant_match'] != 'UNKNOWN'

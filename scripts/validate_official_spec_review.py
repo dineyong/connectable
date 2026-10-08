@@ -3,9 +3,9 @@ import hashlib
 import json
 import sys
 from pathlib import Path
-from urllib.parse import urlsplit
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from scripts.site_content_validation import checked_date, https_url, payload, refs, unique
+from scripts.data_trust import require_official_source
 
 ROOT = Path(__file__).resolve().parents[1]
 PATH = ROOT/'data/official/spec_manual_review_2026-10-09.json'
@@ -19,7 +19,6 @@ def validate(data):
     site = json.loads((ROOT/'data/site/content-v2.json').read_text())
     products = {m['id']: m for m in site['monitors']}
     facts = {f['fact_id']: f for m in site['monitors'] for f in m['features']}
-    publishers = {'Dell': 'dell.com', 'LG': 'lg.com', '주연테크': 'jooyon.co.kr', '크로스오버': 'crosslcd.co.kr'}
     checked_date(data['checked_on'], 'checked_on')
     if data['catalog_application'] != 'NOT_APPLIED':
         raise ValueError('review batch must remain isolated')
@@ -36,11 +35,9 @@ def validate(data):
         refs(item['source_refs'], 'source_refs', sources)
         for ref in item['source_refs']:
             s = sources[ref]
-            host = urlsplit(s['url']).hostname
-            publisher = publishers[product['manufacturer']]
-            if (s['source_status'] != 'DIRECT_CHECK' or s['model_scope'] != product['display_model']
-                    or not (host == publisher or host.endswith('.'+publisher))):
+            if s['source_status'] != 'DIRECT_CHECK' or s['model_scope'] != product['display_model']:
                 raise ValueError('evidence needs checked manufacturer/model source')
+            require_official_source(s, product['manufacturer'], ref)
         if item['public_status'] != 'UNKNOWN' or item['usable_for_compatibility'] != 'NO':
             raise ValueError('spec review is not compatibility approval')
 

@@ -5,6 +5,7 @@ from urllib.parse import urlsplit
 from pathlib import Path
 import json
 from scripts.product_semantics import validate_semantics
+from scripts.data_trust import linked_model_identity, require_official_source
 
 
 def fail(path, message):
@@ -144,6 +145,8 @@ def validate_content(data):
                 if field in item:
                     refs(item[field], path+'/'+field, maps[target], required=False)
             if kind == 'monitors':
+                for s in sources:
+                    require_official_source(s, item['manufacturer'], path+'/source')
                 facts = unique(item['features'], 'fact_id', path+'/features')
                 for f in facts.values():
                     payload(f, path+'/'+f['fact_id'])
@@ -173,6 +176,11 @@ def validate_content(data):
                                 fail(path+'/capability', 'confirmed capability lacks matching supported fact')
             if kind == 'reviews':
                 local = {k: unique(item[k], 'id', path+'/'+k) for k in ('nodes', 'ports', 'evidence', 'configurations', 'observations', 'attempts')}
+                for monitor_id in item.get('monitor_ids', []):
+                    target = maps['monitors'][monitor_id]
+                    if not any(n.get('kind') == 'DISPLAY' and linked_model_identity(target['manufacturer'], target['display_model'], n.get('display_model')) == 'EXACT_MODEL_LABEL'
+                               for n in local['nodes'].values()):
+                        fail(path+'/monitor_ids', 'MANUAL_REVIEW: target model not established by display node')
                 ids = [i for objects in local.values() for i in objects]
                 if len(ids) != len(set(ids)):
                     fail(path, 'duplicate local object ID')
@@ -195,5 +203,10 @@ def validate_content(data):
                 for link in item.get('monitor_links', []):
                     if link['review_id'] != ident or link['monitor_id'] not in item['monitor_ids'] or link['node_id'] not in local['nodes']:
                         fail(path+'/monitor_links', 'invalid review/product/node reference')
+                    node = local['nodes'][link['node_id']]
+                    target = maps['monitors'][link['monitor_id']]
+                    if node.get('kind') != 'DISPLAY' or linked_model_identity(target['manufacturer'], target['display_model'],
+                                                                            node.get('display_model'), link.get('reported_model')) != 'EXACT_MODEL_LABEL':
+                        fail(path+'/monitor_links', 'MANUAL_REVIEW: linked display/target model differs')
                     refs(link.get('source_refs'), path+'/link.source_refs', source_ids)
     return data
