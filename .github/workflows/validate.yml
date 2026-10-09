@@ -33,6 +33,7 @@ jobs:
       - run: python3 web/derive-site-content.py --check
       - run: python3 scripts/validate_official_spec_review.py
       - run: python3 scripts/crossover_pd_evidence.py
+      - run: python3 scripts/supplemental_content_review.py
       - run: python3 scripts/product_semantics.py
       - run: python3 -m scripts.content_review
       - run: npm ci

@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://connectable.invalid/schemas/supplemental-content-review.schema.json",
+  "title": "Withheld editorial review of isolated supplemental evidence",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "enum": [
+        1
+      ]
+    },
+    "public_status": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN"
+      ]
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "supp-review:[a-z0-9-]+"
+          },
+          "target_batch_id": {
+            "type": "string",
+            "enum": [
+              "crossover-pd-followup-2026-10-09"
+            ]
+          },
+          "target_assertion_id": {
+            "type": "string",
+            "enum": [
+              "CROSS-PD-65W-SUPPLEMENT"
+            ]
+          },
+          "evidence_batch_sha256": {
+            "type": "string",
+            "pattern": "[a-f0-9]{64}"
+          },
+          "related_fact_sha256": {
+            "type": "string",
+            "pattern": "[a-f0-9]{64}"
+          },
+          "capture_sha256": {
+            "type": "string",
+            "pattern": "[a-f0-9]{64}"
+          },
+          "reviewer_id": {
+            "type": "string",
+            "pattern": "reviewer:[a-z0-9-]+"
+          },
+          "reviewed_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "NEEDS_REVIEW",
+              "PARTIALLY_VERIFIED",
+              "EVIDENCE_SUFFICIENT",
+              "REJECTED"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "reviewed_fields": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "mode",
+                "watts",
+                "rating_basis"
+              ]
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "remaining_unknowns": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "interface",
+                "power_qualifier",
+                "pd_profiles",
+                "simultaneous_budget",
+                "sku_revision",
+                "actual_host_power"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "notes": {
+            "type": "string"
+          },
+          "public_status": {
+            "type": "string",
+            "enum": [
+              "UNKNOWN"
+            ]
+          },
+          "usable_for_compatibility": {
+            "type": "string",
+            "enum": [
+              "NO"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "target_batch_id",
+          "target_assertion_id",
+          "evidence_batch_sha256",
+          "related_fact_sha256",
+          "capture_sha256",
+          "reviewer_id",
+          "reviewed_on",
+          "result",
+          "evidence_refs",
+          "reviewed_fields",
+          "remaining_unknowns",
+          "notes",
+          "public_status",
+          "usable_for_compatibility"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "public_status",
+    "records"
+  ],
+  "additionalProperties": false
+}
