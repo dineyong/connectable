@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "batch_id": "crossover-pd-followup-2026-10-09",
+  "catalog_application": "NOT_APPLIED",
+  "public_status": "UNKNOWN",
+  "usable_for_compatibility": "NO",
+  "product_id": "product:crossover-27uld950",
+  "model_scope": "27ULD950",
+  "variant_match": "UNKNOWN",
+  "related_fact_id": "crossover-27uld950:site-2",
+  "original_fact_sha256": "d1de1e84d1f083e5726855d364a40d33ee708c414c6ebd273b65b00901c5362d",
+  "source": {
+    "source_id": "CROSS-PD-PAGE",
+    "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+    "source_kind": "MANUFACTURER_PRODUCT_PAGE",
+    "source_status": "DIRECT_CHECK",
+    "checked_on": "2026-10-09",
+    "model_scope": "27ULD950"
+  },
+  "asset": {
+    "asset_id": "CROSS-PD-IMAGE",
+    "parent_source_ref": "CROSS-PD-PAGE",
+    "url": "https://www.crosslcd.co.kr/data/editor/2411/047dd0567fcc29d7226521dd0b0f9f78_1732598597_5708.jpg",
+    "binding_basis": "OBSERVED_ON_PRODUCT_PAGE",
+    "checked_on": "2026-10-09",
+    "location": "상품 상세설명 두 번째 이미지 앞부분 편의 특별기능 표의 PD 65W 칸",
+    "capture_path": "docs/evidence/crossover-27uld950-pd65-followup.jpg",
+    "capture_sha256": "45233da4e480b7bfc2274c6c423f701f9c26ec7fcf6bb4adf01edabe16627e9e"
+  },
+  "assertion": {
+    "assertion_id": "CROSS-PD-65W-SUPPLEMENT",
+    "relation": "SUPPLEMENTAL_EVIDENCE",
+    "property": "POWER_TRANSFER",
+    "payload": {
+      "mode": "OFFER",
+      "interface": "UNKNOWN",
+      "watts": 65,
+      "rating_basis": "MANUFACTURER_STATED"
+    },
+    "evidence_refs": [
+      "CROSS-PD-IMAGE"
+    ],
+    "confirmed_fields": [
+      "mode",
+      "watts",
+      "rating_basis"
+    ],
+    "unconfirmed_fields": [
+      "interface"
+    ],
+    "review_status": "PENDING_HUMAN_REVIEW",
+    "summary": "제조사 기능 표에 PD 65W와 연결 기기의 화면 출력·동시 충전이 표시됨. 특정 호스트의 실제 수전이나 최대·정격 qualifier는 확인하지 않음."
+  },
+  "limitations": [
+    "정확한 공급 포트 및 연결 조건 미확인",
+    "최대·정격 qualifier, 전압·전류 profile 및 동시 전력 예산 미확인",
+    "한국 판매 SKU·revision 동일성 및 실제 호스트 수전 미확인",
+    "DIRECT_CHECK는 에이전트의 원문 확인이며 사람 승인 기록이 아님"
+  ],
+  "provenance_report": "docs/OFFICIAL_GAP_FOLLOWUP_REPORT.md"
+}

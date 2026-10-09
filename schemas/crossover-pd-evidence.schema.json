@@ -1,0 +1,293 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://connectable.local/schemas/crossover-pd-evidence.schema.json",
+  "title": "Bounded isolated Crossover PD supplemental evidence batch",
+  "type": "object",
+  "properties": {
+    "batch_id": {
+      "type": "string",
+      "enum": [
+        "crossover-pd-followup-2026-10-09"
+      ]
+    },
+    "catalog_application": {
+      "type": "string",
+      "enum": [
+        "NOT_APPLIED"
+      ]
+    },
+    "public_status": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN"
+      ]
+    },
+    "usable_for_compatibility": {
+      "type": "string",
+      "enum": [
+        "NO"
+      ]
+    },
+    "product_id": {
+      "type": "string",
+      "enum": [
+        "product:crossover-27uld950"
+      ]
+    },
+    "model_scope": {
+      "type": "string",
+      "enum": [
+        "27ULD950"
+      ]
+    },
+    "variant_match": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN"
+      ]
+    },
+    "related_fact_id": {
+      "type": "string",
+      "enum": [
+        "crossover-27uld950:site-2"
+      ]
+    },
+    "original_fact_sha256": {
+      "type": "string",
+      "pattern": "[a-f0-9]{64}"
+    },
+    "provenance_report": {
+      "type": "string",
+      "enum": [
+        "docs/OFFICIAL_GAP_FOLLOWUP_REPORT.md"
+      ]
+    },
+    "schema_version": {
+      "type": "integer",
+      "enum": [
+        1
+      ]
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "source_id": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "source_kind": {
+          "type": "string",
+          "enum": [
+            "MANUFACTURER_PRODUCT_PAGE"
+          ]
+        },
+        "source_status": {
+          "type": "string",
+          "enum": [
+            "DIRECT_CHECK"
+          ]
+        },
+        "checked_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "model_scope": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "url",
+        "source_kind",
+        "source_status",
+        "checked_on",
+        "model_scope"
+      ],
+      "additionalProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "properties": {
+        "asset_id": {
+          "type": "string"
+        },
+        "parent_source_ref": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "binding_basis": {
+          "type": "string",
+          "enum": [
+            "OBSERVED_ON_PRODUCT_PAGE"
+          ]
+        },
+        "checked_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "location": {
+          "type": "string"
+        },
+        "capture_path": {
+          "type": "string"
+        },
+        "capture_sha256": {
+          "type": "string",
+          "pattern": "[a-f0-9]{64}"
+        }
+      },
+      "required": [
+        "asset_id",
+        "parent_source_ref",
+        "url",
+        "binding_basis",
+        "checked_on",
+        "location",
+        "capture_path",
+        "capture_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "assertion": {
+      "type": "object",
+      "properties": {
+        "assertion_id": {
+          "type": "string"
+        },
+        "relation": {
+          "type": "string",
+          "enum": [
+            "SUPPLEMENTAL_EVIDENCE"
+          ]
+        },
+        "property": {
+          "type": "string",
+          "enum": [
+            "POWER_TRANSFER"
+          ]
+        },
+        "payload": {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": [
+                "OFFER"
+              ]
+            },
+            "interface": {
+              "type": "string",
+              "enum": [
+                "UNKNOWN"
+              ]
+            },
+            "watts": {
+              "type": "number",
+              "enum": [
+                65
+              ]
+            },
+            "rating_basis": {
+              "type": "string",
+              "enum": [
+                "MANUFACTURER_STATED"
+              ]
+            }
+          },
+          "required": [
+            "mode",
+            "interface",
+            "watts",
+            "rating_basis"
+          ],
+          "additionalProperties": false
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "confirmed_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "mode",
+              "watts",
+              "rating_basis"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "unconfirmed_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "interface"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "PENDING_HUMAN_REVIEW"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "assertion_id",
+        "relation",
+        "property",
+        "payload",
+        "evidence_refs",
+        "confirmed_fields",
+        "unconfirmed_fields",
+        "review_status",
+        "summary"
+      ],
+      "additionalProperties": false
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "batch_id",
+    "catalog_application",
+    "public_status",
+    "usable_for_compatibility",
+    "product_id",
+    "model_scope",
+    "variant_match",
+    "related_fact_id",
+    "original_fact_sha256",
+    "provenance_report",
+    "schema_version",
+    "source",
+    "asset",
+    "assertion",
+    "limitations"
+  ],
+  "additionalProperties": false
+}
