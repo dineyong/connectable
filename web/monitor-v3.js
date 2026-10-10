@@ -12,7 +12,7 @@
     $("result-count").textContent = "불러오기 실패";
     document
       .querySelectorAll(
-        ".filter-body input, .filter-body select, #monitor-search, #sort-order, #group-by-brand, #brand-clear, #nav-compare",
+        ".filter-body input, .filter-body select, #monitor-search, #sort-order, #group-by-brand, #brand-clear, #purpose-all, [data-purpose], #nav-compare",
       )
       .forEach((el) => {
         el.disabled = true;
@@ -170,6 +170,10 @@
       const v = $(`filter-${key}`).value;
       if (v === "all") return true;
       let value = f[key === "usbc" ? "usb_c_video" : key];
+      if (key === "resolution" && v === "qhdplus") {
+        return unknown(f.width) || unknown(f.height) ? include : f.width >= 2560 && f.height >= 1440;
+      }
+      if (key === "refresh" && v === "upto120") return unknown(f.refresh) ? include : f.refresh <= 120;
       if (key === "resolution")
         value =
           unknown(f.width) || unknown(f.height)
@@ -201,6 +205,20 @@
       return false;
     });
   }
+  function clearPurpose() {
+    document.querySelectorAll('[data-purpose]').forEach(b => b.setAttribute('aria-pressed', 'false'));
+  }
+  document.querySelectorAll('[data-purpose]').forEach(button => button.addEventListener('click', () => {
+    filterIds.forEach(key => $(`filter-${key}`).value = 'all');
+    $("include-unknown").checked = false;
+    const purpose = button.dataset.purpose;
+    if (purpose === 'office') { $("filter-resolution").value = 'qhdplus'; $("filter-refresh").value = 'upto120'; }
+    if (purpose === 'gaming') $("filter-refresh").value = '144';
+    if (purpose === 'creative') $("filter-resolution").value = 'uhd';
+    if (purpose === 'laptop') $("filter-usbc").value = 'yes';
+    clearPurpose(); button.setAttribute('aria-pressed', 'true'); render();
+  }));
+  $("purpose-all").addEventListener('click', reset);
   function render() {
     const query = $("monitor-search").value.trim().toLocaleLowerCase();
     let list = products.filter(
@@ -235,6 +253,7 @@
     $("empty-state").hidden = list.length > 0;
   }
   function reset() {
+    clearPurpose();
     chosenBrands.clear();
     syncBrands();
     $("monitor-search").value = "";
@@ -377,9 +396,9 @@
   });
   $("monitor-search").addEventListener("input", render);
   filterIds.forEach((key) =>
-    $(`filter-${key}`).addEventListener("change", render),
+    $(`filter-${key}`).addEventListener("change", () => { clearPurpose(); render(); }),
   );
-  $("include-unknown").addEventListener("change", render);
+  $("include-unknown").addEventListener("change", () => { clearPurpose(); render(); });
   $("sort-order").addEventListener("change", render);
   $("group-by-brand").addEventListener("change", render);
   $("reset-filters").addEventListener("click", reset);

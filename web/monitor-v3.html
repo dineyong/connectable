@@ -14,10 +14,12 @@
     />
     <title>Connectable — 나에게 맞는 모니터 찾기</title>
     <link rel="stylesheet" href="monitor-v3.css" />
+    <link rel="stylesheet" href="monitor-purpose.css" />
     <script src="monitor-v3-data.js" defer></script>
     <script src="monitor-v3.js" defer></script>
   </head>
-  <body>
+  <body class="purpose-design">
+    <div class="preview-strip">로컬 미리보기 · 제조사 공식 자료 기준 · 한국 SKU와 호환성 검토 전 · 가격·별점·후기 수 미표시</div>
     <a class="skip" href="#products">제품 목록으로 건너뛰기</a>
     <header>
       <div class="header-inner">
@@ -28,26 +30,7 @@
           ><a href="#guides">구매 가이드</a
           ><a href="tech-news.html">테크 소식</a>
         </nav>
-        <span class="preview-label">LOCAL PREVIEW</span>
-      </div>
-    </header>
-    <main>
-      <noscript
-        ><p class="research-notice">
-          검색·비교에는 JavaScript가 필요합니다.
-          <a href="monitors/asus-pa279crv/"
-            >ASUS PA279CRV 정적 제품 정보 보기</a
-          >
-        </p></noscript
-      >
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-inner">
-          <div>
-            <p class="eyebrow">A CLEARER CHOICE</p>
-            <h1 id="hero-title">내게 맞는 모니터,<br />차이부터 한눈에.</h1>
-            <p class="hero-copy">복잡한 사양은 나란히. 좋은 선택은 가볍게.</p>
-          </div>
-          <div class="hero-search">
+                  <div class="hero-search">
             <label for="monitor-search">어떤 모니터를 찾고 있나요?</label>
             <div class="search-shell">
               <span aria-hidden="true">⌕</span
@@ -63,23 +46,42 @@
               ><span>출처까지 확인해요</span>
             </div>
           </div>
-          <div class="hero-orbit" aria-hidden="true">
-            <div class="orbit-screen"></div>
-            Better display.<br />A clearer choice.
+
+      </div>
+    </header>
+    <main>
+      <noscript
+        ><p class="research-notice">
+          검색·비교에는 JavaScript가 필요합니다.
+          <a href="monitors/asus-pa279crv/"
+            >ASUS PA279CRV 정적 제품 정보 보기</a
+          >
+        </p></noscript
+      >
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div>
+            <p class="eyebrow">A CLEARER CHOICE</p>
+            <h1 id="hero-title">어떤 일에 쓸 <mark>모니터</mark>인가요?</h1>
+            <p class="hero-copy">용도를 고르면 사양 조건으로 좁혀드려요. 적용되는 조건은 카드에 그대로 적혀 있어요.</p>
           </div>
         </div>
       </section>
+      <section class="purpose-section" aria-label="용도별 조건 선택">
+        <div class="purpose-options">
+          <button type="button" data-purpose="office" aria-pressed="false"><strong>문서·사무</strong><span>글자가 많은 작업, 창 여러 개</span><small>QHD 이상 · 120Hz 이하</small></button>
+          <button type="button" data-purpose="gaming" aria-pressed="false"><strong>게임</strong><span>빠른 화면 전환이 중요할 때</span><small>144Hz 이상</small></button>
+          <button type="button" data-purpose="creative" aria-pressed="false"><strong>사진·영상</strong><span>넓고 세밀한 화면이 필요할 때</span><small>4K UHD 해상도</small></button>
+          <button type="button" data-purpose="laptop" aria-pressed="false"><strong>노트북 영상 연결</strong><span>USB-C 영상 입력을 찾을 때</span><small>USB-C DP Alt Mode 확인</small></button>
+        </div>
+        <div class="purpose-caption"><p>추천 순위가 아닌 사양 필터 바로가기예요. 충전·색 정확도·실제 연결 호환성을 보장하지 않습니다.</p><button type="button" id="purpose-all">전체 보기</button></div>
+      </section>
       <div class="page-wrap">
         <p class="research-notice">
-          공식 문서 조사 자료를 비교하는 로컬 미리보기입니다. 한국 판매 SKU와
-          호환성 검토는 아직 완료되지 않았습니다.
-        </p>
-        <p class="research-notice">
           <a href="monitor10-review.html">추가 확인 자료 10종 보기 →</a>
-          입력별 주사율·USB-C 기능과 남은 확인 사항을 출처별로 확인하세요.
-          지역·리비전이 다른 자료는 기존 비교값에 합치지 않았습니다.
         </p>
         <div class="workspace">
+          <div class="catalog-main">
           <aside class="filter-column">
             <details id="filters" open>
               <summary>
@@ -109,13 +111,13 @@
                   <option value="fhd">FHD · 1920 × 1080</option>
                   <option value="qhd">QHD · 2560 × 1440</option>
                   <option value="uhd">4K UHD · 3840 × 2160</option>
-                  <option value="other">그 외 해상도</option></select
+                  <option value="qhdplus">QHD 이상 · 가로·세로 기준</option><option value="other">그 외 해상도</option></select
                 ><label for="filter-refresh">최대 주사율</label
                 ><select id="filter-refresh">
                   <option value="all">모든 주사율</option>
                   <option value="60">60Hz 이하</option>
                   <option value="120">60Hz 초과 ~ 120Hz</option>
-                  <option value="144">144Hz 이상</option>
+                  <option value="upto120">120Hz 이하</option><option value="144">144Hz 이상</option>
                   <option value="240">240Hz 이상</option></select
                 ><label for="filter-panel">패널</label
                 ><select id="filter-panel">
@@ -174,7 +176,29 @@
                 <button type="button" id="empty-reset">필터 초기화</button>
               </div>
             </section>
-            <section id="guides" class="guides" aria-labelledby="guides-title">
+            <div class="closing-note">
+              <span aria-hidden="true">↗</span>
+              <div>
+                <strong>숫자만큼, 그 숫자의 조건도 중요하니까.</strong>
+                <p>
+                  제품 상세에서 공식 출처와 확인 날짜, 아직 확인하지 못한 항목을
+                  확인할 수 있어요.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+          <aside class="discovery-rail" aria-label="비교함과 읽을거리">
+    <div id="compare-tray" class="compare-tray" hidden>
+      <div class="tray-title">
+        <strong>비교함</strong><span id="selection-count"></span>
+      </div>
+      <div id="selected-products"></div>
+      <button type="button" class="primary" id="compare-open" disabled>
+        비교하기 →
+      </button>
+    </div>
+<div class="compare-placeholder"><strong>나란히 보면 더 쉬워요.</strong><p>목록에서 모니터를 2~3개 담아 비교해보세요.</p></div>            <section id="guides" class="guides" aria-labelledby="guides-title">
               <div class="section-head">
                 <div>
                   <p class="eyebrow">BEFORE YOU CHOOSE</p>
@@ -221,17 +245,8 @@
                 </details>
               </div>
             </section>
-            <div class="closing-note">
-              <span aria-hidden="true">↗</span>
-              <div>
-                <strong>숫자만큼, 그 숫자의 조건도 중요하니까.</strong>
-                <p>
-                  제품 상세에서 공식 출처와 확인 날짜, 아직 확인하지 못한 항목을
-                  확인할 수 있어요.
-                </p>
-              </div>
-            </div>
-          </div>
+<section class="news-entry"><h2>테크 소식</h2><p>제조사 발표와 새로운 소식을 살펴보세요.</p><a href="tech-news.html">테크 뉴스 읽기 ↗</a></section>
+          </aside>
         </div>
       </div>
     </main>
@@ -240,15 +255,6 @@
       <p>더 명확한 비교, 더 나은 선택.</p>
       <p>로컬 시연 · 제품 그림은 형태 예시 · 가격·광고·제휴 링크 미활성</p>
     </footer>
-    <div id="compare-tray" class="compare-tray" hidden>
-      <div class="tray-title">
-        <strong>비교함</strong><span id="selection-count"></span>
-      </div>
-      <div id="selected-products"></div>
-      <button type="button" class="primary" id="compare-open" disabled>
-        비교하기 →
-      </button>
-    </div>
     <dialog id="detail-dialog" aria-labelledby="detail-title">
       <div class="dialog-top">
         <span class="eyebrow">OFFICIAL DOCUMENTS</span
