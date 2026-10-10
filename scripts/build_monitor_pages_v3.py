@@ -18,6 +18,23 @@ LABELS = {'size':'화면 크기','width':'가로 해상도','height':'세로 해
           'power_consumption':'소비전력','stand':'스탠드 조절','vesa':'VESA','weight':'무게',
           'dimensions':'크기','warranty':'보증','kvm':'KVM','usb_hub':'USB 허브','vrr':'가변 주사율'}
 QUALIFIERS = {'RATED':'정격','UP_TO':'최대 한도','MANUFACTURER_STATED':'제조사 표기','UNKNOWN':'미확인'}
+LABELS.update({'active_area':'유효 화면 영역','brightness_unspecified':'밝기 (유형 미명시)',
+    'contrast_dynamic':'동적 명암비','curvature':'곡률','daisy_chain':'데이지 체인',
+    'displayport_out':'DisplayPort 출력','dual_mode':'듀얼 모드','input_profile':'입력별 조건',
+    'console_input_profile':'콘솔 입력 조건','input_vertical_frequency':'입력 수직 주파수',
+    'local_dimming_zones':'로컬 디밍 구역','pbp':'PBP','pip':'PIP','thunderbolt':'Thunderbolt',
+    'pd_supply_downstream':'다운스트림 PD 공급','pd_supply_upstream':'업스트림 PD 공급',
+    'power_consumption_ac_input_max':'AC 입력 전력 최대값','power_consumption_max':'최대 소비전력',
+    'power_consumption_normal':'일반 소비전력','power_consumption_operating':'동작 소비전력',
+    'power_consumption_standby':'대기 소비전력','power_consumption_typical':'대표 소비전력',
+    'korean_sku_identity':'한국 판매 SKU 동일성','per_input_simultaneous_conditions':'입력별·동시 사용 조건',
+    'physical_test_results':'실물 연결 시험','warranty_korea':'한국 보증 조건',
+    'displayport.version':'DisplayPort 버전','hdmi.count':'HDMI 수량','hdmi.version':'HDMI 버전',
+    'usb_c.video_mode':'USB-C 영상 모드'})
+VALUE_KEYS={'version':'버전','count':'개수','mode':'모드','note':'조건 메모','unit':'단위',
+    'type_a':'USB-A','type_c':'USB-C','horizontal':'가로','vertical':'세로','axes':'축 순서',
+    'with_stand':'스탠드 포함','without_stand':'스탠드 제외','estimate_status':'추정 표기',
+    'tilt_deg':'틸트 (도)','swivel_deg':'스위블 (도)','pivot_deg':'피벗 (도)','height_mm':'높이 조절 (mm)'}
 
 def esc(value):
     return html.escape(str(value), quote=True)
@@ -25,7 +42,8 @@ def esc(value):
 def formatted(value):
     if value is None: return '미확인'
     if isinstance(value, bool): return '지원' if value else '미지원'
-    if isinstance(value, (dict, list)): return json.dumps(value, ensure_ascii=False, indent=2)
+    if isinstance(value, dict): return '\n'.join(f'{VALUE_KEYS.get(k,k)}: {formatted(v)}' for k,v in value.items())
+    if isinstance(value, list): return '[' + ', '.join(formatted(v) for v in value) + ']'
     return str(value)
 
 def render(product):
