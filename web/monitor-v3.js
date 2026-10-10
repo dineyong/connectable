@@ -233,9 +233,24 @@
       target.focus();
     }
   }
+  function supplementLink(p) {
+    // Explicit context links only: these are not SKU aliases or filter inputs.
+    const targets = {
+      "monitor:lg-27gp850-b": ["m10-01", "한국 27GP850 자료 · 해외 -B 동일성 미확인"],
+      "monitor:lg-27gs95qe-b": ["m10-02", "한국 27GS95QE 자료 · 해외 -B 동일성 미확인"],
+      "monitor:lg-32gs95ue-b": ["m10-03", "한국 32GS95UE 자료 · 해외 -B 동일성 미확인"],
+      "monitor:gigabyte-m27q-rev-1-0": ["m10-04", "다른 리비전 M27Q Rev.2.0 참고 자료"],
+      "monitor:gigabyte-m32u": ["m10-05", "M32U 추가 공식 자료 · 한국 유통 SKU 미확인"],
+      "monitor:dell-u2724d": ["m10-06", "U2724D 한국 판매 페이지·설명서 추가 자료"],
+      "monitor:asus-xg27aqdmg": ["m10-07", "XG27AQDMG 한국 문서 추가 자료 · SKU 미확인"],
+      "monitor:benq-ex2710q": ["m10-09", "EX2710Q 캐나다 공식 문서 재확인 자료"],
+    };
+    const target = targets[p.id];
+    return target ? `<p class="dialog-notice"><a href="monitor10-review.html#${target[0]}">${esc(target[1])} →</a><br>아래 비교 사양과 별도 자료입니다. 지역·리비전 조건을 확인하세요.</p>` : "";
+  }
   function detail(p) {
     $("detail-content").innerHTML =
-      `<h2 id="detail-title">${esc(name(p))}</h2><p class="detail-meta">문서 지역 ${esc(p.region)} · 문서 모델 식별 ${esc(p.variant_status)}</p><p class="dialog-notice">한국 판매 SKU 동일성 미확인 · 사람 검토 미완료 · 호환성 판정 사용 불가. 아래는 공식 문서 조사값이며 실제 연결 성능이나 한국 SKU 사양의 보장이 아닙니다.</p><a class="detail-link" href="monitors/${encodeURIComponent(p.id.replace("monitor:", ""))}/">제품 정보 링크 열기 →</a><h3 class="detail-section">공식 문서의 사양과 조건</h3><div class="table-scroll" tabindex="0" aria-label="공식 사양표 가로 스크롤"><table><thead><tr><th scope="col">항목</th><th scope="col">표기값</th><th scope="col">조건·문서 위치</th><th scope="col">근거</th></tr></thead><tbody>${p.facts.map((f) => `<tr><th scope="row">${esc(labels[f.property] || f.property)}</th><td>${factValue(f)}</td><td>${factContext(f)}</td><td>${links(p, f.source_refs)}</td></tr>`).join("")}</tbody></table></div><h3 class="detail-section">아직 확인하지 못한 항목</h3><p class="detail-meta">${p.missing_fields.map((x) => esc(labels[x] || x)).join(" · ") || "별도 기록 없음"}</p><h3 class="detail-section">공식 출처</h3><ul class="source-list">${p.source_refs
+      `<h2 id="detail-title">${esc(name(p))}</h2><p class="detail-meta">문서 지역 ${esc(p.region)} · 문서 모델 식별 ${esc(p.variant_status)}</p><p class="dialog-notice">한국 판매 SKU 동일성 미확인 · 사람 검토 미완료 · 호환성 판정 사용 불가. 아래는 공식 문서 조사값이며 실제 연결 성능이나 한국 SKU 사양의 보장이 아닙니다.</p><a class="detail-link" href="monitors/${encodeURIComponent(p.id.replace("monitor:", ""))}/">제품 정보 링크 열기 →</a>${supplementLink(p)}<h3 class="detail-section">공식 문서의 사양과 조건</h3><div class="table-scroll" tabindex="0" aria-label="공식 사양표 가로 스크롤"><table><thead><tr><th scope="col">항목</th><th scope="col">표기값</th><th scope="col">조건·문서 위치</th><th scope="col">근거</th></tr></thead><tbody>${p.facts.map((f) => `<tr><th scope="row">${esc(labels[f.property] || f.property)}</th><td>${factValue(f)}</td><td>${factContext(f)}</td><td>${links(p, f.source_refs)}</td></tr>`).join("")}</tbody></table></div><h3 class="detail-section">아직 확인하지 못한 항목</h3><p class="detail-meta">${p.missing_fields.map((x) => esc(labels[x] || x)).join(" · ") || "별도 기록 없음"}</p><h3 class="detail-section">공식 출처</h3><ul class="source-list">${p.source_refs
         .map((s) => {
           const url = safeSource(s.url);
           return `<li>${url ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a>` : esc(s.title)}<br>확인일 ${esc(s.checked_on)} · ${esc(s.access_status)}<br>${esc(s.location)}</li>`;

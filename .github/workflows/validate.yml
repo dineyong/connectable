@@ -40,6 +40,8 @@ jobs:
       - run: python3 scripts/validate_quasarzone_intake.py
       - run: python3 scripts/build_monitor_v3.py --check
       - run: python3 scripts/build_monitor_pages_v3.py --check
+      - run: python3 scripts/validate_monitor10_supplement.py
+      - run: python3 scripts/build_monitor10_review.py --check
       - run: python3 scripts/tech_news.py --check
       - run: npm ci
       - run: npx playwright install --with-deps chromium
