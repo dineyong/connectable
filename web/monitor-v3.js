@@ -12,7 +12,7 @@
     $("result-count").textContent = "불러오기 실패";
     document
       .querySelectorAll(
-        ".filter-body input, .filter-body select, #monitor-search, #sort-order, #nav-compare",
+        ".filter-body input, .filter-body select, #monitor-search, #sort-order, #group-by-brand, #nav-compare",
       )
       .forEach((el) => {
         el.disabled = true;
@@ -187,7 +187,20 @@
       if (unknown(bv)) return -1;
       return order === "size" ? av - bv : bv - av;
     });
-    $("product-grid").innerHTML = list.map(card).join("");
+    if ($("group-by-brand").checked) {
+      const groups = new Map();
+      for (const product of list) {
+        const brand = product.manufacturer;
+        if (!groups.has(brand)) groups.set(brand, []);
+        groups.get(brand).push(product);
+      }
+      $("product-grid").innerHTML = [...groups.entries()]
+        .sort(([a], [b]) => a.localeCompare(b, "ko"))
+        .map(([brand, items], index) => `<section class="brand-group" aria-labelledby="brand-title-${index}"><h3 id="brand-title-${index}" class="brand-group-title">${esc(brand)} <span>${items.length}종</span></h3>${items.map(card).join("")}</section>`)
+        .join("");
+    } else {
+      $("product-grid").innerHTML = list.map(card).join("");
+    }
     $("result-count").textContent = `${list.length}종`;
     $("empty-state").hidden = list.length > 0;
   }
@@ -336,6 +349,7 @@
   );
   $("include-unknown").addEventListener("change", render);
   $("sort-order").addEventListener("change", render);
+  $("group-by-brand").addEventListener("change", render);
   $("reset-filters").addEventListener("click", reset);
   $("empty-reset").addEventListener("click", reset);
   $("differences-only").addEventListener("change", compare);

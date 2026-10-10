@@ -1024,3 +1024,11 @@ td a,
     transition: none !important;
   }
 }
+
+/* Grouping changes presentation only; product facts and filters stay intact. */
+.brand-group-control { display:flex; align-items:center; flex-wrap:wrap; gap:8px; font-size:13px; margin:12px 0 18px; cursor:pointer; }
+.brand-group-control input { accent-color:var(--blue); width:17px; height:17px; }
+.brand-group-control span { color:var(--muted); font-size:11px; }
+.brand-group { display:grid; grid-template-columns:inherit; gap:inherit; grid-column:1 / -1; min-width:0; }
+.brand-group-title { grid-column:1 / -1; display:flex; align-items:center; gap:10px; margin:8px 0 0; padding-bottom:12px; border-bottom:1px solid var(--line); font-size:19px; }
+.brand-group-title span { font-size:12px; font-weight:400; color:var(--muted); }
