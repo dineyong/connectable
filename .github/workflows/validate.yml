@@ -37,6 +37,9 @@ jobs:
       - run: python3 scripts/product_semantics.py
       - run: python3 -m scripts.content_review
       - run: python3 scripts/validate_monitor_expansion.py
+      - run: python3 scripts/validate_quasarzone_intake.py
+      - run: python3 scripts/build_monitor_v3.py --check
+      - run: python3 scripts/build_monitor_pages_v3.py --check
       - run: python3 scripts/tech_news.py --check
       - run: npm ci
       - run: npx playwright install --with-deps chromium
