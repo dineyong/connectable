@@ -1,5 +1,7 @@
 # Connectable 제품 방향 v2 및 세션 작업 기준
 
+> 2026-10-10: 이 문서의 기능 범위·타깃·개발 순서는 이전 기준입니다. 현재는 [제품 방향 v3](PRODUCT_DIRECTION_V3.md)와 [진행 계획](MONITOR_COMPARISON_V3_ROADMAP.md)을 우선합니다. 기존 출처·안전·보존 원칙과 아래 역사적 내용은 유지합니다.
+
 확정일: 2026-10-08. 상태: 사용자 승인. 작업 위치는 현재 커넥터블 프로젝트 폴더, 브랜치는 research/question-corpus-foundation이다.
 
 ## 목표
