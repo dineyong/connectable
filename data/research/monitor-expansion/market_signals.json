@@ -1,0 +1,982 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-10",
+  "public_status": "UNKNOWN",
+  "signals": [
+    {
+      "id": "ms:u2723qe-latest",
+      "display_model": "U2723QE",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 7.2072,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 1; all devices/genders/ages; exact keyword U2723QE",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:u2723qe-peak",
+      "display_model": "U2723QE",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 57.65765,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-01-05; batch 1; all devices/genders/ages; exact keyword U2723QE",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:27up850-w-latest",
+      "display_model": "27UP850-W",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 1; all devices/genders/ages; exact keyword 27UP850-W",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:27up850-w-peak",
+      "display_model": "27UP850-W",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2025-10-09; batch 1; all devices/genders/ages; exact keyword 27UP850-W",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:g2724d-latest",
+      "display_model": "G2724D",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 1; all devices/genders/ages; exact keyword G2724D",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:g2724d-peak",
+      "display_model": "G2724D",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 15.31531,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2025-10-29; batch 1; all devices/genders/ages; exact keyword G2724D",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:v32ue-latest",
+      "display_model": "V32UE",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 1; all devices/genders/ages; exact keyword V32UE",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:v32ue-peak",
+      "display_model": "V32UE",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 10.81081,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-01-24; batch 1; all devices/genders/ages; exact keyword V32UE",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:md271ul-latest",
+      "display_model": "MD271UL",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 1; all devices/genders/ages; exact keyword MD271UL",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:md271ul-peak",
+      "display_model": "MD271UL",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 100.0,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-03-02; batch 1; all devices/genders/ages; exact keyword MD271UL",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:27uld950-latest",
+      "display_model": "27ULD950",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 2; all devices/genders/ages; exact keyword 27ULD950",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:27uld950-peak",
+      "display_model": "27ULD950",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 9.375,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2025-11-23; batch 2; all devices/genders/ages; exact keyword 27ULD950",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:27up850n-latest",
+      "display_model": "27UP850N",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 2; all devices/genders/ages; exact keyword 27UP850N",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:27up850n-peak",
+      "display_model": "27UP850N",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 17.1875,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-02-28; batch 2; all devices/genders/ages; exact keyword 27UP850N",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:32un880-latest",
+      "display_model": "32UN880",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 3.125,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 2; all devices/genders/ages; exact keyword 32UN880",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:32un880-peak",
+      "display_model": "32UN880",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 22.65625,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2025-11-10; batch 2; all devices/genders/ages; exact keyword 32UN880",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:27uq850v-latest",
+      "display_model": "27UQ850V",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 2; all devices/genders/ages; exact keyword 27UQ850V",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:27uq850v-peak",
+      "display_model": "27UQ850V",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 5.07812,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-02-23; batch 2; all devices/genders/ages; exact keyword 27UQ850V",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:27gp850-latest",
+      "display_model": "27GP850",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 10.9375,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 2; all devices/genders/ages; exact keyword 27GP850",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:27gp850-peak",
+      "display_model": "27GP850",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 100.0,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-01-04; batch 2; all devices/genders/ages; exact keyword 27GP850",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:32gr93u-latest",
+      "display_model": "32GR93U",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 3; all devices/genders/ages; exact keyword 32GR93U",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:32gr93u-peak",
+      "display_model": "32GR93U",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 56.0606,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-02-04; batch 3; all devices/genders/ages; exact keyword 32GR93U",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:u2724d-latest",
+      "display_model": "U2724D",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 3; all devices/genders/ages; exact keyword U2724D",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:u2724d-peak",
+      "display_model": "U2724D",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 59.0909,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-03-11; batch 3; all devices/genders/ages; exact keyword U2724D",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:s2722qc-latest",
+      "display_model": "S2722QC",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 3; all devices/genders/ages; exact keyword S2722QC",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:s2722qc-peak",
+      "display_model": "S2722QC",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 33.33333,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-05-15; batch 3; all devices/genders/ages; exact keyword S2722QC",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:ma270u-latest",
+      "display_model": "MA270U",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 3; all devices/genders/ages; exact keyword MA270U",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:ma270u-peak",
+      "display_model": "MA270U",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 100.0,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-02-11; batch 3; all devices/genders/ages; exact keyword MA270U",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:m27q-latest",
+      "display_model": "M27Q",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 0.0,
+      "unit": "relative_index",
+      "period": "2026-10-09",
+      "scope": "Last daily index; batch 3; all devices/genders/ages; exact keyword M27Q",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    },
+    {
+      "id": "ms:m27q-peak",
+      "display_model": "M27Q",
+      "platform": "NAVER",
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "checked_on": "2026-10-10",
+      "metric": "SEARCH_INTEREST_INDEX",
+      "value": 7.57575,
+      "unit": "relative_index",
+      "period": "2025-10-09/2026-10-09",
+      "scope": "Derived maximum of 366 source rows; first maximum date 2026-04-26; batch 3; all devices/genders/ages; exact keyword M27Q",
+      "source_kind": "DIRECT_CHECK",
+      "is_proxy": true,
+      "limitations": [
+        "Relative proxy, not absolute searches/sales or purchase verification",
+        "Exact string only; aliases/regional suffixes/revisions/keyword collisions unverified",
+        "Separate five-keyword batch normalization: no cross-batch ranking",
+        "Reported 0 does not prove zero actual searches or absent demand",
+        "No high-volume/popularity/high-sales conclusion justified"
+      ]
+    }
+  ],
+  "classifications": [
+    {
+      "display_model": "U2723QE",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:u2723qe-latest",
+        "ms:u2723qe-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "27UP850-W",
+      "label": "INSUFFICIENT_PUBLIC_DATA",
+      "signal_refs": [
+        "ms:27up850-w-latest",
+        "ms:27up850-w-peak"
+      ],
+      "rationale": "Entire period relative index zero for exact string; actual searches/aliases/sales UNKNOWN; no-demand inference prohibited."
+    },
+    {
+      "display_model": "G2724D",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:g2724d-latest",
+        "ms:g2724d-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "V32UE",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:v32ue-latest",
+        "ms:v32ue-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "MD271UL",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:md271ul-latest",
+        "ms:md271ul-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "27ULD950",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:27uld950-latest",
+        "ms:27uld950-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "27UP850N",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:27up850n-latest",
+        "ms:27up850n-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "32UN880",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:32un880-latest",
+        "ms:32un880-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "27UQ850V",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:27uq850v-latest",
+        "ms:27uq850v-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "27GP850",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:27gp850-latest",
+        "ms:27gp850-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "32GR93U",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:32gr93u-latest",
+        "ms:32gr93u-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "U2724D",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:u2724d-latest",
+        "ms:u2724d-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "S2722QC",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:s2722qc-latest",
+        "ms:s2722qc-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "MA270U",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:ma270u-latest",
+        "ms:ma270u-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "M27Q",
+      "label": "SEARCH_INTEREST_CANDIDATE",
+      "signal_refs": [
+        "ms:m27q-latest",
+        "ms:m27q-peak"
+      ],
+      "rationale": "Positive relative index: research candidate only, not popular/high-volume/bestselling. Purchase interest UNKNOWN."
+    },
+    {
+      "display_model": "PD3220U",
+      "label": "INSUFFICIENT_PUBLIC_DATA",
+      "signal_refs": [],
+      "rationale": "Shopping pages inaccessible; Datalab query not performed. Searches/sales UNKNOWN."
+    }
+  ],
+  "access_attempts": [
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=U2723QE",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=U2723QE",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=27UP850-W",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=27UP850-W",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=G2724D",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=G2724D",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=V32UE",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=V32UE",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=27ULD950",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=27ULD950",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=MD271UL",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=MD271UL",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=PD3220U",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=PD3220U",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=27UP850N",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=27UP850N",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=32UN880",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=32UN880",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=27UQ850V",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=27UQ850V",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct open HTTP 403 Forbidden; no bypass."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=27GP850",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=27GP850",
+      "status": "NO_PUBLIC_METRIC",
+      "reason": "Readable source marked crawled 1.1 years ago: current numbers rejected. Ranking combines sales/preferences/price/delivery/relevance; AD priority visible. Personalization, exact SKU and review aggregation UNKNOWN."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=32GR93U",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=32GR93U",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=U2724D",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=U2724D",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=S2722QC",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=S2722QC",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=MA270U",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=MA270U",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://search.shopping.naver.com/search/all?query=M27Q",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/np/search?q=M27Q",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct web open inaccessible; cause/login requirement UNKNOWN; no bypass. Exact SKU, ads and personalized ordering unverified."
+    },
+    {
+      "url": "https://www.coupang.com/vp/products/7884032745?itemId=21567976353&itemsCount=49&q=27GP850&rank=0&searchId=369e11ea6438400&searchRank=0&sourceType=search&vendorItemId=90315743540",
+      "status": "ACCESS_FAILED",
+      "reason": "Direct source link click HTTP 403. Option 3. 27GP850 180Hz; exact manufacturer SKU/review aggregation UNKNOWN."
+    },
+    {
+      "url": "https://datalab.naver.com/shoppingInsight/sCategory.naver",
+      "status": "NO_PUBLIC_METRIC",
+      "reason": "Public instruction/input page directly read; no model number at this URL. Separate search trend result URLs checked. Shopping click indices not collected."
+    },
+    {
+      "url": "https://datalab.naver.com/keyword/trendSearch.naver",
+      "status": "NO_PUBLIC_METRIC",
+      "reason": "Public instruction/input page directly read; no model number at this URL. Separate search trend result URLs checked. Shopping click indices not collected."
+    },
+    {
+      "url": "https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md",
+      "status": "DIRECT_CHECK",
+      "reason": "Official documentation checked: ratio relative, not absolute counts. App registration, Client ID/Secret, selected API permission needed. No credentials inspected/API called; examples excluded."
+    },
+    {
+      "url": "https://developers.naver.com/docs/serviceapi/datalab/search/search.md",
+      "status": "DIRECT_CHECK",
+      "reason": "Official documentation checked: ratio relative, not absolute counts. App registration, Client ID/Secret, selected API permission needed. No credentials inspected/API called; examples excluded."
+    },
+    {
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_9c68860f2a3fc3f38ff282485ac19a73",
+      "status": "DIRECT_CHECK",
+      "reason": "Public browser result and official download checked; daily 2025-10-09/2026-10-09, all devices/genders/ages. Attempted one-month selection did not change actual one-year result. Download SHA256 36c930fd260b8099069e022c9c7602b946667985806861a9336a9b22cb38666e"
+    },
+    {
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_20a47fb6b5464efa340c23f32f2ab47d",
+      "status": "DIRECT_CHECK",
+      "reason": "Public browser result and official download checked; daily 2025-10-09/2026-10-09, all devices/genders/ages. Attempted one-month selection did not change actual one-year result. Download SHA256 67c85e8c6c6c0734de4d4e5f5cde94f66212bf03433e6a16eef3c68315af4bbd"
+    },
+    {
+      "url": "https://datalab.naver.com/keyword/trendResult.naver?hashKey=N_ad98a2aaaec8b67ce9f0c1b460eceffe",
+      "status": "DIRECT_CHECK",
+      "reason": "Public browser result and official download checked; daily 2025-10-09/2026-10-09, all devices/genders/ages. Attempted one-month selection did not change actual one-year result. Download SHA256 60f40ab39c19e9ba393ffe0fea992e42304c5126b76f242d23c87b0ba4b3d3ee"
+    }
+  ]
+}

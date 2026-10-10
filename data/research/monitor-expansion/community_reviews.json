@@ -1,0 +1,875 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-10",
+  "public_status": "UNKNOWN",
+  "reviews": [
+    {
+      "id": "mr:v32ue-use",
+      "manufacturer": "주연테크",
+      "display_model": "V32UE",
+      "url": "https://makeany.tistory.com/97",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "MIXED",
+      "summary": "작업 화면과 USB-C 편의에는 만족하지만 전원 연결·단자 위치·음량 조절 불편도 보고했다.",
+      "positives": [
+        "글자 선명도와 작업 공간에 만족",
+        "USB-C로 화면과 충전 사용 보고"
+      ],
+      "limitations": [
+        "전원 연결 때 스파크 경험; 원인 미확정",
+        "Mac 키로 내장 스피커 음량 조절 불가 보고"
+      ],
+      "usage_conditions": [
+        "MacBook Air M1",
+        "USB-C 직접 연결",
+        "3008×1692는 UI 설정 표기"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:m7-43-usbc",
+      "manufacturer": "삼성",
+      "display_model": "M7 43인치 (전체 모델 UNKNOWN)",
+      "url": "https://quasarzone.com/bbs/qc_user/views/109876",
+      "site": "Quasarzone",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "PROBLEM_REPORT",
+      "sentiment": "NEGATIVE",
+      "summary": "USB-C 불안정·무출력을 경험했고 SOHO Dock HDMI로 변경해 사용했다고 보고했다.",
+      "positives": [
+        "독 HDMI 경로에서 화면 출력 보고"
+      ],
+      "limitations": [
+        "초기 깜빡임 이후 USB-C 연결 불가",
+        "전체 모델·OS·케이블 SKU UNKNOWN"
+      ],
+      "usage_conditions": [
+        "MacBook Air M1",
+        "USB-C 직접 연결과 CalDigit SOHO Dock HDMI 비교"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:s43bm700-input",
+      "manufacturer": "삼성",
+      "display_model": "M7 S43BM700",
+      "url": "https://quasarzone.com/bbs/qf_dp/views/369236",
+      "site": "Quasarzone",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "PROBLEM_REPORT",
+      "sentiment": "MIXED",
+      "summary": "Mac 연결은 사용했으나 PC HDMI와 입력 전환에 불편을 보고했다. 작성자 후속 답변은 HDMI가 얕게 꽂힌 상태였다고 설명했다.",
+      "positives": [
+        "Mac USB-C 및 C-HDMI 화면 출력 보고"
+      ],
+      "limitations": [
+        "입력 전환이 번거롭다고 보고",
+        "후속 답변의 케이블 삽입 설명은 작성자 판단이며 독립 재현 아님"
+      ],
+      "usage_conditions": [
+        "MacBook Air M1",
+        "Windows PC GTX 1660 S",
+        "본문 및 작성자 2022-08-29 후속 답변 확인"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:27uld950-flicker",
+      "manufacturer": "크로스오버",
+      "display_model": "27ULD950",
+      "url": "https://quasarzone.com/bbs/qf_dp/views/515378",
+      "site": "Quasarzone",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "PROBLEM_REPORT",
+      "sentiment": "NEGATIVE",
+      "summary": "구입 직후 여러 입력과 기기에서 깜빡임·가로줄·검은 화면을 보고하며 도움을 요청했다.",
+      "positives": [],
+      "limitations": [
+        "해결 결과 UNKNOWN",
+        "고객센터 문의는 원인 확정 아님"
+      ],
+      "usage_conditions": [
+        "MacBook Pro M2 Pro와 Windows GTX1070",
+        "HDMI와 USB-C 비교",
+        "수령 약 5일 시점"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:27uld950-use",
+      "manufacturer": "크로스오버",
+      "display_model": "27ULD950",
+      "url": "https://quasarzone.com/bbs/qc_user/views/133467",
+      "site": "Quasarzone",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "POSITIVE",
+      "summary": "문서·영상 용도에서 화질과 디자인에 만족하고 번들 USB-C로 클램쉘 화면·충전을 사용했다고 보고했다.",
+      "positives": [
+        "영상·문서 화면에 만족",
+        "USB-C 연결·충전 편의"
+      ],
+      "limitations": [
+        "장기 내구성 및 실제 AS 미확인",
+        "구매 포인트 혜택 언급; 후기 보상 여부 UNKNOWN"
+      ],
+      "usage_conditions": [
+        "MacBook 모델 UNKNOWN",
+        "번들 C-C 케이블",
+        "충전 전력 실측 UNKNOWN"
+      ],
+      "commercial_context": "PRESENT",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:mag321curv-dock",
+      "manufacturer": "MSI",
+      "display_model": "MAG321CURV",
+      "url": "https://quasarzone.com/bbs/qf_etc/views/109078",
+      "site": "Quasarzone",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "PROBLEM_REPORT",
+      "sentiment": "MIXED",
+      "summary": "직접 연결은 출력되지만 Belkin 독을 거치면 해당 모니터만 인식되지 않는다고 보고했다.",
+      "positives": [
+        "Mac 직접 연결에서 화면 출력"
+      ],
+      "limitations": [
+        "독 경로 무출력",
+        "해결 결과·Mac 세부 모델 UNKNOWN"
+      ],
+      "usage_conditions": [
+        "Belkin INC013qc",
+        "비교 LG 27UP550N은 독에서 출력했다고 보고; 별도 독립 후기 수로 세지 않음"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:md271ul-use",
+      "manufacturer": "MSI",
+      "display_model": "MD271UL",
+      "url": "https://seook.tistory.com/m/entry/맥북-4K-모니터-추천-MSI-MD271UL-4K-듀얼-모니터-실제-사용-후기",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "MIXED",
+      "summary": "선명도·USB-C 편의에 만족하지만 케이블 교체 경험, VESA와 베젤 불편을 함께 설명했다.",
+      "positives": [
+        "FHD 대비 선명도 만족",
+        "케이블 교체 뒤 깜빡임 해소 보고"
+      ],
+      "limitations": [
+        "초기 케이블에서 가로줄·깜빡임",
+        "암 장착과 듀얼 배치 베젤 불편",
+        "충전 전력 실측 UNKNOWN"
+      ],
+      "usage_conditions": [
+        "MacBook Air M2",
+        "Belkin Thunderbolt 케이블로 교체",
+        "QHD처럼 보기 설정",
+        "본문은 이후 수정될 수 있음"
+      ],
+      "commercial_context": "PRESENT",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:ip2730-hub",
+      "manufacturer": "인터픽셀",
+      "display_model": "IP2730",
+      "url": "https://blog.notepads.kr/182",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "MIXED",
+      "summary": "UGREEN 허브에서 FHD 120Hz를 사용했으며 144Hz 설정에서는 검은 화면을 보고했다.",
+      "positives": [
+        "120Hz 설정 사용 보고"
+      ],
+      "limitations": [
+        "144Hz에서 검은 화면",
+        "대역폭 원인 설명은 작성자 추론; 계측 근거 아님"
+      ],
+      "usage_conditions": [
+        "M1 MacBook",
+        "UGREEN HDMI 허브",
+        "허브 실제 SKU UNKNOWN"
+      ],
+      "commercial_context": "PRESENT",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:u28e590d-hub",
+      "manufacturer": "삼성",
+      "display_model": "U28E590D",
+      "url": "https://jinibh.tistory.com/entry/맥북-듀얼모니터-사용하기-m1-맥북에어-4k-60hz-모니터-연결",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "UNKNOWN",
+      "summary": "자신의 모니터와 M1 Air 설정 과정을 소개하지만 4K60 최종 성공과 제품 만족도를 명확히 입증하지는 않는다.",
+      "positives": [],
+      "limitations": [
+        "저가 허브에서 4K60 미표시 보고",
+        "제안한 구매·업데이트 방법을 수행 성공으로 세지 않음"
+      ],
+      "usage_conditions": [
+        "MacBook Air M1 2020",
+        "USB-C 허브 HDMI",
+        "내장 화면과 외장 화면 구성"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:m8-first-day",
+      "manufacturer": "삼성",
+      "display_model": "M8 32인치 (전체 모델 UNKNOWN)",
+      "url": "https://stride.tistory.com/662",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "NEGATIVE",
+      "summary": "첫날 사무 작업의 글자 선예도와 반응에 불만을 보고했지만 4K 영상 재생은 긍정적으로 평가했다.",
+      "positives": [
+        "4K 영상 재생에 만족"
+      ],
+      "limitations": [
+        "글자 선예도·버벅임 불만",
+        "장기 평가 아님",
+        "전체 모델 및 입력 모드 UNKNOWN"
+      ],
+      "usage_conditions": [
+        "사용 약 하루",
+        "TB4 독 및 Intel 내장 그래픽",
+        "200% 배율"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:32un650-use",
+      "manufacturer": "LG",
+      "display_model": "32UN650",
+      "url": "https://likenew.tistory.com/519",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "MIXED",
+      "summary": "가독성 향상에 만족하면서 색상 조정·앱 배율·어두운 장면의 빛샘 불편도 보고했다.",
+      "positives": [
+        "Mac에서 이전 QHD 대비 가독성 향상",
+        "Windows 글자·사진 선명도 만족"
+      ],
+      "limitations": [
+        "어두운 장면 모서리 빛샘",
+        "두 OS 색상 설정 절충 불편",
+        "리뷰 미션 상품권 보상 조건 명시"
+      ],
+      "usage_conditions": [
+        "Windows 10 DP 150% 배율",
+        "MacBook Pro 14 HDMI"
+      ],
+      "commercial_context": "PRESENT",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:m7-32-six-months",
+      "manufacturer": "삼성",
+      "display_model": "M7 32인치 (전체 모델 UNKNOWN)",
+      "url": "https://dal-lim.tistory.com/entry/M7-스마트모니터",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "POSITIVE",
+      "summary": "약 반년 동안 TV·모니터 겸용 활용에 만족하며 Switch와 무선 DeX 사용을 설명했다.",
+      "positives": [
+        "TV·문서·콘솔 활용 만족"
+      ],
+      "limitations": [
+        "무선 DeX 지연과 FHD 제한 보고",
+        "정확한 SKU UNKNOWN",
+        "Apple 기기 사용 경험 없음"
+      ],
+      "usage_conditions": [
+        "약 반년",
+        "Nintendo Switch",
+        "무선 DeX"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:u2723qe-hdr-report",
+      "manufacturer": "Dell",
+      "display_model": "U2723QE",
+      "url": "https://www.dell.com/community/en/conversations/monitors/u2723qe-smart-hdr-on-backlight-flickering/647f9b7ff4ccf8a8def65459",
+      "site": "Dell Community",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "PROBLEM_REPORT",
+      "sentiment": "NEGATIVE",
+      "summary": "어두운 장면에서 자막이 나타날 때 백라이트 깜빡임을 보고한 지원 질문이다.",
+      "positives": [],
+      "limitations": [
+        "해결 표시 없음",
+        "모든 개체에서 재현된다는 다른 댓글 주장은 채택하지 않음"
+      ],
+      "usage_conditions": [
+        "Smart HDR On",
+        "어두운 영상·게임·데스크톱 장면",
+        "입력 장치·펌웨어 UNKNOWN"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:27up850-month",
+      "manufacturer": "LG",
+      "display_model": "27UP850",
+      "url": "https://yeonnn.tistory.com/16",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "POSITIVE",
+      "summary": "한 달 후기에서 여러 창 작업·화면·디자인 만족을 보고했고 배율과 색감을 조정해 사용했다.",
+      "positives": [
+        "여러 창 작업 효율에 만족",
+        "디자인과 화면에 만족"
+      ],
+      "limitations": [
+        "불량화소 정식 테스트 미실시",
+        "색감은 눈대중 조정; 색 정확도 측정 아님"
+      ],
+      "usage_conditions": [
+        "Mac과 Windows 함께 사용",
+        "Ergotron 암",
+        "배율·색상 사용자 조정"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:27up850-design",
+      "manufacturer": "LG",
+      "display_model": "27UP850",
+      "url": "https://27liter.tistory.com/165",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "POSITIVE",
+      "summary": "디자인 작업에서 USB-C 편의와 글자 선명도에 만족하며 HDR을 끈 뒤 색감을 조정했다고 보고했다.",
+      "positives": [
+        "USB-C 화면·충전 편의",
+        "이전 2K 대비 글자 선명도 만족"
+      ],
+      "limitations": [
+        "초기 색감 차이",
+        "자가 구매 주장과 별도로 쿠팡 제휴 고지 존재",
+        "패널 제조사 관련 주장은 공식 사실로 채택하지 않음"
+      ],
+      "usage_conditions": [
+        "16인치 MacBook 세부 모델 UNKNOWN",
+        "HDR Off",
+        "2560×1440은 UI 설정 표기"
+      ],
+      "commercial_context": "PRESENT",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:u2723qe-body-gap",
+      "manufacturer": "Dell",
+      "display_model": "U2723QE",
+      "url": "https://mementoomnia.tistory.com/12",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "MIXED",
+      "summary": "패널에는 만족하지만 테두리 벌어짐에 실망해 그대로 사용한다고 보고했다.",
+      "positives": [
+        "패널 사용 만족"
+      ],
+      "limitations": [
+        "테두리 벌어짐 보고",
+        "교환 기준에 관한 타인 전언은 채택하지 않음"
+      ],
+      "usage_conditions": [
+        "Mac 종류 UNKNOWN",
+        "미개봉 제품 구매 진술"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:27up850n-settings",
+      "manufacturer": "LG",
+      "display_model": "27UP850N",
+      "url": "https://paperblog.tistory.com/249",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "MIXED",
+      "summary": "처음 색감·이미지에 불만을 가졌으나 HDR과 모니터 설정을 조정한 뒤 만족한다고 보고했다.",
+      "positives": [
+        "설정 변경 뒤 색감·이미지 개선 보고"
+      ],
+      "limitations": [
+        "초기 색 왜곡 불만",
+        "설정 효과는 주관 관측",
+        "쿠팡 제휴 고지 존재; 공급 패널 전언 미채택"
+      ],
+      "usage_conditions": [
+        "Mac mini M1 2020",
+        "Mac HDR Off",
+        "영상 모드·색온도·감마·Super Resolution 변경"
+      ],
+      "commercial_context": "PRESENT",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:u27u2dp-purchase-question",
+      "manufacturer": "AOC",
+      "display_model": "U27U2DP",
+      "url": "https://ing0joo.tistory.com/114",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "QUESTION",
+      "sentiment": "UNKNOWN",
+      "summary": "U2723QE와의 구매 전 비교 및 선택 질문이며 해당 두 모델의 직접 사용 후기가 아니다.",
+      "positives": [],
+      "limitations": [
+        "판매 사양 재인용을 공식 사양으로 채택하지 않음",
+        "긍정 독립 후기 수 0"
+      ],
+      "usage_conditions": [
+        "그래픽 작업용 구매 고려",
+        "구매 예정"
+      ],
+      "commercial_context": "UNKNOWN",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:m32u-pc-games",
+      "manufacturer": "Gigabyte",
+      "display_model": "M32U",
+      "url": "https://quasarzone.com/bbs/qf_dp/views/310312",
+      "site": "Quasarzone",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "MIXED",
+      "summary": "PC 게임에서 화면과 조절 편의에 만족하며 오버드라이브 모드별 역잔상 차이를 보고했다.",
+      "positives": [
+        "Far Cry New Dawn·Battlefield 5 화면에 만족",
+        "Picture 모드에서 역잔상 체감이 줄었다고 보고"
+      ],
+      "limitations": [
+        "Balance 모드에서 역잔상 체감",
+        "피벗 부재 불편",
+        "인풋렉 수치는 재인용이며 자체 측정으로 채택하지 않음"
+      ],
+      "usage_conditions": [
+        "PC 게임; OS·GPU UNKNOWN",
+        "Picture 오버드라이브 모드",
+        "주사율 실측·펌웨어 버전 UNKNOWN"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:27gp850-gaming",
+      "manufacturer": "LG",
+      "display_model": "27GP850",
+      "url": "https://worldproblem.tistory.com/530",
+      "site": "Tistory",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "POSITIVE",
+      "summary": "자가 구매한 듀얼 구성의 새 메인 모니터에서 영상 색감과 The Walking Dead 게임 화면에 만족한다고 보고했다.",
+      "positives": [
+        "기존 C24G1 대비 화면·색감 만족",
+        "게임 디테일과 주사율 체감에 만족"
+      ],
+      "limitations": [
+        "가격 부담 언급",
+        "27GP850-B 접미사 및 한국 SKU 동일성 UNKNOWN",
+        "화질 비교 사진은 측정 근거 아님"
+      ],
+      "usage_conditions": [
+        "PC 게임 The Walking Dead",
+        "평소 165Hz 사용 진술",
+        "OS·GPU·입력 경로 UNKNOWN"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:27gr83q-no-image",
+      "manufacturer": "LG",
+      "display_model": "27GR83Q",
+      "url": "https://quasarzone.com/bbs/qf_dp/views/578384?category=%EC%A0%95%EB%B3%B4&direction=DESC&kind=subject&page=3&sort=num%2C+reply",
+      "site": "Quasarzone",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "PROBLEM_REPORT",
+      "sentiment": "NEGATIVE",
+      "summary": "구매 약 1년 뒤 바탕화면이 어두워지며 화면이 꺼지고 소음·메뉴 무반응이 생겼다고 보고했다.",
+      "positives": [],
+      "limitations": [
+        "수리·원인·해결 결과 UNKNOWN",
+        "27GR83Q-B 접미사와 SKU 동일성 UNKNOWN",
+        "고장률·모델 전체 내구성으로 환산 불가"
+      ],
+      "usage_conditions": [
+        "2025년 3월 구매 진술",
+        "바탕화면 사용 중 발생",
+        "OS·기기·게임 사용 여부 UNKNOWN"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:27m2n5500-windows",
+      "manufacturer": "Philips",
+      "display_model": "27M2N5500",
+      "url": "https://dpg.danawa.com/bbs/view?boardSeq=28&listSeq=5590823&past=Y",
+      "site": "Danawa DPG",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "MIXED",
+      "summary": "Windows 화면 배치와 게임 기능을 사용하며 밝기·색상에 만족했고 소프트웨어 불편과 후속 개선을 설명했다.",
+      "positives": [
+        "화면 비율 조절과 게임 Smart Frame 사용",
+        "밝기·색상에 만족",
+        "2024-05-16 후속 답변에서 레이아웃 버그 해소 보고"
+      ],
+      "limitations": [
+        "초기 레이아웃 버그",
+        "소프트웨어 펌웨어 업데이트 불가 보고; 공식 지원 확정 아님",
+        "자가 구매 주장과 이벤트 참가 의향 병존; 실제 보상 UNKNOWN"
+      ],
+      "usage_conditions": [
+        "구입 약 4일",
+        "Windows 10 및 모니터 암",
+        "고전게임·화면 레이아웃 사용"
+      ],
+      "commercial_context": "PRESENT",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:m27q-gaming-work",
+      "manufacturer": "Gigabyte",
+      "display_model": "M27Q (리비전 UNKNOWN)",
+      "url": "https://www.reddit.com/r/Monitors/comments/to74e2/my_review_of_the_gigabyte_m27q/",
+      "site": "Reddit",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "MIXED",
+      "summary": "게임 움직임·색감에는 만족하지만 작업용 글자와 고정 화소·스탠드에 불만을 보고했다.",
+      "positives": [
+        "게임 응답·색감에 만족",
+        "KVM 편의 평가"
+      ],
+      "limitations": [
+        "고정 화소 6개 보고",
+        "일부 앱 글자 흐림 보고",
+        "스탠드 회전·피벗 불편",
+        "리비전 UNKNOWN; Rev 2.0 및 M27Q-P와 자동 동치 금지"
+      ],
+      "usage_conditions": [
+        "GTX 1060",
+        "게임 및 문자 작업",
+        "Picture Quality 모드",
+        "OS UNKNOWN; ClearType 관련 언급"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    },
+    {
+      "id": "mr:xg27aqdmg-sdr-comment",
+      "manufacturer": "ASUS",
+      "display_model": "XG27AQDMG",
+      "url": "https://www.reddit.com/r/OLED_Gaming/comments/1jk08il/comment/mjrrele/",
+      "site": "Reddit",
+      "checked_on": "2026-10-10",
+      "origin": "DIRECT_CHECK",
+      "record_type": "FIRST_HAND_REVIEW",
+      "sentiment": "MIXED",
+      "summary": "약 3개월 문제없다는 사용 댓글의 후속 답변에서 어두운 회색 밴딩과 SDR 설정에 따른 개선·잔존 증상을 함께 설명했다.",
+      "positives": [
+        "사용 약 3개월의 초기 안정성 보고",
+        "novideo_srgb로 SDR 블랙 크러시·밴딩 개선 보고"
+      ],
+      "limitations": [
+        "후속 답변에서 세로 밴딩과 일부 색 밴딩 잔존",
+        "질문 작성자의 불량 빈도 추측은 채택하지 않음",
+        "단일 댓글 대화 1건; 댓글 참여자 수를 독립 사례로 합산하지 않음",
+        "XG27AQDMGR와 자동 동치 금지"
+      ],
+      "usage_conditions": [
+        "채택 위치: 약 3개월 사용 진술 댓글 및 동일 댓글 작성자의 후속 설정 답변",
+        "Windows Display Settings 언급; 버전 UNKNOWN",
+        "SDR·Wide Gamut·Gamma 2.2 설정 진술"
+      ],
+      "commercial_context": "NOT_OBSERVED",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "usable_for_compatibility": "NO"
+    }
+  ],
+  "classifications": [
+    {
+      "display_model": "V32UE",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:v32ue-use"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "M7 43인치 (전체 모델 UNKNOWN)",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:m7-43-usbc"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "M7 S43BM700",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:s43bm700-input"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "27ULD950",
+      "label": "MIXED_REPORTS",
+      "review_refs": [
+        "mr:27uld950-flicker",
+        "mr:27uld950-use"
+      ],
+      "rationale": "직접 실사용 원문 2건에 만족·문제 관측이 함께 있음. 표본 선택 편향과 조건 차이 때문에 실패율·구매 순위로 환산 불가."
+    },
+    {
+      "display_model": "MAG321CURV",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:mag321curv-dock"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "MD271UL",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:md271ul-use"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "IP2730",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:ip2730-hub"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "U28E590D",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:u28e590d-hub"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "M8 32인치 (전체 모델 UNKNOWN)",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:m8-first-day"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "32UN650",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:32un650-use"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "M7 32인치 (전체 모델 UNKNOWN)",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:m7-32-six-months"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "U2723QE",
+      "label": "MIXED_REPORTS",
+      "review_refs": [
+        "mr:u2723qe-hdr-report",
+        "mr:u2723qe-body-gap"
+      ],
+      "rationale": "직접 실사용 원문 2건에 만족·문제 관측이 함께 있음. 표본 선택 편향과 조건 차이 때문에 실패율·구매 순위로 환산 불가."
+    },
+    {
+      "display_model": "27UP850",
+      "label": "POSITIVE_REVIEW_CANDIDATE",
+      "review_refs": [
+        "mr:27up850-month",
+        "mr:27up850-design"
+      ],
+      "rationale": "서로 다른 원문 2건의 긍정 관측. 작성자 동일성은 확인하지 않아 독립 사용자 수 UNKNOWN; 한 원문은 제휴 고지. 제품 추천·전체 호환 확정 아님."
+    },
+    {
+      "display_model": "27UP850N",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:27up850n-settings"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "U27U2DP",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:u27u2dp-purchase-question"
+      ],
+      "rationale": "직접 원문 1건만 확보. 긍정 1건 또는 조건부 문제 보고만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수 UNKNOWN."
+    },
+    {
+      "display_model": "M32U",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:m32u-pc-games"
+      ],
+      "rationale": "본인 사용 원문 1건. 초기 만족·문제·설정 관측만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수·지역 SKU UNKNOWN."
+    },
+    {
+      "display_model": "27GP850",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:27gp850-gaming"
+      ],
+      "rationale": "본인 사용 원문 1건. 초기 만족·문제·설정 관측만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수·지역 SKU UNKNOWN."
+    },
+    {
+      "display_model": "27GR83Q",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:27gr83q-no-image"
+      ],
+      "rationale": "본인 사용 원문 1건. 초기 만족·문제·설정 관측만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수·지역 SKU UNKNOWN."
+    },
+    {
+      "display_model": "27M2N5500",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:27m2n5500-windows"
+      ],
+      "rationale": "본인 사용 원문 1건. 초기 만족·문제·설정 관측만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수·지역 SKU UNKNOWN."
+    },
+    {
+      "display_model": "M27Q (리비전 UNKNOWN)",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:m27q-gaming-work"
+      ],
+      "rationale": "본인 사용 원문 1건. 초기 만족·문제·설정 관측만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수·지역 SKU UNKNOWN."
+    },
+    {
+      "display_model": "XG27AQDMG",
+      "label": "INSUFFICIENT_EVIDENCE",
+      "review_refs": [
+        "mr:xg27aqdmg-sdr-comment"
+      ],
+      "rationale": "본인 사용 원문 1건. 초기 만족·문제·설정 관측만으로 품질·인기·호환성을 확정할 수 없음. 독립 사용자 수·지역 SKU UNKNOWN."
+    }
+  ],
+  "excluded_sources": [
+    {
+      "url": "https://www.reddit.com/r/Monitors/comments/qe2sl0",
+      "reason": "직접 open 도구 Internal Error. 검색 요약은 사용하지 않음; 차단 원인 UNKNOWN."
+    },
+    {
+      "url": "https://www.reddit.com/r/Monitors/comments/puvaue",
+      "reason": "직접 open 도구 Internal Error. 검색 요약은 사용하지 않음; 차단 원인 UNKNOWN."
+    },
+    {
+      "url": "https://www.clien.net/service/board/park/17580966",
+      "reason": "직접 open 도구 Internal Error. 원문 미확인; 차단 원인 UNKNOWN."
+    },
+    {
+      "url": "https://quasarzone.com/bbs/qf_dp/views/417304",
+      "reason": "직접 open HTTP 403. 우회·로그인·재시도 없이 제외."
+    },
+    {
+      "url": "https://www.reddit.com/r/Monitors/comments/npwoth",
+      "reason": "M28U 후보: 직접 open Internal Error. 검색 요약으로 실사용 사실을 저장하지 않음."
+    },
+    {
+      "url": "https://www.reddit.com/r/Monitors/comments/co0775",
+      "reason": "VG27AQ/VG27AQE 후보: 직접 open Internal Error. 모델 변형과 본인 관측 미확인."
+    },
+    {
+      "url": "https://quasarzone.com/bbs/qf_dp/views/432558",
+      "reason": "AOC Q27G2SD 후보: 직접 open Internal Error. 검색 본문만으로 채택하지 않음."
+    },
+    {
+      "url": "https://forums.theshow.com/topic/62200/gigabyte-m28u/7",
+      "reason": "M28U 후보: 본문 일부가 반환되지만 삭제 주제이며 관리 권한 사용자만 볼 수 있다는 안내가 함께 표시되어 채택 제외. 우회 없이 중단."
+    }
+  ]
+}
