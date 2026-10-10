@@ -1,0 +1,1113 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-11",
+  "public_status": "UNKNOWN",
+  "source_file_sha256": "ea6ba0de4a31fb128e7c1672630ae6dd467a2262baaf887523e18b6e148d28af",
+  "records": [
+    {
+      "selection_model": "27GP850",
+      "checked_on": "2026-10-11",
+      "confirmed": [
+        {
+          "field": "screen_size_cm",
+          "value": 68.5,
+          "url": "https://www.lge.co.kr/monitors/27gp850",
+          "location": "제품 상세 스펙 > 화면 > 화면 크기 (cm)",
+          "scope": "KR official listed product 27GP850",
+          "notes": "인치로 환산하거나 마케팅 화면 크기로 반올림하지 않았습니다."
+        },
+        {
+          "field": "resolution",
+          "value": [
+            2560,
+            1440
+          ],
+          "url": "https://www.lge.co.kr/monitors/27gp850",
+          "location": "제품 상세 스펙 > 화면 > 해상도",
+          "scope": "KR official listed product 27GP850",
+          "notes": ""
+        },
+        {
+          "field": "panel",
+          "value": "Nano IPS",
+          "url": "https://www.lge.co.kr/monitors/27gp850",
+          "location": "제품 상세 스펙 > 화면 > 패널",
+          "scope": "KR official listed product 27GP850",
+          "notes": "패널 공급사·서브픽셀 배열은 추정하지 않았습니다."
+        },
+        {
+          "field": "input_profiles",
+          "value": {
+            "DP": {
+              "normal_hz": 165,
+              "overclock_hz": 180
+            },
+            "HDMI": {
+              "max_hz": 144
+            }
+          },
+          "url": "https://www.lge.co.kr/monitors/27gp850",
+          "location": "제품 상세 스펙 > 입력 신호 > 최대 해상도 및 주사율",
+          "scope": "KR official listed product 27GP850",
+          "notes": "오버클럭에는 DP 1.4 지원 GPU가 필요합니다. 소스 기기의 지원 조건도 확인해야 합니다. 설명서의 세부 타이밍·색심도·크로마 조합은 이번에 독립적으로 재확인하지 않았습니다."
+        },
+        {
+          "field": "connectivity",
+          "value": {
+            "hdmi_count": 2,
+            "displayport_count": 1,
+            "usb_3_0_upstream": 1,
+            "usb_3_0_downstream": 2
+          },
+          "url": "https://www.lge.co.kr/monitors/27gp850",
+          "location": "제품 상세 스펙 > 입력 신호 > 연결단자",
+          "scope": "KR official listed product 27GP850",
+          "notes": "연결단자 목록에 USB-C가 없다는 이유만으로 USB-C 미지원이 확인된 것은 아닙니다."
+        },
+        {
+          "field": "brightness_cd_m2",
+          "value": {
+            "typical": 400,
+            "minimum": 320
+          },
+          "url": "https://www.lge.co.kr/monitors/27gp850",
+          "location": "제품 상세 스펙 > 화면 > 밝기 (Typ., Min.)",
+          "scope": "KR official listed product 27GP850",
+          "notes": "제조사 사양이며 사용자 실측값이 아닙니다. 일반 밝기값을 SDR 전용 값으로 바꾸지 않았으며, HDR 밝기의 APL 조건은 그대로 보존했습니다."
+        },
+        {
+          "field": "hdr",
+          "value": [
+            "HDR10",
+            "DisplayHDR 400"
+          ],
+          "url": "https://www.lge.co.kr/monitors/27gp850",
+          "location": "제품 상세 스펙 > 영상/음성 > HDR",
+          "scope": "KR official listed product 27GP850",
+          "notes": "인증명에 포함된 숫자를 최대 밝기 실측값으로 해석하지 않습니다."
+        },
+        {
+          "field": "support_product_link",
+          "value": {
+            "from": "27GP850-BB",
+            "to": "27GP850",
+            "relationship": "OFFICIAL_SUPPORT_TO_PRODUCT_LINK"
+          },
+          "url": "https://www.lge.co.kr/support/product-27GP850-BB",
+          "location": "제품 정보 link 43; clicked destination product code",
+          "scope": "KR support to KR listed product only",
+          "notes": "지원 페이지를 다시 열고 제품 정보 링크의 도착 페이지를 확인했습니다. 전체 한국 공장 SKU나 해외 -B 모델과의 동일성이 확인된 것은 아닙니다."
+        }
+      ],
+      "conflicts": [],
+      "unconfirmed": [
+        "정확한 한국 공장·판매 SKU와 하드웨어 리비전",
+        "해외 -B 모델과의 동일성",
+        "USB-C의 존재 여부·영상 입력·PD 지원",
+        "설명서의 세부 타이밍·DSC·크로마·색심도 조합은 이번에 재확인하지 않음",
+        "사용자 관측 원문은 이번 공식 사양 검토에서 독립적으로 다시 열지 않음"
+      ],
+      "existing_match_notes": "기존 27GP850-B 기록의 근거 지역은 스페인(ES)입니다. 한국 제품과 -BB 지원 페이지의 연결만으로 해외 -B 제품의 SKU·리비전 동일성을 확정할 수 없습니다. 한국 문서의 사실로 해외 제품 기록을 채우지 않습니다.",
+      "id": "m10-01"
+    },
+    {
+      "selection_model": "27GS95QE",
+      "checked_on": "2026-10-11",
+      "confirmed": [
+        {
+          "field": "screen_size_cm",
+          "value": 67.3,
+          "url": "https://www.lge.co.kr/monitors/27gs95qe",
+          "location": "제품 상세 스펙 > 화면 > 화면 크기 (cm)",
+          "scope": "KR official listed product 27GS95QE",
+          "notes": "인치로 환산하거나 마케팅 화면 크기로 반올림하지 않았습니다."
+        },
+        {
+          "field": "resolution",
+          "value": [
+            2560,
+            1440
+          ],
+          "url": "https://www.lge.co.kr/monitors/27gs95qe",
+          "location": "제품 상세 스펙 > 화면 > 해상도",
+          "scope": "KR official listed product 27GS95QE",
+          "notes": ""
+        },
+        {
+          "field": "panel",
+          "value": "OLED",
+          "url": "https://www.lge.co.kr/monitors/27gs95qe",
+          "location": "제품 상세 스펙 > 화면 > 패널",
+          "scope": "KR official listed product 27GS95QE",
+          "notes": "패널 공급사·서브픽셀 배열은 추정하지 않았습니다."
+        },
+        {
+          "field": "input_profiles",
+          "value": {
+            "HDMI2.1": {
+              "width": 2560,
+              "height": 1440,
+              "max_hz": 240
+            },
+            "DP1.4": {
+              "width": 2560,
+              "height": 1440,
+              "max_hz": 240
+            }
+          },
+          "url": "https://www.lge.co.kr/monitors/27gs95qe",
+          "location": "제품 상세 스펙 > 입력 신호 > 최대 해상도 및 주사율",
+          "scope": "KR official listed product 27GS95QE",
+          "notes": "입력 사양만으로 모든 색심도·크로마 조합의 지원 여부나 DSC가 항상 필요한지를 확정하지 않습니다."
+        },
+        {
+          "field": "connectivity",
+          "value": {
+            "hdmi_count": 2,
+            "displayport_count": 1,
+            "usb_3_0_upstream": 1,
+            "usb_3_0_downstream": 2,
+            "hdmi_version": "2.1",
+            "displayport_version": "1.4"
+          },
+          "url": "https://www.lge.co.kr/monitors/27gs95qe",
+          "location": "제품 상세 스펙 > 입력 신호 > 연결단자",
+          "scope": "KR official listed product 27GS95QE",
+          "notes": "연결단자 목록에 USB-C가 없다는 이유만으로 USB-C 미지원이 확인된 것은 아닙니다."
+        },
+        {
+          "field": "brightness_cd_m2",
+          "value": {
+            "typical": 275,
+            "minimum": 250,
+            "HDR_peak": {
+              "typical": 1300,
+              "minimum": 800,
+              "APL_percent": 3
+            }
+          },
+          "url": "https://www.lge.co.kr/monitors/27gs95qe",
+          "location": "제품 상세 스펙 > 화면 > 밝기 (Typ., Min.)",
+          "scope": "KR official listed product 27GS95QE",
+          "notes": "제조사 사양이며 사용자 실측값이 아닙니다. 일반 밝기값을 SDR 전용 값으로 바꾸지 않았으며, HDR 밝기의 APL 조건은 그대로 보존했습니다."
+        },
+        {
+          "field": "hdr",
+          "value": [
+            "HDR10",
+            "DisplayHDR True Black 400"
+          ],
+          "url": "https://www.lge.co.kr/monitors/27gs95qe",
+          "location": "제품 상세 스펙 > 영상/음성 > HDR",
+          "scope": "KR official listed product 27GS95QE",
+          "notes": "인증명에 포함된 숫자를 최대 밝기 실측값으로 해석하지 않습니다."
+        },
+        {
+          "field": "support_product_link",
+          "value": {
+            "from": "27GS95QE-BB",
+            "to": "27GS95QE",
+            "relationship": "OFFICIAL_SUPPORT_TO_PRODUCT_LINK"
+          },
+          "url": "https://www.lge.co.kr/support/product-27GS95QE-BB",
+          "location": "제품 정보 link 43; clicked destination product code",
+          "scope": "KR support to KR listed product only",
+          "notes": "지원 페이지를 다시 열고 제품 정보 링크의 도착 페이지를 확인했습니다. 전체 한국 공장 SKU나 해외 -B 모델과의 동일성이 확인된 것은 아닙니다."
+        }
+      ],
+      "conflicts": [],
+      "unconfirmed": [
+        "정확한 한국 공장·판매 SKU와 하드웨어 리비전",
+        "해외 -B 모델과의 동일성",
+        "USB-C의 존재 여부·영상 입력·PD 지원",
+        "설명서의 세부 타이밍·DSC·크로마·색심도 조합은 이번에 재확인하지 않음",
+        "사용자 관측 원문은 이번 공식 사양 검토에서 독립적으로 다시 열지 않음"
+      ],
+      "existing_match_notes": "기존 27GS95QE-B 기록의 근거 지역은 영국(GB)입니다. 한국 제품과 -BB 지원 페이지의 연결만으로 해외 -B 제품의 SKU·리비전 동일성을 확정할 수 없습니다. 한국 문서의 사실로 해외 제품 기록을 채우지 않습니다.",
+      "id": "m10-02"
+    },
+    {
+      "selection_model": "32GS95UE",
+      "checked_on": "2026-10-11",
+      "confirmed": [
+        {
+          "field": "screen_size_cm",
+          "value": 79.9,
+          "url": "https://www.lge.co.kr/monitors/32gs95ue",
+          "location": "제품 상세 스펙 > 화면 > 화면 크기 (cm)",
+          "scope": "KR official listed product 32GS95UE",
+          "notes": "인치로 환산하거나 마케팅 화면 크기로 반올림하지 않았습니다."
+        },
+        {
+          "field": "resolution",
+          "value": [
+            3840,
+            2160
+          ],
+          "url": "https://www.lge.co.kr/monitors/32gs95ue",
+          "location": "제품 상세 스펙 > 화면 > 해상도",
+          "scope": "KR official listed product 32GS95UE",
+          "notes": ""
+        },
+        {
+          "field": "panel",
+          "value": "OLED",
+          "url": "https://www.lge.co.kr/monitors/32gs95ue",
+          "location": "제품 상세 스펙 > 화면 > 패널",
+          "scope": "KR official listed product 32GS95UE",
+          "notes": "패널 공급사·서브픽셀 배열은 추정하지 않았습니다."
+        },
+        {
+          "field": "input_profiles",
+          "value": {
+            "HDMI2.1": [
+              {
+                "width": 3840,
+                "height": 2160,
+                "max_hz": 240
+              },
+              {
+                "width": 1920,
+                "height": 1080,
+                "max_hz": 480
+              }
+            ],
+            "DP1.4": [
+              {
+                "width": 3840,
+                "height": 2160,
+                "max_hz": 240
+              },
+              {
+                "width": 1920,
+                "height": 1080,
+                "max_hz": 480
+              }
+            ]
+          },
+          "url": "https://www.lge.co.kr/monitors/32gs95ue",
+          "location": "제품 상세 스펙 > 입력 신호 > 최대 해상도 및 주사율",
+          "scope": "KR official listed product 32GS95UE",
+          "notes": "UHD 240Hz와 FHD 480Hz는 선택 가능한 대체 모드이며 동시에 출력하는 구성이 아닙니다. 설명서의 세부 DSC·색심도 조합은 이번에 독립적으로 재확인하지 않았습니다."
+        },
+        {
+          "field": "connectivity",
+          "value": {
+            "hdmi_count": 2,
+            "displayport_count": 1,
+            "usb_3_0_upstream": 1,
+            "usb_3_0_downstream": 2,
+            "hdmi_version": "2.1",
+            "displayport_version": "1.4"
+          },
+          "url": "https://www.lge.co.kr/monitors/32gs95ue",
+          "location": "제품 상세 스펙 > 입력 신호 > 연결단자",
+          "scope": "KR official listed product 32GS95UE",
+          "notes": "연결단자 목록에 USB-C가 없다는 이유만으로 USB-C 미지원이 확인된 것은 아닙니다."
+        },
+        {
+          "field": "brightness_cd_m2",
+          "value": {
+            "typical": 275,
+            "minimum": 250,
+            "HDR_peak": {
+              "typical": 1300,
+              "minimum": 1040,
+              "APL_percent": 1.5
+            }
+          },
+          "url": "https://www.lge.co.kr/monitors/32gs95ue",
+          "location": "제품 상세 스펙 > 화면 > 밝기 (Typ., Min.)",
+          "scope": "KR official listed product 32GS95UE",
+          "notes": "제조사 사양이며 사용자 실측값이 아닙니다. 일반 밝기값을 SDR 전용 값으로 바꾸지 않았으며, HDR 밝기의 APL 조건은 그대로 보존했습니다."
+        },
+        {
+          "field": "hdr",
+          "value": [
+            "HDR10",
+            "DisplayHDR True Black 400"
+          ],
+          "url": "https://www.lge.co.kr/monitors/32gs95ue",
+          "location": "제품 상세 스펙 > 영상/음성 > HDR",
+          "scope": "KR official listed product 32GS95UE",
+          "notes": "인증명에 포함된 숫자를 최대 밝기 실측값으로 해석하지 않습니다."
+        },
+        {
+          "field": "support_product_link",
+          "value": {
+            "from": "32GS95UE-BB",
+            "to": "32GS95UE",
+            "relationship": "OFFICIAL_SUPPORT_TO_PRODUCT_LINK"
+          },
+          "url": "https://www.lge.co.kr/support/product-32GS95UE-BB",
+          "location": "제품 정보 link 43; clicked destination product code",
+          "scope": "KR support to KR listed product only",
+          "notes": "지원 페이지를 다시 열고 제품 정보 링크의 도착 페이지를 확인했습니다. 전체 한국 공장 SKU나 해외 -B 모델과의 동일성이 확인된 것은 아닙니다."
+        }
+      ],
+      "conflicts": [],
+      "unconfirmed": [
+        "정확한 한국 공장·판매 SKU와 하드웨어 리비전",
+        "해외 -B 모델과의 동일성",
+        "USB-C의 존재 여부·영상 입력·PD 지원",
+        "설명서의 세부 타이밍·DSC·크로마·색심도 조합은 이번에 재확인하지 않음",
+        "사용자 관측 원문은 이번 공식 사양 검토에서 독립적으로 다시 열지 않음"
+      ],
+      "existing_match_notes": "기존 32GS95UE-B 기록의 근거 지역은 캐나다(CA)입니다. 한국 제품과 -BB 지원 페이지의 연결만으로 해외 -B 제품의 SKU·리비전 동일성을 확정할 수 없습니다. 한국 문서의 사실로 해외 제품 기록을 채우지 않습니다.",
+      "id": "m10-03"
+    },
+    {
+      "selection_model": "M27Q 2.0",
+      "checked_on": "2026-10-11",
+      "confirmed": [
+        {
+          "field": "screen_size_inch",
+          "value": 27,
+          "url": "https://www.gigabyte.com/kr/Monitor/M27Q-rev-20/sp",
+          "location": "제품 사양 > Panel Size (inch)",
+          "scope": "Official M27Q Gaming Monitor (Rev. 2.0), KR manufacturer page; distributor SKU UNKNOWN",
+          "notes": ""
+        },
+        {
+          "field": "resolution",
+          "value": [
+            2560,
+            1440
+          ],
+          "url": "https://www.gigabyte.com/kr/Monitor/M27Q-rev-20/sp",
+          "location": "제품 사양 > Resolution",
+          "scope": "Official M27Q Gaming Monitor (Rev. 2.0), KR manufacturer page; distributor SKU UNKNOWN",
+          "notes": ""
+        },
+        {
+          "field": "panel",
+          "value": "SS IPS",
+          "url": "https://www.gigabyte.com/kr/Monitor/M27Q-rev-20/sp",
+          "location": "제품 사양 > Panel Size (inch)",
+          "scope": "Official M27Q Gaming Monitor (Rev. 2.0), KR manufacturer page; distributor SKU UNKNOWN",
+          "notes": "Panel Type 항목에는 Edge가 별도로 표기되어 있습니다. 서브픽셀 배열은 추정하지 않았습니다."
+        },
+        {
+          "field": "max_refresh_hz",
+          "value": {
+            "normal": 165,
+            "overclock": 170
+          },
+          "url": "https://www.gigabyte.com/kr/Monitor/M27Q-rev-20/sp",
+          "location": "제품 사양 > Refresh Rate (Max)",
+          "scope": "Official M27Q Gaming Monitor (Rev. 2.0), KR manufacturer page; distributor SKU UNKNOWN",
+          "notes": "170Hz를 조건 없는 기본 주사율로 표시하지 않습니다."
+        },
+        {
+          "field": "connectivity",
+          "value": {
+            "HDMI": {
+              "count": 2,
+              "version": "2.0"
+            },
+            "DisplayPort": {
+              "count": 1,
+              "version": "1.2"
+            },
+            "USB_Type_C": {
+              "count": 1,
+              "mode": "Alternate Mode",
+              "direction": "Upstream"
+            },
+            "USB_3_0": {
+              "downstream": 2,
+              "upstream": 1
+            }
+          },
+          "url": "https://www.gigabyte.com/kr/Monitor/M27Q-rev-20/sp",
+          "location": "제품 사양 > Connectivity",
+          "scope": "Official M27Q Gaming Monitor (Rev. 2.0), KR manufacturer page; distributor SKU UNKNOWN",
+          "notes": "공식 문서의 Alternate Mode 표기를 보존했습니다. 세부 영상 타이밍이나 USB-C 프로토콜 버전은 추정하지 않았습니다."
+        },
+        {
+          "field": "usb_c_pd_page_max_w",
+          "value": 10,
+          "url": "https://www.gigabyte.com/kr/Monitor/M27Q-rev-20/sp",
+          "location": "제품 사양 > Connectivity > Power Delivery up to 10W",
+          "scope": "Official M27Q Gaming Monitor (Rev. 2.0), KR manufacturer page; distributor SKU UNKNOWN",
+          "notes": "최대 한도(UP_TO) 표기입니다. PDF는 열렸으나 반환된 화면으로 표를 읽을 수 없었습니다. 제공 자료의 켜짐 10W·대기 15W 조건은 독립 재확인 사실로 승격하지 않았습니다."
+        },
+        {
+          "field": "brightness_typical_cd_m2",
+          "value": 350,
+          "url": "https://www.gigabyte.com/kr/Monitor/M27Q-rev-20/sp",
+          "location": "제품 사양 > Brightness",
+          "scope": "Official M27Q Gaming Monitor (Rev. 2.0), KR manufacturer page; distributor SKU UNKNOWN",
+          "notes": "일반 밝기(Typical) 값이며 SDR 전용 또는 최대 밝기로 별도 확인한 값이 아닙니다."
+        },
+        {
+          "field": "hdr",
+          "value": "VESA DisplayHDR400",
+          "url": "https://www.gigabyte.com/kr/Monitor/M27Q-rev-20/sp",
+          "location": "제품 사양 > HDR Support",
+          "scope": "Official M27Q Gaming Monitor (Rev. 2.0), KR manufacturer page; distributor SKU UNKNOWN",
+          "notes": "인증명이며 최대 밝기 400nit를 실측한 결과가 아닙니다."
+        }
+      ],
+      "conflicts": [],
+      "unconfirmed": [
+        "유통명 M27Q 2.0 제이씨현과 정확한 Rev.2 한국 SKU의 동일성",
+        "서브픽셀 RGB/BGR 배열 및 패널 공급사",
+        "PDF 입력별 타이밍 표와 대기 모드 15W 조건: PDF는 열렸으나 반환된 화면으로 표를 읽을 수 없어 직접 확인으로 기록하지 않음",
+        "사용자 관측 원문을 다시 열지 않았으며 후기 승인을 부여하지 않음"
+      ],
+      "existing_match_notes": "기존 monitor:gigabyte-m27q-rev-1-0 기록과 분리합니다. Rev.1 저장값은 170Hz·DCI-P3 92%·0.5ms MPRT이며 Rev.2 페이지에는 165Hz/OC 170Hz·95%·1ms로 표기되어 있습니다. 리비전별 차이이며 Rev.1의 수정값이 아닙니다. 유통명 M27Q 2.0/제이씨현과 정확한 SKU의 동일성은 여전히 미확인입니다.",
+      "id": "m10-04"
+    },
+    {
+      "selection_model": "M32U",
+      "checked_on": "2026-10-11",
+      "confirmed": [
+        {
+          "field": "screen_size_inch",
+          "value": 31.5,
+          "url": "https://www.gigabyte.com/kr/Monitor/M32U/sp",
+          "location": "Panel Size (inch)",
+          "scope": "KR manufacturer model M32U",
+          "notes": "매뉴얼 32인치와 페이지31.5인치 표기를 보존; 유통사SKU 동일성 미확인."
+        },
+        {
+          "field": "resolution",
+          "value": "3840 × 2160",
+          "url": "https://www.gigabyte.com/kr/Monitor/M32U/sp",
+          "location": "Resolution",
+          "scope": "PANEL",
+          "notes": ""
+        },
+        {
+          "field": "panel",
+          "value": "SS IPS",
+          "url": "https://www.gigabyte.com/kr/Monitor/M32U/sp",
+          "location": "Panel Size / Panel Type",
+          "scope": "PANEL",
+          "notes": "Edge type는 백라이트 표기이며 패널기술명과 분리."
+        },
+        {
+          "field": "hdmi_supported_modes",
+          "value": {
+            "pc": "3840 × 2160 @ 144Hz; 4:4:4 with DSC enabled OR 4:2:0",
+            "console": "PS5/Xbox Series X 3840 × 2160 @ 120Hz 4:2:0"
+          },
+          "url": "https://www.gigabyte.com/kr/Monitor/M32U/sp",
+          "location": "Connectivity; Note",
+          "scope": "HDMI",
+          "notes": "HDMI2.1을 48Gbps/무압축4:4:4로 확대하지 않음."
+        },
+        {
+          "field": "displayport_supported_modes",
+          "value": "3840 × 2160 @ 144Hz",
+          "url": "https://download.gigabyte.com/FileList/Manual/GIGABYTE_M32U_UM_Korean.pdf",
+          "location": "PDF/인쇄 p.40 지원되는 타이밍 목록 DP 열; p.39 DP1.4 DSC",
+          "scope": "DISPLAYPORT",
+          "notes": "표를 렌더링해 DP 열 확인. 최대모드 색심도/크로마/DSC필수조건 미확인."
+        },
+        {
+          "field": "usb_c_video",
+          "value": true,
+          "url": "https://download.gigabyte.com/FileList/Manual/GIGABYTE_M32U_UM_Korean.pdf",
+          "location": "PDF/인쇄 p.20 입력 소스 선택; pp.24–25 KVM",
+          "scope": "USB_C_INPUT",
+          "notes": "USB-C 영상입력 소스 선택 확인. DPAltMode 버전/최대타이밍을 추정하지 않음."
+        },
+        {
+          "field": "usb_c_power_profiles",
+          "value": [
+            "5V/3A",
+            "9V/2A",
+            "12V/1.5A",
+            "15V/1A"
+          ],
+          "url": "https://download.gigabyte.com/FileList/Manual/GIGABYTE_M32U_UM_Korean.pdf",
+          "location": "PDF/인쇄 p.39 입력/출력 단자",
+          "scope": "USB_C_POWER",
+          "notes": "공식 나열값 그대로. 공급자/협상/실제충전 성능을 추정하지 않음."
+        },
+        {
+          "field": "usb_c_external_power_advice",
+          "value": "18W 이상의 전력이 필요한 노트북·기기는 다른 전원으로 충전 권장",
+          "url": "https://download.gigabyte.com/FileList/Manual/GIGABYTE_M32U_UM_Korean.pdf",
+          "location": "PDF/인쇄 p.39 하단 주의문",
+          "scope": "USB_C_POWER",
+          "notes": "첨부 max_w=18을 이번 확인에서 literal최대값으로 승격하지 않음."
+        }
+      ],
+      "conflicts": [],
+      "unconfirmed": [
+        "정확한 한국 유통사 SKU와 하드웨어 리비전",
+        "USB-C 최대 해상도/주사율과 DPAltMode 버전",
+        "max_w=18은 literal최대값 아닌 계산/해석 여지가 있어 직접값 채택 보류",
+        "사용자 후기 2건 원문 이번배치 재확인하지 않음"
+      ],
+      "existing_match_notes": "official_specs.json 및 monitor-v3.json에 monitor:gigabyte-m32u Global 존재. 기본 크기/해상도/패널/HDMI 조건 일치. USB-C 영상과 전력 프로파일은 보강 후보지만 원본Global값을 한국SKU로 승격하지 않는다. products.json/content-v2.json에는 해당모델 없음.",
+      "id": "m10-05"
+    },
+    {
+      "selection_model": "U2724D",
+      "checked_on": "2026-10-11",
+      "confirmed": [
+        {
+          "field": "exact_korean_sku",
+          "value": {
+            "manufacturer_part": "PTXMV",
+            "dell_part": "g5jtmg",
+            "offering_id": "u2724d_monitor"
+          },
+          "url": "https://www.dell.com/ko-kr/shop/monitors/apd/dell-ultrasharp-27-%EB%AA%A8%EB%8B%88%ED%84%B0-u2724d/u2724d_monitor/-",
+          "location": "상품명 아래 부품번호; 기술사양 일반정보",
+          "scope": "KR_CURRENT_OFFERING",
+          "notes": "현재한국판매페이지 식별자이며 과거주문 또는 해외US제품과 SKU동일성 승인이 아님."
+        },
+        {
+          "field": "screen_size_inch",
+          "value": 27,
+          "url": "https://www.dell.com/ko-kr/shop/monitors/apd/dell-ultrasharp-27-%EB%AA%A8%EB%8B%88%ED%84%B0-u2724d/u2724d_monitor/-",
+          "location": "화면 크기(대각선)",
+          "scope": "PANEL",
+          "notes": ""
+        },
+        {
+          "field": "resolution",
+          "value": "2560 × 1440 @ 120Hz",
+          "url": "https://www.dell.com/ko-kr/shop/monitors/apd/dell-ultrasharp-27-%EB%AA%A8%EB%8B%88%ED%84%B0-u2724d/u2724d_monitor/-",
+          "location": "해상도/화면 재생률; 최대 사전 설정 해상도",
+          "scope": "PANEL",
+          "notes": "입력별 구성은 별도조건으로 보존."
+        },
+        {
+          "field": "panel",
+          "value": "IPS Black",
+          "url": "https://www.dell.com/ko-kr/shop/monitors/apd/dell-ultrasharp-27-%EB%AA%A8%EB%8B%88%ED%84%B0-u2724d/u2724d_monitor/-",
+          "location": "패널 기술",
+          "scope": "PANEL",
+          "notes": ""
+        },
+        {
+          "field": "hdmi_supported_modes",
+          "value": {
+            "resolution": "2560 × 1440",
+            "refresh_hz": 120,
+            "signalling": "TMDS",
+            "vrr": "as specified in HDMI2.1",
+            "frl": false,
+            "dsc": false
+          },
+          "url": "https://dl.dell.com/content/manual17047281-dell-ultrasharp-27-monitor-u2724d-user-s-guide.pdf?language=en-us",
+          "location": "PDF/인쇄 p.17 Connectivity 및 각주",
+          "scope": "HDMI",
+          "notes": "FRL/DSC 불지원은 HDMI 선택기능 각주 범위. DP 전체 DSC여부로 확대 금지."
+        },
+        {
+          "field": "displayport_ports",
+          "value": {
+            "input_count": 1,
+            "output_count": 1,
+            "input_version": "1.4"
+          },
+          "url": "https://dl.dell.com/content/manual17047281-dell-ultrasharp-27-monitor-u2724d-user-s-guide.pdf?language=en-us",
+          "location": "PDF/인쇄 p.14 Bottom view; p.17 Connectivity",
+          "scope": "DISPLAYPORT",
+          "notes": "DP out은 영상입력 수에 포함하지 않음. p.19 MST의외장수는 경로/호스트검증 대체불가."
+        },
+        {
+          "field": "usb_c_video",
+          "value": false,
+          "url": "https://dl.dell.com/content/manual17047281-dell-ultrasharp-27-monitor-u2724d-user-s-guide.pdf?language=en-us",
+          "location": "PDF/인쇄 p.14 USB-C upstream NOTE",
+          "scope": "USB_C_UPSTREAM",
+          "notes": "데이터 전용이며 영상 입력용이 아니라고 명시되어 있습니다. U2724DE와 합치지 않습니다."
+        },
+        {
+          "field": "usb_c_power_delivery",
+          "value": {
+            "downstream_charging_w": 15,
+            "upstream_host_power_delivery": "UNKNOWN"
+          },
+          "url": "https://dl.dell.com/content/manual17047281-dell-ultrasharp-27-monitor-u2724d-user-s-guide.pdf?language=en-us",
+          "location": "PDF/인쇄 p.17 Quick Access USB-C downstream",
+          "scope": "USB_C_DOWNSTREAM",
+          "notes": "15W는 다운스트림 충전 표기. 노트북용90W 업스트림 충전으로 해석 금지."
+        }
+      ],
+      "conflicts": [
+        {
+          "field": "rj45",
+          "status": "CONFLICT_PENDING",
+          "url": "https://www.dell.com/ko-kr/shop/monitors/apd/dell-ultrasharp-27-%EB%AA%A8%EB%8B%88%ED%84%B0-u2724d/u2724d_monitor/-",
+          "location": "인터페이스/포트 일반필드 vs 상세목록/포트및슬롯",
+          "notes": "일반필드 RJ45있음, 상세포트/설명서 목록에는열거없음. 미기재를 false로확정하지도 않으며 true채택도보류."
+        }
+      ],
+      "unconfirmed": [
+        "하드웨어 리비전(매뉴얼Rev.A02와 구분)",
+        "기존US조사모델과 현재KR판매SKU 동일성",
+        "USB-C업스트림호스트충전",
+        "후기2건 국가/SKU 원문이번재확인없음"
+      ],
+      "existing_match_notes": "official_specs.json 및 monitor-v3.json에 monitor:dell-u2724d US 존재. QHD120/IPSBlack/data-only/다운스트림15W와일치. 현재KR식별자는별도근거로추가가능하지만US레코드KR정식승격근거아님. products.json/content-v2.json에는해당모델없음.",
+      "id": "m10-06"
+    },
+    {
+      "selection_model": "XG27AQDMG",
+      "checked_on": "2026-10-11",
+      "confirmed": [
+        {
+          "field": "screen_size_inch",
+          "value": 26.5,
+          "url": "https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/",
+          "location": "디스플레이 / Panel Size",
+          "scope": "KR_MODEL_PANEL",
+          "notes": "27인치마케팅등급과26.5실제표기구분. 현재US원본size누락보강후보."
+        },
+        {
+          "field": "resolution",
+          "value": "2560 × 1440",
+          "url": "https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/",
+          "location": "디스플레이 / Resolution",
+          "scope": "PANEL",
+          "notes": ""
+        },
+        {
+          "field": "panel",
+          "value": "WOLED",
+          "url": "https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/",
+          "location": "디스플레이 / Panel Type",
+          "scope": "PANEL",
+          "notes": ""
+        },
+        {
+          "field": "max_refresh_hz",
+          "value": 240,
+          "url": "https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/",
+          "location": "디스플레이 / Refresh Rate (max)",
+          "scope": "PANEL_UP_TO",
+          "notes": "한국페이지패널최대표기. HDMI모든해상도240보장아님. 기존US입력수직주파수값을패널최대로자동전용한것아님."
+        },
+        {
+          "field": "hdmi_supported_modes",
+          "value": "2560 × 1440 @ 144Hz",
+          "url": "https://dlcdnets.asus.com/pub/ASUS/LCD%20Monitors/XG27AQDMG/ASUS_XG27AQDMG_UM_Korean.pdf?model=XG27AQDMG",
+          "location": "PDF p.43 / §3.5 표기3-17 HDMI 열",
+          "scope": "HDMI_QHD",
+          "notes": "테이블렌더링확인. 같은표 FHD240HDMI행도있어 HDMI모든해상도144상한이라고단정금지."
+        },
+        {
+          "field": "displayport_supported_modes",
+          "value": "2560 × 1440 @ 240Hz",
+          "url": "https://dlcdnets.asus.com/pub/ASUS/LCD%20Monitors/XG27AQDMG/ASUS_XG27AQDMG_UM_Korean.pdf?model=XG27AQDMG",
+          "location": "PDF p.43 / §3.5 표기3-17 DP 열",
+          "scope": "DISPLAYPORT_QHD",
+          "notes": "p.39 DSC켜기/끄기메뉴확인; 240HzDSC필수/색심도/크로마 조합은미확인."
+        },
+        {
+          "field": "hdr_peak_brightness_nits",
+          "value": 1300,
+          "url": "https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/",
+          "location": "디스플레이 / Brightness(HDR,Peak); 비고",
+          "scope": "HDR_PEAK",
+          "notes": "공장색보정에따라달라짐. 측정창/지속시간미확인. 설명서p40최대450nits는모드미명시이므로같은조건의충돌/SDR값으로단정않음."
+        },
+        {
+          "field": "distinct_related_model",
+          "value": {
+            "model": "XG27AQDMGR",
+            "name": "ROG Strix OLED XG27AQDMG Gen2",
+            "merge_allowed": false
+          },
+          "url": "https://rog.asus.com/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg-gen2-xg27aqdmgr/spec/",
+          "location": "Model; I/O Ports HDMI2.1 FRL",
+          "scope": "RELATED_MODEL_ONLY",
+          "notes": "원모델HDMI2.0와Gen2HDMI2.1FRL 분리. 설명서1판2024-04는하드웨어리비전아님."
+        }
+      ],
+      "conflicts": [
+        {
+          "field": "hdmi_vertical_frequency_scope",
+          "status": "SCOPE_REVIEW",
+          "url": "https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/",
+          "related_url": "https://dlcdnets.asus.com/pub/ASUS/LCD%20Monitors/XG27AQDMG/ASUS_XG27AQDMG_UM_Korean.pdf?model=XG27AQDMG",
+          "notes": "웹주파수 HDMI40–144Hz와설명서FHD240HDMI행이공존. QHD144/DPQHD240은충돌없으나무해상도HDMI최대144표현은보류."
+        }
+      ],
+      "unconfirmed": [
+        "한국별도유통SKU 및 하드웨어리비전",
+        "USB-C 유무/영상/PD는미기재로UNKNOWN유지",
+        "최대모드색심도/크로마/DSC필수조건",
+        "후기2건이번원문재확인없음; 1건은타모델글속이전사용회고"
+      ],
+      "existing_match_notes": "official_specs.json 및 monitor-v3.json에 monitor:asus-xg27aqdmg US 존재. WOLED/QHD/HDMI2.0/DP1.4DSC일치. size26.5와패널max240은이번KR페이지에명시돼보강후보지만US원본증거는그대로보존. products.json/content-v2.json에는해당모델없음.",
+      "id": "m10-07"
+    },
+    {
+      "selection_model": "MPG 274URF-QD",
+      "checked_on": "2026-10-11",
+      "confirmed": [
+        {
+          "field": "screen_size_inch",
+          "value": 27,
+          "url": "https://www.msi.com/Monitor/MPG-274URF-QD/Specification",
+          "location": "Panel Size",
+          "scope": "GLOBAL_MODEL",
+          "notes": ""
+        },
+        {
+          "field": "resolution",
+          "value": {
+            "width": 3840,
+            "height": 2160
+          },
+          "url": "https://www.msi.com/Monitor/MPG-274URF-QD/Specification",
+          "location": "Panel Resolution",
+          "scope": "GLOBAL_MODEL",
+          "notes": ""
+        },
+        {
+          "field": "panel",
+          "value": "Rapid IPS",
+          "url": "https://www.msi.com/Monitor/MPG-274URF-QD/Specification",
+          "location": "Panel Type",
+          "scope": "GLOBAL_MODEL",
+          "notes": "Quantum Dot 부가표현은 이번 제품소개 본문 별도 재확인 범위 밖. QD-OLED로 해석하지 않음."
+        },
+        {
+          "field": "max_refresh_hz",
+          "value": 160,
+          "url": "https://www.msi.com/Monitor/MPG-274URF-QD/Specification",
+          "location": "Refresh Rate; Note",
+          "scope": "GLOBAL_MODEL",
+          "notes": "각 입력 최대 모드: DP/HDMI2.1/Type-C 3840x2160 up to160Hz. 모든 색심도/DSC/동시구동 보장 아님."
+        },
+        {
+          "field": "video_ports",
+          "value": {
+            "displayport": {
+              "count": 1,
+              "version": "1.4a"
+            },
+            "hdmi": {
+              "count": 2,
+              "version": "2.1"
+            },
+            "usb_c": {
+              "count": 1,
+              "mode": "DP alt."
+            }
+          },
+          "url": "https://www.msi.com/Monitor/MPG-274URF-QD/Specification",
+          "location": "Video ports; Note",
+          "scope": "GLOBAL_MODEL",
+          "notes": ""
+        },
+        {
+          "field": "usb_c_video",
+          "value": "DisplayPort Alternate Mode",
+          "url": "https://download-2.msi.com/archive/mnu_exe/monitor/MPG_274URF_QDv1.1_Korean.pdf",
+          "location": "PDF p.8, USB Type-C 포트",
+          "scope": "KOREAN_LANGUAGE_MANUAL_MODEL_3CC2",
+          "notes": "소스와 케이블의 DP Alt Mode 지원 필요. USB 데이터/KVM은 별도 충돌."
+        },
+        {
+          "field": "usb_c_pd_power_w",
+          "value": {
+            "watts": 65,
+            "qualifier": "UP_TO",
+            "volts": 20,
+            "amps": 3.25
+          },
+          "url": "https://download-2.msi.com/archive/mnu_exe/monitor/MPG_274URF_QDv1.1_Korean.pdf",
+          "location": "PDF p.8, USB Type-C 포트 최대 전원 공급",
+          "scope": "KOREAN_LANGUAGE_MANUAL_MODEL_3CC2",
+          "notes": "실제 장치 수전량 보장 아님."
+        },
+        {
+          "field": "brightness",
+          "value": {
+            "sdr_typical_nits": 400,
+            "hdr_peak_nits": 400
+          },
+          "url": "https://download-2.msi.com/archive/mnu_exe/monitor/MPG_274URF_QDv1.1_Korean.pdf",
+          "location": "PDF p.20, 사양 밝기",
+          "scope": "KOREAN_LANGUAGE_MANUAL_MODEL_3CC2",
+          "notes": "측정창/지속시간 미확인."
+        }
+      ],
+      "conflicts": [
+        {
+          "field": "stand_height_mm",
+          "status": "CONFLICT",
+          "claims": [
+            {
+              "value": 130,
+              "url": "https://download-2.msi.com/archive/mnu_exe/monitor/MPG_274URF_QDv1.1_Korean.pdf",
+              "location": "PDF pp.5,20"
+            },
+            {
+              "value": 110,
+              "url": "https://www.msi.com/Monitor/MPG-274URF-QD/Specification",
+              "location": "Adjustment (Height)"
+            }
+          ],
+          "resolution": "UNKNOWN; 둘 중 하나를 한국 SKU 확정치로 선택하지 않음"
+        },
+        {
+          "field": "usb_c_data_kvm",
+          "status": "CONFLICT",
+          "claims": [
+            {
+              "value": "USB-C 데이터 전송 미지원",
+              "url": "https://download-2.msi.com/archive/mnu_exe/monitor/MPG_274URF_QDv1.1_Korean.pdf",
+              "location": "PDF p.8"
+            },
+            {
+              "value": "KVM USB 입력 소스 Type-C 선택",
+              "url": "https://download-2.msi.com/archive/mnu_exe/monitor/MPG_274URF_QDv1.1_Korean.pdf",
+              "location": "PDF p.12"
+            }
+          ],
+          "resolution": "UNKNOWN; 영상 및 PD 확인과 USB 데이터/KVM 판정 분리"
+        }
+      ],
+      "unconfirmed": [
+        "정확한 한국 유통 SKU 및 말레이시아 SKU와 동일성",
+        "하드웨어 리비전; V1.1은 문서 개정",
+        "최대 모드 색심도·크로마·DSC 조건",
+        "MSI 사용자 후기 재열람: DPG 페이지 틀만 확보, 핵심 사용기 본문 추출 불가; Reddit 원문 이번 미재확인"
+      ],
+      "existing_match_notes": "official_specs 30종 및 content-v2 6종에 해당 모델 없음. MAG/QD-OLED 다른 모델과 병합 금지.",
+      "id": "m10-08"
+    },
+    {
+      "selection_model": "BenQ MOBIUZ EX2710Q",
+      "checked_on": "2026-10-11",
+      "confirmed": [
+        {
+          "field": "screen_size_inch",
+          "value": 27,
+          "url": "https://www.benq.com/en-ca/monitor/gaming/ex2710q/spec.html",
+          "location": "Display / Screen Size",
+          "scope": "CA_MODEL",
+          "notes": ""
+        },
+        {
+          "field": "resolution",
+          "value": {
+            "width": 2560,
+            "height": 1440
+          },
+          "url": "https://www.benq.com/en-ca/monitor/gaming/ex2710q/spec.html",
+          "location": "Display / Resolution (max.)",
+          "scope": "CA_MODEL",
+          "notes": ""
+        },
+        {
+          "field": "panel",
+          "value": "IPS",
+          "url": "https://www.benq.com/en-ca/monitor/gaming/ex2710q/spec.html",
+          "location": "Display / Panel Type",
+          "scope": "CA_MODEL",
+          "notes": "Nano IPS로 확장하지 않음"
+        },
+        {
+          "field": "max_refresh_hz",
+          "value": 165,
+          "url": "https://www.benq.com/en-ca/monitor/gaming/ex2710q/spec.html",
+          "location": "Display / Refresh Rate (Hz)",
+          "scope": "CA_MODEL",
+          "notes": "전체 포트 무조건165Hz로 해석하지 않음."
+        },
+        {
+          "field": "video_ports",
+          "value": {
+            "hdmi": {
+              "count": 2,
+              "version": "2.0"
+            },
+            "displayport": {
+              "count": 1,
+              "version": "1.4"
+            }
+          },
+          "url": "https://www.benq.com/en-ca/monitor/gaming/ex2710q/spec.html",
+          "location": "Connectivity",
+          "scope": "CA_MODEL",
+          "notes": "USB-C 미열거를 명시적 부재로 전환하지 않음."
+        },
+        {
+          "field": "brightness",
+          "value": {
+            "typical_mode_unspecified_nits": 250,
+            "hdr_peak_nits": 400
+          },
+          "url": "https://www.benq.com/en-ca/monitor/gaming/ex2710q/spec.html",
+          "location": "Brightness (typ.); Brightness (peak)(HDR)",
+          "scope": "CA_MODEL",
+          "notes": "250nits를 SDR전용 필드로 자동 치환하지 않음"
+        },
+        {
+          "field": "hdr",
+          "value": "HDR10; VESA DisplayHDR 400",
+          "url": "https://www.benq.com/en-ca/monitor/gaming/ex2710q/spec.html",
+          "location": "Display / HDR",
+          "scope": "CA_MODEL",
+          "notes": ""
+        },
+        {
+          "field": "stand_and_mount",
+          "value": {
+            "tilt_deg": [
+              -5,
+              15
+            ],
+            "swivel_deg": [
+              -15,
+              15
+            ],
+            "height_mm": 100,
+            "vesa_mm": [
+              100,
+              100
+            ]
+          },
+          "url": "https://www.benq.com/en-ca/monitor/gaming/ex2710q/spec.html",
+          "location": "Dimension and Weight",
+          "scope": "CA_MODEL",
+          "notes": "피벗 미확인. 한국 SKU 동일성 승인 아님."
+        }
+      ],
+      "conflicts": [],
+      "unconfirmed": [
+        "한국 공식 페이지 제목은 반환됐으나 상세 열람 후404; 한국 문서 재확인 완료로 표기 금지",
+        "USB-C 기능 및 PD, 정확 한국 SKU/리비전",
+        "영문 timing PDF 텍스트는 확보했으나 열 정렬 시각 재확인 불가: DP165/HDMI144 및 색심도 표는 이번 확정 항목에서 제외",
+        "Flipkart 후기 원문 이번 미재확인"
+      ],
+      "existing_match_notes": "기존 monitor:benq-ex2710q CA 21facts 중 핵심 값과 일치. 한국 페이지 자료를 CA 원본의 지역상태 대체/한국SKU 승인에 사용하지 않음. 퀘이사존522348 실제 사용 본문 재확인: 스피커/자동밝기 만족과 가격 아쉬움. 승인·의학적효능·구매인증으로 확대 금지.",
+      "id": "m10-09"
+    },
+    {
+      "selection_model": "Crossover 27ULD950",
+      "checked_on": "2026-10-11",
+      "confirmed": [
+        {
+          "field": "screen_size_inch",
+          "value": 27,
+          "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+          "location": "요약정보",
+          "scope": "KR_DISPLAY_MODEL",
+          "notes": ""
+        },
+        {
+          "field": "resolution",
+          "value": {
+            "width": 3840,
+            "height": 2160
+          },
+          "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+          "location": "요약정보",
+          "scope": "KR_DISPLAY_MODEL",
+          "notes": ""
+        },
+        {
+          "field": "panel",
+          "value": "IPS",
+          "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+          "location": "요약정보",
+          "scope": "KR_DISPLAY_MODEL",
+          "notes": ""
+        },
+        {
+          "field": "max_refresh_hz",
+          "value": 60,
+          "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+          "location": "요약정보",
+          "scope": "KR_DISPLAY_MODEL",
+          "notes": "HTML 요약은 입력별 타이밍 근거가 아님."
+        },
+        {
+          "field": "brightness_advertised",
+          "value": {
+            "value": 400,
+            "unit": "cd/m²",
+            "qualifier": "UNKNOWN"
+          },
+          "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+          "location": "요약정보 400cd",
+          "scope": "KR_DISPLAY_MODEL",
+          "notes": "SDR/HDR, typical/peak 및 HDR인증을 추정하지 않음."
+        },
+        {
+          "field": "stand_adjustments",
+          "value": [
+            "height",
+            "tilt",
+            "swivel",
+            "pivot"
+          ],
+          "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+          "location": "요약정보 스탠드 기능",
+          "scope": "KR_DISPLAY_MODEL",
+          "notes": "조절범위·각도 확정하지 않음."
+        },
+        {
+          "field": "vesa_mm",
+          "value": [
+            75,
+            75
+          ],
+          "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+          "location": "요약정보 베사홀",
+          "scope": "KR_DISPLAY_MODEL",
+          "notes": ""
+        },
+        {
+          "field": "usb_pd_support",
+          "value": "SUPPORTED_MANUFACTURER_STATEMENT",
+          "url": "https://www.crosslcd.co.kr/shop/item.php?it_id=1716533757",
+          "location": "요약정보 USB PD 지원",
+          "scope": "KR_DISPLAY_MODEL",
+          "notes": "PD65 상품명으로 65W 수치/UP_TO/RATED를 확정하지 않음."
+        }
+      ],
+      "conflicts": [
+        {
+          "field": "displayport_version",
+          "status": "USER_SUPPLIED_CONFLICT_PENDING_RECHECK",
+          "claims": [
+            "공식 이미지 DP1.4 표기",
+            "동일 이미지 최적해상도 DP1.2 표기"
+          ],
+          "resolution": "UNKNOWN; 이미지 직접 재확인 실패"
+        },
+        {
+          "field": "stand_height_mm",
+          "status": "USER_SUPPLIED_AMBIGUITY_PENDING_RECHECK",
+          "claims": [
+            "이미지 0~110m 표기"
+          ],
+          "resolution": "UNKNOWN; mm 자동정정 금지. 외형385~520mm를 조절거리로 환산 금지"
+        },
+        {
+          "field": "stand_swivel_deg",
+          "status": "USER_SUPPLIED_CONFLICT_PENDING_RECHECK",
+          "claims": [
+            "이미지 -30~30도",
+            "설명 -90~90도"
+          ],
+          "resolution": "UNKNOWN; 이번 이미지 시각 재확인 실패"
+        }
+      ],
+      "unconfirmed": [
+        "공식 상세 이미지 16004212bytes로 web 도구 크기제한 오류; CUA 브라우저 없음. 이미지 문구 재확인 완료로 표시하지 않음.",
+        "이미지 전용 입력별4K60·DP버전·USB-C영상·65W수치 및 PD qualifier·정확 높이/스위블",
+        "원본 제시 PD65 qualifier UNKNOWN 유지; 장치 실수전/지속공급 미확인",
+        "정확 유통 SKU/하드웨어 리비전"
+      ],
+      "existing_match_notes": "official30에는 없음; 기존 content-v2 product:crossover-27uld950 7facts 있음. 화면/기능/VESA 일치, 기존 PD65 PRODUCT_LABEL_ONLY 및 wattsUNKNOWN은 이번HTML재확인으로 해소되지 않음. 퀘이사존133467/919113 본문 재확인: 개인USB-C출력충전 및3주사용 불편 보고. 공식사양 또는 전력측정 대체 불가.",
+      "id": "m10-10"
+    }
+  ]
+}
