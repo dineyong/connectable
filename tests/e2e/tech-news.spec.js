@@ -21,3 +21,12 @@ test("hostile news title is text and unsafe article link is skipped", async({pag
   await page.selectOption("#news-filter","MONITOR_DISPLAY");
   await expect(page.locator("#news-empty")).toBeVisible();
 });
+
+test("news has no accessibility violations or horizontal overflow", async ({page}) => {
+  const AxeBuilder = require("@axe-core/playwright").default;
+  await page.goto("/tech-news.html");
+  await expect(page.locator(".news-card").first()).toBeVisible();
+  const results = await new AxeBuilder({page}).analyze();
+  expect(results.violations).toEqual([]);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
+});
