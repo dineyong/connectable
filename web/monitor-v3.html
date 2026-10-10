@@ -90,6 +90,12 @@
                   <span>필터</span
                   ><button type="button" id="reset-filters">전체 초기화</button>
                 </div>
+                <fieldset class="brand-filter">
+                  <legend>브랜드 <span id="brand-filter-count">전체</span></legend>
+                  <p id="brand-filter-help">여러 브랜드를 함께 선택할 수 있어요. 선택하지 않으면 전체를 보여줘요.</p>
+                  <div id="brand-options" aria-describedby="brand-filter-help"></div>
+                  <button id="brand-clear" type="button" disabled>모든 브랜드 보기</button>
+                </fieldset>
                 <label for="filter-size">화면 크기</label
                 ><select id="filter-size">
                   <option value="all">모든 크기</option>

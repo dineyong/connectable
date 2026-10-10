@@ -1032,3 +1032,13 @@ td a,
 .brand-group { display:grid; grid-template-columns:inherit; gap:inherit; grid-column:1 / -1; min-width:0; }
 .brand-group-title { grid-column:1 / -1; display:flex; align-items:center; gap:10px; margin:8px 0 0; padding-bottom:12px; border-bottom:1px solid var(--line); font-size:19px; }
 .brand-group-title span { font-size:12px; font-weight:400; color:var(--muted); }
+
+.brand-filter { border:0; border-bottom:1px solid var(--line); padding:0 0 18px; margin:0 0 20px; min-width:0; }
+.brand-filter legend { font-size:13px; font-weight:650; width:100%; }
+#brand-filter-count { float:right; font-size:11px; color:var(--blue); }
+#brand-filter-help { color:var(--muted); font-size:11px; line-height:1.6; margin:8px 0 10px; }
+.filter-body .brand-option { display:flex; align-items:center; gap:8px; margin:0; padding:7px 0; font-size:12px; cursor:pointer; }
+.brand-option input { width:16px; height:16px; margin:0; accent-color:var(--blue); }
+.brand-option small { margin-left:auto; color:var(--muted); }
+#brand-clear { border:0; padding:9px 0 0; background:none; color:var(--blue); font-size:11px; cursor:pointer; }
+#brand-clear:disabled { color:var(--muted); cursor:default; }

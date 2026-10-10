@@ -1,0 +1,36 @@
+const {test,expect}=require('@playwright/test');
+const data=require('../../data/site/monitor-v3.json');
+const cards=page=>page.locator('#product-grid .product-card');
+const open=async page=>{if(!await page.locator('#brand-options').isVisible())await page.locator('#filters > summary').click();};
+test('multiple brand selection intersects search and specifications; clear only resets brands',async({page})=>{
+ await page.goto('/monitor-v3.html'); await open(page);
+ await page.locator('#brand-options input[value="LG"]').check();
+ await expect(cards(page)).toHaveCount(data.products.filter(p=>p.manufacturer==='LG').length);
+ await page.locator('#brand-options input[value="Dell"]').check();
+ await expect(cards(page)).toHaveCount(data.products.filter(p=>['LG','Dell'].includes(p.manufacturer)).length);
+ await expect(page.locator('#brand-filter-count')).toHaveText('2개 선택');
+ await page.locator('#monitor-search').fill('U2724D');
+ await expect(cards(page)).toHaveCount(2);
+ await page.locator('#filter-resolution').selectOption('qhd');
+ await expect(cards(page)).toHaveCount(2);
+ await page.locator('#brand-clear').click();
+ await expect(page.locator('#brand-filter-count')).toHaveText('전체');
+ await expect(page.locator('#monitor-search')).toHaveValue('U2724D');
+ await expect(page.locator('#filter-resolution')).toHaveValue('qhd');
+ await expect(cards(page)).toHaveCount(2);
+});
+test('brand filtering preserves selection, grouping toggle, and empty-result reset',async({page})=>{
+ await page.goto('/monitor-v3.html');await open(page);
+ await cards(page).first().locator('[data-action="select"]').click();
+ await page.locator('#brand-options input[value="LG"]').check();
+ await page.locator('#group-by-brand').uncheck();
+ await expect(page.locator('.brand-group')).toHaveCount(0);
+ await expect(page.locator('#selection-count')).toContainText('1 / 3');
+ await page.locator('#monitor-search').fill('PA279CRV');
+ await expect(cards(page)).toHaveCount(0);
+ await page.locator('#empty-reset').click();
+ await expect(cards(page)).toHaveCount(30);
+ await expect(page.locator('#brand-options input:checked')).toHaveCount(0);
+ await expect(page.locator('#selection-count')).toContainText('1 / 3');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});

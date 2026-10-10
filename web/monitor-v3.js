@@ -12,7 +12,7 @@
     $("result-count").textContent = "불러오기 실패";
     document
       .querySelectorAll(
-        ".filter-body input, .filter-body select, #monitor-search, #sort-order, #group-by-brand, #nav-compare",
+        ".filter-body input, .filter-body select, #monitor-search, #sort-order, #group-by-brand, #brand-clear, #nav-compare",
       )
       .forEach((el) => {
         el.disabled = true;
@@ -133,6 +133,35 @@
     const f = p.filters;
     return `<article class="product-card${selected.has(p.id) ? " selected" : ""}" data-product-id="${esc(p.id)}"><div class="monitor-art" aria-hidden="true"><div class="monitor-screen"></div><div class="monitor-neck"></div><div class="monitor-foot"></div></div><p class="product-brand">${esc(p.manufacturer)}</p><h3>${esc(p.display_model)}</h3><p class="spec-line">${unknown(f.size) ? "크기 미확인" : `${esc(f.size)}인치`} · ${esc(resolution(f))}<br>${unknown(f.refresh) ? "주사율 미확인" : `최대 ${esc(f.refresh)}Hz`} · ${esc(fmt(f.panel))}</p><div class="card-meta"><span>공식 문서 · ${esc(p.region)}</span><button type="button" data-action="detail" data-id="${esc(p.id)}" aria-label="${esc(name(p))} 출처·조건 보기">출처·조건 보기 ›</button></div><button type="button" class="select-button" data-action="select" data-id="${esc(p.id)}" aria-pressed="${selected.has(p.id)}" aria-label="${esc(name(p))} ${selected.has(p.id) ? "비교에서 빼기" : "비교에 담기"}">${selected.has(p.id) ? "✓ 비교에 담았어요" : "＋ 비교에 담기"}</button></article>`;
   }
+  const chosenBrands = new Set();
+  const brandCounts = new Map();
+  for (const product of products) {
+    brandCounts.set(product.manufacturer, (brandCounts.get(product.manufacturer) || 0) + 1);
+  }
+  $("brand-options").innerHTML = [...brandCounts.entries()]
+    .sort(([a], [b]) => a.localeCompare(b, "ko"))
+    .map(([brand, count]) => `<label class="brand-option"><input type="checkbox" value="${esc(brand)}" /><span>${esc(brand)}</span><small>${count}</small></label>`)
+    .join("");
+  function syncBrands() {
+    $("brand-filter-count").textContent = chosenBrands.size ? `${chosenBrands.size}개 선택` : "전체";
+    $("brand-clear").disabled = chosenBrands.size === 0;
+    $("brand-options").querySelectorAll("input").forEach(input => {
+      input.checked = chosenBrands.has(input.value);
+    });
+  }
+  $("brand-options").addEventListener("change", event => {
+    const input = event.target;
+    if (!input.matches('input[type="checkbox"]')) return;
+    if (input.checked) chosenBrands.add(input.value);
+    else chosenBrands.delete(input.value);
+    syncBrands();
+    render();
+  });
+  $("brand-clear").addEventListener("click", () => {
+    chosenBrands.clear();
+    syncBrands();
+    render();
+  });
   const filterIds = ["size", "resolution", "refresh", "panel", "usbc"];
   function matches(p) {
     const f = p.filters;
@@ -175,7 +204,8 @@
   function render() {
     const query = $("monitor-search").value.trim().toLocaleLowerCase();
     let list = products.filter(
-      (p) => name(p).toLocaleLowerCase().includes(query) && matches(p),
+      (p) => name(p).toLocaleLowerCase().includes(query) &&
+        (!chosenBrands.size || chosenBrands.has(p.manufacturer)) && matches(p),
     );
     const order = $("sort-order").value;
     list.sort((a, b) => {
@@ -205,6 +235,8 @@
     $("empty-state").hidden = list.length > 0;
   }
   function reset() {
+    chosenBrands.clear();
+    syncBrands();
     $("monitor-search").value = "";
     filterIds.forEach((key) => ($(`filter-${key}`).value = "all"));
     $("include-unknown").checked = false;
