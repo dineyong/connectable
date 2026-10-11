@@ -6690,6 +6690,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:msi-modern-md271ul:manual-20261011",
+          "url": "https://download.msi.com/archive/mnu_exe/monitor/Modern_MD271ULv1.1_Korean.pdf",
+          "title": "MSI Modern MD271UL (3PB8) Korean manual V1.1",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Official model support > Manual & Document > Korean; printed p.16 specifications"
         }
       ],
       "facts": [
@@ -6967,10 +6975,21 @@
           ],
           "location": "Weight; stand context and unit in value",
           "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "msi-modern-md271ul:manual-brightness-typical",
+          "property": "brightness_typical",
+          "value": 300,
+          "unit": "nit",
+          "scope": "PANEL",
+          "source_refs": [
+            "src:msi-modern-md271ul:manual-20261011"
+          ],
+          "location": "V1.1 Korean manual printed p.16: brightness 300 nits (typ.)",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
-        "brightness_typical",
         "hdr",
         "power_consumption",
         "usb_hub",
@@ -6992,7 +7011,8 @@
         "origin=EXISTING_MODEL_NEW_DIRECT_CHECK; existing data/site model MD271UL rechecked independently on official Modern MD271UL page; no old facts copied.",
         "Monitor model label Modern MD271UL versus existing MD271UL preserved; regional SKU equivalence UNKNOWN.",
         "Web specification omits brightness, consumption, VESA, KVM and USB hub.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11: 공식 모델 지원 페이지 Manual & Document에서 한국어 V1.1 설명서 직접 링크를 확인했다. 인쇄16쪽의 일반 밝기300니트 반영. 한국어 설명서가 한국 판매 SKU/보증을 증명하지 않으며 전원 출력19V·5.79A를 소비전력으로 계산하지 않음."
       ],
       "filters": {
         "size": 27,

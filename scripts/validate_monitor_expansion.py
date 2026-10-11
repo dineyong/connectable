@@ -22,6 +22,13 @@ DOMAINS={
 }
 
 
+# Exact document reviewed via the model's public support UI on 2026-10-11.
+# See docs/MSI_MANUAL_LINK_VERIFICATION_REPORT.md; no host-wide approval.
+REVIEWED_MANUALS = {
+    ('MSI', 'monitor:msi-modern-md271ul', 'Modern MD271UL'):
+        {'https://download.msi.com/archive/mnu_exe/monitor/Modern_MD271ULv1.1_Korean.pdf'},
+}
+
 def load(path):return json.loads(Path(path).read_text(),object_pairs_hook=unique_object,parse_constant=reject_constant)
 def require(test,message):
     if not test:raise ValueError(message)
@@ -73,7 +80,8 @@ def official(data):
             require(s['access_status']=='DIRECT_CHECK','unread official source')
             for k in ['title','location']:text(s[k],k)
             domains=DOMAINS.get(p['manufacturer'],set())
-            require(parsed.hostname in domains,'unknown manufacturer host; manual scope review required')
+            manuals=REVIEWED_MANUALS.get((p['manufacturer'],p['id'],p['display_model']),set())
+            require(parsed.hostname in domains or s['url'] in manuals,'unknown manufacturer host; manual scope review required')
         facts=index(p['facts'],'id');require(bool(facts),'no verified facts')
         for f in facts.values():
             fields(f,'id property value unit scope source_refs location qualifier','fact')

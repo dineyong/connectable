@@ -2,7 +2,7 @@
 
 기존 파생 데이터의 정리이며 공식 원문 재확인이나 이미지 사용권 검증 결과가 아니다.
 
-- 원본: `data/site/monitor-v3.json` · SHA-256 `d63a1e3da26e72f92afef553a1983d966c70d28bdae8976e83a21c7ac465df80`
+- 원본: `data/site/monitor-v3.json` · SHA-256 `575ec7f6a961ebd087c59635ea7599a7d959085e49a6385d36ba529ee13d31c0`
 - 제품 30종 · 자료 확인일 2026-10-10 · 공개 상태 UNKNOWN
 - 이미지: 모든 제품은 CSS 형태 예시. 제품 사진 원본 URL·권리자·상업 사용 허용 근거·모델/지역 일치 검토는 미확인. 실제 사진 적용 0건.
 - 승인된 이미지 레지스트리가 아직 없으므로 이 목록은 제품에 사진 사용권을 부여하지 않는다.
@@ -37,7 +37,7 @@
 | `monitor:lg-34wq75c-b-aus` / LG 34WQ75C-B.AUS | US | USB-C 영상 | 8 | [문서 1](https://www.lg.com/us/support/products/documents/34WQ75C_Spec_Sheet.pdf) · [문서 2](https://www.lg.com/uk/monitors/ultrawide/34wq75c-b/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:msi-mag-274qrf-qd-e2` / MSI MAG 274QRF QD E2 | Global | 없음 (검색용 값만) | 6 | [문서 1](https://www.msi.com/Monitor/MAG-274QRF-QD-E2/Specification) · [문서 2](https://www.msi.com/Monitor/MAG-274QRF-QD-E2) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:msi-mpg-321urx-qd-oled` / MSI MPG 321URX QD-OLED | Global | 없음 (검색용 값만) | 7 | [문서 1](https://www.msi.com/Monitor/MPG-321URX-QD-OLED/Specification) · [문서 2](https://www.msi.com/Monitor/MPG-321URX-QD-OLED) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:msi-modern-md271ul` / MSI Modern MD271UL | Global | 없음 (검색용 값만) | 14 | [문서 1](https://www.msi.com/Business-Productivity-Monitor/Modern-MD271UL/Specification) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:msi-modern-md271ul` / MSI Modern MD271UL | Global | 없음 (검색용 값만) | 13 | [문서 1](https://www.msi.com/Business-Productivity-Monitor/Modern-MD271UL/Specification) · [문서 2](https://download.msi.com/archive/mnu_exe/monitor/Modern_MD271ULv1.1_Korean.pdf) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:samsung-s32cg554eu-ls32cg554euxen` / Samsung S32CG554EU (LS32CG554EUXEN) | DE | 없음 (검색용 값만) | 8 | [문서 1](https://images.samsung.com/is/content/samsung/assets/de/display/pdf/Datenblatt_Monitor_LS32CG554EUXEN.pdf) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:samsung-s65uc-ls34c650ueexxy` / Samsung S65UC (LS34C650UEEXXY) | AU | USB-C 영상 | 7 | [문서 1](https://www.samsung.com/au/monitors/high-resolution/viewfinity-s6-s65uc-34-inch-ultra-wqhd-ls34c650ueexxy/) | 형태 예시 / 사진 권한 미확인 |
 
@@ -57,9 +57,9 @@
 | `usb_c` | 12 |
 | `vrr` | 9 |
 | `power_consumption` | 7 |
-| `brightness_typical` | 6 |
 | `hdr` | 6 |
 | `usb_hub` | 5 |
+| `brightness_typical` | 5 |
 | `hdmi.version` | 5 |
 | `usb_c.video_mode` | 4 |
 | `contrast_native` | 3 |
