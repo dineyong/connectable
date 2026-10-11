@@ -1,6 +1,10 @@
 # Connectable 제품 방향 v3 — 모니터 사양 비교
 
-## 최신 디자인 승인 · 2026-10-10
+## 최신 로컬 구현 기준 · 2026-10-11
+
+사용자가 이후 승인한 Claude의 **용도부터(B)** 시안이 현재 기준이다. 연한 회녹색 배경·진녹색·노란 강조, 용도 조건 바로가기, 브랜드 필터/그룹, 가로 제품 목록과 비교함을 사용한다. [적용 기록](MONITOR_PURPOSE_DESIGN_REPORT.md), [상세·비교](MONITOR_DETAIL_COMPARISON_DESIGN_REPORT.md), [구매 가이드](MONITOR_IMAGES_AND_GUIDES_REPORT.md), [세션별 진행](LOCAL_MVP_SESSION_PROGRESS.md)을 따른다. 아래 파란색 시안과 최초 승인 기록은 이전 이력이다.
+
+## 최초 디자인 승인 · 2026-10-10
 
 사용자는 세 안 중 [1번 빠른 탐색형](design/monitor-v3-options/a-fast-finder.png)을 선택하고 로컬 구현을 승인했다. 아래 이전 이미지보다 이 시안을 우선한다. 검색 → 필터 → 제품 선택 → 비교 동선을 사용한다. 데이터 연결·화면·검증을 분담하며, 사용자 검토가 필요한 공개 승인·운영 계정·광고/제휴·main 병합은 실행하지 않는다. 닷의 추가 자료는 도착 후 별도 검증한다. 기존 웹 파일을 보존하고 `web/monitor-v3.html`에 새 구현을 둔다.
 
