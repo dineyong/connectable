@@ -30,3 +30,15 @@ test("news has no accessibility violations or horizontal overflow", async ({page
   expect(results.violations).toEqual([]);
   expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
 });
+
+test('product announcements separate launch and preorder with dated source evidence',async({page})=>{
+  await page.goto('/tech-news.html');
+  await expect(page.locator('.announcement-card')).toHaveCount(2);
+  await page.locator('#product-news-filter').selectOption('PHONE_PREORDER');
+  await expect(page.locator('.announcement-card')).toHaveCount(1);
+  await expect(page.locator('.announcement-card')).toContainText('판매 상태 미확인');
+  await expect(page.locator('.announcement-card')).toContainText('2026-10-16');
+  await page.locator('#product-news-filter').selectOption('MONITOR_LAUNCH');
+  await expect(page.locator('.announcement-card')).toContainText('BenQ');
+  await expect(page.locator('.announcement-card')).not.toContainText('사전주문일');
+});

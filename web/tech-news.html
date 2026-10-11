@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="tech-news.css" />
     <script defer src="tech-news-data.js"></script>
     <script defer src="tech-news.js"></script>
+    <script defer src="product-news-data.js"></script>
+    <script defer src="product-news.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">본문 바로가기</a>
@@ -33,6 +35,13 @@
         제조사가 전하는 새로운 소식을 한곳에서.<br />관심 있는 제목을 골라
         발행처의 원문으로 읽어보세요.
       </p>
+      <section class="product-announcements" aria-labelledby="product-news-title">
+        <h2 id="product-news-title">신제품 · 사전예약 체크</h2>
+        <p class="note">공식 발표 본문을 확인한 소식입니다. 발표 당시 일정이며 현재 예약 가능 여부·재고·혜택을 보장하지 않습니다.</p>
+        <div class="toolbar"><label for="product-news-filter">관심 소식</label><select id="product-news-filter"><option value="ALL">전체</option><option value="MONITOR_LAUNCH">모니터 신제품</option><option value="PHONE_PREORDER">휴대폰 사전예약</option></select></div>
+        <div id="product-news-items"></div><p id="product-news-status" role="status"></p>
+      </section>
+      <h2>제조사 RSS 둘러보기</h2>
       <aside class="snapshot" aria-label="저장 목록 안내">
         <strong>저장된 목록을 보고 있어요</strong>
         <p id="news-status" role="status">저장된 목록 확인 중…</p>
