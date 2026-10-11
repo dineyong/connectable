@@ -59,9 +59,28 @@ def render(product):
 <section><h2>아직 확인이 필요한 항목</h2><ul>{missing or '<li>원본에 별도 결측 목록 없음. 전체 검증 완료를 뜻하지 않습니다.</li>'}</ul><details><summary>조사 범위와 원본 메모</summary><ul>{notes}</ul></details></section>
 <footer>Connectable · 원본 사양과 사용자 경험을 구분합니다. 가격·판매량·구매 인증을 제공하는 페이지가 아닙니다.</footer></main></body></html>'''
 
+def render_index(products):
+    groups = {}
+    for p in sorted(products, key=lambda p: (p['manufacturer'], p['display_model'])):
+        groups.setdefault(p['manufacturer'], []).append(p)
+    sections = []
+    for brand, items in groups.items():
+        links = ''.join(f'<li><a href="{esc(p["id"].removeprefix("monitor:"))}/">{esc(p["display_model"])}</a><span>문서 지역 {esc(p["region"])}</span></li>' for p in items)
+        sections.append(f'<section><h2>{esc(brand)}</h2><ul>{links}</ul></section>')
+    return f'''<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>전체 모니터 사양·출처 목록 | Connectable</title>
+<meta name="description" content="조사한 모니터의 사양과 공식 출처를 브랜드별 정적 목록에서 확인하세요. JavaScript 없이 열 수 있는 로컬 검토용 문서입니다.">
+<link rel="stylesheet" href="../monitor-detail-v3.css"><link rel="stylesheet" href="../monitor-index.css"></head>
+<body><a class="skip" href="#main">본문으로 이동</a><header><a class="brand" href="../monitor-v3.html">connectable<span>모니터 선택의 기준</span></a><nav aria-label="주요 메뉴"><a href="../monitor-v3.html">검색·비교 화면</a><a href="../guides/monitor-buying.html">구매 가이드</a></nav></header>
+<main id="main"><p class="eyebrow">ALL MONITORS</p><h1>전체 모니터 사양·출처</h1><p class="intro">브랜드별 {len(products)}개 제품 문서. JavaScript 없이 읽을 수 있어요.</p>
+<aside><strong>로컬 검토용 · 한국 판매 SKU 동일성 미확인</strong><p>문서 지역과 구매할 모델을 대조하세요. 조사 내용은 사람 검토 완료나 호환성 보장이 아닙니다.</p></aside>
+<div class="static-product-groups">{''.join(sections)}</div><footer>Connectable · 공식 자료의 사양과 조건을 함께 확인하세요.</footer></main></body></html>'''
+
 def build(source=SOURCE, output=OUTPUT, check=False):
     data=official(load(source))
     expected={p['id'].removeprefix('monitor:')+'/index.html':render(p)+'\n' for p in data['products']}
+    expected['index.html'] = render_index(data['products']) + '\n'
     if check:
         stale=[key for key,value in expected.items() if not (output/key).is_file() or (output/key).read_text()!=value]
         extra=set(str(p.relative_to(output)) for p in output.glob('*/index.html'))-set(expected)
@@ -69,7 +88,7 @@ def build(source=SOURCE, output=OUTPUT, check=False):
     else:
         for key,value in expected.items():
             path=output/key;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(value)
-    return len(expected)
+    return len(data['products'])
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--check',action='store_true')

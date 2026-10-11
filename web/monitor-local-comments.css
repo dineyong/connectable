@@ -1,0 +1,15 @@
+.local-comment-preview { margin-top: 1.5rem; padding: 1.2rem; border: 1px solid #dce6e0; border-radius: 16px; background: #fff; color: #142d24; }
+.local-comment-preview h3 { margin: 0 0 .7rem; }
+.local-comment-preview p { font-size: .88rem; line-height: 1.65; }
+.local-comment-preview label { display: block; font-size: .9rem; font-weight: 700; }
+.local-comment-preview textarea { display: block; box-sizing: border-box; width: 100%; max-width: 100%; min-height: 90px; margin-top: .5rem; padding: .75rem; border: 1px solid #9db1a5; border-radius: 10px; font: inherit; resize: vertical; }
+.local-comment-preview textarea:focus-visible, .local-comment-preview button:focus-visible { outline: 3px solid #d5a824; outline-offset: 3px; }
+.local-comment-preview textarea[aria-invalid="true"] { border-color: #a53223; }
+.local-comment-preview .local-comment-counter { margin: .3rem 0 .7rem; text-align: right; }
+.local-comment-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.local-comment-preview button { min-height: 44px; padding: .6rem 1rem; border: 1px solid #25483b; border-radius: 20px; background: #12362a; color: #fff; font: inherit; cursor: pointer; }
+.local-comment-preview button + button { background: #fff; color: #25483b; }
+.local-comment-preview button:disabled { opacity: .5; cursor: not-allowed; }
+.local-comment-saved { padding-top: .5rem; border-top: 1px solid #dce6e0; overflow-wrap: anywhere; }
+.local-comment-saved p { white-space: pre-wrap; }
+.local-comment-privacy { color: #56665e; }

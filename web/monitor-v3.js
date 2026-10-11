@@ -342,6 +342,14 @@
           "브라우저 저장을 사용할 수 없습니다. 반응은 저장되지 않았어요.";
       }
     });
+    const comments = document.createElement("section");
+    comments.id = "local-comments";
+    $("detail-content").append(comments);
+    if (window.ConnectableLocalComments?.mount) {
+      window.ConnectableLocalComments.mount(comments, p.id);
+    } else {
+      comments.textContent = "댓글 초안 기능을 불러오지 못했습니다. 새로고침 후 다시 확인해주세요.";
+    }
     $("detail-dialog").showModal();
   }
   function compare() {
