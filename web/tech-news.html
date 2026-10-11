@@ -1,1 +1,83 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>테크 소식 | Connectable</title><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="tech-news.css"><script defer src="tech-news-data.js"></script><script defer src="tech-news.js"></script></head><body><header><a class="brand" href="/">Connectable</a><a href="/">모니터 비교로 돌아가기</a></header><main><span class="eyebrow">TECH NEWS · 로컬 검토용</span><h1>새로운 테크 소식</h1><p class="lead">공개 RSS의 제목과 발행 시각을 모아 원문으로 안내합니다. 제조사 발표이며 독립 매체의 평가와 다릅니다.</p><div class="toolbar"><label for="news-filter">분류</label><select id="news-filter"><option value="ALL">전체 테크</option><option value="MONITOR_DISPLAY">모니터·디스플레이</option></select><button id="news-reload" type="button">목록 다시 보기</button></div><p id="news-status" role="status"></p><p class="note">분류는 제목 키워드 기준입니다. 자동 갱신 프로세스가 실행될 때 15분 간격으로 확인하며 실시간 수신을 보장하지 않습니다. 기사 전문·이미지는 저장하지 않습니다.</p><section id="news-sources" aria-label="출처 상태"></section><section id="news-items" aria-label="테크 뉴스"></section><p id="news-empty" hidden>이 분류에 확인된 소식이 없습니다.</p></main><footer>원문 권리는 각 발행처에 있습니다. 공개 서비스 적용은 출처 이용 조건 검토 후 진행합니다.</footer></body></html>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>테크 소식 | Connectable</title>
+    <meta
+      name="description"
+      content="제조사 RSS의 테크 소식 제목과 발행 시각, 마지막 수집 상태를 확인하고 원문으로 이동하세요."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" href="tech-news.css" />
+    <script defer src="tech-news-data.js"></script>
+    <script defer src="tech-news.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+    <div class="preview-strip" role="region" aria-label="미리보기 상태">
+      로컬 미리보기 · 공개 검토 전 · 저장된 제조사 소식
+    </div>
+    <header>
+      <a class="brand" href="monitor-v3.html">connectable</a>
+      <nav aria-label="주요 메뉴">
+        <a href="monitor-v3.html">모니터 찾기</a>
+        <a href="guides/monitor-buying.html">구매 가이드</a>
+        <a href="tech-news.html" aria-current="page">테크 소식</a>
+      </nav>
+    </header>
+    <main id="main">
+      <span class="eyebrow">TECH NEWS</span>
+      <h1>새로운 <mark>테크 소식</mark></h1>
+      <p class="lead">
+        제조사가 전하는 새로운 소식을 한곳에서.<br />관심 있는 제목을 골라
+        발행처의 원문으로 읽어보세요.
+      </p>
+      <aside class="snapshot" aria-label="저장 목록 안내">
+        <strong>저장된 목록을 보고 있어요</strong>
+        <p id="news-status" role="status">저장된 목록 확인 중…</p>
+        <p class="note">
+          표시 시각은 수집 기록입니다. 현재 자동 갱신 여부와 실시간 수신을
+          보장하지 않습니다. ‘목록 다시 보기’는 서버에 저장된 목록을 다시 읽으며
+          새 기사를 직접 수집하지 않습니다.
+        </p>
+      </aside>
+      <div class="toolbar">
+        <label for="news-filter">분류</label>
+        <select id="news-filter">
+          <option value="ALL">전체 테크</option>
+          <option value="MONITOR_DISPLAY">모니터·디스플레이</option>
+        </select>
+        <button id="news-reload" type="button">목록 다시 보기</button>
+        <span id="news-count" role="status"></span>
+      </div>
+      <p class="note">
+        제조사 발표이며 독립 매체의 평가·제품 추천과 다릅니다. 분류는 제목
+        키워드 기준입니다.
+      </p>
+      <details class="source-details">
+        <summary>출처별 수집 상태 보기</summary>
+        <p class="note">
+          아래 상태는 마지막 수집 당시의 기록이며 현재 접속 가능 여부를 뜻하지
+          않습니다.
+        </p>
+        <section id="news-sources" aria-label="출처 상태"></section>
+      </details>
+      <section id="news-items" aria-label="테크 뉴스"></section>
+      <p id="news-empty" class="empty" hidden>
+        이 분류에 표시할 수 있는 소식이 없습니다. 다른 분류를 선택해 주세요.
+      </p>
+      <noscript
+        ><p class="empty">
+          소식 목록을 표시하려면 JavaScript가 필요합니다.
+          <a href="monitor-v3.html">모니터 찾기로 돌아가기</a>
+        </p></noscript
+      >
+    </main>
+    <footer>
+      기사 전문·이미지는 저장하지 않습니다. 원문 권리는 각 발행처에 있습니다.<br />공개
+      서비스 적용은 출처 이용 조건 검토 후 진행합니다.
+      <a href="monitor-v3.html">모니터 찾기로 돌아가기</a>
+    </footer>
+  </body>
+</html>
