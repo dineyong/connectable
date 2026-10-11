@@ -21,6 +21,26 @@
   }
   const products = data.products;
   const selected = new Set();
+  const comparisonKey = "connectable-v3-comparison";
+  let comparisonWritable = true;
+  let comparisonNotice = "이 탭에서 페이지를 이동하거나 새로고침해도 비교함을 유지합니다.";
+  try {
+    const raw = sessionStorage.getItem(comparisonKey);
+    if (raw !== null) {
+      if (raw.length > 1000) throw new Error("oversized selection");
+      const saved = JSON.parse(raw);
+      if (!Array.isArray(saved) || saved.length > 3 || new Set(saved).size !== saved.length || saved.some(id => typeof id !== "string" || !products.some(p => p.id === id))) throw new Error("invalid selection");
+      saved.forEach(id => selected.add(id));
+    }
+  } catch {
+    comparisonWritable = false;
+    comparisonNotice = "비교함 보관을 사용할 수 없습니다. 현재 화면에서만 비교하며 기존 저장값은 변경하지 않습니다.";
+  }
+  function saveComparison() {
+    if (!comparisonWritable) return;
+    try { sessionStorage.setItem(comparisonKey, JSON.stringify([...selected])); }
+    catch { comparisonWritable = false; comparisonNotice = "비교함 저장에 실패했습니다. 현재 화면의 선택만 유지합니다."; }
+  }
   const esc = (value) =>
     String(value ?? "").replace(
       /[&<>"']/g,
@@ -259,6 +279,7 @@
     render();
   }
   function renderTray() {
+    $("comparison-storage-status").textContent = comparisonNotice;
     $("compare-tray").hidden = selected.size === 0;
     $("selection-count").textContent = `${selected.size} / 3개 선택`;
     $("compare-open").disabled = selected.size < 2;
@@ -282,6 +303,7 @@
     const focus = document.activeElement;
     const wasCard = focus?.closest(".product-card");
     const wasTray = focus?.closest("#compare-tray");
+    saveComparison();
     render();
     renderTray();
     if (wasCard || wasTray) {
@@ -441,9 +463,16 @@
       return;
     }
     selected.clear(); ids.forEach(id => selected.add(id));
+    saveComparison();
     render(); renderTray();
     $("compare-picker-dialog").close();
     openCompare();
+  });
+  $("compare-clear").addEventListener("click", () => {
+    selected.clear(); saveComparison(); render(); renderTray(); $("compare-start").focus();
+  });
+  $("monitor-search").addEventListener("keydown", event => {
+    if (event.key === "Enter") { $("products").focus({preventScroll:true}); $("products").scrollIntoView({block:"start",behavior:"instant"}); }
   });
   $("compare-open").addEventListener("click", openCompare);
   $("nav-compare").addEventListener("click", openCompare);

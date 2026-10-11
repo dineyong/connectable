@@ -302,3 +302,5 @@ footer a,
 .announcement-card .schedule {background:#eef5ef;padding:12px;border-radius:10px;color:#163d2d;}
 .announcement-card a {font-weight:700;text-decoration:underline;}
 @media(max-width:760px){#product-news-items{grid-template-columns:1fr;}}
+.toolbar {flex-wrap:wrap;}
+#news-search {max-width:100%;min-width:0;border:1px solid #9baea3;border-radius:12px;padding:12px;font:inherit;background:white;}

@@ -5,7 +5,7 @@
   if (!data || !Array.isArray(data.items) || !Array.isArray(data.sources)) {
     status.textContent =
       "뉴스 목록을 불러오지 못했습니다. 이전 화면으로 돌아가 주세요.";
-    document.getElementById("news-filter").disabled = true;
+    ["news-filter","news-search","news-source-filter"].forEach(id => document.getElementById(id).disabled = true);
     document
       .getElementById("news-reload")
       .addEventListener("click", () => window.location.reload());
@@ -20,6 +20,7 @@
   const sourceRows = data.sources.filter((s) => s && typeof s.id === "string");
   const sources = new Map(sourceRows.map((s) => [s.id, s]));
   for (const source of sourceRows) {
+    const option = document.createElement("option"); option.value = source.id; option.textContent = source.name; document.getElementById("news-source-filter").append(option);
     const el = document.createElement("div");
     el.className = "source";
     el.textContent = `${source.name} · ${source.status === "OK" ? "RSS 확인" : source.status === "STALE" ? "갱신 실패 · 이전 목록" : source.status === "ACCESS_FAILED" ? "접근 실패" : "수집 상태 미확인"} · 마지막 성공 ${time(source.last_success_at, "성공 시각 미확인")}`;
@@ -27,8 +28,10 @@
   }
   function render() {
     const selected = document.getElementById("news-filter").value;
+    const query = document.getElementById("news-search").value.trim().toLocaleLowerCase();
+    const sourceFilter = document.getElementById("news-source-filter").value;
     const articles = data.items.filter(
-      (i) => i && (selected === "ALL" || i.category === selected),
+      (i) => i && typeof i.title === "string" && i.title.toLocaleLowerCase().includes(query) && (sourceFilter === "ALL" || i.source_id === sourceFilter) && (selected === "ALL" || i.category === selected),
     );
     const container = document.getElementById("news-items");
     container.replaceChildren();
@@ -80,6 +83,8 @@
     document.getElementById("news-count").textContent =
       `표시 중 ${container.childElementCount}건`;
   }
+  document.getElementById("news-search").addEventListener("input", render);
+  document.getElementById("news-source-filter").addEventListener("change", render);
   document.getElementById("news-filter").addEventListener("change", render);
   document
     .getElementById("news-reload")

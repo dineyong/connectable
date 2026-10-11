@@ -42,9 +42,11 @@
                 id="monitor-search"
                 type="search"
                 placeholder="모델명 또는 스펙 · 예: 27인치 QHD"
+                aria-describedby="search-help"
                 autocomplete="off"
               /><span class="search-arrow" aria-hidden="true">→</span>
             </div>
+            <p id="search-help" class="search-help">예: 27인치 QHD · 4K IPS · 144Hz. 여러 조건은 함께 적용돼요. Enter로 결과 보기.</p>
             <div class="hero-hints">
               <span>크기로 좁히고</span><span>사양을 비교하고</span
               ><span>출처까지 확인해요</span>
@@ -198,6 +200,8 @@
       <div class="tray-title">
         <strong>비교함</strong><span id="selection-count"></span>
       </div>
+      <p id="comparison-storage-status" role="status"></p>
+      <button type="button" id="compare-clear">비교함 비우기</button>
       <div id="selected-products"></div>
       <button type="button" class="primary" id="compare-open" disabled>
         비교하기 →
