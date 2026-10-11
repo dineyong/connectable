@@ -4154,6 +4154,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:lg-27gp850-b:recheck-20261011",
+          "url": "https://www.lg.com/es/monitores/monitores-ultragear-gaming/27gp850-b/",
+          "title": "LG 27GP850-B official recheck",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "CONECTIVIDAD; CUALIDADES/ATRIBUTOS; CARACTERÍSTICAS FÍSICAS/MECANICAS"
         }
       ],
       "facts": [
@@ -4275,14 +4283,15 @@
           "property": "hdmi",
           "value": {
             "count": 2,
-            "version": null
+            "version": "2.0"
           },
           "unit": null,
           "scope": "PORT",
           "source_refs": [
-            "src:lg-27gp850-b"
+            "src:lg-27gp850-b",
+            "src:lg-27gp850-b:recheck-20261011"
           ],
-          "location": "Product title / entradas",
+          "location": "Product title / entradas; CONECTIVIDAD / hdmi version (2026-10-11)",
           "qualifier": "MANUFACTURER_STATED"
         },
         {
@@ -4290,14 +4299,15 @@
           "property": "displayport",
           "value": {
             "count": 1,
-            "version": null
+            "version": "1.4"
           },
           "unit": null,
           "scope": "PORT",
           "source_refs": [
-            "src:lg-27gp850-b"
+            "src:lg-27gp850-b",
+            "src:lg-27gp850-b:recheck-20261011"
           ],
-          "location": "Product title / entradas",
+          "location": "Product title / entradas; CONECTIVIDAD / displayport version (2026-10-11)",
           "qualifier": "MANUFACTURER_STATED"
         },
         {
@@ -4335,23 +4345,139 @@
           ],
           "location": "ALIMENTACIÓN / Consumo de Potencia Máx",
           "qualifier": "UP_TO"
+        },
+        {
+          "id": "lg-27gp850-b:recheck-hdr",
+          "property": "hdr",
+          "value": "HDR10; DisplayHDR 400",
+          "unit": null,
+          "scope": "PANEL",
+          "source_refs": [
+            "src:lg-27gp850-b:recheck-20261011"
+          ],
+          "location": "HDR 10 SÍ / VESA DisplayHDR 400",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "lg-27gp850-b:recheck-usb_c",
+          "property": "usb_c",
+          "value": false,
+          "unit": null,
+          "scope": "PORT",
+          "source_refs": [
+            "src:lg-27gp850-b:recheck-20261011"
+          ],
+          "location": "CONECTIVIDAD / USB-C NO; DP Alternate Mode NO",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "lg-27gp850-b:recheck-usb_hub",
+          "property": "usb_hub",
+          "value": {
+            "upstream": 1,
+            "downstream": 2,
+            "version": "3.0"
+          },
+          "unit": null,
+          "scope": "PORT",
+          "source_refs": [
+            "src:lg-27gp850-b:recheck-20261011"
+          ],
+          "location": "USB de entrada x1 / USB de salida x2; ver 3.0",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "lg-27gp850-b:recheck-pip",
+          "property": "pip",
+          "value": false,
+          "unit": null,
+          "scope": "MULTI_SOURCE",
+          "source_refs": [
+            "src:lg-27gp850-b:recheck-20261011"
+          ],
+          "location": "Modo PIP NO",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "lg-27gp850-b:recheck-pbp",
+          "property": "pbp",
+          "value": false,
+          "unit": null,
+          "scope": "MULTI_SOURCE",
+          "source_refs": [
+            "src:lg-27gp850-b:recheck-20261011"
+          ],
+          "location": "Modo PBP NO",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "lg-27gp850-b:recheck-stand",
+          "property": "stand",
+          "value": {
+            "tilt_deg": [
+              -5,
+              15
+            ],
+            "height_mm": 110,
+            "pivot": "clockwise"
+          },
+          "unit": null,
+          "scope": "STAND",
+          "source_refs": [
+            "src:lg-27gp850-b:recheck-20261011"
+          ],
+          "location": "Inclinación / Rango Altura / Pivote",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "lg-27gp850-b:recheck-dimensions",
+          "property": "dimensions",
+          "value": {
+            "unit": "mm",
+            "with_stand": {
+              "width": 614.2,
+              "height": [
+                465.9,
+                575.9
+              ],
+              "depth": 291.2
+            },
+            "without_stand": {
+              "width": 614.2,
+              "height": 364.8,
+              "depth": 51.7
+            }
+          },
+          "unit": null,
+          "scope": "CHASSIS",
+          "source_refs": [
+            "src:lg-27gp850-b:recheck-20261011"
+          ],
+          "location": "Dimensiones con/sin peana (Ancho x Alto x Prof.); Down/UP heights",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "lg-27gp850-b:recheck-weight",
+          "property": "weight",
+          "value": {
+            "unit": "kg",
+            "with_stand": 6.3,
+            "without_stand": 4.2
+          },
+          "unit": null,
+          "scope": "CHASSIS",
+          "source_refs": [
+            "src:lg-27gp850-b:recheck-20261011"
+          ],
+          "location": "Peso con/sin peana (kg)",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
-        "hdr",
-        "usb_c",
         "pd_supply",
-        "usb_hub",
         "kvm",
-        "pip",
-        "pbp",
-        "stand",
         "vesa",
-        "dimensions",
-        "weight",
         "warranty",
-        "hdmi.version",
-        "displayport.version",
         "korean_sku_identity",
         "per_input_simultaneous_conditions",
         "physical_test_results",
@@ -4361,7 +4487,8 @@
         "origin=NEW_DIRECT_CHECK; rechecked=2026-10-10 (not copied from prior catalog).",
         "한국 판매 SKU와 문서 모델의 동일성 UNKNOWN. 공개 검토/사람 승인 미완료.",
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
-        "165Hz from product title; overclock/input timings not imported from other regions."
+        "165Hz from product title; overclock/input timings not imported from other regions.",
+        "2026-10-11 ES 공식 문서 재확인. USB-C/PIP/PBP는 명시적 NO에 근거. VESA 인증 표의 NO와 물리 장착 표의 100×100mm가 함께 있어 vesa 결측은 유지. HDMI QHD 144Hz와 DP 165Hz(OC180Hz)는 패널/동시 구동 보장으로 승격하지 않음."
       ]
     },
     {
@@ -5251,6 +5378,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:lg-27up850k-w:recheck-20261011",
+          "url": "https://www.lg.com/uk/monitors/uhd-4k-5k/27up850k-w/",
+          "title": "LG 27UP850K-W official recheck",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Key Features; USB-C Power Delivery; gallery alternative text"
         }
       ],
       "facts": [
@@ -5540,6 +5675,18 @@
           ],
           "location": "Weight; stand context and unit in value",
           "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "lg-27up850k-w:recheck-vrr",
+          "property": "vrr",
+          "value": "AMD FreeSync",
+          "unit": null,
+          "scope": "PANEL",
+          "source_refs": [
+            "src:lg-27up850k-w:recheck-20261011"
+          ],
+          "location": "Key Features / AMD FreeSync; no input-specific range stated",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
@@ -5547,7 +5694,6 @@
         "kvm",
         "pip",
         "pbp",
-        "vrr",
         "warranty",
         "hdmi.version",
         "korean_sku_identity",
@@ -5561,7 +5707,8 @@
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "27UP850K-W is not automatically identical to existing27UP850-W or Korean27UP850K.",
         "Adapter DC output210W is not host PD nor monitor power consumption.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "CONFLICT_REVIEW 2026-10-11: UK 상세 사양과 본문 PD 90W, 갤러리 대체텍스트 96W가 충돌. 기존 사양표 기반 90W는 유지하되 96W로 변경하지 않음. 본문에 다른 모델 27UP85NP도 등장하므로 제품별 명시 필드만 사용. 한국 SKU 및 실제 충전 보장 없음."
       ]
     },
     {
@@ -6275,6 +6422,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:msi-mag-274qrf-qd-e2:recheck-20261011",
+          "url": "https://www.msi.com/Monitor/MAG-274QRF-QD-E2",
+          "title": "MSI MAG 274QRF QD E2 official recheck",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Product overview / KVM"
         }
       ],
       "facts": [
@@ -6658,11 +6813,22 @@
           ],
           "location": "Weight; stand context and unit in value",
           "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "msi-mag-274qrf-qd-e2:recheck-kvm",
+          "property": "kvm",
+          "value": true,
+          "unit": null,
+          "scope": "MULTI_SOURCE",
+          "source_refs": [
+            "src:msi-mag-274qrf-qd-e2:recheck-20261011"
+          ],
+          "location": "KVM: one keyboard/mouse controls multiple devices; no port switching combinations inferred",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
         "power_consumption",
-        "kvm",
         "warranty",
         "korean_sku_identity",
         "per_input_simultaneous_conditions",
@@ -6691,6 +6857,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:msi-mpg-321urx-qd-oled:recheck-20261011",
+          "url": "https://www.msi.com/Monitor/MPG-321URX-QD-OLED",
+          "title": "MSI MPG 321URX QD-OLED official recheck",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Product overview / KVM"
         }
       ],
       "facts": [
@@ -7060,11 +7234,22 @@
           ],
           "location": "Warranty",
           "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "msi-mpg-321urx-qd-oled:recheck-kvm",
+          "property": "kvm",
+          "value": true,
+          "unit": null,
+          "scope": "MULTI_SOURCE",
+          "source_refs": [
+            "src:msi-mpg-321urx-qd-oled:recheck-20261011"
+          ],
+          "location": "KVM: one keyboard/mouse controls multiple devices; no port switching combinations inferred",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
         "power_consumption",
-        "kvm",
         "pip",
         "pbp",
         "korean_sku_identity",
@@ -9214,6 +9399,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:dell-u2724d:recheck-20261011",
+          "url": "https://www.dell.com/en-us/shop/monitors/apd/dell-ultrasharp-27-monitor-u2724d/u2724d_monitor/-",
+          "title": "Dell U2724D official recheck",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Physical Characteristics; Warranty"
         }
       ],
       "facts": [
@@ -9525,14 +9718,61 @@
           ],
           "location": "VESA wall mount",
           "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "dell-u2724d:recheck-dimensions",
+          "property": "dimensions",
+          "value": {
+            "unit": "inch",
+            "with_stand": {
+              "width": 24.1,
+              "height": [
+                15.18,
+                21.09
+              ],
+              "depth": 7.57
+            }
+          },
+          "unit": null,
+          "scope": "CHASSIS",
+          "source_refs": [
+            "src:dell-u2724d:recheck-20261011"
+          ],
+          "location": "Width/Depth with Stand; Compressed/Extended Height with Stand",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "dell-u2724d:recheck-weight",
+          "property": "weight",
+          "value": {
+            "unit": "lb",
+            "with_stand": 14.46,
+            "condition": "approximate"
+          },
+          "unit": null,
+          "scope": "CHASSIS",
+          "source_refs": [
+            "src:dell-u2724d:recheck-20261011"
+          ],
+          "location": "Weight with Stand (Approximate)",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "dell-u2724d:recheck-warranty",
+          "property": "warranty",
+          "value": "US 문서: 3년 제한 보증; 한국 보증 미확인",
+          "unit": null,
+          "scope": "US",
+          "source_refs": [
+            "src:dell-u2724d:recheck-20261011"
+          ],
+          "location": "Warranty / Limited Warranty 3 Year; US document only",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
         "kvm",
         "vrr",
-        "dimensions",
-        "weight",
-        "warranty",
         "korean_sku_identity",
         "per_input_simultaneous_conditions",
         "physical_test_results",
@@ -9544,7 +9784,8 @@
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "Do not use configurator choices for another model as selected model specs.",
         "USB-C data-only upstream is not a video input. HDMI2.1 TMDS condition preserved.",
-        "Summary says RJ45 Yes but detailed ports omit RJ45; network support UNKNOWN."
+        "Summary says RJ45 Yes but detailed ports omit RJ45; network support UNKNOWN.",
+        "2026-10-11 US 공식 문서의 스탠드 포함 치수/근사 무게와 제한 보증만 추가. inch/lb 원단위 유지. 한국 SKU·보증은 미확인."
       ]
     },
     {
