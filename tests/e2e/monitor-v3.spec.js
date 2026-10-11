@@ -116,14 +116,14 @@ test("USB-C video filter distinguishes explicit support, absence and unknown con
   await expect(modelCard(page, "S32CG554EU")).toHaveCount(0);
 });
 
-test("input-specific refresh is not promoted into an unconditional filter maximum", async ({
+test("documented panel refresh is searchable while input conditions stay visible", async ({
   page,
 }) => {
   await page.goto("/monitor-v3.html");
   await openFilters(page);
   await page.locator("#include-unknown").uncheck();
   await page.locator("#filter-refresh").selectOption("240");
-  await expect(modelCard(page, "XG27AQDMG")).toHaveCount(0);
+  await expect(modelCard(page, "XG27AQDMG")).toHaveCount(1);
   await expect(modelCard(page, "PA279CRV")).toHaveCount(0);
   await page.locator("#include-unknown").check();
   await expect(modelCard(page, "XG27AQDMG")).toHaveCount(1);

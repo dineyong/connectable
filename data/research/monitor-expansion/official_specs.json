@@ -764,6 +764,22 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:asus-xg27aqdmg-overview-20261011",
+          "url": "https://rog.asus.com/us/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/",
+          "title": "ASUS XG27AQDMG US product overview",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Manufacturer product heading and feature summary (not embedded reviews)"
+        },
+        {
+          "id": "src:asus-xg27aqdmg-kr-20261011",
+          "url": "https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/",
+          "title": "ASUS XG27AQDMG Korean document comparison",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Model / Display / I/O / Signal Frequency; KR page does not establish retail SKU equivalence"
         }
       ],
       "facts": [
@@ -1017,15 +1033,62 @@
           ],
           "location": "Warranty",
           "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "asus-xg27aqdmg:018",
+          "property": "size",
+          "value": 26.5,
+          "unit": "inch",
+          "scope": "PANEL",
+          "source_refs": [
+            "src:asus-xg27aqdmg-overview-20261011"
+          ],
+          "location": "Product heading: 27-inch class, 26.5-inch viewable",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "asus-xg27aqdmg:019",
+          "property": "refresh",
+          "value": 240,
+          "unit": "Hz",
+          "scope": "PANEL",
+          "source_refs": [
+            "src:asus-xg27aqdmg-overview-20261011"
+          ],
+          "location": "Product feature summary: panel refresh 240 Hz; not every input",
+          "qualifier": "UP_TO"
+        },
+        {
+          "id": "asus-xg27aqdmg:020",
+          "property": "response",
+          "value": "0.03ms GtG",
+          "unit": null,
+          "scope": "PANEL",
+          "source_refs": [
+            "src:asus-xg27aqdmg-overview-20261011"
+          ],
+          "location": "Product heading / gray-to-gray response; manufacturer claim, not measured latency",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "asus-xg27aqdmg:021",
+          "property": "color_gamut",
+          "value": {
+            "DCI_P3": 99,
+            "unit": "%"
+          },
+          "unit": null,
+          "scope": "PANEL",
+          "source_refs": [
+            "src:asus-xg27aqdmg-overview-20261011"
+          ],
+          "location": "Advantages of OLED technology / DCI-P3 gamut",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
-        "size",
-        "refresh",
         "brightness_typical",
         "contrast_native",
-        "response",
-        "color_gamut",
         "usb_c",
         "pd_supply",
         "kvm",
@@ -1042,7 +1105,10 @@
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "Extracted spec text omits diagonal, panel refresh, brightness, contrast and response. Scan frequency is not resolution-specific timing.",
         "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
-        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다."
+        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다.",
+        "2026-10-11 추가 확인: US 제품 소개의 제조사 본문으로 검색 핵심값을 보완함. 이전 추출 결측 메모는 2026-10-10 이력이며, 나머지 결측은 유지.",
+        "2026-10-11 한국 공식 기술 스펙에서 같은 모델명 및 핵심 사양을 확인함. 한국 판매 P/N·구성품·유통 보증의 동일성은 확인하지 못함; korean_sku_identity 및 warranty_korea는 UNKNOWN 유지. 지역 US는 기존 자료 범위이며 KR 자료는 대조용.",
+        "27인치급과 실제 가시 화면 26.5인치를 구분함. 패널 최대 240Hz이며 기존 주파수 범위 DP 40–240Hz / HDMI 40–144Hz는 별도 보존. 해상도별 지원 타이밍이나 실제 연결 보장이 아님. XG27AQDMGR(Gen2) 자료는 사용하지 않음."
       ]
     },
     {
@@ -1059,6 +1125,22 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:asus-pg32ucdm-overview-20261011",
+          "url": "https://rog.asus.com/us/monitors/27-to-31-5-inches/rog-swift-oled-pg32ucdm/",
+          "title": "ASUS PG32UCDM US product overview",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Manufacturer product heading and feature summary (not embedded reviews)"
+        },
+        {
+          "id": "src:asus-pg32ucdm-kr-20261011",
+          "url": "https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-swift-oled-pg32ucdm/spec/?config=90LM09T0-B01310",
+          "title": "ASUS PG32UCDM Korean document comparison",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Model / Display / I/O / Signal Frequency; KR page does not establish retail SKU equivalence"
         }
       ],
       "facts": [
@@ -1191,9 +1273,10 @@
           "unit": "W",
           "scope": "USB_C",
           "source_refs": [
-            "src:asus-pg32ucdm"
+            "src:asus-pg32ucdm",
+            "src:asus-pg32ucdm-overview-20261011"
           ],
-          "location": "USB-C Power Delivery",
+          "location": "USB-C Power Delivery; US overview TYPE-C PD footnote: 기본 65W, 90W는 OSD 메뉴에서 활성화 필요",
           "qualifier": "MANUFACTURER_STATED"
         },
         {
@@ -1341,16 +1424,74 @@
           ],
           "location": "Warranty",
           "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "asus-pg32ucdm:020",
+          "property": "panel",
+          "value": "QD-OLED",
+          "unit": null,
+          "scope": "PANEL",
+          "source_refs": [
+            "src:asus-pg32ucdm-overview-20261011"
+          ],
+          "location": "Product heading: QD-OLED panel",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "asus-pg32ucdm:021",
+          "property": "refresh",
+          "value": 240,
+          "unit": "Hz",
+          "scope": "PANEL",
+          "source_refs": [
+            "src:asus-pg32ucdm-overview-20261011"
+          ],
+          "location": "Product feature summary: panel refresh 240 Hz; not every input",
+          "qualifier": "UP_TO"
+        },
+        {
+          "id": "asus-pg32ucdm:022",
+          "property": "response",
+          "value": "0.03ms GtG",
+          "unit": null,
+          "scope": "PANEL",
+          "source_refs": [
+            "src:asus-pg32ucdm-overview-20261011"
+          ],
+          "location": "Product heading / gray-to-gray response; manufacturer claim, not measured latency",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "asus-pg32ucdm:023",
+          "property": "color_gamut",
+          "value": {
+            "DCI_P3": 99,
+            "unit": "%"
+          },
+          "unit": null,
+          "scope": "PANEL",
+          "source_refs": [
+            "src:asus-pg32ucdm-overview-20261011"
+          ],
+          "location": "Advantages of OLED technology / DCI-P3 gamut",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "asus-pg32ucdm:024",
+          "property": "kvm",
+          "value": true,
+          "unit": null,
+          "scope": "MULTI_SOURCE",
+          "source_refs": [
+            "src:asus-pg32ucdm-overview-20261011"
+          ],
+          "location": "Feature summary / built-in KVM",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
-        "panel",
-        "refresh",
         "brightness_typical",
         "contrast_native",
-        "response",
-        "color_gamut",
-        "kvm",
         "pip",
         "pbp",
         "korean_sku_identity",
@@ -1366,7 +1507,10 @@
         "DP/Type-C horizontal frequency 510~501kHz appears inconsistent; not normalized.",
         "Peak brightness varies with colour pre-calibration.",
         "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
-        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다."
+        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다.",
+        "2026-10-11 추가 확인: US 제품 소개의 제조사 본문으로 검색 핵심값을 보완함. 이전 추출 결측 메모는 2026-10-10 이력이며, 나머지 결측은 유지.",
+        "2026-10-11 한국 공식 기술 스펙에서 같은 모델명 및 핵심 사양을 확인함. 한국 판매 P/N·구성품·유통 보증의 동일성은 확인하지 못함; korean_sku_identity 및 warranty_korea는 UNKNOWN 유지. 지역 US는 기존 자료 범위이며 KR 자료는 대조용.",
+        "PG32UCDM 원 모델만 대조함. PG32UCDM3 등 후속 세대 자료는 사용하지 않음. config 쿼리의 P/N은 국내 유통 SKU 확정 근거로 쓰지 않음. DP/Type-C 수평 주파수 오기 가능성은 미해결."
       ]
     },
     {

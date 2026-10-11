@@ -2,7 +2,7 @@
 
 기존 파생 데이터의 정리이며 공식 원문 재확인이나 이미지 사용권 검증 결과가 아니다.
 
-- 원본: `data/site/monitor-v3.json` · SHA-256 `0cf6f5f9b25873feb2199a09afc0f5a0fad68ed786adbba16c7b55758e91f0c6`
+- 원본: `data/site/monitor-v3.json` · SHA-256 `482c5a537806d1af28dc68c05c4b6e93aa34909ccbc68db5eb7b85aa2b8f0964`
 - 제품 30종 · 자료 확인일 2026-10-10 · 공개 상태 UNKNOWN
 - 이미지: 모든 제품은 CSS 형태 예시. 제품 사진 원본 URL·권리자·상업 사용 허용 근거·모델/지역 일치 검토는 미확인. 실제 사진 적용 0건.
 - 승인된 이미지 레지스트리가 아직 없으므로 이 목록은 제품에 사진 사용권을 부여하지 않는다.
@@ -14,10 +14,10 @@
 | `monitor:asus-pa248qv` / ASUS PA248QV | US | USB-C 영상 | 10 | [문서 1](https://www.asus.com/us/displays-desktops/monitors/proart/proart-display-pa248qv/techspec/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:asus-pa278qv` / ASUS PA278QV | SG | USB-C 영상 | 10 | [문서 1](https://www.asus.com/sg/displays-desktops/monitors/proart/proart-display-pa278qv/techspec/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:asus-pa279crv` / ASUS PA279CRV | US | 없음 (검색용 값만) | 5 | [문서 1](https://www.asus.com/us/displays-desktops/monitors/proart/proart-display-pa279crv/techspec/) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:asus-pg32ucdm` / ASUS PG32UCDM | US | 주사율, 패널 | 13 | [문서 1](https://rog.asus.com/us/monitors/27-to-31-5-inches/rog-swift-oled-pg32ucdm/spec/) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:asus-pg32ucdm` / ASUS PG32UCDM | US | 없음 (검색용 값만) | 8 | [문서 1](https://rog.asus.com/us/monitors/27-to-31-5-inches/rog-swift-oled-pg32ucdm/spec/) · [문서 2](https://rog.asus.com/us/monitors/27-to-31-5-inches/rog-swift-oled-pg32ucdm/) · [문서 3](https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-swift-oled-pg32ucdm/spec/?config=90LM09T0-B01310) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:asus-va24ehf` / ASUS VA24EHF | Global | USB-C 영상 | 14 | [문서 1](https://www.asus.com/displays-desktops/monitors/eye-care/va24ehf/techspec/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:asus-vg27aq` / ASUS VG27AQ | US | USB-C 영상 | 11 | [문서 1](https://www.asus.com/us/displays-desktops/monitors/tuf-gaming/tuf-gaming-vg27aq/techspec/) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:asus-xg27aqdmg` / ASUS XG27AQDMG | US | 크기, 주사율, USB-C 영상 | 15 | [문서 1](https://rog.asus.com/us/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:asus-xg27aqdmg` / ASUS XG27AQDMG | US | USB-C 영상 | 11 | [문서 1](https://rog.asus.com/us/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/) · [문서 2](https://rog.asus.com/us/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/) · [문서 3](https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:benq-ex2710q` / BenQ EX2710Q | CA | USB-C 영상 | 10 | [문서 1](https://www.benq.com/en-ca/monitor/gaming/ex2710q/spec.html) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:benq-gw2490` / BenQ GW2490 | US | USB-C 영상 | 13 | [문서 1](https://www.benq.com/en-us/monitor/home/gw2490/spec.html) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:benq-gw2790qt` / BenQ GW2790QT | CA | 없음 (검색용 값만) | 10 | [문서 1](https://www.benq.com/en-ca/monitor/home/gw2790qt/spec.html) | 형태 예시 / 사진 권한 미확인 |
@@ -49,7 +49,7 @@
 | `per_input_simultaneous_conditions` | 30 |
 | `physical_test_results` | 30 |
 | `warranty_korea` | 30 |
-| `kvm` | 22 |
+| `kvm` | 21 |
 | `pip` | 20 |
 | `warranty` | 20 |
 | `pbp` | 19 |
@@ -61,17 +61,13 @@
 | `usb_hub` | 6 |
 | `brightness_typical` | 6 |
 | `hdmi.version` | 6 |
-| `color_gamut` | 5 |
 | `dimensions` | 4 |
 | `usb_c.video_mode` | 4 |
 | `contrast_native` | 3 |
+| `color_gamut` | 3 |
 | `vesa` | 3 |
 | `weight` | 3 |
-| `refresh` | 2 |
-| `response` | 2 |
 | `displayport.version` | 2 |
-| `size` | 1 |
-| `panel` | 1 |
 | `displayport` | 1 |
 | `stand` | 1 |
 | `hdmi.count` | 1 |

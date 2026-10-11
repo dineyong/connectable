@@ -74,7 +74,11 @@ class MonitorV3Tests(unittest.TestCase):
         self.assertEqual(builder.select_filter(facts, 'usb_c_video'), (None, []))
 
     def test_real_port_frequency_does_not_become_panel_refresh(self):
-        products = {p['id']: p for p in builder.build(self.source)['products']}
+        source = copy.deepcopy(self.source)
+        for product in source['products']:
+            if product['id'] in ('monitor:asus-xg27aqdmg', 'monitor:asus-pg32ucdm'):
+                product['facts'] = [f for f in product['facts'] if f['property'] != 'refresh']
+        products = {p['id']: p for p in builder.build(source)['products']}
         self.assertIsNone(products['monitor:asus-xg27aqdmg']['filters']['refresh'])
         self.assertIsNone(products['monitor:asus-pg32ucdm']['filters']['refresh'])
         self.assertEqual(products['monitor:gigabyte-m28u']['filters']['refresh'], 144)
