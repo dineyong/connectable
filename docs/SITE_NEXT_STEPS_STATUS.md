@@ -2,6 +2,8 @@
 
 2026-10-11 · `codex/monitor-purpose-design` · 사양 재검토 기준 `739df3a`.
 
+> 후속 조사: [한국 문서·미확인 사양 소배치](KOREAN_SKU_SPEC_BATCH_1_REPORT.md). 09ac401 CI 성공 확인. 한국 문서 대조 2종과 M28U 기능 3개를 보완했으며 한국 SKU 확정은 0건이다.
+
 ## 확인한 CI
 
 [739df3a CI](https://github.com/dineyong/connectable/actions/runs/38116955034): completed/success 확인.

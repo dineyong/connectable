@@ -17,6 +17,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:asus-pa279crv:kr-batch-20261011",
+          "url": "https://www.asus.com/kr/displays-desktops/monitors/proart/proart-display-pa279crv/techspec/",
+          "title": "PA279CRV official document recheck",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "한국 기술 사양 / Display·I/O Ports·지역 차이 각주"
         }
       ],
       "facts": [
@@ -404,7 +412,8 @@
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "Dimensions/weight are estimated, region-dependent.",
         "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
-        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다."
+        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다.",
+        "2026-10-11 한국 공식 PA279CRV 문서의 27인치 IPS UHD60, USB-C DP Alt Mode/PD96W 확인. LCD ZBD Warranty 3yr는 특정 LCD 무결점 보증 표기이며 전체 한국 보증 기간으로 확정하지 않음. 문서는 지역별 치수/무게/구성품 차이를 명시. 한국 유통 P/N 동일성, KVM은 미확인 유지."
       ],
       "filters": {
         "size": 27,
@@ -2623,6 +2632,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:benq-pd2705u:kr-batch-20261011",
+          "url": "https://www.benq.com/ko-kr/monitor/creative-pro/pd2705u/spec.html",
+          "title": "PD2705U official document recheck",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "한국 사양 / 모델·디스플레이·지원 단자"
         }
       ],
       "facts": [
@@ -2989,7 +3006,8 @@
         "origin=NEW_DIRECT_CHECK; rechecked=2026-10-10 (not copied from prior catalog).",
         "한국 판매 SKU와 문서 모델의 동일성 UNKNOWN. 공개 검토/사람 승인 미완료.",
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11 한국 공식 PD2705U 사양표에서 27인치 IPS 3840×2160 60Hz 및 USB-C DP Alt Mode/PD65W 확인. 기존 CA 레코드와 한국 판매 품번의 동일성은 미확인. 보증 페이지는 서비스센터 안내 이미지 중심으로 조건 확인이 부족해 warranty/warranty_korea 유지. VRR 미기재는 미지원 근거가 아님."
       ],
       "filters": {
         "size": 27,
@@ -8260,6 +8278,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:gigabyte-m28u:kr-batch-20261011",
+          "url": "https://www.gigabyte.com/Monitor/M28U",
+          "title": "M28U official document recheck",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Key Features / Support Adaptive-Sync Technology; Gaming Features / PIP / PBP"
         }
       ],
       "facts": [
@@ -8588,13 +8614,46 @@
           ],
           "location": "Note",
           "qualifier": "UP_TO"
+        },
+        {
+          "id": "gigabyte-m28u:recheck-vrr",
+          "property": "vrr",
+          "value": "Adaptive-Sync",
+          "unit": null,
+          "scope": "PANEL",
+          "source_refs": [
+            "src:gigabyte-m28u:kr-batch-20261011"
+          ],
+          "location": "Support Adaptive-Sync Technology",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "gigabyte-m28u:recheck-pip",
+          "property": "pip",
+          "value": true,
+          "unit": null,
+          "scope": "MULTI_SOURCE",
+          "source_refs": [
+            "src:gigabyte-m28u:kr-batch-20261011"
+          ],
+          "location": "Gaming Features / PIP / PBP; input combinations and simultaneous timing not specified",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "gigabyte-m28u:recheck-pbp",
+          "property": "pbp",
+          "value": true,
+          "unit": null,
+          "scope": "MULTI_SOURCE",
+          "source_refs": [
+            "src:gigabyte-m28u:kr-batch-20261011"
+          ],
+          "location": "Gaming Features / PIP / PBP; input combinations and simultaneous timing not specified",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
         "pd_supply",
-        "pip",
-        "pbp",
-        "vrr",
         "warranty",
         "usb_c.video_mode",
         "korean_sku_identity",
@@ -8609,7 +8668,8 @@
         "Color percentages are manufacturer colour saturation, not assumed gamut coverage.",
         "USB-C presence does not establish PD wattage or input timing; UNKNOWN.",
         "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
-        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다."
+        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다.",
+        "2026-10-11 Global 제품 소개에서 Adaptive-Sync 및 PIP/PBP 확인. FreeSync 등 별도 인증, 입력별 VRR 범위·동시 해상도는 추정하지 않음. 한국 판매 SKU/보증 미확인 유지."
       ],
       "filters": {
         "size": 28,
