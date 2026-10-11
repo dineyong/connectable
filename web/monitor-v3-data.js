@@ -4248,6 +4248,14 @@ window.CONNECTABLE_MONITORS = {
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:benq-gw2490:kr-batch3-20261011",
+          "url": "https://www.benq.com/ko-kr/monitor/home/gw2490/spec.html",
+          "title": "GW2490 official regional document cross-check",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "한국 사양 / 디스플레이·지원 단자"
         }
       ],
       "facts": [
@@ -4508,7 +4516,8 @@ window.CONNECTABLE_MONITORS = {
         "origin=NEW_DIRECT_CHECK; rechecked=2026-10-10 (not copied from prior catalog).",
         "한국 판매 SKU와 문서 모델의 동일성 UNKNOWN. 공개 검토/사람 승인 미완료.",
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11 재확인: 한국 공식 문서 GW2490의 FHD100 IPS 및 HDMI1.4 2개/DP1.2 1개를 대조했다. 국내 판매 품번·보증 및 기존 US 모델과의 동일성은 미확인. 미기재 기능을 미지원으로 해석하지 않음."
       ],
       "filters": {
         "size": 23.8,
@@ -5163,7 +5172,8 @@ window.CONNECTABLE_MONITORS = {
         "한국 판매 SKU와 문서 모델의 동일성 UNKNOWN. 공개 검토/사람 승인 미완료.",
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "HDMI accessory version2.1 is not proof of HDMI input version; not converted. UK text lacks brightness/dimensions/with-stand weight.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11 재확인: 한국 후보 표기는 27GR83Q이며 지원 페이지는 27GR83Q-BB다. 기존 GB 27GR83Q-B와 정확한 동일성 미확인. 한국 표의 밝기·HDMI2.1·PBP/PIP 미지원·1년 보증을 기존 해외 facts로 옮기지 않음."
       ],
       "filters": {
         "size": 27,
@@ -6266,6 +6276,14 @@ window.CONNECTABLE_MONITORS = {
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:lg-34wq75c-b-aus:kr-batch3-20261011",
+          "url": "https://www.lg.com/uk/monitors/ultrawide/34wq75c-b/",
+          "title": "34WQ75C-B.AUS official regional document cross-check",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "UK 비교 후보 / CONNECTIVITY"
         }
       ],
       "facts": [
@@ -6627,7 +6645,8 @@ window.CONNECTABLE_MONITORS = {
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "PDF dated7/13/22; current checked date does not imply recent document revision.",
         "Typ/max180W kept as manufacturer claims; not substituted with an estimate.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11 재확인: UK 34WQ75C-B의 DP1.4 표기를 확인했으나 기존 원본은 미국 34WQ75C-B.AUS다. 미국 공식 사양서에는 DP 버전이 없어 한국 SKU와 함께 미확인 유지. UK 값을 미국 제품에 이식하지 않음."
       ],
       "filters": {
         "size": 34.14,
@@ -9187,6 +9206,14 @@ window.CONNECTABLE_MONITORS = {
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:aoc-q27g3xmn:kr-batch3-20261011",
+          "url": "https://www.aoc.com/us/gaming/monitors/q27g3xmn",
+          "title": "Q27G3XMN official regional document cross-check",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Power consumption / off; Product dimensions"
         }
       ],
       "facts": [
@@ -9429,6 +9456,18 @@ window.CONNECTABLE_MONITORS = {
           ],
           "location": "Power consumption standby",
           "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "aoc-q27g3xmn:recheck-power-off",
+          "property": "power_consumption_off",
+          "value": 0.3,
+          "unit": "W",
+          "scope": "MONITOR",
+          "source_refs": [
+            "src:aoc-q27g3xmn:kr-batch3-20261011"
+          ],
+          "location": "Power consumption off in watts",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
@@ -9454,7 +9493,8 @@ window.CONNECTABLE_MONITORS = {
         "Dimensions labelled WxHxD but list403.3~533.3 x614.4 x302.6 (likely height first); dimensions UNKNOWN, raw field retained here without normalizing.",
         "Official with/without-stand weight both5.43kg; only with-stand stored. Standless weight UNKNOWN pending independent manual.",
         "700cd/m² brightness does not state typical/peak; not typical comparison value.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11 재확인: US 공식 표의 전원 꺼짐 소비전력 0.3W를 확인했다. 치수는 WxHxD 라벨과 높이 조절처럼 보이는 첫 수치의 관계가 불명확하여 축을 추정하지 않음. 한국어 설명서 제공만으로 한국 판매 SKU를 확정하지 않음."
       ],
       "filters": {
         "size": 27,
@@ -10721,6 +10761,14 @@ window.CONNECTABLE_MONITORS = {
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:dell-u2724de:kr-batch3-20261011",
+          "url": "https://www.dell.com/ko-kr/shop/monitors/apd/dell-ultrasharp-27-thunderbolt-허브-모니터-u2724de/u2724de_withstnd_mon/-",
+          "title": "U2724DE official regional document cross-check",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "한국 기술 사양 / 일반 정보·비디오"
         }
       ],
       "facts": [
@@ -11142,7 +11190,8 @@ window.CONNECTABLE_MONITORS = {
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "Do not use configurator choices for another model as selected model specs.",
         "USB-C data-only upstream is not a video input. HDMI2.1 TMDS condition preserved.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11 재확인: 한국 공식 제품 페이지에서 U2724DE 제조업체 부품 5PXK3, Dell 부품 n32y09, 오퍼링 u2724de_withstnd_mon을 확인했다. 국내 페이지 식별 기록이며 기존 US 사양 전체와의 SKU 동일성 승인이 아니다. 선택 UI의 140W 옵션을 이 제품 PD로 적용하지 않음."
       ],
       "filters": {
         "size": 27,
@@ -11187,6 +11236,14 @@ window.CONNECTABLE_MONITORS = {
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:dell-aw3225qf:kr-batch3-20261011",
+          "url": "https://www.dell.com/ko-kr/shop/monitors/apd/alienware-32-240hz-4k-qdoled-gaming-monitor-aw3225qf/aw3225qf_monitor/-",
+          "title": "AW3225QF official regional document cross-check",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "한국 기술 사양 / 일반 정보·인터페이스"
         }
       ],
       "facts": [
@@ -11557,7 +11614,8 @@ window.CONNECTABLE_MONITORS = {
         "USB-C is downstream data/BC1.2, not video input or verified laptop PD.",
         "Brightness1000 nit has unspecified measurement context; no normal brightness comparison. Dynamic contrast not native contrast.",
         "Approximate13.23lb weight table omits stand context; weight UNKNOWN.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11 재확인: 한국 공식 제품 페이지에서 AW3225QF 제조업체 부품 20YX5, Dell 부품 t4w7j4, 오퍼링 aw3225qf_monitor를 확인했다. 국내 페이지 식별 기록이며 기존 US 사양·보증의 한국 SKU 적용은 미확인. 선택 UI의 다른 VRR 옵션을 현재 제품 인증으로 가져오지 않음."
       ],
       "filters": {
         "size": 31.6,

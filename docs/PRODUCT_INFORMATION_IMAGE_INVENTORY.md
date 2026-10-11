@@ -2,7 +2,7 @@
 
 기존 파생 데이터의 정리이며 공식 원문 재확인이나 이미지 사용권 검증 결과가 아니다.
 
-- 원본: `data/site/monitor-v3.json` · SHA-256 `acb68b012390d2395f2eecdc6ef89cb3ded0493795a33398d86cb5417aaa888a`
+- 원본: `data/site/monitor-v3.json` · SHA-256 `d63a1e3da26e72f92afef553a1983d966c70d28bdae8976e83a21c7ac465df80`
 - 제품 30종 · 자료 확인일 2026-10-10 · 공개 상태 UNKNOWN
 - 이미지: 모든 제품은 CSS 형태 예시. 제품 사진 원본 URL·권리자·상업 사용 허용 근거·모델/지역 일치 검토는 미확인. 실제 사진 적용 0건.
 - 승인된 이미지 레지스트리가 아직 없으므로 이 목록은 제품에 사진 사용권을 부여하지 않는다.
@@ -10,7 +10,7 @@
 
 | 제품 ID / 모델 | 문서 지역 | 검색 핵심값 미확인 | 기록된 결측 수 | 공식 출처 | 이미지 |
 | --- | --- | --- | --- | --- | --- |
-| `monitor:aoc-q27g3xmn` / AOC Q27G3XMN | US | USB-C 영상 | 13 | [문서 1](https://www.aoc.com/us/gaming/monitors/q27g3xmn) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:aoc-q27g3xmn` / AOC Q27G3XMN | US | USB-C 영상 | 13 | [문서 1](https://www.aoc.com/us/gaming/monitors/q27g3xmn) · [문서 2](https://www.aoc.com/us/gaming/monitors/q27g3xmn) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:asus-pa248qv` / ASUS PA248QV | US | USB-C 영상 | 10 | [문서 1](https://www.asus.com/us/displays-desktops/monitors/proart/proart-display-pa248qv/techspec/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:asus-pa278qv` / ASUS PA278QV | SG | USB-C 영상 | 10 | [문서 1](https://www.asus.com/sg/displays-desktops/monitors/proart/proart-display-pa278qv/techspec/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:asus-pa279crv` / ASUS PA279CRV | US | 없음 (검색용 값만) | 5 | [문서 1](https://www.asus.com/us/displays-desktops/monitors/proart/proart-display-pa279crv/techspec/) · [문서 2](https://www.asus.com/kr/displays-desktops/monitors/proart/proart-display-pa279crv/techspec/) | 형태 예시 / 사진 권한 미확인 |
@@ -19,13 +19,13 @@
 | `monitor:asus-vg27aq` / ASUS VG27AQ | US | USB-C 영상 | 11 | [문서 1](https://www.asus.com/us/displays-desktops/monitors/tuf-gaming/tuf-gaming-vg27aq/techspec/) · [문서 2](https://www.asus.com/kr/displays-desktops/monitors/tuf-gaming/tuf-gaming-vg27aq/techspec/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:asus-xg27aqdmg` / ASUS XG27AQDMG | US | USB-C 영상 | 11 | [문서 1](https://rog.asus.com/us/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/) · [문서 2](https://rog.asus.com/us/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/) · [문서 3](https://rog.asus.com/kr/monitors/27-to-31-5-inches/rog-strix-oled-xg27aqdmg/spec/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:benq-ex2710q` / BenQ EX2710Q | CA | USB-C 영상 | 10 | [문서 1](https://www.benq.com/en-ca/monitor/gaming/ex2710q/spec.html) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:benq-gw2490` / BenQ GW2490 | US | USB-C 영상 | 13 | [문서 1](https://www.benq.com/en-us/monitor/home/gw2490/spec.html) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:benq-gw2490` / BenQ GW2490 | US | USB-C 영상 | 13 | [문서 1](https://www.benq.com/en-us/monitor/home/gw2490/spec.html) · [문서 2](https://www.benq.com/ko-kr/monitor/home/gw2490/spec.html) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:benq-gw2790qt` / BenQ GW2790QT | CA | 없음 (검색용 값만) | 10 | [문서 1](https://www.benq.com/en-ca/monitor/home/gw2790qt/spec.html) · [문서 2](https://www.benq.com/ko-kr/monitor/home/gw2790qt/spec.html) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:benq-pd2705u` / BenQ PD2705U | CA | 없음 (검색용 값만) | 6 | [문서 1](https://www.benq.com/en-ca/monitor/creative-pro/pd2705u/spec.html) · [문서 2](https://www.benq.com/ko-kr/monitor/creative-pro/pd2705u/spec.html) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:benq-pd2725u` / BenQ PD2725U | CA | USB-C 영상 | 7 | [문서 1](https://www.benq.com/en-ca/monitor/creative-pro/pd2725u/spec.html) · [문서 2](https://www.benq.com/ko-kr/monitor/creative-pro/pd2725u/spec.html) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:dell-aw3225qf` / Dell AW3225QF | US | USB-C 영상 | 11 | [문서 1](https://www.dell.com/en-us/shop/alienware-32-4k-qd-oled-gaming-monitor-aw3225qf/apd/210-blmq/computer-monitors) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:dell-aw3225qf` / Dell AW3225QF | US | USB-C 영상 | 11 | [문서 1](https://www.dell.com/en-us/shop/alienware-32-4k-qd-oled-gaming-monitor-aw3225qf/apd/210-blmq/computer-monitors) · [문서 2](https://www.dell.com/ko-kr/shop/monitors/apd/alienware-32-240hz-4k-qdoled-gaming-monitor-aw3225qf/aw3225qf_monitor/-) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:dell-u2724d` / Dell U2724D | US | USB-C 영상 | 6 | [문서 1](https://www.dell.com/en-us/shop/dell-ultrasharp-27-monitor-u2724d/apd/210-bksf/monitors-monitor-accessories) · [문서 2](https://www.dell.com/en-us/shop/monitors/apd/dell-ultrasharp-27-monitor-u2724d/u2724d_monitor/-) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:dell-u2724de` / Dell U2724DE | US | USB-C 영상 | 5 | [문서 1](https://www.dell.com/en-us/shop/dell-ultrasharp-27-thunderbolt-hub-monitor-u2724de/apd/210-bksj/monitors-monitor-accessories) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:dell-u2724de` / Dell U2724DE | US | USB-C 영상 | 5 | [문서 1](https://www.dell.com/en-us/shop/dell-ultrasharp-27-thunderbolt-hub-monitor-u2724de/apd/210-bksj/monitors-monitor-accessories) · [문서 2](https://www.dell.com/ko-kr/shop/monitors/apd/dell-ultrasharp-27-thunderbolt-허브-모니터-u2724de/u2724de_withstnd_mon/-) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:gigabyte-m27q-rev-1-0` / Gigabyte M27Q rev.1.0 | Global | USB-C 영상 | 8 | [문서 1](https://www.gigabyte.com/Monitor/M27Q-rev-10/sp) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:gigabyte-m28u` / Gigabyte M28U | Global | USB-C 영상 | 7 | [문서 1](https://www.gigabyte.com/Monitor/M28U/sp) · [문서 2](https://www.gigabyte.com/Monitor/M28U) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:gigabyte-m32u` / Gigabyte M32U | Global | USB-C 영상 | 7 | [문서 1](https://www.gigabyte.com/Monitor/M32U/sp) · [문서 2](https://www.gigabyte.com/Monitor/M32U) | 형태 예시 / 사진 권한 미확인 |
@@ -34,7 +34,7 @@
 | `monitor:lg-27gs95qe-b` / LG 27GS95QE-B | GB | USB-C 영상 | 12 | [문서 1](https://www.lg.com/uk/monitors/gaming/27gs95qe-b/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:lg-27up850k-w` / LG 27UP850K-W | GB | USB-C 영상 | 10 | [문서 1](https://www.lg.com/uk/monitors/uhd-4k-5k/27up850k-w/) · [문서 2](https://www.lg.com/uk/monitors/uhd-4k-5k/27up850k-w/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:lg-32gs95ue-b` / LG 32GS95UE-B | CA | USB-C 영상 | 12 | [문서 1](https://www.lg.com/ca_en/monitors/gaming/32gs95ue-b/) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:lg-34wq75c-b-aus` / LG 34WQ75C-B.AUS | US | USB-C 영상 | 8 | [문서 1](https://www.lg.com/us/support/products/documents/34WQ75C_Spec_Sheet.pdf) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:lg-34wq75c-b-aus` / LG 34WQ75C-B.AUS | US | USB-C 영상 | 8 | [문서 1](https://www.lg.com/us/support/products/documents/34WQ75C_Spec_Sheet.pdf) · [문서 2](https://www.lg.com/uk/monitors/ultrawide/34wq75c-b/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:msi-mag-274qrf-qd-e2` / MSI MAG 274QRF QD E2 | Global | 없음 (검색용 값만) | 6 | [문서 1](https://www.msi.com/Monitor/MAG-274QRF-QD-E2/Specification) · [문서 2](https://www.msi.com/Monitor/MAG-274QRF-QD-E2) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:msi-mpg-321urx-qd-oled` / MSI MPG 321URX QD-OLED | Global | 없음 (검색용 값만) | 7 | [문서 1](https://www.msi.com/Monitor/MPG-321URX-QD-OLED/Specification) · [문서 2](https://www.msi.com/Monitor/MPG-321URX-QD-OLED) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:msi-modern-md271ul` / MSI Modern MD271UL | Global | 없음 (검색용 값만) | 14 | [문서 1](https://www.msi.com/Business-Productivity-Monitor/Modern-MD271UL/Specification) | 형태 예시 / 사진 권한 미확인 |

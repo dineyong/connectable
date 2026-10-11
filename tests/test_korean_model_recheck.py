@@ -40,3 +40,23 @@ class KoreanModelRecheck(unittest.TestCase):
         self.assertEqual(vrr['value'],'Adaptive-Sync')
         self.assertIn('usb_c.video_mode',p['missing_fields'])
         self.assertIn('pd_supply',p['missing_fields'])
+
+    def test_third_batch_keeps_regional_candidates_separate(self):
+        ps={p['display_model']:p for p in builder.build(builder.load(builder.SOURCE))['products']}
+        for model in ('GW2490','U2724DE','AW3225QF','27GR83Q-B','34WQ75C-B.AUS','Q27G3XMN'):
+            self.assertIn('korean_sku_identity',ps[model]['missing_fields'])
+            self.assertIn('warranty_korea',ps[model]['missing_fields'])
+            self.assertEqual(ps[model]['usable_for_compatibility'],'NO')
+        for model,part in [('U2724DE','5PXK3'),('AW3225QF','20YX5')]:
+            self.assertTrue(any(part in n for n in ps[model]['notes']))
+            self.assertEqual(ps[model]['region'],'US')
+        self.assertIn('hdmi.version',ps['27GR83Q-B']['missing_fields'])
+        self.assertIn('brightness_typical',ps['27GR83Q-B']['missing_fields'])
+        self.assertIn('displayport.version',ps['34WQ75C-B.AUS']['missing_fields'])
+
+    def test_aoc_off_power_is_not_pd_or_dimensions(self):
+        p=next(p for p in builder.build(builder.load(builder.SOURCE))['products'] if p['display_model']=='Q27G3XMN')
+        f=next(f for f in p['facts'] if f['property']=='power_consumption_off')
+        self.assertEqual((f['value'],f['unit'],f['scope']),(0.3,'W','MONITOR'))
+        for field in ('pd_supply','dimensions','brightness_typical'):
+            self.assertIn(field,p['missing_fields'])
