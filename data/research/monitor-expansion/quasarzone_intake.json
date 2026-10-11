@@ -18,8 +18,8 @@
   "baseline_files": [
     {
       "basename": "official_specs.json",
-      "size_bytes": 317460,
-      "sha256": "23e7a66c2c0a517491bcc36fbbdbf0385ba2177c6804225f378e7edf1b206b31"
+      "size_bytes": 321040,
+      "sha256": "0c8bee720e00224771b6050ea762465b5d99c75a14dcb63fed0ebdeb10b4de7c"
     },
     {
       "basename": "community_reviews.json",

@@ -460,6 +460,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:asus-vg27aq:kr-batch2-20261011",
+          "url": "https://www.asus.com/kr/displays-desktops/monitors/tuf-gaming/tuf-gaming-vg27aq/techspec/",
+          "title": "VG27AQ official recheck batch 2",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "한국 기술 사양 / Display"
         }
       ],
       "facts": [
@@ -786,7 +794,8 @@
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "HDMI scan range max144Hz; panel165Hz is not an HDMI165Hz claim.",
         "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
-        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다."
+        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다.",
+        "2026-10-11 공식 문서 재확인: 27인치 IPS QHD165, HDR10 확인. 한국 페이지 존재만으로 판매 품번이나 국내 보증을 확정하지 않음. 기존 문서 지역 유지. 한국 판매 SKU 동일성 및 국내 보증 미확인."
       ],
       "filters": {
         "size": 27,
@@ -2336,6 +2345,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:asus-va24ehf:kr-batch2-20261011",
+          "url": "https://www.asus.com/kr/displays-desktops/monitors/eye-care/va24ehf/",
+          "title": "VA24EHF official recheck batch 2",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "한국 제품 소개 / 모델·개요"
         }
       ],
       "facts": [
@@ -2587,7 +2604,8 @@
         "한국 판매 SKU와 문서 모델의 동일성 UNKNOWN. 공개 검토/사람 승인 미완료.",
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
-        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다."
+        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다.",
+        "2026-10-11 공식 문서 재확인: 23.8인치 IPS FHD100 및 Adaptive-Sync 확인. 이미지 대체텍스트의 FreeSync를 별도 인증 근거로 추가하지 않음. 기존 문서 지역 유지. 한국 판매 SKU 동일성 및 국내 보증 미확인."
       ],
       "filters": {
         "size": 23.8,
@@ -3054,6 +3072,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:benq-pd2725u:kr-batch2-20261011",
+          "url": "https://www.benq.com/ko-kr/monitor/creative-pro/pd2725u/spec.html",
+          "title": "PD2725U official recheck batch 2",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "한국 사양 / 디스플레이·지원 단자"
         }
       ],
       "facts": [
@@ -3424,7 +3450,8 @@
         "한국 판매 SKU와 문서 모델의 동일성 UNKNOWN. 공개 검토/사람 승인 미완료.",
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "Thunderbolt3 upstream65W and downstream15W are separate outputs; no additive host charging claim.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11 공식 문서 재확인: 27인치 IPS UHD60, TB3 입력 PD65W 및 출력 PD15W 확인. 두 공급 방향을 합치지 않음. All-in-One Connection의 TB3/4/5 표현을 물리 포트 버전으로 바꾸지 않음. 기존 문서 지역 유지. 한국 판매 SKU 동일성 및 국내 보증 미확인."
       ],
       "filters": {
         "size": 27,
@@ -3830,6 +3857,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:benq-gw2790qt:kr-batch2-20261011",
+          "url": "https://www.benq.com/ko-kr/monitor/home/gw2790qt/spec.html",
+          "title": "GW2790QT official recheck batch 2",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "한국 사양 / 디스플레이·지원 단자"
         }
       ],
       "facts": [
@@ -4164,7 +4199,8 @@
         "origin=NEW_DIRECT_CHECK; rechecked=2026-10-10 (not copied from prior catalog).",
         "한국 판매 SKU와 문서 모델의 동일성 UNKNOWN. 공개 검토/사람 승인 미완료.",
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11 공식 문서 재확인: 27인치 IPS QHD75, USB-C DP Alt Mode/PD65W, DP out MST 확인. MST의 특정 OS 독립 확장 가능 여부는 이 문서만으로 판정하지 않음. 기존 문서 지역 유지. 한국 판매 SKU 동일성 및 국내 보증 미확인."
       ],
       "filters": {
         "size": 27,
@@ -8714,6 +8750,14 @@
           "checked_on": "2026-10-10",
           "access_status": "DIRECT_CHECK",
           "location": "Product-specific specifications / cited named field"
+        },
+        {
+          "id": "src:gigabyte-m32u:kr-batch2-20261011",
+          "url": "https://www.gigabyte.com/Monitor/M32U",
+          "title": "M32U official recheck batch 2",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Key Features / Support Adaptive-Sync Technology"
         }
       ],
       "facts": [
@@ -9066,11 +9110,22 @@
           ],
           "location": "Note",
           "qualifier": "UP_TO"
+        },
+        {
+          "id": "gigabyte-m32u:recheck-vrr",
+          "property": "vrr",
+          "value": "Adaptive-Sync",
+          "unit": null,
+          "scope": "PANEL",
+          "source_refs": [
+            "src:gigabyte-m32u:kr-batch2-20261011"
+          ],
+          "location": "Key Features / Support Adaptive-Sync Technology",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
         "pd_supply",
-        "vrr",
         "warranty",
         "usb_c.video_mode",
         "korean_sku_identity",
@@ -9085,7 +9140,8 @@
         "Color percentages are manufacturer colour saturation, not assumed gamut coverage.",
         "USB-C presence does not establish PD wattage or input timing; UNKNOWN.",
         "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
-        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다."
+        "치수·무게의 Esti.는 제조사 추정 표기(MANUFACTURER_ESTIMATE)다. 조사자의 계산 추정값은 없다.",
+        "2026-10-11 공식 문서 재확인: Global 제품 소개의 Adaptive-Sync 확인. 입력별 VRR 범위·인증 등급·한국 판매 SKU를 추정하지 않음. 기존 문서 지역 유지. 한국 판매 SKU 동일성 및 국내 보증 미확인."
       ],
       "filters": {
         "size": 31.5,
