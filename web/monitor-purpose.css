@@ -828,3 +828,45 @@
 .purpose-design .product-card .monitor-screen {
   background: #132e23;
 }
+/* Detail and comparison share the purpose-first palette and information hierarchy. */
+.purpose-design dialog{background:#f2f5f1;border:1px solid #dce5de;border-radius:24px;padding:28px;box-shadow:0 24px 90px #10251c40}
+.purpose-design dialog::backdrop{background:#10251c99;backdrop-filter:blur(4px)}
+.purpose-design .dialog-top{position:sticky;top:-28px;z-index:5;background:#f2f5f1;padding:12px 0;border-bottom:1px solid var(--line)}
+.purpose-design .dialog-top .eyebrow{color:#09664f}
+.purpose-design .close-button{border:1px solid var(--line);border-radius:50%;background:white;color:var(--ink)}
+.purpose-design #detail-title,.purpose-design #compare-title{letter-spacing:-1px;font-size:28px;line-height:1.4}
+.purpose-design .dialog-notice{background:#e5eee7;border-left:3px solid #08775d;padding:15px 18px;border-radius:12px;line-height:1.8}
+.purpose-design .detail-section{font-size:18px;margin:28px 0 13px}
+.purpose-design .table-scroll{background:white;border:1px solid var(--line);border-radius:15px}
+.purpose-design dialog caption{text-align:left;padding:14px;font-size:11px;color:var(--muted)}
+.purpose-design dialog th{background:#eaf0e9}
+.purpose-design dialog td,.purpose-design dialog th{padding:16px;line-height:1.8}
+.purpose-design .different td{background:#f5f8ee}
+.purpose-design .fact-context{font-size:11px;line-height:1.8}
+.purpose-design .source-list{background:white;border:1px solid var(--line);border-radius:14px;padding:14px 20px 14px 35px;line-height:1.85}
+.purpose-design .local-feedback{background:#e3eee5;border:1px solid #cbdcce;border-radius:18px;padding:20px}
+.purpose-design .local-feedback button{background:white;border:1px solid #698474;border-radius:30px;padding:10px 18px;color:#153c29}
+.purpose-design .local-feedback button[aria-pressed=true]{background:#ffdc5d;color:#13251e;border-color:#aa8c20}
+.purpose-design .compare-scroll-hint{color:var(--muted);font-size:12px;margin:16px 0 10px}
+.purpose-design #compare-dialog .table-scroll{max-height:56dvh;overscroll-behavior:contain}
+.purpose-design #compare-table{border-collapse:separate;border-spacing:0;min-width:640px}
+.purpose-design #compare-table thead th{position:sticky;top:0;z-index:2;background:#e7efe8;min-width:210px}
+.purpose-design #compare-table th:first-child{position:sticky;left:0;min-width:125px;width:125px;max-width:150px;z-index:1;box-shadow:2px 0 0 #dce5de}
+.purpose-design #compare-table thead th:first-child{z-index:3}
+@media(max-width:600px){
+.purpose-design dialog{width:calc(100% - 16px);max-height:94dvh;padding:18px;border-radius:19px}
+.purpose-design .dialog-top{top:-18px;padding:9px 0}
+.purpose-design #detail-title,.purpose-design #compare-title{font-size:23px}
+.purpose-design #detail-dialog .table-scroll{border:0;background:none;overflow:visible}
+.purpose-design #detail-dialog table{display:block;width:100%;min-width:0}
+.purpose-design #detail-dialog thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.purpose-design #detail-dialog tbody{display:block}
+.purpose-design #detail-dialog tbody tr{display:block;background:white;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.purpose-design #detail-dialog tbody th{display:block;width:100%;padding:12px 15px;border:0;font-size:13px}
+.purpose-design #detail-dialog tbody td{display:block;width:100%;padding:10px 15px;border:0;font-size:12px}
+.purpose-design #detail-dialog td::before{content:attr(data-label);display:block;color:var(--muted);font-size:10px;margin-bottom:4px}
+.purpose-design #compare-table thead th{min-width:190px}
+.purpose-design #compare-table th:first-child{min-width:100px;max-width:100px;width:100px;font-size:11px}
+.purpose-design #compare-table{min-width:580px}
+.purpose-design #compare-table td,.purpose-design #compare-table th{padding:12px}
+}
