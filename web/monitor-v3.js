@@ -219,7 +219,7 @@
   function render() {
     const query = $("monitor-search").value.trim().toLocaleLowerCase();
     let list = products.filter(
-      (p) => name(p).toLocaleLowerCase().includes(query) &&
+      (p) => window.monitorMatchesSearch(p, query) &&
         (!chosenBrands.size || chosenBrands.has(p.manufacturer)) && matches(p),
     );
     const order = $("sort-order").value;
