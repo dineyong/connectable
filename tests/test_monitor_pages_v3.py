@@ -34,3 +34,13 @@ class MonitorPagesTests(unittest.TestCase):
         p=load(SOURCE)['products'][0]
         p['facts'][0]['qualifier']='RATED';p['facts'][1]['qualifier']='UP_TO'
         page=render(p);self.assertIn('정격',page);self.assertIn('최대 한도',page)
+
+    def test_explicit_conflict_visible_before_specs_and_escaped(self):
+        p=load(SOURCE)['products'][0]
+        p['notes']=['ordinary UNKNOWN note','CONFLICT_REVIEW <script>bad</script>']
+        page=render(p)
+        self.assertLess(page.index('class="source-conflict"'),page.index('id="specs"'))
+        self.assertIn('&lt;script&gt;bad&lt;/script&gt;',page)
+        self.assertNotIn('<script>bad</script>',page)
+        p['notes']=['UNKNOWN; possible conflict not classified']
+        self.assertNotIn('class="source-conflict"',render(p))

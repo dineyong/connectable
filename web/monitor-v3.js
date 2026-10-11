@@ -341,9 +341,15 @@
     const target = targets[p.id];
     return target ? `<p class="dialog-notice"><a href="monitor10-review.html#${target[0]}">${esc(target[1])} →</a><br>아래 비교 사양과 별도 자료입니다. 지역·리비전 조건을 확인하세요.</p>` : "";
   }
+  // Only surface explicitly recorded conflicts; do not interpret free-text notes.
+  function conflictNotice(p) {
+    const notes = p.notes.filter(n => n.startsWith("CONFLICT_REVIEW "));
+    if (!notes.length) return "";
+    return `<div class="dialog-notice source-conflict"><strong>공식 자료 간 표기 차이 · 확인 필요</strong><ul>${notes.map(n => `<li>${esc(n.slice("CONFLICT_REVIEW ".length))}</li>`).join("")}</ul><p>아래 값은 기록된 문서의 표기입니다. 충돌이 해소된 것으로 해석하지 마세요.</p></div>`;
+  }
   function detail(p) {
     $("detail-content").innerHTML =
-      `<h2 id="detail-title">${esc(name(p))}</h2><p class="detail-meta">문서 지역 ${esc(p.region)} · 문서 모델 식별 ${esc(p.variant_status)}</p><p class="dialog-notice">한국 판매 SKU 동일성 미확인 · 사람 검토 미완료 · 호환성 판정 사용 불가. 아래는 공식 문서 조사값이며 실제 연결 성능이나 한국 SKU 사양의 보장이 아닙니다.</p><a class="detail-link" href="monitors/${encodeURIComponent(p.id.replace("monitor:", ""))}/">제품 정보 링크 열기 →</a>${supplementLink(p)}<h3 class="detail-section">공식 문서의 사양과 조건</h3><div class="table-scroll" tabindex="0" aria-label="공식 사양표 가로 스크롤"><table><thead><tr><th scope="col">항목</th><th scope="col">표기값</th><th scope="col">조건·문서 위치</th><th scope="col">근거</th></tr></thead><tbody>${p.facts.map((f) => `<tr><th scope="row">${esc(labels[f.property] || f.property)}</th><td data-label="표기값">${factValue(f)}</td><td data-label="조건·문서 위치">${factContext(f)}</td><td data-label="근거">${links(p, f.source_refs)}</td></tr>`).join("")}</tbody></table></div><h3 class="detail-section">아직 확인하지 못한 항목</h3><p class="detail-meta">${p.missing_fields.map((x) => esc(labels[x] || x)).join(" · ") || "별도 기록 없음"}</p><h3 class="detail-section">공식 출처</h3><ul class="source-list">${p.source_refs
+      `<h2 id="detail-title">${esc(name(p))}</h2><p class="detail-meta">문서 지역 ${esc(p.region)} · 문서 모델 식별 ${esc(p.variant_status)}</p><p class="dialog-notice">한국 판매 SKU 동일성 미확인 · 사람 검토 미완료 · 호환성 판정 사용 불가. 아래는 공식 문서 조사값이며 실제 연결 성능이나 한국 SKU 사양의 보장이 아닙니다.</p><a class="detail-link" href="monitors/${encodeURIComponent(p.id.replace("monitor:", ""))}/">제품 정보 링크 열기 →</a>${supplementLink(p)}${conflictNotice(p)}<h3 class="detail-section">공식 문서의 사양과 조건</h3><div class="table-scroll" tabindex="0" aria-label="공식 사양표 가로 스크롤"><table><thead><tr><th scope="col">항목</th><th scope="col">표기값</th><th scope="col">조건·문서 위치</th><th scope="col">근거</th></tr></thead><tbody>${p.facts.map((f) => `<tr><th scope="row">${esc(labels[f.property] || f.property)}</th><td data-label="표기값">${factValue(f)}</td><td data-label="조건·문서 위치">${factContext(f)}</td><td data-label="근거">${links(p, f.source_refs)}</td></tr>`).join("")}</tbody></table></div><h3 class="detail-section">아직 확인하지 못한 항목</h3><p class="detail-meta">${p.missing_fields.map((x) => esc(labels[x] || x)).join(" · ") || "별도 기록 없음"}</p><h3 class="detail-section">공식 출처</h3><ul class="source-list">${p.source_refs
         .map((s) => {
           const url = safeSource(s.url);
           return `<li>${url ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a>` : esc(s.title)}<br>확인일 ${esc(s.checked_on)} · ${esc(s.access_status)}<br>${esc(s.location)}</li>`;
@@ -408,7 +414,7 @@
       })
       .join("");
     $("compare-table").innerHTML =
-      `<caption>공식 문서 조사값 비교 · 지역별 SKU와 실제 호환성은 미확인</caption><thead><tr><th scope="col">항목</th>${list.map((p) => `<th scope="col">${esc(name(p))}<span class="fact-context">문서 지역 ${esc(p.region)} · 한국 SKU 미확인</span></th>`).join("")}</tr></thead><tbody>${rows || `<tr><td colspan="${list.length + 1}">표기값·단위·범위·표현 종류가 다른 항목이 없습니다. 제품 동일성이나 호환성을 뜻하지 않습니다.</td></tr>`}</tbody>`;
+      `<caption>공식 문서 조사값 비교 · 지역별 SKU와 실제 호환성은 미확인</caption><thead><tr><th scope="col">항목</th>${list.map((p) => `<th scope="col">${esc(name(p))}<span class="fact-context">문서 지역 ${esc(p.region)} · 한국 SKU 미확인</span>${conflictNotice(p)}</th>`).join("")}</tr></thead><tbody>${rows || `<tr><td colspan="${list.length + 1}">표기값·단위·범위·표현 종류가 다른 항목이 없습니다. 제품 동일성이나 호환성을 뜻하지 않습니다.</td></tr>`}</tbody>`;
   }
   document.addEventListener("click", (event) => {
     const b = event.target.closest("button");
