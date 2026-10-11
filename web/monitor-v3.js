@@ -232,9 +232,12 @@
     if (purpose === 'creative') $("filter-resolution").value = 'uhd';
     if (purpose === 'laptop') $("filter-usbc").value = 'yes';
     clearPurpose(); button.setAttribute('aria-pressed', 'true'); render();
+
+  }));
+  $("purpose-results-open").addEventListener("click", () => {
     $("products").focus({preventScroll: true});
     $("products").scrollIntoView({block: "start", behavior: "instant"});
-  }));
+  });
   $("purpose-all").addEventListener('click', reset);
   function render() {
     const query = $("monitor-search").value.trim().toLocaleLowerCase();
@@ -265,6 +268,13 @@
         .join("");
     } else {
       $("product-grid").innerHTML = list.map(card).join("");
+    }
+    const activePurpose = document.querySelector('[data-purpose][aria-pressed="true"]');
+    $("purpose-result").hidden = !activePurpose;
+    if (activePurpose) {
+      $("purpose-result-title").textContent = `${activePurpose.querySelector('strong').textContent} 모니터 찾기`;
+      $("purpose-result-description").textContent = `${activePurpose.querySelector('small').textContent} · 현재 검색어와 브랜드 조건도 함께 적용됩니다.${list.length ? '' : ' 조건을 바꾸거나 전체 보기를 눌러 주세요.'}`;
+      $("purpose-results-open").textContent = `조건에 맞는 모니터 ${list.length}개 보기 →`;
     }
     $("result-count").textContent = `${list.length}종`;
     $("empty-state").hidden = list.length > 0;

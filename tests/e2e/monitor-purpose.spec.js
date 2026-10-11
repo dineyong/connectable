@@ -35,6 +35,7 @@ test("purpose shortcuts apply exactly their visible numeric conditions without c
   }
   await page.locator("#purpose-all").click();
   await expect(page.locator(".product-card")).toHaveCount(30);
+  await expect(page.locator("#purpose-result")).toBeHidden();
   await expect(page.locator('[data-purpose][aria-pressed="true"]')).toHaveCount(
     0,
   );
@@ -61,11 +62,16 @@ test("purpose retains brand selection and manual condition changes clear shortcu
   ).toBe(true);
 });
 
-test("purpose shows results immediately and Mac label preserves USB-C-only scope", async ({page}) => {
+test("purpose previews count and only navigates after explicit result click", async ({page}) => {
   await page.goto('/monitor-v3.html');
   await expect(page.locator('[data-purpose="laptop"]')).toContainText('맥북·맥미니');
   for (const purpose of ['office','gaming']) {
     await page.locator(`[data-purpose="${purpose}"]`).click();
+    await expect(page.locator(`[data-purpose="${purpose}"]`)).toBeFocused();
+    await expect(page.locator('#purpose-result')).toBeVisible();
+    const count = await page.locator('.product-card').count();
+    await expect(page.locator('#purpose-results-open')).toContainText(`${count}개 보기`);
+    await page.locator('#purpose-results-open').click();
     await expect(page.locator('#products')).toBeFocused();
     await expect(page.locator('#products-title')).toBeInViewport();
   }
@@ -96,4 +102,14 @@ test("direct comparison picker rejects missing and duplicate choices and compare
   await page.locator('#compare-pick-1').selectOption('');
   await page.keyboard.press('Escape');
   await expect(page.locator('#selection-count')).toContainText('3 / 3');
+});
+
+test("purpose preview preserves zero results without inventing matches", async ({page}) => {
+ await page.goto('/monitor-v3.html');
+ await page.locator('#monitor-search').fill('nonexistent-model-zzz');
+ await page.locator('[data-purpose="office"]').click();
+ await expect(page.locator('#purpose-results-open')).toContainText('0개 보기');
+ await expect(page.locator('#purpose-result-description')).toContainText('조건을 바꾸거나');
+ await page.locator('#purpose-results-open').click();
+ await expect(page.locator('#empty-state')).toBeVisible();
 });

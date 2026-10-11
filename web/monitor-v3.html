@@ -69,7 +69,7 @@
           <div>
             <p class="eyebrow">A CLEARER CHOICE</p>
             <h1 id="hero-title">어떤 일에 쓸 <mark>모니터</mark>인가요?</h1>
-            <p class="hero-copy">용도 하나만 누르면 바로 결과를 볼 수 있어요. 적용되는 조건은 카드에 그대로 적혀 있어요.</p>
+            <p class="hero-copy">용도를 고르고, 조건에 맞는 모니터 수를 확인한 뒤 결과를 보세요. 적용되는 조건은 카드에 그대로 적혀 있어요.</p>
           </div>
         </div>
       </section>
@@ -79,6 +79,10 @@
           <button type="button" data-purpose="gaming" aria-pressed="false"><strong>게임</strong><span>빠른 화면 전환이 중요할 때</span><small>144Hz 이상</small></button>
           <button type="button" data-purpose="creative" aria-pressed="false"><strong>사진·영상</strong><span>넓고 세밀한 화면이 필요할 때</span><small>4K UHD 해상도</small></button>
           <button type="button" data-purpose="laptop" aria-pressed="false"><strong>맥북·맥미니</strong><span>USB-C 연결 후보 살펴보기</span><small>USB-C DP Alt Mode 확인</small></button>
+        </div>
+        <div id="purpose-result" class="purpose-result" hidden>
+          <div role="status"><strong id="purpose-result-title"></strong><p id="purpose-result-description"></p></div>
+          <button type="button" id="purpose-results-open"></button>
         </div>
         <div class="purpose-caption"><p>추천 순위가 아닌 사양 필터 바로가기예요. 충전·색 정확도·실제 연결 호환성을 보장하지 않습니다.</p><button type="button" id="purpose-all">전체 보기</button></div>
       </section>
