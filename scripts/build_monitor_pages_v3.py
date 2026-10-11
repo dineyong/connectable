@@ -31,20 +31,10 @@ LABELS.update({'active_area':'유효 화면 영역','brightness_unspecified':'�
     'physical_test_results':'실물 연결 시험','warranty_korea':'한국 보증 조건',
     'displayport.version':'DisplayPort 버전','hdmi.count':'HDMI 수량','hdmi.version':'HDMI 버전',
     'usb_c.video_mode':'USB-C 영상 모드'})
-VALUE_KEYS={'version':'버전','count':'개수','mode':'모드','note':'조건 메모','unit':'단위',
-    'type_a':'USB-A','type_c':'USB-C','horizontal':'가로','vertical':'세로','axes':'축 순서',
-    'with_stand':'스탠드 포함','without_stand':'스탠드 제외','estimate_status':'추정 표기',
-    'tilt_deg':'틸트 (도)','swivel_deg':'스위블 (도)','pivot_deg':'피벗 (도)','height_mm':'높이 조절 (mm)'}
+from scripts.monitor_value_format import formatted, fact_text
 
 def esc(value):
     return html.escape(str(value), quote=True)
-
-def formatted(value):
-    if value is None: return '미확인'
-    if isinstance(value, bool): return '지원' if value else '미지원'
-    if isinstance(value, dict): return '\n'.join(f'{VALUE_KEYS.get(k,k)}: {formatted(v)}' for k,v in value.items())
-    if isinstance(value, list): return '[' + ', '.join(formatted(v) for v in value) + ']'
-    return str(value)
 
 def render(product):
     title = product['manufacturer'] + ' ' + product['display_model']
@@ -52,7 +42,7 @@ def render(product):
     rows=[]
     for f in product['facts']:
         links=' · '.join(f'<a href="{esc(sources[r]["url"])}" rel="noreferrer">공식 문서 · {esc(sources[r]["checked_on"])}</a>' for r in f['source_refs'])
-        value=formatted(f['value']) + (' '+f['unit'] if f['unit'] else '')
+        value=fact_text(f['value'], f['unit'])
         rows.append(f'<tr><th scope="row">{esc(LABELS.get(f["property"],f["property"]))}</th><td data-label="값·표현 종류"><pre>{esc(value)}</pre><span class="qualifier">{esc(QUALIFIERS[f["qualifier"]])}</span></td><td data-label="조건·문서 위치·출처">{esc(f["scope"])}<br>{esc(f["location"])}<br>{links}</td></tr>')
     missing=''.join(f'<li>{esc(LABELS.get(v,v))}</li>' for v in product['missing_fields'])
     notes=''.join(f'<li>{esc(v)}</li>' for v in product['notes'])

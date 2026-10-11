@@ -35,12 +35,7 @@
     );
   const name = (p) => `${p.manufacturer} ${p.display_model}`;
   const unknown = (value) => value === null || value === undefined;
-  const fmt = (value) =>
-    unknown(value)
-      ? "미확인"
-      : typeof value === "object"
-        ? JSON.stringify(value)
-        : String(value);
+  const fmt = window.ConnectableValueFormat.format;
   const labels = {
     size: "화면 크기",
     width: "가로 해상도",
@@ -124,7 +119,7 @@
       .join(" · ");
   }
   function factValue(f) {
-    return `${esc(fmt(f.value))}${f.unit ? ` ${esc(f.unit)}` : ""}`;
+    return `<span class="fact-value">${esc(window.ConnectableValueFormat.factText(f.value, f.unit))}</span>`;
   }
   function factContext(f) {
     return `${esc(qualifiers[f.qualifier] || f.qualifier)} · ${esc(f.scope)}<br>${esc(f.location)}`;

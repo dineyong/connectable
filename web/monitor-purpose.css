@@ -870,3 +870,5 @@
 .purpose-design #compare-table{min-width:580px}
 .purpose-design #compare-table td,.purpose-design #compare-table th{padding:12px}
 }
+
+.purpose-design .fact-value { white-space: pre-wrap; overflow-wrap: anywhere; }
