@@ -80,3 +80,7 @@
 ## MSI 설명서 연결 확인 · 2026-10-11
 
 [공식 지원 메뉴에서 MD271UL 한국어 설명서 연결 확인](MSI_MANUAL_LINK_VERIFICATION_REPORT.md). 정확한 모델·문서 URL만 등록하여 일반 밝기300니트를 보완했다. 4차의 해당 연결 보류만 해소하며 한국 SKU·보증·소비전력 미확인 유지.
+
+## MAG 설명서 검토 · 2026-10-11
+
+[MAG 274QRF QD E2 공식 설명서 연결 및 조건 확인](MSI_MAG_MANUAL_VERIFICATION_REPORT.md). PIP/PBP 제한을 반영했고 DCI-P3·포장중량 문서 차이는 충돌로 표시한다. 신규 수치 확정 없이 기존 facts와 한국 SKU/소비전력 결측 보존.

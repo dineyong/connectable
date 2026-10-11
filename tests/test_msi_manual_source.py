@@ -31,3 +31,26 @@ class MsiManualSourceTests(unittest.TestCase):
         self.assertIn('warranty_korea',p['missing_fields'])
         self.assertIn('power_consumption',p['missing_fields'])
         self.assertEqual(p['region'],'Global')
+
+    def test_mag_manual_exact_model_binding(self):
+        link='https://download.msi.com/archive/mnu_exe/monitor/MAG_274QRF-QD-E2v1.1_Korean.pdf'
+        data=load(DATA/'official_specs.json')
+        p=next(p for p in data['products'] if p['display_model']=='MAG 274QRF QD E2')
+        p['source_refs'][0]['url']=link
+        official(data)
+        for bad in [link+'?redirect=other',link.replace('v1.1','v1.2'),link.replace('download.msi.com','download-2.msi.com'),URL]:
+            with self.subTest(url=bad):
+                p['source_refs'][0]['url']=bad
+                with self.assertRaises(ValueError):official(data)
+
+    def test_mag_conflicts_and_conditions_do_not_promote_facts(self):
+        from scripts import build_monitor_v3 as builder
+        p=next(p for p in builder.build(builder.load(builder.SOURCE))['products'] if p['display_model']=='MAG 274QRF QD E2')
+        gamut=next(f for f in p['facts'] if f['property']=='color_gamut')
+        self.assertEqual(gamut['value']['DCI_P3'],98)
+        self.assertTrue(any(n.startswith('CONFLICT_REVIEW ') and '95%' in n for n in p['notes']))
+        self.assertTrue(any(n.startswith('CONFLICT_REVIEW ') and '13.3kg' in n for n in p['notes']))
+        self.assertTrue(any('PIP/PBP 활성화' in n and 'Adaptive-Sync' in n for n in p['notes']))
+        self.assertEqual(p['usable_for_compatibility'],'NO')
+        for field in ('power_consumption','warranty_korea','korean_sku_identity','per_input_simultaneous_conditions'):
+            self.assertIn(field,p['missing_fields'])

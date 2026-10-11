@@ -6523,6 +6523,14 @@
           "checked_on": "2026-10-11",
           "access_status": "DIRECT_CHECK",
           "location": "Product overview / KVM"
+        },
+        {
+          "id": "src:msi-mag-274qrf-qd-e2:manual-20261011",
+          "url": "https://download.msi.com/archive/mnu_exe/monitor/MAG_274QRF-QD-E2v1.1_Korean.pdf",
+          "title": "MAG 274QRF-QD-E2 (3CC2) Korean manual V1.1 (2024/11)",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Official support > Manual & Document > Korean; printed pp.7,11,16,18–20"
         }
       ],
       "facts": [
@@ -6933,7 +6941,12 @@
         "한국 판매 SKU와 문서 모델의 동일성 UNKNOWN. 공개 검토/사람 승인 미완료.",
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
         "Do not clamp all inputs to panel180Hz: HDMI max144Hz.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "2026-10-11 한국어 설명서 V1.1(2024/11) 공식 지원 메뉴 직접 링크 확인. 인쇄11쪽: HDR 신호 수신 시 PIP/PBP 설정이 비활성화된다.",
+        "설명서 인쇄16쪽: PIP/PBP 활성화 시 MPRT·Adaptive-Sync가 꺼지며 HDMI CEC는 꺼지고 선택 불가다. 응답 시간은 선택 불가다. 입력별 동시 해상도·주사율 전체가 검증된 것은 아니다.",
+        "CONFLICT_REVIEW 색역: 기존 공식 사양 페이지 DCI-P3 98%(CIE1976)와 한국어 V1.1 설명서 인쇄19–20쪽의 95%(CIE1976)가 다르다. 기존 문서값을 보존하고 어느 값이 적용되는지 미확인으로 유지한다.",
+        "CONFLICT_REVIEW 포장 포함 중량: 공식 사양 페이지 GW 8.6kg, 한국어 설명서 인쇄20쪽 Gross 13.3kg으로 다르다. 본체 Net 6.05kg와 구분하며 포장 중량을 신규 fact로 채택하지 않는다.",
+        "설명서 인쇄19쪽의 외부 전원 공급120.08W 및19V·6.32A는 실제 모니터 소비전력이 아니다. 소비전력·국내SKU·국내보증 결측 유지. 인쇄7/18쪽의 최대65W PD는 기존 사실을 대조한 것이며 새 충전 보장이 아니다."
       ]
     },
     {

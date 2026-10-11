@@ -23,8 +23,11 @@ DOMAINS={
 
 
 # Exact document reviewed via the model's public support UI on 2026-10-11.
-# See docs/MSI_MANUAL_LINK_VERIFICATION_REPORT.md; no host-wide approval.
+# See docs/MSI_MANUAL_LINK_VERIFICATION_REPORT.md and
+# docs/MSI_MAG_MANUAL_VERIFICATION_REPORT.md; no host-wide approval.
 REVIEWED_MANUALS = {
+    ('MSI', 'monitor:msi-mag-274qrf-qd-e2', 'MAG 274QRF QD E2'):
+        {'https://download.msi.com/archive/mnu_exe/monitor/MAG_274QRF-QD-E2v1.1_Korean.pdf'},
     ('MSI', 'monitor:msi-modern-md271ul', 'Modern MD271UL'):
         {'https://download.msi.com/archive/mnu_exe/monitor/Modern_MD271ULv1.1_Korean.pdf'},
 }
