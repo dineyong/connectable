@@ -360,18 +360,22 @@
       try {
         if (typeof item.url !== 'string' || /[\s\\%\u0000-\u001f\u007f]/.test(item.url)) return '';
         const parsed = new URL(item.url);
-        if (parsed.protocol !== 'https:' || parsed.username || parsed.password || parsed.port || parsed.search || parsed.hash) return '';
-        const host = {RTINGS:'www.rtings.com',Quasarzone:'quasarzone.com'}[item.site];
+        if (parsed.protocol !== 'https:' || parsed.username || parsed.password || parsed.port || parsed.hash) return '';
+        if (item.url.split('?')[0].split('/').some(part => part === '.' || part === '..')) return '';
+        if (parsed.search && !(item.site === 'YouTube' && parsed.pathname === '/watch' && /^\?v=[A-Za-z0-9_-]{11}$/.test(parsed.search))) return '';
+        const host = {RTINGS:'www.rtings.com',Quasarzone:'quasarzone.com',YouTube:'www.youtube.com',NaverBlog:'blog.naver.com'}[item.site] || (item.site === 'Tistory' && /^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.tistory\.com$/.test(parsed.hostname) ? parsed.hostname : item.site === 'Blog' ? parsed.hostname : null);
         if (!host || parsed.hostname !== host || !item.url.startsWith(`https://${host}/`)) return '';
-        if (!(item.site === 'RTINGS' ? /^\/monitor\/reviews\/[a-z0-9-]+\/[a-z0-9-]+$/.test(parsed.pathname) : /^\/bbs\/qf_dp\/views\/\d+$/.test(parsed.pathname))) return '';
+        const validPath = {RTINGS:/^\/monitor\/reviews\/[a-z0-9-]+\/[a-z0-9-]+$/,Quasarzone:/^\/bbs\/qf_dp\/views\/\d+$/,YouTube:/^\/watch$/,NaverBlog:/^\/[A-Za-z0-9_-]+\/\d+$/,Tistory:/^\/\d+$/}[item.site];
+        if ((item.site !== 'Blog' && !validPath?.test(parsed.pathname)) || (item.site === 'YouTube' && !/^\?v=[A-Za-z0-9_-]{11}$/.test(parsed.search))) return '';
+        if (['YouTube','NaverBlog','Tistory','Blog'].includes(item.site) && !data.reviewed_bindings?.some(binding => binding.product_id === item.product_id && binding.site === item.site && binding.url === item.url)) return '';
         url = esc(parsed.href);
       } catch { return ''; }
       if (![item.site,item.title,item.summary,item.checked_on].every(value => typeof value === 'string')) return '';
       if (item.model_scope !== 'EXACT_DOCUMENT_MODEL' || !['FIRST_HAND_REVIEW','PROFESSIONAL_REVIEW'].includes(item.review_type)) return '';
-      const reviewType = item.review_type === 'PROFESSIONAL_REVIEW' ? '전문 리뷰' : '개인 사용기';
+      const reviewType = item.site === 'YouTube' ? '영상 리뷰' : item.review_type === 'PROFESSIONAL_REVIEW' ? '전문 리뷰' : '개인 사용기';
       const commercial = {PRESENT:'광고·판매·제휴 요소 있음',NOT_OBSERVED:'광고·제휴 요소 확인되지 않음',UNKNOWN:'광고·제휴 여부 미확인'}[item.commercial_context];
       if (!commercial) return '';
-      return `<li class="review-link-card"><p class="review-link-meta">${esc(item.site)} · ${reviewType} · 확인일 ${esc(item.checked_on)}</p><a href="${url}" target="_blank" rel="noopener noreferrer">${esc(item.title)} <span aria-hidden="true">↗</span><span class="sr-only"> (새 창 또는 새 탭)</span></a><p>${esc(item.summary)}</p><p class="review-link-meta">${esc(commercial)}</p></li>`;
+      return `<li class="review-link-card"><p class="review-link-meta">${esc({NaverBlog:'네이버 블로그',Tistory:'티스토리',Blog:'블로그'}[item.site] || item.site)} · ${reviewType} · 확인일 ${esc(item.checked_on)}</p><a href="${url}" target="_blank" rel="noopener noreferrer">${esc(item.title)} <span aria-hidden="true">↗</span><span class="sr-only"> (새 창 또는 새 탭)</span></a><p>${esc(item.summary)}</p><p class="review-link-meta">${esc(commercial)}</p></li>`;
     }).filter(Boolean).join('');
     return shell(cards ? `<ul class="review-link-list">${cards}</ul>` : '<p class="review-links-empty">안전하게 표시할 수 있는 후기 링크가 없습니다.</p>');
   }

@@ -38,6 +38,7 @@ test('external review cards keep source, advertising and official facts separate
 });
 
 test('models without connected reviews show a clear empty state without borrowing other model links', async ({page}) => {
+  await page.route('**/monitor-review-links-data.js', route => route.fulfill({contentType:'application/javascript',body:'window.CONNECTABLE_REVIEW_LINKS={schema_version:1,items:[]};'}));
   await page.goto('/monitor-v3.html');
   const section = await openDetail(page, 'monitor:dell-u2724d');
   await expect(section).toContainText('아직 이 모델에 연결해 확인한 외부 후기 링크가 없습니다.');
@@ -70,11 +71,53 @@ test('tampered review URLs and uncertain model scope fail closed while text is e
 test('static product documents retain review links without JavaScript and distinct empty state', async ({page}) => {
   await page.goto('/monitors/gigabyte-m32u/');
   const section = page.locator('.external-reviews');
-  await expect(section.locator('a')).toHaveCount(2);
+  await expect(section.locator('a')).toHaveCount(reviews.items.filter(item => item.product_id === 'monitor:gigabyte-m32u').length);
   for (const link of await section.locator('a').all()) {
     await expect(link).toHaveAttribute('target','_blank');
     await expect(link).toHaveAttribute('rel','noopener noreferrer');
   }
-  await page.goto('/monitors/dell-u2724d/');
-  await expect(page.locator('.review-links-empty')).toContainText('아직 이 모델');
+  const other = require('../../data/site/monitor-v3.json').products?.find(p => !reviews.items.some(item => item.product_id === p.id));
+  if (other) {
+    await page.goto(`/monitors/${other.id.replace('monitor:', '')}/`);
+    await expect(page.locator('.review-links-empty')).toContainText('아직 이 모델');
+  }
+});
+
+test('video and blog links use reviewed model bindings and open separately without embeds', async ({page,context}) => {
+  const base = {...reviews.items[0],product_id:'monitor:gigabyte-m32u'};
+  const good = [
+    {...base,id:'fixture-video',site:'YouTube',url:'https://www.youtube.com/watch?v=AbCdEf_1234'},
+    {...base,id:'fixture-blog',site:'NaverBlog',url:'https://blog.naver.com/testhandle/123456789'},
+    {...base,id:'fixture-custom-blog',site:'Blog',url:'https://review.example.test/2024/model.html'}
+  ];
+  const bad = [
+    {...good[0],id:'fixture-query',url:good[0].url+'&redirect=evil'},
+    {...good[0],id:'fixture-port',url:'https://www.youtube.com:443/watch?v=AbCdEf_1234'},
+    {...good[0],id:'fixture-unregistered',url:'https://www.youtube.com/watch?v=XbCdEf_1234'},
+    {...good[1],id:'fixture-host',url:'https://blog.naver.com.evil.test/testhandle/123456789'},
+    {...good[2],id:'fixture-unregistered-blog',url:'https://evil.example.test/2024/model.html'},
+    {...good[1],id:'fixture-traversal',url:'https://blog.naver.com/testhandle/../testhandle/123456789'}
+  ];
+  const reviewed_bindings = good.map(({product_id,site,url}) => ({product_id,site,url}));
+  await page.route('**/monitor-review-links-data.js', route => route.fulfill({contentType:'application/javascript',body:`window.CONNECTABLE_REVIEW_LINKS=${JSON.stringify({schema_version:1,items:[...good,...bad],reviewed_bindings})};`}));
+  await page.goto('/monitor-v3.html');
+  const section = await openDetail(page, base.product_id);
+  await expect(section.locator('a')).toHaveCount(3);
+  await expect(section).toContainText('영상 리뷰');
+  await expect(section).toContainText('네이버 블로그');
+  await expect(section.locator('iframe,img')).toHaveCount(0);
+  for (const item of good) {
+    const link = section.locator(`a[href="${item.url}"]`);
+    await expect(link).toHaveAttribute('target','_blank');
+    await expect(link).toHaveAttribute('rel','noopener noreferrer');
+  }
+  await context.route('https://www.youtube.com/**', route => route.fulfill({contentType:'text/html',body:'<!doctype html><title>Fixture video</title>'}));
+  const popup = context.waitForEvent('page');
+  await section.locator('a[href*="youtube.com"]').click();
+  const destination = await popup;
+  await destination.waitForLoadState();
+  await expect(destination).toHaveTitle('Fixture video');
+  expect(await destination.evaluate(() => window.opener)).toBeNull();
+  await destination.close();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });

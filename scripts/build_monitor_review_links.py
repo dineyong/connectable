@@ -14,9 +14,11 @@ from scripts.validate_monitor_expansion import load, official, community
 SOURCE = ROOT / 'data/research/monitor-review-links.json'
 OUTPUT = ROOT / 'data/site/monitor-review-links.json'
 JS_OUTPUT = ROOT / 'web/monitor-review-links-data.js'
+BINDINGS = ROOT / 'data/research/monitor-review-link-bindings.json'
 PUBLIC_FIELDS = ('id', 'product_id', 'url', 'site', 'title', 'summary', 'checked_on',
                  'commercial_context', 'source_review_id', 'model_scope', 'review_type')
-SITES = {'RTINGS': 'www.rtings.com', 'Quasarzone': 'quasarzone.com'}
+SITES = {'RTINGS': 'www.rtings.com', 'Quasarzone': 'quasarzone.com',
+         'YouTube': 'www.youtube.com', 'NaverBlog': 'blog.naver.com'}
 # Bounded model bindings checked against each public review, not URL substring guesses.
 REVIEWED_PATHS = {
     'monitor:gigabyte-m32u': '/monitor/reviews/gigabyte/m32u',
@@ -36,17 +38,38 @@ def normalized_url(value):
     parsed = urlsplit(value)
     require(parsed.scheme == 'https' and parsed.hostname and not parsed.username and not parsed.password,
             'URL must be HTTPS without credentials')
-    require(parsed.port is None and not parsed.query and not parsed.fragment, 'URL port/query/fragment not allowed')
+    require(parsed.port is None and not parsed.fragment, 'URL port/fragment not allowed')
+    require(not parsed.query or (parsed.hostname == 'www.youtube.com' and parsed.path == '/watch' and
+            re.fullmatch(r'v=[A-Za-z0-9_-]{11}', parsed.query)), 'URL query not allowed')
     require(not any(part in ('.', '..') for part in parsed.path.split('/')), 'URL path traversal')
     require(parsed.netloc == parsed.hostname, 'noncanonical host')
-    return urlunsplit(('https', parsed.hostname.lower(), parsed.path.rstrip('/'), '', ''))
+    return urlunsplit(('https', parsed.hostname.lower(), parsed.path.rstrip('/'), parsed.query, ''))
 
 
-def validate(data, products=None, reviews=None):
+def reviewed_bindings(data):
+    require(type(data) is dict and type(data.get('schema_version')) is int and data.get('schema_version') == 1 and type(data.get('items')) is list,
+            'invalid reviewed binding registry')
+    result = {}
+    for item in data['items']:
+        require(type(item) is dict, 'binding object required')
+        require(all(isinstance(item.get(key), str) and item[key].strip() for key in
+                    ('product_id', 'site', 'url', 'checked_model', 'evidence_location', 'checked_on')),
+                'binding evidence missing')
+        require(item.get('evidence_origin') == 'DIRECT_CHECK', 'binding direct check required')
+        require(re.fullmatch(r'\d{4}-\d{2}-\d{2}', item['checked_on']) is not None, 'binding date format')
+        dt.date.fromisoformat(item['checked_on'])
+        url = normalized_url(item['url'])
+        require(url not in result, 'duplicate binding URL')
+        result[url] = item
+    return result
+
+
+def validate(data, products=None, reviews=None, bindings=None):
     if products is None:
         products = official(load(ROOT / 'data/research/monitor-expansion/official_specs.json'))['products']
     if reviews is None:
         reviews = community(load(ROOT / 'data/research/monitor-expansion/community_reviews.json'))['reviews']
+    bindings = reviewed_bindings(load(BINDINGS) if bindings is None else bindings)
     products = {p['id']: p for p in products}
     reviews = {r['id']: r for r in reviews}
     require(type(data) is dict, 'dataset must be object')
@@ -74,13 +97,22 @@ def validate(data, products=None, reviews=None):
         require(not re.search(r'<[^>]+>|\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b|01[016789][- ]?\d{3,4}[- ]?\d{4}', item['title'] + ' ' + item['summary'], re.I), prefix + 'HTML or personal contact data')
         url = normalized_url(item['url'])
         parsed = urlsplit(url)
-        require(item['site'] in SITES and parsed.hostname == SITES[item['site']], prefix + 'site host mismatch')
+        require((item['site'] in SITES and parsed.hostname == SITES[item['site']]) or
+                (item['site'] == 'Tistory' and re.fullmatch(r'[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.tistory\.com', parsed.hostname)) or (item['site'] == 'Blog' and url in bindings), prefix + 'site host mismatch')
         require((item['site'] == 'RTINGS' and re.fullmatch(r'/monitor/reviews/[a-z0-9-]+/[a-z0-9-]+', parsed.path)) or
-                (item['site'] == 'Quasarzone' and re.fullmatch(r'/bbs/qf_dp/views/\d+', parsed.path)), prefix + 'non-review path')
+                (item['site'] == 'Quasarzone' and re.fullmatch(r'/bbs/qf_dp/views/\d+', parsed.path)) or
+                (item['site'] == 'YouTube' and parsed.path == '/watch' and re.fullmatch(r'v=[A-Za-z0-9_-]{11}', parsed.query)) or
+                (item['site'] == 'NaverBlog' and re.fullmatch(r'/[A-Za-z0-9_-]+/\d+', parsed.path)) or
+                (item['site'] == 'Tistory' and re.fullmatch(r'/\d+', parsed.path)) or (item['site'] == 'Blog' and url in bindings), prefix + 'non-review path')
         require(url not in urls, prefix + 'duplicate normalized URL')
         urls.add(url)
         if item['site'] == 'RTINGS':
             require(REVIEWED_PATHS.get(item['product_id']) == parsed.path, prefix + 'unreviewed model URL binding')
+        if item['site'] in ('YouTube', 'NaverBlog', 'Tistory', 'Blog'):
+            proof = bindings.get(url)
+            require(proof is not None and proof['product_id'] == item['product_id'] and
+                    proof['site'] == item['site'] and proof['checked_model'] == item['checked_model'],
+                    prefix + 'unreviewed model URL binding')
         ref = item['source_review_id']
         require(ref is None or isinstance(ref, str), prefix + 'source reference must be text or null')
         require(item['site'] != 'Quasarzone' or ref is not None, prefix + 'community source reference required')
@@ -95,7 +127,9 @@ def validate(data, products=None, reviews=None):
 
 def build():
     data = validate(load(SOURCE))
-    return {'schema_version': 1, 'items': [{key: item[key] for key in PUBLIC_FIELDS} for item in data['items']]}
+    return {'schema_version': 1, 'items': [{key: item[key] for key in PUBLIC_FIELDS} for item in data['items']],
+            'reviewed_bindings': [{key: item[key] for key in ('product_id', 'site', 'url')}
+                                  for item in data['items'] if item['site'] in ('YouTube', 'NaverBlog', 'Tistory', 'Blog')]}
 
 
 def main():

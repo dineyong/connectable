@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "product_id": "monitor:asus-vg27aq",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=5b2cwbWbDmo",
+      "checked_model": "VG27AQ",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 YouTube 원문을 브라우저로 직접 열어 확인: Amazon 제휴 수수료 고지와 제목·설명·챕터 확인",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:asus-xg27aqdmg",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=4OD1Gml24gI",
+      "checked_model": "XG27AQDMG",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 YouTube 원문을 브라우저로 직접 열어 확인: Amazon 제휴 수수료 고지와 제목·설명·챕터 확인",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:asus-pg32ucdm",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=qywLwR7KT9M",
+      "checked_model": "PG32UCDM",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 YouTube 원문을 브라우저로 직접 열어 확인: Amazon 제휴 수수료 고지와 제목·설명·챕터 확인; 2024년 원래 모델이며 Gen 3 제외",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:benq-pd2725u",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=b17VbUjXrzg",
+      "checked_model": "PD2725U",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 YouTube 원문을 브라우저로 직접 열어 확인: 작성자가 편집/VFX 사용과 색 프로필 테스트를 명시; Amazon UK 수수료 고지",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:benq-ex2710q",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=z8kS67KVXEk",
+      "checked_model": "EX2710Q",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 YouTube 원문을 브라우저로 직접 열어 확인: 제목·펼친 설명의 정확 모델; BenQ 제품 제공 및 Amazon 제휴 고지",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:dell-aw3225qf",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=GR9H_kg1uZU",
+      "checked_model": "AW3225QF",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 YouTube 원문을 브라우저로 직접 열어 확인: 제목·펼친 설명·챕터; Amazon 제휴 수수료 고지",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:benq-gw2490",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=TFN6XnyJqfw",
+      "checked_model": "GW2490",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 YouTube 원문을 브라우저로 직접 열어 확인: 제목·펼친 설명에 GW2490 사용 경험 명시; Flipkart 상품 태그 구매 유도 존재, 구체 협찬 여부 미상",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:benq-gw2790qt",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=8JEug6RsBtE",
+      "checked_model": "GW2790QT",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 YouTube 원문을 브라우저로 직접 열어 확인: 제목·펼친 설명의 정확 모델; BenQ 제품 제공 및 Lazada/Shopee 제휴 고지",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:asus-pa278qv",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=tzo2IrnKt8E",
+      "checked_model": "PA278QV",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 YouTube 원문을 브라우저로 직접 열어 확인: 제목·펼친 설명에서 PA278QV를 직접 받은 사실 명시; 구매 링크·유료 서비스 홍보 존재, 제품 협찬 여부 미상",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:benq-pd2705u",
+      "site": "Blog",
+      "url": "https://www.breeee.com/2024/01/benq-pd2705u.html",
+      "checked_model": "PD2705U",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 원문 직접 열람: 제목·본문 첫 단락의 모델/구매/1년 사용, HotKey Puck 및 스피커 경험, 본문 구매 링크",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:benq-pd2705u",
+      "site": "Tistory",
+      "url": "https://devlee.tistory.com/242",
+      "checked_model": "PD2705U",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 원문 직접 열람: 제목·구매 및 조립 과정, USB-C 사용과 화면 모드 경험, 본문 Amazon 구매 링크",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:lg-27gs95qe-b",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=rJB0Or1MLiw",
+      "checked_model": "27GS95QE-B",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "iab 공개 원문 제목의 27GS95QE-B; 펼친 설명의 개봉·게임·설정 챕터 및 affiliate disclaimer",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:msi-modern-md271ul",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=z_enSOWesWs",
+      "checked_model": "Modern MD271UL",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "iab 공개 원문 제목·펼친 설명에 Modern MD271UL 명시; 심층 리뷰 소개 및 Amazon Associates 고지",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:aoc-q27g3xmn",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=kYwV_1bIJ4g",
+      "checked_model": "Q27G3XMN",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "iab 펼친 설명의 Model Tested: Q27G3XMN, 시험 챕터 및 소매 링크 수익 고지",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:msi-mpg-321urx-qd-oled",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=uohrgsUX07o",
+      "checked_model": "MPG 321URX QD-OLED",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "iab 펼친 설명의 테스트 모델 MPG 321URX QD-OLED 및 시험 챕터·소매 링크 수익 고지",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:lg-32gs95ue-b",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=vDtBjH2g_G8",
+      "checked_model": "32GS95UE-B",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "iab 공개 원문 제목 및 펼친 설명의 테스트 모델 LG 32GS95UE-B, 시험 챕터·소매 링크 수익 고지",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:gigabyte-m28u",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=qttvOMM3C1w",
+      "checked_model": "M28U",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "iab 펼친 설명의 Model tested: M28U, 시험 챕터 및 affiliate links 고지",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:gigabyte-m32u",
+      "site": "Blog",
+      "url": "https://tylee82.tistory.com/346",
+      "checked_model": "M32U",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 원문 본문: M32U 직접 구매(41–54행), 설치·연결 점검(65–78행), 단점(91–105행); 광고·제휴 명시 고지는 확인하지 못함",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:gigabyte-m27q-rev-1-0",
+      "site": "Blog",
+      "url": "https://pcmonitors.info/reviews/gigabyte-m27q/",
+      "checked_model": "M27Q rev.1.0",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 원문 Specifications의 Rev 1.0 model reviewed here(69행), 실제 시험 소개(40행), Amazon·Newegg 제휴 고지(72행)",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:lg-27gp850-b",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=gMqm4vzCDVM",
+      "checked_model": "27GP850-B",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "iab 공개 원문 제목·펼친 설명의 LG 27GP850-B 모델 표기 및 영상에 제휴 링크가 포함된다는 고지",
+      "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:msi-mag-274qrf-qd-e2",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=6kZnaRwYsfM",
+      "checked_model": "MAG 274QRF QD E2",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "iab 공개 원문 제목·펼친 설명의 MSI MAG 274QRF QD E2 모델 표기, 색 재현·HDR·응답 챕터 및 제휴 링크 고지",
+      "checked_on": "2026-10-11"
+    }
+  ]
+}
