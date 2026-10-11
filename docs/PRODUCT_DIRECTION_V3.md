@@ -1,5 +1,9 @@
 # Connectable 제품 방향 v3 — 모니터 사양 비교
 
+## 최신 참여 기능 결정 · 2026-10-11
+
+사용자 승인: 댓글은 후순위로 두고 이모지 반응부터 진행한다. 첫 화면은 👍 도움이 됐어요 반응만 제공한다. 현재 반응은 브라우저 로컬 저장이며 공개 집계가 아니다. 기존 댓글 초안과 모듈·회귀 검사는 보존한다. 아래 최초 범위의 댓글 포함 설명은 이전 이력이다. [제품 정보·이미지 목록](PRODUCT_INFORMATION_IMAGE_INVENTORY.md).
+
 ## 최신 로컬 구현 기준 · 2026-10-11
 
 사용자가 이후 승인한 Claude의 **용도부터(B)** 시안이 현재 기준이다. 연한 회녹색 배경·진녹색·노란 강조, 용도 조건 바로가기, 브랜드 필터/그룹, 가로 제품 목록과 비교함을 사용한다. [적용 기록](MONITOR_PURPOSE_DESIGN_REPORT.md), [상세·비교](MONITOR_DETAIL_COMPARISON_DESIGN_REPORT.md), [구매 가이드](MONITOR_IMAGES_AND_GUIDES_REPORT.md), [세션별 진행](LOCAL_MVP_SESSION_PROGRESS.md)을 따른다. 아래 파란색 시안과 최초 승인 기록은 이전 이력이다.

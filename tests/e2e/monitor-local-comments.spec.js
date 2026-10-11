@@ -3,6 +3,13 @@ const KEY = 'connectable-v3-comment-drafts';
 async function open(page, model = 'PA279CRV') {
   await page.locator('#monitor-search').fill(model);
   await page.locator('.product-card [data-action="detail"]').first().click();
+  // The deferred module remains regression-tested in an isolated test-only mount.
+  await page.evaluate(() => {
+    const container = document.createElement('section'); container.id = 'local-comments';
+    document.getElementById('detail-content').append(container);
+    const id = document.querySelector('.product-card').dataset.productId;
+    window.ConnectableLocalComments.mount(container, id);
+  });
 }
 const box = page => page.locator('#local-comments');
 const input = page => box(page).getByLabel('댓글 초안 (최대 300자)');

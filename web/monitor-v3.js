@@ -350,7 +350,7 @@
         })
         .join(
           "",
-        )}</ul><h3 class="detail-section">조사 메모</h3><ul class="source-list">${p.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul><section class="local-feedback"><h3 class="detail-section">이 정보가 도움이 됐나요?</h3><p>이 기기의 브라우저에만 저장하는 반응입니다. 제품 평가나 전체 사용자 집계가 아닙니다.</p><button type="button" id="helpful-toggle" aria-pressed="false">♡ 도움이 됐어요</button><p id="reaction-status" role="status"></p></section>`;
+        )}</ul><h3 class="detail-section">조사 메모</h3><ul class="source-list">${p.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul><section class="local-feedback"><h3 class="detail-section">이 정보가 도움이 됐나요?</h3><p>이 기기의 브라우저에만 저장하는 반응입니다. 제품 평가나 전체 사용자 집계가 아닙니다.</p><button type="button" id="helpful-toggle" aria-pressed="false">👍 도움이 됐어요</button><p id="reaction-status" role="status"></p></section>`;
     const btn = $("helpful-toggle");
     const key = `connectable-v3-helpful:${p.id}`;
     let liked = false;
@@ -359,7 +359,7 @@
     } catch {}
     const update = () => {
       btn.setAttribute("aria-pressed", String(liked));
-      btn.textContent = liked ? "♥ 도움이 됐어요 · 취소" : "♡ 도움이 됐어요";
+      btn.textContent = liked ? "👍 도움이 됐어요 · 취소" : "👍 도움이 됐어요";
     };
     update();
     btn.addEventListener("click", () => {
@@ -376,14 +376,7 @@
           "브라우저 저장을 사용할 수 없습니다. 반응은 저장되지 않았어요.";
       }
     });
-    const comments = document.createElement("section");
-    comments.id = "local-comments";
-    $("detail-content").append(comments);
-    if (window.ConnectableLocalComments?.mount) {
-      window.ConnectableLocalComments.mount(comments, p.id);
-    } else {
-      comments.textContent = "댓글 초안 기능을 불러오지 못했습니다. 새로고침 후 다시 확인해주세요.";
-    }
+    // Comments are deferred; existing local drafts and the standalone module remain intact.
     $("detail-dialog").showModal();
   }
   function compare() {

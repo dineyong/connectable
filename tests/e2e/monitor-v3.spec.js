@@ -196,6 +196,8 @@ test("helpful reaction is browser-local, reversible and not a fabricated global 
 }) => {
   await page.goto("/monitor-v3.html");
   await modelCard(page, "PA279CRV").locator('[data-action="detail"]').click();
+  await expect(page.locator('#helpful-toggle')).toContainText('👍');
+  await expect(page.locator('#local-comments')).toHaveCount(0);
   await expect(page.locator(".local-feedback")).toContainText(
     "전체 사용자 집계가 아닙니다",
   );
@@ -341,4 +343,14 @@ test("keyboard entry and responsive page pass automated accessibility checks", a
   await page.keyboard.press("Enter");
   await viewportFits(page);
   await axeCheck(page);
+});
+
+test('emoji-only UI preserves deferred comment drafts', async ({page}) => {
+ await page.goto('/monitor-v3.html');
+ const raw = JSON.stringify({version:1,drafts:[{productId:'monitor:asus-pa279crv',text:'saved draft'}]});
+ await page.evaluate(value => localStorage.setItem('connectable-v3-comment-drafts',value),raw);
+ await modelCard(page, 'PA279CRV').locator('[data-action="detail"]').click();
+ await expect(page.locator('#detail-content textarea')).toHaveCount(0);
+ await page.locator('#helpful-toggle').click();
+ expect(await page.evaluate(() => localStorage.getItem('connectable-v3-comment-drafts'))).toBe(raw);
 });
