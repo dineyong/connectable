@@ -54,3 +54,29 @@ class MsiManualSourceTests(unittest.TestCase):
         self.assertEqual(p['usable_for_compatibility'],'NO')
         for field in ('power_consumption','warranty_korea','korean_sku_identity','per_input_simultaneous_conditions'):
             self.assertIn(field,p['missing_fields'])
+
+    def test_mpg_shared_manual_exact_model_binding(self):
+        link='https://download.msi.com/archive/mnu_exe/monitor/MPG271QRX_321URX_QD-OLEDv1.1_Korean.pdf'
+        data=load(DATA/'official_specs.json')
+        p=next(p for p in data['products'] if p['display_model']=='MPG 321URX QD-OLED')
+        p['source_refs'][0]['url']=link
+        official(data)
+        for bad in [link+'?redirect=other',link.replace('v1.1','v1.2'),link.replace('download.msi.com','download-2.msi.com'),URL]:
+            with self.subTest(url=bad):
+                p['source_refs'][0]['url']=bad
+                with self.assertRaises(ValueError):official(data)
+
+    def test_mpg_multisource_support_keeps_conditions_and_unknowns(self):
+        from scripts import build_monitor_v3 as builder
+        p=next(p for p in builder.build(builder.load(builder.SOURCE))['products'] if p['display_model']=='MPG 321URX QD-OLED')
+        for prop in ('pip','pbp'):
+            f=next(f for f in p['facts'] if f['property']==prop)
+            self.assertIs(f['value'],True)
+            self.assertEqual(f['source_refs'],['src:msi-mpg-321urx-qd-oled:manual-20261011'])
+            self.assertNotIn(prop,p['missing_fields'])
+        self.assertTrue(any('HDR' in n and 'PIP/PBP' in n for n in p['notes']))
+        self.assertTrue(any('PIP/PBP 활성화' in n and 'Adaptive-Sync' in n for n in p['notes']))
+        self.assertEqual(next(f['value'] for f in p['facts'] if f['property']=='refresh'),240)
+        self.assertEqual(p['usable_for_compatibility'],'NO')
+        for field in ('power_consumption','warranty_korea','korean_sku_identity','per_input_simultaneous_conditions'):
+            self.assertIn(field,p['missing_fields'])

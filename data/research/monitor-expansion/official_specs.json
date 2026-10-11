@@ -6971,6 +6971,14 @@
           "checked_on": "2026-10-11",
           "access_status": "DIRECT_CHECK",
           "location": "Product overview / KVM"
+        },
+        {
+          "id": "src:msi-mpg-321urx-qd-oled:manual-20261011",
+          "url": "https://download.msi.com/archive/mnu_exe/monitor/MPG271QRX_321URX_QD-OLEDv1.1_Korean.pdf",
+          "title": "MSI MPG 271QRX / 321URX QD-OLED Korean manual V1.1",
+          "checked_on": "2026-10-11",
+          "access_status": "DIRECT_CHECK",
+          "location": "Official MPG 321URX support Manual & Document link; printed pp.12,17"
         }
       ],
       "facts": [
@@ -7352,12 +7360,34 @@
           ],
           "location": "KVM: one keyboard/mouse controls multiple devices; no port switching combinations inferred",
           "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "msi-mpg-321urx-qd-oled:manual-pip",
+          "property": "pip",
+          "value": true,
+          "unit": null,
+          "scope": "MULTI_SOURCE",
+          "source_refs": [
+            "src:msi-mpg-321urx-qd-oled:manual-20261011"
+          ],
+          "location": "Korean manual V1.1 printed p.17 PIP/PBP",
+          "qualifier": "MANUFACTURER_STATED"
+        },
+        {
+          "id": "msi-mpg-321urx-qd-oled:manual-pbp",
+          "property": "pbp",
+          "value": true,
+          "unit": null,
+          "scope": "MULTI_SOURCE",
+          "source_refs": [
+            "src:msi-mpg-321urx-qd-oled:manual-20261011"
+          ],
+          "location": "Korean manual V1.1 printed p.17 PIP/PBP",
+          "qualifier": "MANUFACTURER_STATED"
         }
       ],
       "missing_fields": [
         "power_consumption",
-        "pip",
-        "pbp",
         "korean_sku_identity",
         "per_input_simultaneous_conditions",
         "physical_test_results",
@@ -7367,8 +7397,10 @@
         "origin=NEW_DIRECT_CHECK; rechecked=2026-10-10 (not copied from prior catalog).",
         "한국 판매 SKU와 문서 모델의 동일성 UNKNOWN. 공개 검토/사람 승인 미완료.",
         "결측은 미지원이 아니다. PD 공급은 소비전력/실제 충전과 다르다. 포트 한도는 동시 구동 보장이 아니다.",
-        "KVM/PIP/PBP omitted in this spec text; left UNKNOWN even if other marketing sources may mention them.",
-        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion."
+        "초기 사양 표에 없던 KVM은 제품 소개, PIP/PBP는 2026-10-11 연결 확인한 공식 설명서로 후속 확인했다.",
+        "Dimensions/weight are manufacturer figures; no cross-region or implicit unit conversion.",
+        "한국어 설명서 V1.1 인쇄12쪽: HDR 신호 수신 시 PIP/PBP 설정 비활성. 인쇄17쪽: PIP/PBP 활성화 시 Adaptive-Sync·Optix Scope·HDMI CEC 꺼짐, DisplayHDR 사용 불가. 입력별 동시 해상도·주사율은 미확인 유지.",
+        "공용 설명서의 MPG 271QRX(3CD7)와 MPG 321URX(3DD2)를 구분했다. 한국어 제공만으로 한국 판매 SKU나 국내 보증을 확정하지 않는다."
       ]
     },
     {

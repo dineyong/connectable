@@ -84,3 +84,7 @@
 ## MAG 설명서 검토 · 2026-10-11
 
 [MAG 274QRF QD E2 공식 설명서 연결 및 조건 확인](MSI_MAG_MANUAL_VERIFICATION_REPORT.md). PIP/PBP 제한을 반영했고 DCI-P3·포장중량 문서 차이는 충돌로 표시한다. 신규 수치 확정 없이 기존 facts와 한국 SKU/소비전력 결측 보존.
+
+## MPG 설명서 후속 검토 · 2026-10-11
+
+[MPG 321URX QD-OLED 설명서 확인](MSI_MPG_MANUAL_VERIFICATION_REPORT.md): 공식 지원 메뉴에 연결된 공용 설명서에서 해당 모델 PIP/PBP 지원을 확인하고 제한 조건과 함께 반영했다. 한국 SKU·소비전력·전체 동시 구동 조건 및 기존 자료 충돌은 미확인/충돌 상태를 유지한다.

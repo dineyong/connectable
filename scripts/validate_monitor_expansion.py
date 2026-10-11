@@ -26,6 +26,8 @@ DOMAINS={
 # See docs/MSI_MANUAL_LINK_VERIFICATION_REPORT.md and
 # docs/MSI_MAG_MANUAL_VERIFICATION_REPORT.md; no host-wide approval.
 REVIEWED_MANUALS = {
+    ('MSI', 'monitor:msi-mpg-321urx-qd-oled', 'MPG 321URX QD-OLED'):
+        {'https://download.msi.com/archive/mnu_exe/monitor/MPG271QRX_321URX_QD-OLEDv1.1_Korean.pdf'},
     ('MSI', 'monitor:msi-mag-274qrf-qd-e2', 'MAG 274QRF QD E2'):
         {'https://download.msi.com/archive/mnu_exe/monitor/MAG_274QRF-QD-E2v1.1_Korean.pdf'},
     ('MSI', 'monitor:msi-modern-md271ul', 'Modern MD271UL'):
