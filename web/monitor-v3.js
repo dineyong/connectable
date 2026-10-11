@@ -347,6 +347,34 @@
     if (!notes.length) return "";
     return `<div class="dialog-notice source-conflict"><strong>공식 자료 간 표기 차이 · 확인 필요</strong><ul>${notes.map(n => `<li>${esc(n.slice("CONFLICT_REVIEW ".length))}</li>`).join("")}</ul><p>아래 값은 기록된 문서의 표기입니다. 충돌이 해소된 것으로 해석하지 마세요.</p></div>`;
   }
+  function externalReviews(p) {
+    const data = window.CONNECTABLE_REVIEW_LINKS;
+    const intro = '<p class="review-links-note">외부 작성자의 경험입니다. 공식 사양·제품 평가 점수·호환성 승인이 아니며 한국 판매 SKU 동일성을 보장하지 않습니다. 원문은 새 창 또는 새 탭으로 열립니다.</p>';
+    const shell = (body) => `<section class="external-reviews" aria-label="외부 후기 원문"><h3 class="detail-section">외부 후기 원문</h3>${intro}${body}</section>`;
+    if (!data || data.schema_version !== 1 || !Array.isArray(data.items))
+      return shell('<p class="review-links-empty">후기 링크 데이터를 불러오지 못했습니다. 공식 사양은 위에서 확인할 수 있습니다.</p>');
+    const items = data.items.filter(item => item && item.product_id === p.id);
+    if (!items.length) return shell('<p class="review-links-empty">아직 이 모델에 연결해 확인한 외부 후기 링크가 없습니다.</p>');
+    const cards = items.map(item => {
+      let url;
+      try {
+        if (typeof item.url !== 'string' || /[\s\\%\u0000-\u001f\u007f]/.test(item.url)) return '';
+        const parsed = new URL(item.url);
+        if (parsed.protocol !== 'https:' || parsed.username || parsed.password || parsed.port || parsed.search || parsed.hash) return '';
+        const host = {RTINGS:'www.rtings.com',Quasarzone:'quasarzone.com'}[item.site];
+        if (!host || parsed.hostname !== host || !item.url.startsWith(`https://${host}/`)) return '';
+        if (!(item.site === 'RTINGS' ? /^\/monitor\/reviews\/[a-z0-9-]+\/[a-z0-9-]+$/.test(parsed.pathname) : /^\/bbs\/qf_dp\/views\/\d+$/.test(parsed.pathname))) return '';
+        url = esc(parsed.href);
+      } catch { return ''; }
+      if (![item.site,item.title,item.summary,item.checked_on].every(value => typeof value === 'string')) return '';
+      if (item.model_scope !== 'EXACT_DOCUMENT_MODEL' || !['FIRST_HAND_REVIEW','PROFESSIONAL_REVIEW'].includes(item.review_type)) return '';
+      const reviewType = item.review_type === 'PROFESSIONAL_REVIEW' ? '전문 리뷰' : '개인 사용기';
+      const commercial = {PRESENT:'광고·판매·제휴 요소 있음',NOT_OBSERVED:'광고·제휴 요소 확인되지 않음',UNKNOWN:'광고·제휴 여부 미확인'}[item.commercial_context];
+      if (!commercial) return '';
+      return `<li class="review-link-card"><p class="review-link-meta">${esc(item.site)} · ${reviewType} · 확인일 ${esc(item.checked_on)}</p><a href="${url}" target="_blank" rel="noopener noreferrer">${esc(item.title)} <span aria-hidden="true">↗</span><span class="sr-only"> (새 창 또는 새 탭)</span></a><p>${esc(item.summary)}</p><p class="review-link-meta">${esc(commercial)}</p></li>`;
+    }).filter(Boolean).join('');
+    return shell(cards ? `<ul class="review-link-list">${cards}</ul>` : '<p class="review-links-empty">안전하게 표시할 수 있는 후기 링크가 없습니다.</p>');
+  }
   function detail(p) {
     $("detail-content").innerHTML =
       `<h2 id="detail-title">${esc(name(p))}</h2><p class="detail-meta">문서 지역 ${esc(p.region)} · 문서 모델 식별 ${esc(p.variant_status)}</p><p class="dialog-notice">한국 판매 SKU 동일성 미확인 · 사람 검토 미완료 · 호환성 판정 사용 불가. 아래는 공식 문서 조사값이며 실제 연결 성능이나 한국 SKU 사양의 보장이 아닙니다.</p><a class="detail-link" href="monitors/${encodeURIComponent(p.id.replace("monitor:", ""))}/">제품 정보 링크 열기 →</a>${supplementLink(p)}${conflictNotice(p)}<h3 class="detail-section">공식 문서의 사양과 조건</h3><div class="table-scroll" tabindex="0" aria-label="공식 사양표 가로 스크롤"><table><thead><tr><th scope="col">항목</th><th scope="col">표기값</th><th scope="col">조건·문서 위치</th><th scope="col">근거</th></tr></thead><tbody>${p.facts.map((f) => `<tr><th scope="row">${esc(labels[f.property] || f.property)}</th><td data-label="표기값">${factValue(f)}</td><td data-label="조건·문서 위치">${factContext(f)}</td><td data-label="근거">${links(p, f.source_refs)}</td></tr>`).join("")}</tbody></table></div><h3 class="detail-section">아직 확인하지 못한 항목</h3><p class="detail-meta">${p.missing_fields.map((x) => esc(labels[x] || x)).join(" · ") || "별도 기록 없음"}</p><h3 class="detail-section">공식 출처</h3><ul class="source-list">${p.source_refs
@@ -356,7 +384,7 @@
         })
         .join(
           "",
-        )}</ul><h3 class="detail-section">조사 메모</h3><ul class="source-list">${p.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul><section class="local-feedback"><h3 class="detail-section">이 정보가 도움이 됐나요?</h3><p>이 기기의 브라우저에만 저장하는 반응입니다. 제품 평가나 전체 사용자 집계가 아닙니다.</p><button type="button" id="helpful-toggle" aria-pressed="false">👍 도움이 됐어요</button><p id="reaction-status" role="status"></p></section>`;
+        )}</ul><h3 class="detail-section">조사 메모</h3><ul class="source-list">${p.notes.map((n) => `<li>${esc(n)}</li>`).join("")}</ul>${externalReviews(p)}<section class="local-feedback"><h3 class="detail-section">이 정보가 도움이 됐나요?</h3><p>이 기기의 브라우저에만 저장하는 반응입니다. 제품 평가나 전체 사용자 집계가 아닙니다.</p><button type="button" id="helpful-toggle" aria-pressed="false">👍 도움이 됐어요</button><p id="reaction-status" role="status"></p></section>`;
     const btn = $("helpful-toggle");
     const key = `connectable-v3-helpful:${p.id}`;
     let liked = false;

@@ -2,7 +2,7 @@
 
 기존 파생 데이터의 정리이며 공식 원문 재확인이나 이미지 사용권 검증 결과가 아니다.
 
-- 원본: `data/site/monitor-v3.json` · SHA-256 `652e099ba161dd1219a7a86fcb427d08e9c40d46916bb05d52e82c97c11cfa5d`
+- 원본: `data/site/monitor-v3.json` · SHA-256 `10a0845a096de582989830afce552e34fe659f896dffbed4a0b950e12551601c`
 - 제품 30종 · 자료 확인일 2026-10-10 · 공개 상태 UNKNOWN
 - 이미지: 모든 제품은 CSS 형태 예시. 제품 사진 원본 URL·권리자·상업 사용 허용 근거·모델/지역 일치 검토는 미확인. 실제 사진 적용 0건.
 - 승인된 이미지 레지스트리가 아직 없으므로 이 목록은 제품에 사진 사용권을 부여하지 않는다.
@@ -26,9 +26,9 @@
 | `monitor:dell-aw3225qf` / Dell AW3225QF | US | USB-C 영상 | 11 | [문서 1](https://www.dell.com/en-us/shop/alienware-32-4k-qd-oled-gaming-monitor-aw3225qf/apd/210-blmq/computer-monitors) · [문서 2](https://www.dell.com/ko-kr/shop/monitors/apd/alienware-32-240hz-4k-qdoled-gaming-monitor-aw3225qf/aw3225qf_monitor/-) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:dell-u2724d` / Dell U2724D | US | USB-C 영상 | 6 | [문서 1](https://www.dell.com/en-us/shop/dell-ultrasharp-27-monitor-u2724d/apd/210-bksf/monitors-monitor-accessories) · [문서 2](https://www.dell.com/en-us/shop/monitors/apd/dell-ultrasharp-27-monitor-u2724d/u2724d_monitor/-) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:dell-u2724de` / Dell U2724DE | US | USB-C 영상 | 5 | [문서 1](https://www.dell.com/en-us/shop/dell-ultrasharp-27-thunderbolt-hub-monitor-u2724de/apd/210-bksj/monitors-monitor-accessories) · [문서 2](https://www.dell.com/ko-kr/shop/monitors/apd/dell-ultrasharp-27-thunderbolt-허브-모니터-u2724de/u2724de_withstnd_mon/-) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:gigabyte-m27q-rev-1-0` / Gigabyte M27Q rev.1.0 | Global | USB-C 영상 | 8 | [문서 1](https://www.gigabyte.com/Monitor/M27Q-rev-10/sp) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:gigabyte-m28u` / Gigabyte M28U | Global | USB-C 영상 | 7 | [문서 1](https://www.gigabyte.com/Monitor/M28U/sp) · [문서 2](https://www.gigabyte.com/Monitor/M28U) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:gigabyte-m32u` / Gigabyte M32U | Global | USB-C 영상 | 7 | [문서 1](https://www.gigabyte.com/Monitor/M32U/sp) · [문서 2](https://www.gigabyte.com/Monitor/M32U) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:gigabyte-m27q-rev-1-0` / Gigabyte M27Q rev.1.0 | Global | USB-C 영상 | 7 | [문서 1](https://www.gigabyte.com/Monitor/M27Q-rev-10/sp) · [문서 2](https://www.gigabyte.com/Monitor/M27Q-rev-10) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:gigabyte-m28u` / Gigabyte M28U | Global | USB-C 영상 | 7 | [문서 1](https://www.gigabyte.com/Monitor/M28U/sp) · [문서 2](https://www.gigabyte.com/Monitor/M28U) · [문서 3](https://www.gigabyte.com/kr/Monitor/M28U) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:gigabyte-m32u` / Gigabyte M32U | Global | USB-C 영상 | 7 | [문서 1](https://www.gigabyte.com/Monitor/M32U/sp) · [문서 2](https://www.gigabyte.com/Monitor/M32U) · [문서 3](https://www.gigabyte.com/kr/Monitor/M32U) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:lg-27gp850-b` / LG 27GP850-B | ES | 없음 (검색용 값만) | 8 | [문서 1](https://www.lg.com/es/monitores/monitores-ultragear-gaming/27gp850-b/) · [문서 2](https://www.lg.com/es/monitores/monitores-ultragear-gaming/27gp850-b/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:lg-27gr83q-b` / LG 27GR83Q-B | GB | USB-C 영상 | 15 | [문서 1](https://www.lg.com/uk/monitors/gaming/27gr83q-b/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:lg-27gs95qe-b` / LG 27GS95QE-B | GB | USB-C 영상 | 12 | [문서 1](https://www.lg.com/uk/monitors/gaming/27gs95qe-b/) | 형태 예시 / 사진 권한 미확인 |
@@ -37,7 +37,7 @@
 | `monitor:lg-34wq75c-b-aus` / LG 34WQ75C-B.AUS | US | USB-C 영상 | 8 | [문서 1](https://www.lg.com/us/support/products/documents/34WQ75C_Spec_Sheet.pdf) · [문서 2](https://www.lg.com/uk/monitors/ultrawide/34wq75c-b/) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:msi-mag-274qrf-qd-e2` / MSI MAG 274QRF QD E2 | Global | 없음 (검색용 값만) | 6 | [문서 1](https://www.msi.com/Monitor/MAG-274QRF-QD-E2/Specification) · [문서 2](https://www.msi.com/Monitor/MAG-274QRF-QD-E2) · [문서 3](https://download.msi.com/archive/mnu_exe/monitor/MAG_274QRF-QD-E2v1.1_Korean.pdf) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:msi-mpg-321urx-qd-oled` / MSI MPG 321URX QD-OLED | Global | 없음 (검색용 값만) | 5 | [문서 1](https://www.msi.com/Monitor/MPG-321URX-QD-OLED/Specification) · [문서 2](https://www.msi.com/Monitor/MPG-321URX-QD-OLED) · [문서 3](https://download.msi.com/archive/mnu_exe/monitor/MPG271QRX_321URX_QD-OLEDv1.1_Korean.pdf) | 형태 예시 / 사진 권한 미확인 |
-| `monitor:msi-modern-md271ul` / MSI Modern MD271UL | Global | 없음 (검색용 값만) | 13 | [문서 1](https://www.msi.com/Business-Productivity-Monitor/Modern-MD271UL/Specification) · [문서 2](https://download.msi.com/archive/mnu_exe/monitor/Modern_MD271ULv1.1_Korean.pdf) | 형태 예시 / 사진 권한 미확인 |
+| `monitor:msi-modern-md271ul` / MSI Modern MD271UL | Global | 없음 (검색용 값만) | 12 | [문서 1](https://www.msi.com/Business-Productivity-Monitor/Modern-MD271UL/Specification) · [문서 2](https://download.msi.com/archive/mnu_exe/monitor/Modern_MD271ULv1.1_Korean.pdf) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:samsung-s32cg554eu-ls32cg554euxen` / Samsung S32CG554EU (LS32CG554EUXEN) | DE | 없음 (검색용 값만) | 8 | [문서 1](https://images.samsung.com/is/content/samsung/assets/de/display/pdf/Datenblatt_Monitor_LS32CG554EUXEN.pdf) | 형태 예시 / 사진 권한 미확인 |
 | `monitor:samsung-s65uc-ls34c650ueexxy` / Samsung S65UC (LS34C650UEEXXY) | AU | USB-C 영상 | 7 | [문서 1](https://www.samsung.com/au/monitors/high-resolution/viewfinity-s6-s65uc-34-inch-ultra-wqhd-ls34c650ueexxy/) | 형태 예시 / 사진 권한 미확인 |
 
@@ -55,7 +55,7 @@
 | `pip` | 17 |
 | `pbp` | 16 |
 | `usb_c` | 12 |
-| `vrr` | 9 |
+| `vrr` | 7 |
 | `power_consumption` | 7 |
 | `hdr` | 6 |
 | `usb_hub` | 5 |

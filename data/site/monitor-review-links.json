@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "review-link:rtings-gigabyte-m32u",
+      "product_id": "monitor:gigabyte-m32u",
+      "url": "https://www.rtings.com/monitor/reviews/gigabyte/m32u",
+      "site": "RTINGS",
+      "title": "M32U 전문 측정 리뷰",
+      "summary": "게임 응답과 화질·문자 가독성 등을 다루는 전문 리뷰입니다.",
+      "checked_on": "2026-10-11",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:rtings-asus-xg27aqdmg",
+      "product_id": "monitor:asus-xg27aqdmg",
+      "url": "https://www.rtings.com/monitor/reviews/asus/rog-strix-oled-xg27aqdmg",
+      "site": "RTINGS",
+      "title": "XG27AQDMG 전문 측정 리뷰",
+      "summary": "OLED 화면 특성과 게임 응답 등을 다루는 전문 리뷰입니다.",
+      "checked_on": "2026-10-11",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:rtings-asus-pg32ucdm",
+      "product_id": "monitor:asus-pg32ucdm",
+      "url": "https://www.rtings.com/monitor/reviews/asus/rog-swift-oled-pg32ucdm",
+      "site": "RTINGS",
+      "title": "PG32UCDM 전문 측정 리뷰",
+      "summary": "화질·색상·게임 응답 등을 다루는 전문 리뷰입니다.",
+      "checked_on": "2026-10-11",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:rtings-aoc-q27g3xmn",
+      "product_id": "monitor:aoc-q27g3xmn",
+      "url": "https://www.rtings.com/monitor/reviews/aoc/q27g3xmn",
+      "site": "RTINGS",
+      "title": "Q27G3XMN 전문 측정 리뷰",
+      "summary": "화질·로컬 디밍·게임 응답 등을 다루는 전문 리뷰입니다.",
+      "checked_on": "2026-10-11",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:quasarzone-m32u",
+      "product_id": "monitor:gigabyte-m32u",
+      "url": "https://quasarzone.com/bbs/qf_dp/views/310312",
+      "site": "Quasarzone",
+      "title": "M32U 구매 후 게임 사용기",
+      "summary": "구매 과정과 PC 게임 화면·설정 경험을 다루는 개인 사용기입니다.",
+      "checked_on": "2026-10-11",
+      "commercial_context": "UNKNOWN",
+      "source_review_id": "mr:m32u-pc-games",
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "FIRST_HAND_REVIEW"
+    }
+  ]
+}
