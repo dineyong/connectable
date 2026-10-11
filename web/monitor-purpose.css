@@ -872,3 +872,15 @@
 }
 
 .purpose-design .fact-value { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Direct comparison entry and accessible product picker. */
+.purpose-design .compare-entry { max-width:1120px; margin:0 auto 24px; padding:22px; display:flex; align-items:center; justify-content:space-between; gap:20px; border:1px solid #dce5df; border-radius:18px; background:white; }
+.purpose-design .compare-entry h2 {font-size:20px; margin:0 0 8px;}
+.purpose-design .compare-entry p {margin:0; color:#52655c;}
+.purpose-design #compare-start,.purpose-design #compare-picker-submit {background:#123c2d; color:white; border:0; border-radius:24px; padding:14px 22px; font-weight:700; cursor:pointer;}
+.purpose-design #compare-start {flex-shrink:0;}
+.purpose-design #compare-picker-dialog {width:min(560px, calc(100% - 32px));}
+.purpose-design .compare-pickers {display:grid; gap:10px; margin-top:20px;}
+.purpose-design .compare-pickers select {width:100%; min-width:0; padding:12px; border:1px solid #bacac0; border-radius:10px; background:white; font:inherit;}
+.purpose-design #products {scroll-margin-top:24px;}
+@media(max-width:760px) {.purpose-design .compare-entry {margin:0 16px 20px; flex-direction:column; align-items:stretch;} }

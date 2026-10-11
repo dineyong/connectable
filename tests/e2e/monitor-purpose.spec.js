@@ -60,3 +60,40 @@ test("purpose retains brand selection and manual condition changes clear shortcu
     ),
   ).toBe(true);
 });
+
+test("purpose shows results immediately and Mac label preserves USB-C-only scope", async ({page}) => {
+  await page.goto('/monitor-v3.html');
+  await expect(page.locator('[data-purpose="laptop"]')).toContainText('맥북·맥미니');
+  for (const purpose of ['office','gaming']) {
+    await page.locator(`[data-purpose="${purpose}"]`).click();
+    await expect(page.locator('#products')).toBeFocused();
+    await expect(page.locator('#products-title')).toBeInViewport();
+  }
+});
+
+test("direct comparison picker rejects missing and duplicate choices and compares two or three", async ({page}) => {
+  await page.goto('/monitor-v3.html');
+  await page.locator('#compare-start').click();
+  await page.locator('#compare-picker-submit').click();
+  await expect(page.locator('#compare-picker-status')).toContainText('첫 번째와 두 번째');
+  const ids = data.products.slice(0,3).map(p=>p.id);
+  await page.locator('#compare-pick-1').selectOption(ids[0]);
+  await page.locator('#compare-pick-2').selectOption(ids[0]);
+  await page.locator('#compare-picker-submit').click();
+  await expect(page.locator('#compare-picker-status')).toContainText('서로 다른');
+  await page.locator('#compare-pick-2').selectOption(ids[1]);
+  await page.locator('#compare-picker-submit').click();
+  await expect(page.locator('#compare-dialog')).toBeVisible();
+  await expect(page.locator('#compare-table')).toContainText(data.products[0].display_model);
+  await expect(page.locator('#compare-table')).toContainText(data.products[1].display_model);
+  await page.locator('[data-close="compare-dialog"]').click();
+  await page.locator('#compare-start').click();
+  await page.locator('#compare-pick-3').selectOption(ids[2]);
+  await page.locator('#compare-picker-submit').click();
+  await expect(page.locator('#compare-table')).toContainText(data.products[2].display_model);
+  await page.locator('[data-close="compare-dialog"]').click();
+  await page.locator('#compare-start').click();
+  await page.locator('#compare-pick-1').selectOption('');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#selection-count')).toContainText('3 / 3');
+});

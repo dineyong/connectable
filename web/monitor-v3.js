@@ -12,7 +12,7 @@
     $("result-count").textContent = "불러오기 실패";
     document
       .querySelectorAll(
-        ".filter-body input, .filter-body select, #monitor-search, #sort-order, #group-by-brand, #brand-clear, #purpose-all, [data-purpose], #nav-compare",
+        ".filter-body input, .filter-body select, #monitor-search, #sort-order, #group-by-brand, #brand-clear, #purpose-all, [data-purpose], #nav-compare, #compare-start",
       )
       .forEach((el) => {
         el.disabled = true;
@@ -212,6 +212,8 @@
     if (purpose === 'creative') $("filter-resolution").value = 'uhd';
     if (purpose === 'laptop') $("filter-usbc").value = 'yes';
     clearPurpose(); button.setAttribute('aria-pressed', 'true'); render();
+    $("products").focus({preventScroll: true});
+    $("products").scrollIntoView({block: "start", behavior: "instant"});
   }));
   $("purpose-all").addEventListener('click', reset);
   function render() {
@@ -409,13 +411,40 @@
   $("differences-only").addEventListener("change", compare);
   function openCompare() {
     if (selected.size < 2) {
-      $("interaction-status").textContent = "비교할 모니터를 2~3개 담아주세요.";
-      $("products").scrollIntoView();
+      openPicker();
       return;
     }
     compare();
     $("compare-dialog").showModal();
   }
+  function openPicker() {
+    const ids = [...selected];
+    const options = [...products].sort((a,b) => name(a).localeCompare(name(b), "ko"))
+      .map(p => `<option value="${esc(p.id)}">${esc(name(p))}</option>`).join("");
+    [1,2,3].forEach((n,i) => {
+      $(`compare-pick-${n}`).innerHTML = '<option value="">모니터 선택</option>' + options;
+      $(`compare-pick-${n}`).value = ids[i] || "";
+    });
+    $("compare-picker-status").textContent = "";
+    $("compare-picker-dialog").showModal();
+  }
+  $("compare-start").addEventListener("click", openPicker);
+  $("compare-picker-submit").addEventListener("click", () => {
+    const values = [1,2,3].map(n => $(`compare-pick-${n}`).value);
+    const ids = values.filter(Boolean);
+    if (!values[0] || !values[1]) {
+      $("compare-picker-status").textContent = "첫 번째와 두 번째 모니터를 선택해주세요.";
+      return;
+    }
+    if (new Set(ids).size !== ids.length || ids.some(id => !products.some(p => p.id === id))) {
+      $("compare-picker-status").textContent = "서로 다른 모니터를 선택해주세요.";
+      return;
+    }
+    selected.clear(); ids.forEach(id => selected.add(id));
+    render(); renderTray();
+    $("compare-picker-dialog").close();
+    openCompare();
+  });
   $("compare-open").addEventListener("click", openCompare);
   $("nav-compare").addEventListener("click", openCompare);
   if (matchMedia("(max-width:760px)").matches) $("filters").open = false;
