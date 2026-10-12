@@ -189,6 +189,60 @@
       "evidence_origin": "DIRECT_CHECK",
       "evidence_location": "iab 공개 원문 제목·펼친 설명의 MSI MAG 274QRF QD E2 모델 표기, 색 재현·HDR·응답 챕터 및 제휴 링크 고지",
       "checked_on": "2026-10-11"
+    },
+    {
+      "product_id": "monitor:asus-pa279crv",
+      "site": "Blog",
+      "url": "https://www.parkablogs.com/index.php/content/review-asus-proart-pa279crv-4k-27-inch-display",
+      "checked_model": "PA279CRV",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 원문 제목·본문 11행 제품 대여, 58–94행 직접 조작·측정·화면 관측, 117–119/249행 구매 링크·제휴 고지",
+      "checked_on": "2026-10-12"
+    },
+    {
+      "product_id": "monitor:asus-pa248qv",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=KCxgIK6Cg7E",
+      "checked_model": "PA248QV",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 watch 페이지를 브라우저로 직접 열어 제목·펼친 게시자 설명의 PA248QV와 자체 시험 명시, 개봉·첫 인상·편집 예제 챕터 확인",
+      "checked_on": "2026-10-12"
+    },
+    {
+      "product_id": "monitor:asus-va24ehf",
+      "site": "Blog",
+      "url": "https://www.canbuyornot.com/reviews/pc/asus-va24ehf-eye-care-gaming-monitor-review-price/",
+      "checked_model": "VA24EHF",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 원문 제목·36행 창가 책상 사용, 39–47행 직접 조립·OSD 설정·시험 경험, 48–50행 구매 링크 및 ASUS 제품 제공 명시",
+      "checked_on": "2026-10-12"
+    },
+    {
+      "product_id": "monitor:dell-u2724d",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=EU9ckzIwnMw",
+      "checked_model": "U2724D",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 watch 원문 브라우저 확인: 정확 모델 제목·게시자 설명의 U2724D, 직접 제작 챕터 Connections/Quick Menu/Auto Brightness/Display/Backlight/Color 및 링크 수수료 고지",
+      "checked_on": "2026-10-12"
+    },
+    {
+      "product_id": "monitor:dell-u2724de",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=zeiJtjJBKdE",
+      "checked_model": "U2724DE",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 watch 원문 브라우저 확인: 제목과 펼친 게시자 설명에 U2724DE 및 U2724D first impressions 명시, U2724DE Thunderbolt 및 두 모델 조합 항목 구분",
+      "checked_on": "2026-10-12"
+    },
+    {
+      "product_id": "monitor:lg-27up850k-w",
+      "site": "Blog",
+      "url": "https://www.chip.cz/testy/recenze-lg-ultrafine-27up850k-w-paradni-levny-10bitovy-obraz-s-usb-c",
+      "checked_model": "27UP850K-W",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "iab 공개 원문 제목·본문·Technická data의 27UP850K-W 전체 표기. Rozumná spotřeba의 실제 사용 설정과 전력 측정, Zobrazovací IPS panel의 측정 설명. 본문 reklama 광고 및 Heureka 가격 모듈 표시.",
+      "checked_on": "2026-10-12"
     }
   ]
 }

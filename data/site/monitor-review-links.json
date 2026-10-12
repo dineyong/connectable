@@ -338,6 +338,84 @@
       "source_review_id": null,
       "model_scope": "EXACT_DOCUMENT_MODEL",
       "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:blog-asus-pa279crv-parka",
+      "product_id": "monitor:asus-pa279crv",
+      "url": "https://www.parkablogs.com/index.php/content/review-asus-proart-pa279crv-4k-27-inch-display",
+      "site": "Blog",
+      "title": "PA279CRV 디자인 작업·측정 리뷰",
+      "summary": "색상 측정과 화면 반사·스탠드 조작을 다루는 영어 블로그 리뷰입니다.",
+      "checked_on": "2026-10-12",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:youtube-asus-pa248qv",
+      "product_id": "monitor:asus-pa248qv",
+      "url": "https://www.youtube.com/watch?v=KCxgIK6Cg7E",
+      "site": "YouTube",
+      "title": "PA248QV 편집·디자인 영상 리뷰",
+      "summary": "개봉·화면·편집 예제와 게임 항목을 다루는 스페인어 영상 리뷰입니다.",
+      "checked_on": "2026-10-12",
+      "commercial_context": "UNKNOWN",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:blog-asus-va24ehf-canbuyornot",
+      "product_id": "monitor:asus-va24ehf",
+      "url": "https://www.canbuyornot.com/reviews/pc/asus-va24ehf-eye-care-gaming-monitor-review-price/",
+      "site": "Blog",
+      "title": "VA24EHF 책상 사용·조작 리뷰",
+      "summary": "책상에서 사용한 화면과 조립·OSD 조작 경험을 다루는 영어 리뷰입니다.",
+      "checked_on": "2026-10-12",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:youtube-dell-u2724d",
+      "product_id": "monitor:dell-u2724d",
+      "url": "https://www.youtube.com/watch?v=EU9ckzIwnMw",
+      "site": "YouTube",
+      "title": "U2724D 화면·조작 영상 리뷰",
+      "summary": "연결·메뉴·화면·밝기 조작 항목을 다루는 영어 영상 리뷰입니다.",
+      "checked_on": "2026-10-12",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:youtube-dell-u2724de",
+      "product_id": "monitor:dell-u2724de",
+      "url": "https://www.youtube.com/watch?v=zeiJtjJBKdE",
+      "site": "YouTube",
+      "title": "U2724DE·U2724D 초기 사용 인상",
+      "summary": "두 모델의 초기 사용 인상과 연결 구성을 다루는 영어 영상입니다.",
+      "checked_on": "2026-10-12",
+      "commercial_context": "UNKNOWN",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:blog-chip-lg-27up850k-w",
+      "product_id": "monitor:lg-27up850k-w",
+      "url": "https://www.chip.cz/testy/recenze-lg-ultrafine-27up850k-w-paradni-levny-10bitovy-obraz-s-usb-c",
+      "site": "Blog",
+      "title": "27UP850K-W 전문 리뷰",
+      "summary": "화면 측정·스탠드·단자·메뉴와 실제 사용 전력 관측을 다루는 전문 리뷰입니다.",
+      "checked_on": "2026-10-12",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW"
     }
   ],
   "reviewed_bindings": [
@@ -445,6 +523,36 @@
       "product_id": "monitor:msi-mag-274qrf-qd-e2",
       "site": "YouTube",
       "url": "https://www.youtube.com/watch?v=6kZnaRwYsfM"
+    },
+    {
+      "product_id": "monitor:asus-pa279crv",
+      "site": "Blog",
+      "url": "https://www.parkablogs.com/index.php/content/review-asus-proart-pa279crv-4k-27-inch-display"
+    },
+    {
+      "product_id": "monitor:asus-pa248qv",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=KCxgIK6Cg7E"
+    },
+    {
+      "product_id": "monitor:asus-va24ehf",
+      "site": "Blog",
+      "url": "https://www.canbuyornot.com/reviews/pc/asus-va24ehf-eye-care-gaming-monitor-review-price/"
+    },
+    {
+      "product_id": "monitor:dell-u2724d",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=EU9ckzIwnMw"
+    },
+    {
+      "product_id": "monitor:dell-u2724de",
+      "site": "YouTube",
+      "url": "https://www.youtube.com/watch?v=zeiJtjJBKdE"
+    },
+    {
+      "product_id": "monitor:lg-27up850k-w",
+      "site": "Blog",
+      "url": "https://www.chip.cz/testy/recenze-lg-ultrafine-27up850k-w-paradni-levny-10bitovy-obraz-s-usb-c"
     }
   ]
 }

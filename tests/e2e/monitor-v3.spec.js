@@ -141,13 +141,21 @@ test("detail retains region, incomplete review, fact conditions and official sou
   await expect(dialog).toBeVisible();
   await expect(dialog).toContainText("US");
   await expect(dialog).toContainText(/검토|미확인/);
-  const links = dialog.locator('a[href^="https:"]');
+  const links = dialog.locator('.table-scroll a[href^="https:"], .source-list a[href^="https:"]');
   expect(await links.count()).toBeGreaterThan(0);
   for (const link of await links.all()) {
     await expect(link).toHaveAttribute("rel", /noopener/);
     expect(new URL(await link.getAttribute("href")).hostname).toMatch(
       /(^|\.)asus\.com$/,
     );
+  }
+  const reviewLinks = dialog.locator('.external-reviews a');
+  const expectedReviews = require('../../data/site/monitor-review-links.json').items.filter(item => item.product_id === 'monitor:asus-pa279crv');
+  await expect(reviewLinks).toHaveCount(expectedReviews.length);
+  for (const item of expectedReviews) {
+    const link = dialog.locator(`.external-reviews a[href="${item.url}"]`);
+    await expect(link).toHaveAttribute('target', '_blank');
+    await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   }
   await axeCheck(page);
   await viewportFits(page);
