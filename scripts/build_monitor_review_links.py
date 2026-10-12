@@ -25,6 +25,7 @@ REVIEWED_PATHS = {
     'monitor:asus-xg27aqdmg': '/monitor/reviews/asus/rog-strix-oled-xg27aqdmg',
     'monitor:asus-pg32ucdm': '/monitor/reviews/asus/rog-swift-oled-pg32ucdm',
     'monitor:aoc-q27g3xmn': '/monitor/reviews/aoc/q27g3xmn',
+    'monitor:lg-27gr83q-b': '/monitor/reviews/lg/27gr83q-b',
 }
 
 

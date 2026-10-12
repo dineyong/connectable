@@ -149,6 +149,24 @@ class MonitorReviewLinkTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             links.validate(data, bindings=bindings)
 
+    def test_rtings_lg_exact_model_path_and_cross_model_rejection(self):
+        row = copy.deepcopy(self.data['items'][0])
+        row.update(id='test:lg-reviewed-path', product_id='monitor:lg-27gr83q-b',
+                   checked_model='27GR83Q-B',
+                   url='https://www.rtings.com/monitor/reviews/lg/27gr83q-b')
+        dataset = {'schema_version': 1, 'items': [row]}
+        self.assertEqual(links.validate(dataset)['items'], [row])
+        for url in ('https://www.rtings.com/monitor/reviews/lg/27gr83q',
+                    'https://www.rtings.com/monitor/reviews/lg/27gp850-b'):
+            invalid = copy.deepcopy(dataset)
+            invalid['items'][0]['url'] = url
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                links.validate(invalid)
+        invalid = copy.deepcopy(dataset)
+        invalid['items'][0].update(product_id='monitor:lg-27gp850-b', checked_model='27GP850-B')
+        with self.assertRaises(ValueError):
+            links.validate(invalid)
+
 
 if __name__ == '__main__':
     unittest.main()

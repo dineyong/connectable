@@ -544,6 +544,23 @@
       "evidence_origin": "DIRECT_CHECK",
       "evidence_location": "iab 공개 원문 제목·본문·Technická data의 27UP850K-W 전체 표기. Rozumná spotřeba의 실제 사용 설정과 전력 측정, Zobrazovací IPS panel의 측정 설명. 본문 reklama 광고 및 Heureka 가격 모듈 표시.",
       "notes": "체코어 전문 매체의 공개 리뷰 원문 직접 확인. 광고 영역이 있으나 제품 제공·협찬·제휴 여부는 별도 확인하지 못함. 본인 시험·사용 설명이 확인되어 포함. 공식 사양·한국 SKU 승인으로 승격하지 않으며 원문·사진·점수는 복제하지 않음."
+    },
+    {
+      "id": "review-link:rtings-lg-27gr83q-b",
+      "product_id": "monitor:lg-27gr83q-b",
+      "url": "https://www.rtings.com/monitor/reviews/lg/27gr83q-b",
+      "site": "RTINGS",
+      "title": "27GR83Q-B 전문 측정 리뷰",
+      "summary": "게임 응답과 화질·문자 가독성을 다루는 전문 리뷰입니다.",
+      "checked_on": "2026-10-13",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "PROFESSIONAL_REVIEW",
+      "checked_model": "27GR83Q-B",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 원문의 리뷰 제목, Differences Between Sizes And Variants의 직접 시험 모델·시험 개체 설명, Our Verdict; 상단 제휴 고지",
+      "notes": "영어 공개 전문 리뷰 링크. 일부 세부 측정값·사진은 회원 제한이 있어 확인·복제하지 않음. 공개 시험 모델과 서술만 직접 확인. 한국 SKU 동일성·호환 승인 근거 아님."
     }
   ]
 }
