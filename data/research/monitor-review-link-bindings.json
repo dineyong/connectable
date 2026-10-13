@@ -252,6 +252,15 @@
       "evidence_origin": "DIRECT_CHECK",
       "evidence_location": "공개 원문 제목 및 2024-10-23 원글 #1: 전체 SKU LS32CG554EUXEN, 구매 2일 뒤 본인 사용, CS2·검은 배경의 잔상, 실제 모니터 설정 목록. 하단 광고 배너 운영 고지.",
       "checked_on": "2026-10-13"
+    },
+    {
+      "product_id": "monitor:lg-34wq75c-b-aus",
+      "site": "Forum",
+      "url": "https://www.reddit.com/r/UsbCHardware/comments/ttp475/comment/j2a1gg6/",
+      "checked_model": "34WQ75C-B.AUS",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "Reddit 공개 원문 댓글 j2a1gg6: 전체 SKU 34WQ75C-B.AUS, 전날 구매, 2021 MacBook Pro M1에서 정상 동작한 본인 관측. 댓글 영구주소 직접 확인.",
+      "checked_on": "2026-10-13"
     }
   ]
 }

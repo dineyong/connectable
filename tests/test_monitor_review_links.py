@@ -182,5 +182,12 @@ class MonitorReviewLinkTests(unittest.TestCase):
                 links.validate(invalid, bindings=bindings)
 
 
+    def test_build_projects_reviewed_bindings_for_every_source(self):
+        result = links.build()
+        expected = {(item['product_id'], item['site'], item['url']) for item in result['items']}
+        actual = {(item['product_id'], item['site'], item['url']) for item in result['reviewed_bindings']}
+        self.assertEqual(actual, expected)
+
+
 if __name__ == '__main__':
     unittest.main()

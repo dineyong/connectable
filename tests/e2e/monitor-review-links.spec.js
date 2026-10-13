@@ -57,7 +57,7 @@ test('tampered review URLs and uncertain model scope fail closed while text is e
   const good = {...reviews.items[0], title:'<img src=x onerror=alert(1)>' + '긴 제목 '.repeat(25), summary:'<script>window.injected=true</script>'};
   const badUrls = ['javascript:alert(1)','https://www.rtings.com.evil.test/monitor/reviews/gigabyte/m32u','https://www.rtings.com@evil.test/monitor/reviews/gigabyte/m32u','https://www.rtings.com/monitor/reviews/gigabyte/m32u?redirect=evil','https://www.rtings.com/%256aavascript'];
   const items = [good, ...badUrls.map((url,i) => ({...good,id:`bad-${i}`,url})), {...good,id:'uncertain',model_scope:'UNKNOWN'}, {...good,id:'bad-kind',review_type:'UNKNOWN'}];
-  await page.route('**/monitor-review-links-data.js', route => route.fulfill({contentType:'application/javascript',body:`window.CONNECTABLE_REVIEW_LINKS=${JSON.stringify({schema_version:1,items})};`}));
+  await page.route('**/monitor-review-links-data.js', route => route.fulfill({contentType:'application/javascript',body:`window.CONNECTABLE_REVIEW_LINKS=${JSON.stringify({schema_version:1,items,reviewed_bindings:[{product_id:good.product_id,site:good.site,url:good.url}]})};`}));
   await page.goto('/monitor-v3.html');
   const section = await openDetail(page, good.product_id);
   await expect(section.locator('a')).toHaveCount(1);
@@ -124,4 +124,22 @@ test('video and blog links use reviewed model bindings and open separately witho
   expect(await destination.evaluate(() => window.opener)).toBeNull();
   await destination.close();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+
+test('RTINGS and community links cannot be reassigned to another product in display data', async ({page}) => {
+  const productId = 'monitor:dell-u2724d';
+  const alien = ['RTINGS', 'Quasarzone'].map(site => ({
+    ...reviews.items.find(item => item.site === site),
+    id: `tampered:${site}`, product_id: productId
+  }));
+  const payload = {...reviews, items: [...reviews.items, ...alien]};
+  await page.route('**/monitor-review-links-data.js', route => route.fulfill({
+    contentType:'application/javascript', body:`window.CONNECTABLE_REVIEW_LINKS=${JSON.stringify(payload)};`
+  }));
+  await page.goto('/monitor-v3.html');
+  const section = await openDetail(page, productId);
+  const expected = reviews.items.filter(item => item.product_id === productId);
+  await expect(section.locator('a')).toHaveCount(expected.length);
+  for (const item of alien) await expect(section.locator(`a[href="${item.url}"]`)).toHaveCount(0);
 });

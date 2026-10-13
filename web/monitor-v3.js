@@ -367,7 +367,7 @@
         if (!host || parsed.hostname !== host || !item.url.startsWith(`https://${host}/`)) return '';
         const validPath = {RTINGS:/^\/monitor\/reviews\/[a-z0-9-]+\/[a-z0-9-]+$/,Quasarzone:/^\/bbs\/qf_dp\/views\/\d+$/,YouTube:/^\/watch$/,NaverBlog:/^\/[A-Za-z0-9_-]+\/\d+$/,Tistory:/^\/\d+$/}[item.site];
         if ((!['Blog','Forum'].includes(item.site) && !validPath?.test(parsed.pathname)) || (item.site === 'YouTube' && !/^\?v=[A-Za-z0-9_-]{11}$/.test(parsed.search))) return '';
-        if (['YouTube','NaverBlog','Tistory','Blog','Forum'].includes(item.site) && !data.reviewed_bindings?.some(binding => binding.product_id === item.product_id && binding.site === item.site && binding.url === item.url)) return '';
+        if (!data.reviewed_bindings?.some(binding => binding.product_id === item.product_id && binding.site === item.site && binding.url === item.url)) return '';
         url = esc(parsed.href);
       } catch { return ''; }
       if (![item.site,item.title,item.summary,item.checked_on].every(value => typeof value === 'string')) return '';

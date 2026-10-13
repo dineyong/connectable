@@ -130,7 +130,7 @@ def build():
     data = validate(load(SOURCE))
     return {'schema_version': 1, 'items': [{key: item[key] for key in PUBLIC_FIELDS} for item in data['items']],
             'reviewed_bindings': [{key: item[key] for key in ('product_id', 'site', 'url')}
-                                  for item in data['items'] if item['site'] in ('YouTube', 'NaverBlog', 'Tistory', 'Blog', 'Forum')]}
+                                  for item in data['items']]}
 
 
 def main():

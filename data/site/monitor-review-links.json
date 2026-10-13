@@ -442,9 +442,47 @@
       "source_review_id": null,
       "model_scope": "EXACT_DOCUMENT_MODEL",
       "review_type": "FIRST_HAND_REVIEW"
+    },
+    {
+      "id": "review-link:forum-reddit-lg-34wq75c-b-aus",
+      "product_id": "monitor:lg-34wq75c-b-aus",
+      "url": "https://www.reddit.com/r/UsbCHardware/comments/ttp475/comment/j2a1gg6/",
+      "site": "Forum",
+      "title": "34WQ75C-B.AUS 구매 직후 MacBook Pro 사용 관측",
+      "summary": "전체 SKU를 명시한 사용자가 구매 다음 날 2021 MacBook Pro M1에서 정상 동작했다고 남긴 짧은 개인 사례입니다.",
+      "checked_on": "2026-10-13",
+      "commercial_context": "UNKNOWN",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "FIRST_HAND_REVIEW"
     }
   ],
   "reviewed_bindings": [
+    {
+      "product_id": "monitor:gigabyte-m32u",
+      "site": "RTINGS",
+      "url": "https://www.rtings.com/monitor/reviews/gigabyte/m32u"
+    },
+    {
+      "product_id": "monitor:asus-xg27aqdmg",
+      "site": "RTINGS",
+      "url": "https://www.rtings.com/monitor/reviews/asus/rog-strix-oled-xg27aqdmg"
+    },
+    {
+      "product_id": "monitor:asus-pg32ucdm",
+      "site": "RTINGS",
+      "url": "https://www.rtings.com/monitor/reviews/asus/rog-swift-oled-pg32ucdm"
+    },
+    {
+      "product_id": "monitor:aoc-q27g3xmn",
+      "site": "RTINGS",
+      "url": "https://www.rtings.com/monitor/reviews/aoc/q27g3xmn"
+    },
+    {
+      "product_id": "monitor:gigabyte-m32u",
+      "site": "Quasarzone",
+      "url": "https://quasarzone.com/bbs/qf_dp/views/310312"
+    },
     {
       "product_id": "monitor:asus-vg27aq",
       "site": "YouTube",
@@ -581,9 +619,19 @@
       "url": "https://www.chip.cz/testy/recenze-lg-ultrafine-27up850k-w-paradni-levny-10bitovy-obraz-s-usb-c"
     },
     {
+      "product_id": "monitor:lg-27gr83q-b",
+      "site": "RTINGS",
+      "url": "https://www.rtings.com/monitor/reviews/lg/27gr83q-b"
+    },
+    {
       "product_id": "monitor:samsung-s32cg554eu-ls32cg554euxen",
       "site": "Forum",
       "url": "https://www.computerbase.de/forum/threads/samsung-odyssey-g55c-ghosting-ls32cg554euxen.2214872/"
+    },
+    {
+      "product_id": "monitor:lg-34wq75c-b-aus",
+      "site": "Forum",
+      "url": "https://www.reddit.com/r/UsbCHardware/comments/ttp475/comment/j2a1gg6/"
     }
   ]
 }
