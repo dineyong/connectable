@@ -317,12 +317,11 @@
     render();
     renderTray();
     if (wasCard || wasTray) {
-      const target =
-        [...document.querySelectorAll('[data-action="select"]')].find(
-          (el) => el.dataset.id === id,
-        ) ||
-        document.querySelector("#selected-products button") ||
-        $("monitor-search");
+      const target = wasTray
+        ? document.querySelector("#selected-products button") || $("compare-start")
+        : [...document.querySelectorAll('#product-grid [data-action="select"]')].find(
+            (el) => el.dataset.id === id,
+          ) || $("monitor-search");
       target.focus();
     }
   }
@@ -470,7 +469,10 @@
   $("sort-order").addEventListener("change", render);
   $("group-by-brand").addEventListener("change", render);
   $("reset-filters").addEventListener("click", reset);
-  $("empty-reset").addEventListener("click", reset);
+  $("empty-reset").addEventListener("click", () => {
+    reset();
+    $("monitor-search").focus();
+  });
   $("differences-only").addEventListener("change", compare);
   function openCompare() {
     if (selected.size < 2) {
