@@ -168,5 +168,19 @@ class MonitorReviewLinkTests(unittest.TestCase):
             links.validate(invalid)
 
 
+    def test_forum_links_require_exact_reviewed_url_and_model(self):
+        data, bindings = self.platform_fixture('Forum', 'https://forum.example.test/threads/model.123/')
+        self.assertEqual(links.validate(data, bindings=bindings)['items'], data['items'])
+        with self.assertRaises(ValueError):
+            links.validate(data, bindings={'schema_version': 1, 'items': []})
+        for update in ({'url': 'https://forum.example.test/threads/other.456/'},
+                       {'url': 'https://forum.example.test.evil.test/threads/model.123/'},
+                       {'product_id': 'monitor:asus-xg27aqdmg', 'checked_model': 'XG27AQDMG'}):
+            invalid = copy.deepcopy(data)
+            invalid['items'][0].update(update)
+            with self.subTest(update=update), self.assertRaises(ValueError):
+                links.validate(invalid, bindings=bindings)
+
+
 if __name__ == '__main__':
     unittest.main()

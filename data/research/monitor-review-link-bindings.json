@@ -243,6 +243,15 @@
       "evidence_origin": "DIRECT_CHECK",
       "evidence_location": "iab 공개 원문 제목·본문·Technická data의 27UP850K-W 전체 표기. Rozumná spotřeba의 실제 사용 설정과 전력 측정, Zobrazovací IPS panel의 측정 설명. 본문 reklama 광고 및 Heureka 가격 모듈 표시.",
       "checked_on": "2026-10-12"
+    },
+    {
+      "product_id": "monitor:samsung-s32cg554eu-ls32cg554euxen",
+      "site": "Forum",
+      "url": "https://www.computerbase.de/forum/threads/samsung-odyssey-g55c-ghosting-ls32cg554euxen.2214872/",
+      "checked_model": "S32CG554EU (LS32CG554EUXEN)",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 원문 제목 및 2024-10-23 원글 #1: 전체 SKU LS32CG554EUXEN, 구매 2일 뒤 본인 사용, CS2·검은 배경의 잔상, 실제 모니터 설정 목록. 하단 광고 배너 운영 고지.",
+      "checked_on": "2026-10-13"
     }
   ]
 }

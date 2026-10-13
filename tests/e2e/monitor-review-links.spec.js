@@ -88,7 +88,8 @@ test('video and blog links use reviewed model bindings and open separately witho
   const good = [
     {...base,id:'fixture-video',site:'YouTube',url:'https://www.youtube.com/watch?v=AbCdEf_1234'},
     {...base,id:'fixture-blog',site:'NaverBlog',url:'https://blog.naver.com/testhandle/123456789'},
-    {...base,id:'fixture-custom-blog',site:'Blog',url:'https://review.example.test/2024/model.html'}
+    {...base,id:'fixture-custom-blog',site:'Blog',url:'https://review.example.test/2024/model.html'},
+    {...base,id:'fixture-forum',site:'Forum',url:'https://forum.example.test/threads/model.123/'}
   ];
   const bad = [
     {...good[0],id:'fixture-query',url:good[0].url+'&redirect=evil'},
@@ -96,15 +97,18 @@ test('video and blog links use reviewed model bindings and open separately witho
     {...good[0],id:'fixture-unregistered',url:'https://www.youtube.com/watch?v=XbCdEf_1234'},
     {...good[1],id:'fixture-host',url:'https://blog.naver.com.evil.test/testhandle/123456789'},
     {...good[2],id:'fixture-unregistered-blog',url:'https://evil.example.test/2024/model.html'},
+    {...good[3],id:'fixture-unregistered-forum',url:'https://forum.example.test/threads/other.456/'},
+    {...good[3],id:'fixture-spoof-forum',url:'https://forum.example.test.evil.test/threads/model.123/'},
     {...good[1],id:'fixture-traversal',url:'https://blog.naver.com/testhandle/../testhandle/123456789'}
   ];
   const reviewed_bindings = good.map(({product_id,site,url}) => ({product_id,site,url}));
   await page.route('**/monitor-review-links-data.js', route => route.fulfill({contentType:'application/javascript',body:`window.CONNECTABLE_REVIEW_LINKS=${JSON.stringify({schema_version:1,items:[...good,...bad],reviewed_bindings})};`}));
   await page.goto('/monitor-v3.html');
   const section = await openDetail(page, base.product_id);
-  await expect(section.locator('a')).toHaveCount(3);
+  await expect(section.locator('a')).toHaveCount(4);
   await expect(section).toContainText('영상 리뷰');
   await expect(section).toContainText('네이버 블로그');
+  await expect(section).toContainText('커뮤니티');
   await expect(section.locator('iframe,img')).toHaveCount(0);
   for (const item of good) {
     const link = section.locator(`a[href="${item.url}"]`);

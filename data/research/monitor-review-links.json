@@ -561,6 +561,23 @@
       "evidence_origin": "DIRECT_CHECK",
       "evidence_location": "공개 원문의 리뷰 제목, Differences Between Sizes And Variants의 직접 시험 모델·시험 개체 설명, Our Verdict; 상단 제휴 고지",
       "notes": "영어 공개 전문 리뷰 링크. 일부 세부 측정값·사진은 회원 제한이 있어 확인·복제하지 않음. 공개 시험 모델과 서술만 직접 확인. 한국 SKU 동일성·호환 승인 근거 아님."
+    },
+    {
+      "id": "review-link:forum-computerbase-samsung-ls32cg554euxen",
+      "product_id": "monitor:samsung-s32cg554eu-ls32cg554euxen",
+      "url": "https://www.computerbase.de/forum/threads/samsung-odyssey-g55c-ghosting-ls32cg554euxen.2214872/",
+      "site": "Forum",
+      "title": "LS32CG554EUXEN 구매 후 화면 잔상 관측",
+      "summary": "구매 후 CS2와 검은 배경에서 화면 잔상을 관측하고 사용 설정을 제시한 개인 사례입니다.",
+      "checked_on": "2026-10-13",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "FIRST_HAND_REVIEW",
+      "checked_model": "S32CG554EU (LS32CG554EUXEN)",
+      "evidence_origin": "DIRECT_CHECK",
+      "evidence_location": "공개 원문 제목 및 2024-10-23 원글 #1: 전체 SKU LS32CG554EUXEN, 구매 2일 뒤 본인 사용, CS2·검은 배경의 잔상, 실제 모니터 설정 목록. 하단 광고 배너 운영 고지.",
+      "notes": "독일어 공개 포럼의 작성자 본인 원글만 사용 관측으로 확인. 타인의 패널·구매 조언은 결과 근거로 사용하지 않음. 문제 질문이며 긍정 추천·최종 실패·한국 SKU·공식 사양·호환 승인 근거가 아님. 사이트 광고 배너 운영 고지는 확인했으나 작성자 협찬·제휴 여부는 확인하지 못함. 사용자명·닉네임·연락처·사진·본문 전체는 저장하지 않음. checked_model은 카탈로그 표시명을 사용하며 직접 확인한 제품 식별 근거는 원글의 전체 SKU LS32CG554EUXEN이다."
     }
   ]
 }

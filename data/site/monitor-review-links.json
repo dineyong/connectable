@@ -429,6 +429,19 @@
       "source_review_id": null,
       "model_scope": "EXACT_DOCUMENT_MODEL",
       "review_type": "PROFESSIONAL_REVIEW"
+    },
+    {
+      "id": "review-link:forum-computerbase-samsung-ls32cg554euxen",
+      "product_id": "monitor:samsung-s32cg554eu-ls32cg554euxen",
+      "url": "https://www.computerbase.de/forum/threads/samsung-odyssey-g55c-ghosting-ls32cg554euxen.2214872/",
+      "site": "Forum",
+      "title": "LS32CG554EUXEN 구매 후 화면 잔상 관측",
+      "summary": "구매 후 CS2와 검은 배경에서 화면 잔상을 관측하고 사용 설정을 제시한 개인 사례입니다.",
+      "checked_on": "2026-10-13",
+      "commercial_context": "PRESENT",
+      "source_review_id": null,
+      "model_scope": "EXACT_DOCUMENT_MODEL",
+      "review_type": "FIRST_HAND_REVIEW"
     }
   ],
   "reviewed_bindings": [
@@ -566,6 +579,11 @@
       "product_id": "monitor:lg-27up850k-w",
       "site": "Blog",
       "url": "https://www.chip.cz/testy/recenze-lg-ultrafine-27up850k-w-paradni-levny-10bitovy-obraz-s-usb-c"
+    },
+    {
+      "product_id": "monitor:samsung-s32cg554eu-ls32cg554euxen",
+      "site": "Forum",
+      "url": "https://www.computerbase.de/forum/threads/samsung-odyssey-g55c-ghosting-ls32cg554euxen.2214872/"
     }
   ]
 }

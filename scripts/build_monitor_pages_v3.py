@@ -38,7 +38,7 @@ def esc(value):
 
 def review_section(product_id, reviews):
     items = [item for item in reviews if item['product_id'] == product_id]
-    site_labels = {'NaverBlog': '네이버 블로그', 'Tistory': '티스토리', 'Blog': '블로그'}
+    site_labels = {'NaverBlog': '네이버 블로그', 'Tistory': '티스토리', 'Blog': '블로그', 'Forum': '커뮤니티'}
     commercial_labels = {'PRESENT':'광고·판매·제휴 요소 있음',
         'NOT_OBSERVED':'광고·제휴 요소 확인되지 않음','UNKNOWN':'광고·제휴 여부 미확인'}
     cards = ''.join(f'<li class="review-link-card"><p class="review-link-meta">{esc(site_labels.get(item["site"], item["site"]))} · {"영상 리뷰" if item["site"] == "YouTube" else "전문 리뷰" if item["review_type"] == "PROFESSIONAL_REVIEW" else "개인 사용기"} · 확인일 {esc(item["checked_on"])}</p><a href="{esc(item["url"])}" target="_blank" rel="noopener noreferrer">{esc(item["title"])} ↗<span class="sr-only"> (새 창 또는 새 탭)</span></a><p>{esc(item["summary"])}</p><p class="review-link-meta">{esc(commercial_labels[item["commercial_context"]])}</p></li>' for item in items)

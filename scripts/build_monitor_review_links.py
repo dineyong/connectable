@@ -99,17 +99,17 @@ def validate(data, products=None, reviews=None, bindings=None):
         url = normalized_url(item['url'])
         parsed = urlsplit(url)
         require((item['site'] in SITES and parsed.hostname == SITES[item['site']]) or
-                (item['site'] == 'Tistory' and re.fullmatch(r'[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.tistory\.com', parsed.hostname)) or (item['site'] == 'Blog' and url in bindings), prefix + 'site host mismatch')
+                (item['site'] == 'Tistory' and re.fullmatch(r'[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.tistory\.com', parsed.hostname)) or (item['site'] in ('Blog', 'Forum') and url in bindings), prefix + 'site host mismatch')
         require((item['site'] == 'RTINGS' and re.fullmatch(r'/monitor/reviews/[a-z0-9-]+/[a-z0-9-]+', parsed.path)) or
                 (item['site'] == 'Quasarzone' and re.fullmatch(r'/bbs/qf_dp/views/\d+', parsed.path)) or
                 (item['site'] == 'YouTube' and parsed.path == '/watch' and re.fullmatch(r'v=[A-Za-z0-9_-]{11}', parsed.query)) or
                 (item['site'] == 'NaverBlog' and re.fullmatch(r'/[A-Za-z0-9_-]+/\d+', parsed.path)) or
-                (item['site'] == 'Tistory' and re.fullmatch(r'/\d+', parsed.path)) or (item['site'] == 'Blog' and url in bindings), prefix + 'non-review path')
+                (item['site'] == 'Tistory' and re.fullmatch(r'/\d+', parsed.path)) or (item['site'] in ('Blog', 'Forum') and url in bindings), prefix + 'non-review path')
         require(url not in urls, prefix + 'duplicate normalized URL')
         urls.add(url)
         if item['site'] == 'RTINGS':
             require(REVIEWED_PATHS.get(item['product_id']) == parsed.path, prefix + 'unreviewed model URL binding')
-        if item['site'] in ('YouTube', 'NaverBlog', 'Tistory', 'Blog'):
+        if item['site'] in ('YouTube', 'NaverBlog', 'Tistory', 'Blog', 'Forum'):
             proof = bindings.get(url)
             require(proof is not None and proof['product_id'] == item['product_id'] and
                     proof['site'] == item['site'] and proof['checked_model'] == item['checked_model'],
@@ -130,7 +130,7 @@ def build():
     data = validate(load(SOURCE))
     return {'schema_version': 1, 'items': [{key: item[key] for key in PUBLIC_FIELDS} for item in data['items']],
             'reviewed_bindings': [{key: item[key] for key in ('product_id', 'site', 'url')}
-                                  for item in data['items'] if item['site'] in ('YouTube', 'NaverBlog', 'Tistory', 'Blog')]}
+                                  for item in data['items'] if item['site'] in ('YouTube', 'NaverBlog', 'Tistory', 'Blog', 'Forum')]}
 
 
 def main():
