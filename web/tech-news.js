@@ -23,7 +23,7 @@
     const option = document.createElement("option"); option.value = source.id; option.textContent = source.name; document.getElementById("news-source-filter").append(option);
     const el = document.createElement("div");
     el.className = "source";
-    el.textContent = `${source.name} · ${source.status === "OK" ? "RSS 확인" : source.status === "STALE" ? "갱신 실패 · 이전 목록" : source.status === "ACCESS_FAILED" ? "접근 실패" : "수집 상태 미확인"} · 마지막 성공 ${time(source.last_success_at, "성공 시각 미확인")}`;
+    el.textContent = `${source.name} · ${source.status === "OK" ? "RSS 확인" : source.status === "STALE" ? "갱신 실패 · 이전 목록" : source.status === "ACCESS_FAILED" ? "접근 실패" : "수집 상태 미확인"} · 마지막 시도 ${time(source.last_attempt_at, "시도 시각 미확인")} · 마지막 성공 ${time(source.last_success_at, "성공 시각 미확인")}`;
     document.getElementById("news-sources").append(el);
   }
   function render() {
@@ -69,7 +69,7 @@
       title.textContent = item.title;
       const meta = document.createElement("p");
       meta.className = "meta";
-      meta.textContent = `${source.name} · ${source.kind === "MANUFACTURER_NEWSROOM" ? "제조사 소식" : "출처 유형 미확인"} · ${source.language === "en" ? "영어 원문" : source.language === "ko" ? "한국어 원문" : "언어 미확인"} · 발행 ${time(item.published_at)}`;
+      meta.textContent = `${source.name} · ${source.kind === "MANUFACTURER_NEWSROOM" ? "제조사 소식" : "출처 유형 미확인"} · ${source.language === "en" ? "영어 원문" : source.language === "ko" ? "한국어 원문" : "언어 미확인"} · 발행 ${time(item.published_at)} · RSS 확인 ${time(item.fetched_at, "확인 시각 미확인")}`;
       const link = document.createElement("a");
       link.href = url.href;
       link.target = "_blank";

@@ -10,6 +10,12 @@ def fetcher(sid):return feed('news.samsung.com' if sid=='samsung-kr' else 'blogs
 class TechNewsTests(unittest.TestCase):
     def setUp(self):self.data=refresh(fetcher=fetcher,stamp=STAMP)
     def test_real_cache(self):validate(__import__('json').loads(CACHE.read_text()))
+    def test_previous_snapshot_is_preserved(self):
+        import hashlib
+        previous=CACHE.parent/'archive'/'tech_news_20261010.json'
+        self.assertEqual(hashlib.sha256(previous.read_bytes()).hexdigest(),
+                         'c90ac5b6dafc45a194f9e2f47d491e35af42d510965b7b394e2e3c5571dbede3')
+        validate(__import__('json').loads(previous.read_text()))
     def test_metadata_only(self):
         self.assertEqual(len(self.data['items']),2)
         self.assertNotIn('DO NOT SAVE',asset(self.data))

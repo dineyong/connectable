@@ -10,9 +10,10 @@
     output.replaceChildren();
     if(!data || data.public_status!=='UNKNOWN' || !Array.isArray(data.items)) {status.textContent='신제품 소식을 불러오지 못했습니다.';filter.disabled=true;return;}
     for(const item of data.items){
+      if(!item || typeof item!=='object' || typeof item.url!=='string')continue;
       let url;try {url=new URL(item.url);}catch {continue;}
       const source=registry[item.source_id];
-      if(!source || url.protocol!=='https:' || url.hostname!==source[0] || !url.pathname.startsWith(source[1]) || url.username || url.password || url.port || url.search || url.hash || /[\s\\%]/.test(item.url) || item.review_status!=='PENDING_PUBLICATION_REVIEW' || !labels[item.category])continue;
+      if(!source || url.protocol!=='https:' || url.hostname!==source[0] || !url.pathname.startsWith(source[1]) || url.username || url.password || url.port || url.search || url.hash || /[\s\\%\x00-\x1f\x7f]/.test(item.url) || item.url.split('/').some(part=>part==='.' || part==='..') || item.review_status!=='PENDING_PUBLICATION_REVIEW' || !labels[item.category])continue;
       if(filter.value!=='ALL' && item.category!==filter.value)continue;
       const card=document.createElement('article');card.className='announcement-card';
       const append=(tag,text,cls)=>{const el=document.createElement(tag);el.textContent=text;if(cls)el.className=cls;card.append(el);return el;};

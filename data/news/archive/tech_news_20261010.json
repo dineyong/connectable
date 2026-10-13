@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-10T13:25:12+00:00",
+  "public_status": "UNKNOWN",
+  "sources": [
+    {
+      "name": "삼성전자 뉴스룸",
+      "url": "https://news.samsung.com/kr/feed",
+      "kind": "MANUFACTURER_NEWSROOM",
+      "language": "ko",
+      "id": "samsung-kr",
+      "last_attempt_at": "2026-10-10T13:25:12+00:00",
+      "last_success_at": "2026-10-10T13:19:56+00:00",
+      "status": "STALE"
+    },
+    {
+      "name": "Windows Blog",
+      "url": "https://blogs.windows.com/feed/",
+      "kind": "MANUFACTURER_NEWSROOM",
+      "language": "en",
+      "id": "windows-blog",
+      "last_attempt_at": "2026-10-10T13:25:12+00:00",
+      "last_success_at": "2026-10-10T13:25:12+00:00",
+      "status": "OK"
+    }
+  ],
+  "items": [
+    {
+      "id": "news:6dbe16ec00c4000d0f9e",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, 2026년 3분기 잠정실적 발표",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-2026%eb%85%84-3%eb%b6%84%ea%b8%b0-%ec%9e%a0%ec%a0%95%ec%8b%a4%ec%a0%81-%eb%b0%9c%ed%91%9c",
+      "published_at": "2026-10-08T07:46:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:623c76fc35f0b3990305",
+      "source_id": "windows-blog",
+      "title": "Announcing new builds for 7 October 2026",
+      "url": "https://blogs.windows.com/windows-insider/2026/10/07/announcing-new-builds-for-7-october-2026/",
+      "published_at": "2026-10-07T18:10:17+00:00",
+      "fetched_at": "2026-10-10T13:25:12+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:644ed04bcfc30db15905",
+      "source_id": "windows-blog",
+      "title": "Pre-order our most powerful Surface devices ever",
+      "url": "https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/",
+      "published_at": "2026-10-07T18:00:35+00:00",
+      "fetched_at": "2026-10-10T13:25:12+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:71b96d78bf43b81c21bc",
+      "source_id": "windows-blog",
+      "title": "Microsoft Execution Containers: Policy-driven containment for AI agents",
+      "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
+      "published_at": "2026-10-07T18:00:28+00:00",
+      "fetched_at": "2026-10-10T13:25:12+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:bb14a2d04e2113206bee",
+      "source_id": "windows-blog",
+      "title": "Building Windows for hybrid intelligence",
+      "url": "https://blogs.windows.com/windowsexperience/2026/10/07/building-windows-for-hybrid-intelligence/",
+      "published_at": "2026-10-07T18:00:22+00:00",
+      "fetched_at": "2026-10-10T13:25:12+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:6ea00f2ec97825ced24c",
+      "source_id": "windows-blog",
+      "title": "From searching to doing: Building a faster, more streamlined Windows Search",
+      "url": "https://blogs.windows.com/windows-insider/2026/10/07/from-searching-to-doing-building-a-faster-more-streamlined-windows-search/",
+      "published_at": "2026-10-07T18:00:05+00:00",
+      "fetched_at": "2026-10-10T13:25:12+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:75a06dd634fa60ac6d66",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, 삼성 아트 스토어에 ‘영국 박물관’ 대표 소장품 30점 공개",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ec%82%bc%ec%84%b1-%ec%95%84%ed%8a%b8-%ec%8a%a4%ed%86%a0%ec%96%b4%ec%97%90-%ec%98%81%ea%b5%ad-%eb%b0%95%eb%ac%bc%ea%b4%80-%eb%8c%80%ed%91%9c-%ec%86%8c",
+      "published_at": "2026-10-07T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:5c827ecc667a1cbaded4",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, ‘갤럭시 탭 S12 시리즈·스마트태그3’ 국내 출시",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ea%b0%a4%eb%9f%ad%ec%8b%9c-%ed%83%ad-s12-%ec%8b%9c%eb%a6%ac%ec%a6%88%c2%b7%ec%8a%a4%eb%a7%88%ed%8a%b8%ed%83%9c%ea%b7%b83-%ea%b5%ad%eb%82%b4-%ec%b6%9c",
+      "published_at": "2026-10-06T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:db709e2bedf7689ca7bf",
+      "source_id": "samsung-kr",
+      "title": "[영상] 세계 무대에서 빛난 기술 국가대표들… 삼성전자와 함께한 ‘2026 상하이 국제기능올림픽’ 도전기",
+      "url": "https://news.samsung.com/kr/%ec%98%81%ec%83%81-%ec%84%b8%ea%b3%84-%eb%ac%b4%eb%8c%80%ec%97%90%ec%84%9c-%eb%b9%9b%eb%82%9c-%ea%b8%b0%ec%88%a0-%ea%b5%ad%ea%b0%80%eb%8c%80%ed%91%9c%eb%93%a4-%ec%82%bc%ec%84%b1%ec%a0%84",
+      "published_at": "2026-10-06T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:04c2901e37d1121ab5a1",
+      "source_id": "windows-blog",
+      "title": "Announcing new builds for 2 October 2026",
+      "url": "https://blogs.windows.com/windows-insider/2026/10/02/announcing-new-builds-for-2-october-2026/",
+      "published_at": "2026-10-02T17:04:36+00:00",
+      "fetched_at": "2026-10-10T13:25:12+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:f7edd57a772a1cd4dbb2",
+      "source_id": "samsung-kr",
+      "title": "삼성, 영국박물관서 KH 컬렉션 순회전 개막 기념 갈라 디너 개최",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1-%ec%98%81%ea%b5%ad%eb%b0%95%eb%ac%bc%ea%b4%80%ec%84%9c-kh-%ec%bb%ac%eb%a0%89%ec%85%98-%ec%88%9c%ed%9a%8c%ec%a0%84-%ea%b0%9c%eb%a7%89-%ea%b8%b0%eb%85%90-%ea%b0%88%eb%9d%bc-%eb%94%94",
+      "published_at": "2026-10-01T10:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:5430659a1f3af85ca0a8",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, JBL 80주년 기념 특별 기획전 진행",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-jbl-80%ec%a3%bc%eb%85%84-%ea%b8%b0%eb%85%90-%ed%8a%b9%eb%b3%84-%ea%b8%b0%ed%9a%8d%ec%a0%84-%ec%a7%84%ed%96%89",
+      "published_at": "2026-10-01T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:1863c739bc446b2df70b",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, 갤럭시 최초 클립형 무선 이어폰 ‘갤럭시 버즈 온’ 공개",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ea%b0%a4%eb%9f%ad%ec%8b%9c-%ec%b5%9c%ec%b4%88-%ed%81%b4%eb%a6%bd%ed%98%95-%eb%ac%b4%ec%84%a0-%ec%9d%b4%ec%96%b4%ed%8f%b0-%ea%b0%a4%eb%9f%ad%ec%8b%9c-%eb%b2%84",
+      "published_at": "2026-10-01T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:c7394dfc10a2f7824cba",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, 더 작고 정교해진 ‘갤럭시 스마트태그3’ 공개",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%eb%8d%94-%ec%9e%91%ea%b3%a0-%ec%a0%95%ea%b5%90%ed%95%b4%ec%a7%84-%ea%b0%a4%eb%9f%ad%ec%8b%9c-%ec%8a%a4%eb%a7%88%ed%8a%b8%ed%83%9c%ea%b7%b83-%ea%b3%b5",
+      "published_at": "2026-10-01T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:c9099fd9aee7d43bd13c",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, ‘갤럭시 탭 S12 시리즈’ 공개",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ea%b0%a4%eb%9f%ad%ec%8b%9c-%ed%83%ad-s12-%ec%8b%9c%eb%a6%ac%ec%a6%88-%ea%b3%b5%ea%b0%9c",
+      "published_at": "2026-10-01T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:dcc0c7884c6204d2e305",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, ‘에이전틱 시프트’ 주제로 삼성 AI 포럼 2026 개최",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ec%97%90%ec%9d%b4%ec%a0%84%ed%8b%b1-%ec%8b%9c%ed%94%84%ed%8a%b8-%ec%a3%bc%ec%a0%9c%eb%a1%9c-%ec%82%bc%ec%84%b1-ai-%ed%8f%ac%eb%9f%bc-2026-%ea%b0%9c%ec%b5%9c",
+      "published_at": "2026-09-30T09:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:0d5936c2845dab02d75a",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, 2026 KCSI 평가서 25년 연속 최다 부문 1위",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-2026-kcsi-%ed%8f%89%ea%b0%80%ec%84%9c-25%eb%85%84-%ec%97%b0%ec%86%8d-%ec%b5%9c%eb%8b%a4-%eb%b6%80%eb%ac%b8-1%ec%9c%84",
+      "published_at": "2026-09-30T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:219e1b9d51cfe05f5c49",
+      "source_id": "windows-blog",
+      "title": "WSL containers is now generally available",
+      "url": "https://blogs.windows.com/windowsdeveloper/2026/09/29/wsl-containers-now-generally-available/",
+      "published_at": "2026-09-29T17:00:52+00:00",
+      "fetched_at": "2026-10-10T13:25:12+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:82f08949e730ae7e1c2c",
+      "source_id": "windows-blog",
+      "title": "How to get the Windows 11 2026 Update",
+      "url": "https://blogs.windows.com/windowsexperience/2026/09/29/how-to-get-windows-11-2026-update/",
+      "published_at": "2026-09-29T17:00:38+00:00",
+      "fetched_at": "2026-10-10T13:25:12+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:bd922c432c1afdf031c8",
+      "source_id": "samsung-kr",
+      "title": "삼성 6개사, 美 AI 인프라 기업 ‘헬릭스’에 10억 달러 투자",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1-6%ea%b0%9c%ec%82%ac-%e7%be%8e-ai-%ec%9d%b8%ed%94%84%eb%9d%bc-%ea%b8%b0%ec%97%85-%ed%97%ac%eb%a6%ad%ec%8a%a4%ec%97%90-10%ec%96%b5-%eb%8b%ac%eb%9f%ac-%ed%88%ac%ec%9e%90",
+      "published_at": "2026-09-29T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:d002567af9efd64988aa",
+      "source_id": "samsung-kr",
+      "title": "[세계 심장의 날] 손목에서 시작되는 일상 속 심장 건강 관리법",
+      "url": "https://news.samsung.com/kr/%ec%84%b8%ea%b3%84-%ec%8b%ac%ec%9e%a5%ec%9d%98-%eb%82%a0-%ec%86%90%eb%aa%a9%ec%97%90%ec%84%9c-%ec%8b%9c%ec%9e%91%eb%90%98%eb%8a%94-%ec%9d%bc%ec%83%81-%ec%86%8d-%ec%8b%ac%ec%9e%a5-%ea%b1%b4%ea%b0%95",
+      "published_at": "2026-09-29T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:e2fe63ad466768e6602b",
+      "source_id": "samsung-kr",
+      "title": "“스크린 속 미장센을 거실 화면으로”… 삼성 아트 스토어, 첫 시네마틱 컬렉션 공개",
+      "url": "https://news.samsung.com/kr/%ec%8a%a4%ed%81%ac%eb%a6%b0-%ec%86%8d-%eb%af%b8%ec%9e%a5%ec%84%bc%ec%9d%84-%ea%b1%b0%ec%8b%a4-%ed%99%94%eb%a9%b4%ec%9c%bc%eb%a1%9c-%ec%82%bc%ec%84%b1-%ec%95%84%ed%8a%b8",
+      "published_at": "2026-09-28T22:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:deb1d7fc21060fce13ed",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, ‘삼성 AI 구독’ 새단장… 신혼·시니어·기업까지 맞춤 케어 서비스 강화",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ec%82%bc%ec%84%b1-ai-%ea%b5%ac%eb%8f%85-%ec%83%88%eb%8b%a8%ec%9e%a5-%ec%8b%a0%ed%98%bc%c2%b7%ec%8b%9c%eb%8b%88%ec%96%b4%c2%b7%ea%b8%b0%ec%97%85",
+      "published_at": "2026-09-28T11:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:5fe10fcdfde6496211cc",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, ‘2026 멕시코 K-박람회’서 AI 연결 경험 선보여",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-2026-%eb%a9%95%ec%8b%9c%ec%bd%94-k-%eb%b0%95%eb%9e%8c%ed%9a%8c%ec%84%9c-ai-%ec%97%b0%ea%b2%b0-%ea%b2%bd%ed%97%98-%ec%84%a0%eb%b3%b4%ec%97%ac",
+      "published_at": "2026-09-27T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:f6a77e457396119b2d7e",
+      "source_id": "windows-blog",
+      "title": "Announcing new builds for 25 September 2026",
+      "url": "https://blogs.windows.com/windows-insider/2026/09/25/announcing-new-builds-for-25-september-2026/",
+      "published_at": "2026-09-25T17:02:08+00:00",
+      "fetched_at": "2026-10-10T13:25:12+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:24491492d639945da0dd",
+      "source_id": "windows-blog",
+      "title": "Introducing the next Surface Pro 12-inch and Surface Laptop 13-inch with Snapdragon X2 Plus: Greater performance that travels light",
+      "url": "https://blogs.windows.com/devices/2026/09/23/introducing-surface-pro-12-inch-and-surface-laptop-13-inch-with-snapdragon-x2/",
+      "published_at": "2026-09-23T20:30:27+00:00",
+      "fetched_at": "2026-10-10T13:25:12+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:9bdfa0b045005a7b5be7",
+      "source_id": "samsung-kr",
+      "title": "판타지의 경계를 확장하다: 삼성 스페이셜 사이니지가 도쿄게임쇼 2026에서 펼치는 캐릭터 IP와 리테일의 미래",
+      "url": "https://news.samsung.com/kr/%ed%8c%90%ed%83%80%ec%a7%80%ec%9d%98-%ea%b2%bd%ea%b3%84%eb%a5%bc-%ed%99%95%ec%9e%a5%ed%95%98%eb%8b%a4-%ec%82%bc%ec%84%b1-%ec%8a%a4%ed%8e%98%ec%9d%b4%ec%85%9c-%ec%82%ac%ec%9d%b4%eb%8b%88%ec%a7%80",
+      "published_at": "2026-09-23T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:0c4a67294ba9cfd7cf7d",
+      "source_id": "samsung-kr",
+      "title": "삼성전자서비스, 추석 연휴 ‘긴급 서비스’ 지원",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90%ec%84%9c%eb%b9%84%ec%8a%a4-%ec%b6%94%ec%84%9d-%ec%97%b0%ed%9c%b4-%ea%b8%b4%ea%b8%89-%ec%84%9c%eb%b9%84%ec%8a%a4-%ec%a7%80%ec%9b%90",
+      "published_at": "2026-09-22T08:30:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:bc350c7bf80c8ecc5dbf",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, 유럽 빌트인 주요 시장 독일에 빌트인 가전 상설 쇼룸 개관",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ec%9c%a0%eb%9f%bd-%eb%b9%8c%ed%8a%b8%ec%9d%b8-%ec%a3%bc%ec%9a%94-%ec%8b%9c%ec%9e%a5-%eb%8f%85%ec%9d%bc%ec%97%90-%eb%b9%8c%ed%8a%b8%ec%9d%b8-%ea%b0%80%ec%a0%84",
+      "published_at": "2026-09-22T08:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    },
+    {
+      "id": "news:1b8615f8042c854aea79",
+      "source_id": "samsung-kr",
+      "title": "삼성전자, 플랙트그룹 HVAC 생산라인 착공",
+      "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ed%94%8c%eb%9e%99%ed%8a%b8%ea%b7%b8%eb%a3%b9-hvac-%ec%83%9d%ec%82%b0%eb%9d%bc%ec%9d%b8-%ec%b0%a9%ea%b3%b5",
+      "published_at": "2026-09-21T10:00:00+00:00",
+      "fetched_at": "2026-10-10T13:19:56+00:00",
+      "category": "TECH",
+      "category_basis": "TITLE_KEYWORD_HEURISTIC",
+      "review_status": "PENDING_PUBLICATION_REVIEW"
+    }
+  ]
+}

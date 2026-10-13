@@ -1,3 +1,4 @@
+# coding: utf-8
 """Reviewed product announcements, separate from automated RSS and spec catalog."""
 import datetime as dt
 import json
@@ -10,16 +11,25 @@ ASSET=ROOT/'web/product-news-data.js'
 SOURCES={'benq-kr':('www.benq.com','/ko-kr/news/products/'), 'apple-kr':('images.apple.com','/kr/newsroom/')}
 
 def validate(data):
+    if not isinstance(data,dict): raise ValueError('announcement object required')
     if set(data)!={'public_status','items'} or data['public_status']!='UNKNOWN': raise ValueError('public hold required')
+    if not isinstance(data['items'],list): raise ValueError('announcement list required')
     seen=set(); urls=set()
     for item in data['items']:
         required={'id','source_id','source_name','url','title','summary','category','published_on','checked_on','evidence_location','region','preorder_on','available_on','review_status'}
+        if not isinstance(item,dict): raise ValueError('announcement item object required')
         if set(item)!=required: raise ValueError('unexpected announcement fields')
+        for key in ['id','source_id','url','category','review_status','region']:
+            if not isinstance(item[key],str) or not item[key].strip(): raise ValueError('announcement identity/state text required')
+        if item['source_id'] not in SOURCES: raise ValueError('unreviewed announcement source')
         if item['id'] in seen or item['url'] in urls: raise ValueError('duplicate announcement')
         seen.add(item['id']); urls.add(item['url'])
         host,prefix=SOURCES[item['source_id']]
-        u=urlsplit(item['url'])
-        if u.scheme!='https' or u.hostname!=host or not u.path.startswith(prefix) or u.username or u.password or u.port not in (None,443) or u.query or u.fragment or re.search(r'[\s\\%]',item['url']): raise ValueError('invalid official URL')
+        try:
+            u=urlsplit(item['url']); port=u.port
+        except ValueError as error:
+            raise ValueError('invalid official URL') from error
+        if u.scheme!='https' or u.hostname!=host or not u.path.startswith(prefix) or u.username or u.password or port not in (None,443) or u.query or u.fragment or re.search(r'[\s\\%\x00-\x1f\x7f]',item['url']) or any(part in {'.','..'} for part in u.path.split('/')): raise ValueError('invalid official URL')
         if item['category'] not in {'MONITOR_LAUNCH','PHONE_PREORDER'} or item['review_status']!='PENDING_PUBLICATION_REVIEW' or item['region'] not in {'KR','UNKNOWN'}: raise ValueError('invalid state')
         for key in ['title','summary','source_name','evidence_location']:
             if not isinstance(item[key],str) or not item[key].strip() or len(item[key])>500: raise ValueError('missing or long text')

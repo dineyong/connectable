@@ -23,3 +23,25 @@ class ProductNewsTests(unittest.TestCase):
     def test_script_escape(self):
         self.data['items'][0]['title']='</script>'
         self.assertNotIn('</script>',asset(self.data))
+
+    def test_malformed_container_and_records_rejected_cleanly(self):
+        for data in [None, [], {'public_status':'UNKNOWN','items':{}},
+                     {'public_status':'UNKNOWN','items':[None]}]:
+            with self.subTest(data=data):
+                with self.assertRaises(ValueError): validate(data)
+
+    def test_unknown_source_and_invalid_identity_types_rejected(self):
+        for key,value in [('source_id','unreviewed'),('id',[]),('url',{}),('category',[])]:
+            data=copy.deepcopy(self.data);data['items'][0][key]=value
+            with self.subTest(key=key):
+                with self.assertRaises(ValueError): validate(data)
+
+    def test_dot_path_control_and_invalid_port_rejected(self):
+        for url in ['https://www.benq.com/ko-kr/news/products/../x',
+                    'https://www.benq.com/ko-kr/news/products/./x',
+                    'https://www.benq.com/ko-kr/news/products/x\x00',
+                    'https://www.benq.com/ko-kr/news/products/x\x7f',
+                    'https://www.benq.com:bad/ko-kr/news/products/x']:
+            data=copy.deepcopy(self.data);data['items'][0]['url']=url
+            with self.subTest(url=url):
+                with self.assertRaises(ValueError): validate(data)

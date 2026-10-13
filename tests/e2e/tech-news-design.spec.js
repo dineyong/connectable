@@ -98,3 +98,21 @@ test("missing snapshot shows recoverable error and disables unusable filtering",
   await expect(page.locator(".news-card")).toHaveCount(0);
   expect(errors).toEqual([]);
 });
+
+
+test("RSS attempt, success and article confirmation remain separate", async ({page}) => {
+  await page.goto("/tech-news.html");
+  await expect(page.locator(".news-card .meta").first()).toContainText("RSS 확인");
+  await page.getByText("출처별 수집 상태 보기", {exact:true}).click();
+  await expect(page.locator("#news-sources")).toContainText("마지막 시도");
+  await expect(page.locator("#news-sources")).toContainText("마지막 성공");
+});
+
+test("malformed announcements are skipped without stopping valid official records", async ({page}) => {
+  const errors=[];page.on("pageerror", error=>errors.push(error.message));
+  await page.route("**/product-news-data.js",route=>route.fulfill({contentType:"application/javascript",body:`window.CONNECTABLE_PRODUCT_NEWS={public_status:"UNKNOWN",items:[null,{url:"https://www.benq.com/ko-kr/news/products/../x",source_id:"benq-kr",review_status:"PENDING_PUBLICATION_REVIEW",category:"MONITOR_LAUNCH"},{url:"https://www.benq.com/ko-kr/news/products/test",source_id:"benq-kr",review_status:"PENDING_PUBLICATION_REVIEW",category:"MONITOR_LAUNCH",title:"확인된 테스트 발표",summary:"본문 확인 예시",source_name:"BenQ",region:"KR",published_on:"2026-10-10",checked_on:"2026-10-11"}]};`}));
+  await page.goto("/tech-news.html");
+  await expect(page.locator(".announcement-card")).toHaveCount(1);
+  await expect(page.locator("#product-news-status")).toContainText("1건");
+  expect(errors).toEqual([]);
+});
