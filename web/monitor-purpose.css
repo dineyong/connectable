@@ -45,7 +45,11 @@
   min-width: 0;
   margin: 0;
 }
-.purpose-design .hero-search label,
+.purpose-design .hero-search label {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
 .purpose-design .hero-hints,
 .purpose-design .search-arrow {
   display: none;
