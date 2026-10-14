@@ -10,7 +10,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1] / 'web'
-ENTRY_PAGES = ('monitor-v3.html', 'monitors/index.html', 'guides/monitor-buying.html', 'tech-news.html')
+ENTRY_PAGES = ('404.html', 'information.html', 'monitor-v3.html', 'monitors/index.html', 'guides/monitor-buying.html', 'tech-news.html')
 
 
 class Document(HTMLParser):

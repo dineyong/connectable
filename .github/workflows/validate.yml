@@ -45,6 +45,8 @@ jobs:
       - run: python3 scripts/build_monitor10_review.py --check
       - run: python3 scripts/tech_news.py --check
       - run: python3 scripts/validate_local_site.py
+      - name: Build isolated local launch preview (no deployment)
+        run: python3 -m scripts.prepare_launch_preview --output "${RUNNER_TEMP}/connectable-launch-preview"
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e

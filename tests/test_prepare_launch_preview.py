@@ -1,5 +1,6 @@
 """Regression guards for candidate isolation, entry point and publication hold."""
 import hashlib
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -56,3 +57,50 @@ class LaunchPreviewTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'source validation failed'):
                 prepare(self.output)
         self.assertFalse(self.output.exists())
+
+    def source_copy(self):
+        copied = Path(self.temp.name) / 'web'
+        shutil.copytree(WEB, copied)
+        return copied
+
+    def test_invalid_runtime_data_rejected(self):
+        web = self.source_copy()
+        (web / 'monitor-v3-data.js').write_text('window.CONNECTABLE_MONITORS = ;')
+        with self.assertRaises(ValueError):
+            prepare(self.output, web)
+        self.assertFalse(self.output.exists())
+
+    def test_supplemental_index_despite_noindex_comment_rejected(self):
+        web = self.source_copy()
+        page = web / 'monitor10-review.html'
+        page.write_text(page.read_text().replace('noindex,nofollow', 'index,follow') + '<!-- noindex -->')
+        with self.assertRaises(ValueError):
+            prepare(self.output, web)
+        self.assertFalse(self.output.exists())
+
+    def test_supplemental_canonical_rejected(self):
+        web = self.source_copy()
+        page = web / 'monitor10-review.html'
+        page.write_text(page.read_text().replace('</head>', '<link rel="canonical" href="https://example.org/"></head>'))
+        with self.assertRaises(ValueError):
+            prepare(self.output, web)
+        self.assertFalse(self.output.exists())
+
+    def test_supplemental_missing_asset_rejected(self):
+        web = self.source_copy()
+        page = web / 'monitor10-review.html'
+        page.write_text(page.read_text().replace('</head>', '<link rel="stylesheet" href="missing.css"></head>'))
+        with self.assertRaises(ValueError):
+            prepare(self.output, web)
+        self.assertFalse(self.output.exists())
+
+    def test_all_generated_display_assets_are_bound_to_validated_originals(self):
+        for name in ['monitor-v3-data.js', 'monitor-review-links-data.js', 'tech-news-data.js', 'product-news-data.js']:
+            with self.subTest(asset=name):
+                web = Path(self.temp.name) / name.replace('.js', '')
+                shutil.copytree(WEB, web)
+                target = web / name
+                target.write_text(target.read_text() + '\nwindow.UNREVIEWED_EXTRA = true;\n')
+                with self.assertRaisesRegex(ValueError, 'altered generated display data'):
+                    prepare(self.output, web)
+                self.assertFalse(self.output.exists())

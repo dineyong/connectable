@@ -10,6 +10,7 @@ from scripts.validate_local_site import validate_site
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / 'web'
 ASSETS = (
+    '404.html', 'information.html',
     'monitor-v3.html', 'monitor-v3.css', 'monitor-purpose.css', 'monitor-v3.js',
     'monitor-v3-data.js', 'monitor-value-format.js', 'monitor-search.js',
     'monitor-local-comments.js', 'monitor-local-comments.css',
@@ -20,6 +21,24 @@ ASSETS = (
     'product-news.js', 'product-news-data.js',
     'guides/monitor-buying.html', 'guides/monitor-buying.css',
 )
+
+
+def validate_display_artifacts(web):
+    """Rebuild expected data in memory from validated originals; no source writes/network."""
+    from scripts.build_monitor_v3 import serialized, load, SOURCE
+    from scripts.build_monitor_review_links import build
+    from scripts.tech_news import asset as news_asset, CACHE
+    from scripts.product_news import asset as product_asset, DATA
+    expected = {
+        'monitor-v3-data.js': serialized(load(SOURCE))[1],
+        'monitor-review-links-data.js': 'window.CONNECTABLE_REVIEW_LINKS = ' +
+            json.dumps(build(), ensure_ascii=False).replace('<', '\\u003c') + ';\n',
+        'tech-news-data.js': news_asset(json.loads(CACHE.read_text())),
+        'product-news-data.js': product_asset(json.loads(DATA.read_text())),
+    }
+    for name, text in expected.items():
+        if (web / name).read_bytes() != text.encode('utf-8'):
+            raise ValueError('stale or altered generated display data: ' + name)
 
 
 def prepare(output, web=WEB):
@@ -37,6 +56,11 @@ def prepare(output, web=WEB):
         source = web / relative
         if not source.is_file() or source.is_symlink() or web not in source.resolve().parents:
             raise ValueError('missing or unsafe source: ' + relative)
+    html_pages = [relative for relative in files if relative.endswith('.html')]
+    errors = validate_site(web, html_pages)
+    if errors:
+        raise ValueError('full candidate source validation failed: ' + '; '.join(errors))
+    validate_display_artifacts(web)
     site = output / 'site'
     site.mkdir(parents=True)
     try:
@@ -46,13 +70,10 @@ def prepare(output, web=WEB):
             shutil.copyfile(web / relative, target)
         # The original root remains untouched; the candidate opens the current design.
         shutil.copyfile(site / 'monitor-v3.html', site / 'index.html')
-        errors = validate_site(site)
+        errors = validate_site(site, html_pages) + validate_site(site, ['index.html'])
         if errors:
             raise ValueError('candidate validation failed: ' + '; '.join(errors))
-        html_files = list(site.rglob('*.html'))
-        for page in html_files:
-            if 'noindex' not in page.read_text():
-                raise ValueError('candidate must remain noindex: ' + str(page.relative_to(site)))
+        validate_display_artifacts(site)
         manifest = {
             'purpose': 'LOCAL_PREVIEW_ONLY',
             'deployment_authorized': False,
