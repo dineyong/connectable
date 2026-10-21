@@ -23,6 +23,18 @@ if [ "$CF_PAGES_BRANCH" = "codex/monipick-private-preview" ]; then python3 -m sc
 
 인증된 원격 화면, 실제 호스트의 헤더·404·asset 검수 결과는 검수 배포 완료 뒤 아래 후속 기록에 추가한다. 현재 로컬 테스트 통과를 원격 서비스 전체 검수 완료로 승격하지 않는다.
 
+### 후속 확인과 외부 대기 상태
+
+- `017997b`(본 설정 기록만 추가한 커밋)을 검수 브랜치에 push했다. 원격 브랜치 SHA를 다시 확인했다. 코드/데이터/화면의 기준은 CI 성공한 c55b9d3과 동일하다.
+- Pages 설정을 새로 불러와 Custom branches 포함값이 `codex/monipick-private-preview` 하나이며 production 자동 배포는 꺼져 있음을 재확인했다. 출력 폴더, 조건부 명령, Access 제한이 저장된 상태다.
+- [GitHub 공식 상태](https://www.githubstatus.com/)를 직접 열어 `Delays for Pull Requests and Webhook deliveries` 미해결 공지와 Webhooks Degraded Performance를 확인했다. 공지 시작은 2026-10-21 14:52 UTC(한국 2026-10-21 23:52)다. 특정 push의 미전달 원인을 개별 추적한 것은 아니지만 외부 연동 지연과 일치한다.
+- 최종 확인 당시 Pages 목록에는 초기 차단 빌드 한 건과 `No production deployment yet`만 보였다. 검수 브랜치의 원격 빌드 시작·성공, 인증된 사이트 화면, 실자산 헤더, origin 404는 **아직 확인 불가**다. 본문의 로컬 성공 결과로 대체하지 않는다.
+- 초기 차단 빌드의 Cloudflare Pages GitHub check는 failure다. 사전에 `exit 1`로 지정한 공개 보류 장치의 예상 결과로 기록하며 GitHub 테스트 실패로 섞지 않는다. 이를 성공 배포로 표시하거나 삭제하지 않았다.
+- 검수 브랜치 push로 생긴 추가 GitHub Actions 실행은 대기/실행 중 상태였다. c55b9d3의 최초 CI 성공 결과는 위 링크에서 확인했다. 문서만 바뀐 후속 커밋의 미완료 CI를 통과로 표기하지 않는다.
+- 검수 브랜치가 나중에 빌드되더라도 wildcard Access 로그인 제한 안에서만 제공되도록 설정했다. 본 도메인 연결·기본 주소 production 콘텐츠 업로드는 보류다. 정기 감시나 자동 공개 전환은 만들지 않았다.
+
+다음 확인은 Pages가 받은 검수 deployment의 정확한 SHA/고유 URL부터 시작한다. 고유 URL과 alias의 HTML·JS·제품 직접 경로가 인증 없이 노출되지 않는지 재검사하고, 허용 계정으로 화면·200/404·헤더를 확인한 뒤 사용자에게 최종 공개 전 결과를 제시한다. 권한 승인 추가나 유료 플랜 선택은 현재 필요하지 않다. 외부 지연을 해결하려고 저장소 권한을 넓히거나 production 배포를 켜지 않는다.
+
 ## 결정과 실제 상태
 
 사용자는 monipick.com 구매를 알렸고 모니픽 호스팅을 Cloudflare로 선택했다. Vercel Pro는 보류한다. 이번 지시는 Cloudflare 설정을 이어가되 **실제 공개 전에 검수 결과를 먼저 제시**하는 것이다. 알리쿠폰파인드의 호스팅·Railway·DNS는 이 작업 대상이 아니다.
