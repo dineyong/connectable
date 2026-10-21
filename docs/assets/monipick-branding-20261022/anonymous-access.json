@@ -1,0 +1,38 @@
+[
+  {
+    "host": "3afd8034.monipick.pages.dev",
+    "path": "/",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "3afd8034.monipick.pages.dev",
+    "path": "/monitor-v3-data.js",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "3afd8034.monipick.pages.dev",
+    "path": "/monitors/asus-pa279crv/",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/monitor-v3-data.js",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/monitors/asus-pa279crv/",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  }
+]
