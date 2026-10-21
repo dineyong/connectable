@@ -7,8 +7,8 @@
     ['/monitor-v3.css', 200],
     ['/monitors/', 200],
     ['/monitors/asus-pa279crv/', 200],
-    ['/guides/monitor-buying.html', 200],
-    ['/tech-news.html', 200],
+    ['/guides/monitor-buying', 200],
+    ['/tech-news', 200],
     ['/__missing_preview_check_20261022', 404],
     ['/monitors/__missing_preview_check_20261022/', 404],
   ];
