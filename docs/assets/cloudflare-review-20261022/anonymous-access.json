@@ -1,0 +1,62 @@
+[
+  {
+    "host": "66e184bf.monipick.pages.dev",
+    "path": "/",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "66e184bf.monipick.pages.dev",
+    "path": "/__preview_http_check.html",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "66e184bf.monipick.pages.dev",
+    "path": "/monitor-v3-data.js",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "66e184bf.monipick.pages.dev",
+    "path": "/monitors/asus-pa279crv/",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "66e184bf.monipick.pages.dev",
+    "path": "/__missing_preview_check_20261022",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/__preview_http_check.html",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/monitor-v3-data.js",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/monitors/asus-pa279crv/",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/__missing_preview_check_20261022",
+    "status": 302,
+    "redirect_host": "monipick-pages.cloudflareaccess.com"
+  }
+]

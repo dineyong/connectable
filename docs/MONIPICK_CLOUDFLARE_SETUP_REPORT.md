@@ -1,5 +1,75 @@
 # 모니픽 Cloudflare 설정 준비 · 2026-10-22
 
+## 인증된 원격 검수 완료 · 2026-10-22
+
+이 절이 아래 대기 기록보다 최신이다. 사용자 Access 로그인 후 실제 응답과 화면을 확인했다. **비공개 검수 통과이며 공개 승인이나 제품 사양의 추가 인증은 아니다.**
+
+### 검수 대상과 보호 범위
+
+- 최종 소스: `89763ffd8dbcbe9dedae6a8b5fe7d96555ecdd6a`, 검수 브랜치 `codex/monipick-private-preview`.
+- [고정 검수 URL](https://66e184bf.monipick.pages.dev/), deployment `66e184bf-aacb-4cdc-8049-3e9ad0512831`. Cloudflare 상세에서 Preview/success, 2026-10-22 01:48 KST, 21초를 확인했다.
+- 실제 alias는 `codex-monipick-private-previ.monipick.pages.dev`다. 이전에 전체 브랜치명을 변환해 추정했던 주소와 다르므로 실제 alias를 다시 검사했다. 배포 식별은 변경 가능한 alias 대신 고정 URL과 SHA를 사용한다.
+- 고정 URL과 실제 alias 각각 root, 점검 HTML, JS 데이터, 제품 상세, 없는 경로에 비인증 GET을 보냈다. **10/10 HTTP 302 → Access 로그인 호스트**로 차단됐다. [비인증 결과](assets/cloudflare-review-20261022/anonymous-access.json)에는 상태와 로그인 호스트만 기록하고 인증 쿼리·토큰·이메일은 저장하지 않았다.
+- Access의 `*.monipick.pages.dev` 소유자 이메일 1개 허용 정책을 유지했다. production 자동 배포 Disabled/paused, 목록 `No production deployment yet`, 기본 `monipick.pages.dev/` HTTP 404를 재확인했다. monipick.com 연결·DNS·main·색인·광고·제휴·유료 플랜은 변경하지 않았다.
+
+### 화면과 HTTP 검증
+
+| 항목 | 결과 | 실제 확인 |
+| --- | --- | --- |
+| 기본 화면 | 통과 | 모니터 30종·브랜드 8개 표시 |
+| 용도 선택 | 통과 | 문서·사무 11종, 별도 결과 버튼; 선택 즉시 목록으로 이동하지 않음 |
+| 검색·브랜드 | 통과 | PA279CRV 1종, ASUS 7종 |
+| 비교 | 통과 | PA279CRV/PG32UCDM 비교 열림, Escape 닫기, 선택 유지 |
+| 미확인/지역/조건 | 통과 | US 기준·한국 SKU 미확인, 미확인 값, PD 96W/90W 및 PG32UCDM 기본 65W·OSD 90W 조건 유지 |
+| 직접 제품 상세 | 통과 | `/monitors/asus-pa279crv/` 제목·공식 출처·지역 불확실성 표시 |
+| 뉴스·가이드 | 통과 | 실제 내용 표시; `.html` 진입 시 확장자 없는 주소로 정상 이동 |
+| 실제 정상 응답 | 통과 | root, JS, CSS, 목록, 제품, 가이드, 뉴스 7개 HTTP 200 |
+| 실제 없는 경로 | 통과 | root 하위 및 제품 하위 2개 HTTP 404, 전용 404 문구 표시 |
+| 보안 헤더 | 통과 | 아래 6개 정책을 9개 응답 모두에서 확인 |
+| 인증 없는 접근 | 통과 | 고정 URL/실제 alias의 HTML·JS·상세·없는 주소 10개 모두 Access 302 |
+
+[인증된 실제 HTTP 결과](assets/cloudflare-review-20261022/http-results.json)는 로그인 응답이 아닌 애플리케이션 응답이다. 각 경로에서 다음을 확인했다.
+
+- `X-Robots-Tag: noindex, nofollow, noarchive`
+- `X-Content-Type-Options: nosniff`
+- `X-Frame-Options: DENY`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- `Permissions-Policy: camera=(), microphone=(), geolocation=()`
+- `Cache-Control: no-store`
+
+일반 브라우저 도구가 인증된 HTTP 헤더를 제공하지 않아, [옵트인 점검 HTML](../scripts/preview_http_check.html)과 [JS](../scripts/preview_http_check.js)를 비공개 후보에만 추가했다. 고정된 같은 origin 경로만 GET하고 인증값·쿠키를 읽거나 출력하지 않는다. `redirect:error`로 Access 로그인 응답을 성공으로 오인하지 않는다. 초기 점검은 가이드/뉴스의 `.html` 정규화 이동을 요청 오류로 표시했으며, 일반 화면에서 최종 주소를 확인한 뒤 점검 대상만 정규화 주소로 수정했다. 최종 **9/9 PASS**다. 실제 사이트 경로나 UI를 바꿔 오류를 숨긴 것이 아니다.
+
+기본 생성에는 점검 파일이 포함되지 않고 `--include-http-check`에서만 포함된다. 원격 조건부 명령도 검수 브랜치에서만 이 옵션을 사용한다. 그 밖의 브랜치는 `exit 1`이다. 점검 파일은 공개 후보에서 계속 제외해야 한다. noindex/robots는 Access 인증의 대체 수단이 아니다.
+
+### 화면 증거와 검수 범위
+
+- [최종 메인 화면](assets/cloudflare-review-20261022/desktop.jpg): 66e184bf, 측정 CSS 폭 1265px.
+- [모바일 화면](assets/cloudflare-review-20261022/mobile.jpg): b0bd1ac3, 측정 CSS 폭/scrollWidth 모두 375px. 가로 넘침 없음.
+- [비교 화면](assets/cloudflare-review-20261022/compare.jpg): b0bd1ac3, 중간 폭 화면.
+- [실제 404 화면](assets/cloudflare-review-20261022/404.jpg): ac86f2ca.
+- [최종 HTTP 점검 화면](assets/cloudflare-review-20261022/http-check.jpg): 66e184bf.
+
+주요 검색·비교·모바일 조작은 사용자가 인증한 b0bd1ac3에서 수행했다. 017997b→89763ff 사이 `web/`, `data/`, `schemas/`의 커밋 차이는 0임을 검사했다. 최종 호스트에서도 메인 화면과 HTTP 점검을 다시 확인했다. 캡처마다 실제 호스트를 구분하며 모든 기기·브라우저의 완전한 기능 검수로 확대 해석하지 않는다. 최종 점검/메인 탭에서 수집된 warn/error 콘솔 로그는 없었다. 모든 경로의 전체 네트워크·외부 링크·사양 진위를 검사했다는 뜻은 아니다.
+
+### 테스트와 보존
+
+- `node --check scripts/preview_http_check.js`: 통과.
+- `python3 -m unittest tests.test_prepare_cloudflare_preview -q`: 7개 통과. 기본 후보에서 점검 파일 제외, 옵트인 포함 및 manifest/CSP를 검사한다.
+- `python3 -m unittest discover -s tests -q`: 로컬 **623개 통과**. 의도적인 비정상 입력의 FAIL 출력은 테스트 결과 실패가 아니며 최종 exit 0/OK를 확인했다.
+- ecacb31 [검수 CI](https://github.com/dineyong/connectable/actions/runs/39637251565): Python **623개**, 브라우저 **208개** 통과. 준비 브랜치 CI도 success.
+- 최종 89763ff [검수 CI](https://github.com/dineyong/connectable/actions/runs/39638086903): success. Python 623개·브라우저 208개 통과. 최종 변경은 점검 경로 2개의 `.html` 확장자 제거뿐이다.
+- `git diff --check`: 통과. 기존 사용자 수정 README/DECISIONS/content-review.spec.js/site-v2.js와 미추적 문서는 보존했다. 제품·코퍼스·목업 원본 변경 없음.
+- 새 근거에는 개인 계정·이메일·인증 쿠키·토큰·비밀값을 저장하지 않았다. 문서 상대 경로와 JSON 파싱을 검사했다.
+- 후속 확인 자동화 `automation-4`는 검수가 완료돼 삭제했다. 현재 채팅은 보존했다.
+
+### 남은 위험과 공개 전 작업
+
+1. 화면/문서 제목은 아직 Connectable이며 로컬 미리보기·로컬 시연 문구가 남아 있다. 모니픽 브랜딩과 공개 문구/메타데이터는 별도 변경·검수해야 한다. 특히 404의 “실제 호스팅 404는 공개 전 별도 확인” 문구는 이번 실제 확인 이후 갱신 대상이다.
+2. 한국 SKU 미확인·해외 지역 공식 문서·충돌·부분 검증을 유지했다. 이번 배포 검수가 제품 전체 사양/호환성 승인을 뜻하지 않는다.
+3. 뉴스는 저장 목록이고 자동 실시간 수집을 보장하지 않는다. 이모지 반응은 로컬 저장이며 공개 집계가 아니다.
+4. 기본 pages.dev와 custom domain은 현재 Access wildcard 대상이 아니다. 실제 공개는 별도 승인 후 production 구성·도메인·색인 정책을 검수해야 한다. 수동 콘솔 배포까지 막는 절대적 권한 경계는 아니다.
+5. 이번 점검은 익명 차단과 허용 계정 성공을 검사했다. 다른 계정으로 로그인하는 부정 접근 테스트는 수행하지 않았다. 헤더 확인은 열거한 정책 범위이며 종합 보안 감사가 아니다.
+
 ## 자동 후속 검수 · 2026-10-22 01:26 KST
 
 아래 인증 후 준비 기록보다 이 절의 실제 수신 결과가 최신이다.
