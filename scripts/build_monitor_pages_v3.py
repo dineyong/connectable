@@ -32,6 +32,7 @@ LABELS.update({'active_area':'유효 화면 영역','brightness_unspecified':'�
     'displayport.version':'DisplayPort 버전','hdmi.count':'HDMI 수량','hdmi.version':'HDMI 버전',
     'usb_c.video_mode':'USB-C 영상 모드'})
 from scripts.monitor_value_format import formatted, fact_text
+from scripts.site_branding import social_metadata
 
 def esc(value):
     return html.escape(str(value), quote=True)
@@ -46,6 +47,8 @@ def review_section(product_id, reviews):
 
 def render(product, reviews=()):
     title = product['manufacturer'] + ' ' + product['display_model']
+    page_title = title + ' 사양·출처 | 모니픽'
+    description = title + '의 수집된 공식 사양, 입력 조건과 미확인 항목을 모니픽에서 함께 확인하세요.'
     sources = {s['id']:s for s in product['source_refs']}
     rows=[]
     for f in product['facts']:
@@ -60,19 +63,22 @@ def render(product, reviews=()):
               + '</ul><p>아래 값은 기록된 문서의 표기입니다. 충돌이 해소된 것으로 해석하지 마세요.</p></aside>') if conflicts else ''
     return f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>{esc(title)} 사양·출처 | Connectable</title>
-<meta name="description" content="{esc(title)}의 수집된 공식 사양, 입력 조건과 미확인 항목을 함께 확인하세요. 로컬 검토용 문서입니다.">
+<meta name="robots" content="noindex,nofollow"><title>{esc(page_title)}</title>
+<meta name="description" content="{esc(description)}">
+{social_metadata(page_title, description)}
 <link rel="stylesheet" href="../../monitor-detail-v3.css"><link rel="stylesheet" href="../../monitor-review-links.css"></head>
-<body><a class="skip" href="#main">본문으로 이동</a><header><a class="brand" href="../../monitor-v3.html">Connectable<span>모니터 선택의 기준</span></a><nav aria-label="주요 메뉴"><a href="../../monitor-v3.html">모니터 찾기</a><a href="../../tech-news.html">테크 소식</a></nav></header>
+<body><a class="skip" href="#main">본문으로 이동</a><header><a class="brand" href="../../monitor-v3.html">모니픽<span>모니터 선택의 기준</span></a><nav aria-label="주요 메뉴"><a href="../../monitor-v3.html">모니터 찾기</a><a href="../../tech-news.html">테크 소식</a></nav></header>
 <main id="main"><a class="back" href="../../monitor-v3.html">← 모니터 목록</a><p class="eyebrow">MONITOR DETAILS</p><h1>{esc(title)}</h1>
 <p class="intro">사양은 자세하게, 확인되지 않은 정보는 분명하게.</p>
-<aside><strong>로컬 검토용 · 공개 승인 전</strong><p>문서 지역: {esc(product['region'])}. 한국 판매 SKU 동일성은 미확인입니다. 아래 제조사 표기는 사람 검토 완료나 기기 호환성 보장이 아닙니다. 미확인은 미지원과 다릅니다.</p></aside>
+<aside><strong>비공개 검수 중 · 사양 적용 범위 확인 필요</strong><p>문서 지역: {esc(product['region'])}. 한국 판매 SKU 동일성은 미확인입니다. 아래 제조사 표기는 사람 검토 완료나 기기 호환성 보장이 아닙니다. 미확인은 미지원과 다릅니다.</p></aside>
 {notice}<section aria-labelledby="specs"><h2 id="specs">공식 문서에서 수집한 사양</h2><p>최대값은 입력·모드에 따라 달라질 수 있습니다. PD 공급 전력과 모니터 소비전력은 서로 다른 항목입니다.</p><div class="table-wrap" tabindex="0" role="region" aria-label="공식 사양과 항목별 근거"><table><caption>{esc(title)} 사양과 항목별 근거</caption><thead><tr><th scope="col">항목</th><th scope="col">값·표현 종류</th><th scope="col">조건·문서 위치·출처</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section>
 <section><h2>아직 확인이 필요한 항목</h2><ul>{missing or '<li>원본에 별도 결측 목록 없음. 전체 검증 완료를 뜻하지 않습니다.</li>'}</ul><details><summary>조사 범위와 원본 메모</summary><ul>{notes}</ul></details></section>
 {review_section(product["id"], reviews)}
-<footer>Connectable · 원본 사양과 사용자 경험을 구분합니다. 가격·판매량·구매 인증을 제공하는 페이지가 아닙니다.</footer></main></body></html>'''
+<footer>모니픽 · 원본 사양과 사용자 경험을 구분합니다. 가격·판매량·구매 인증을 제공하는 페이지가 아닙니다.</footer></main></body></html>'''
 
 def render_index(products):
+    page_title = '전체 모니터 사양·출처 목록 | 모니픽'
+    description = '모니픽에서 모니터 사양과 공식 출처를 브랜드별로 확인하세요. 문서 지역과 미확인 조건을 함께 표시합니다.'
     groups = {}
     for p in sorted(products, key=lambda p: (p['manufacturer'], p['display_model'])):
         groups.setdefault(p['manufacturer'], []).append(p)
@@ -82,13 +88,14 @@ def render_index(products):
         sections.append(f'<section><h2>{esc(brand)}</h2><ul>{links}</ul></section>')
     return f'''<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>전체 모니터 사양·출처 목록 | Connectable</title>
-<meta name="description" content="조사한 모니터의 사양과 공식 출처를 브랜드별 정적 목록에서 확인하세요. JavaScript 없이 열 수 있는 로컬 검토용 문서입니다.">
+<meta name="robots" content="noindex,nofollow"><title>{esc(page_title)}</title>
+<meta name="description" content="{esc(description)}">
+{social_metadata(page_title, description)}
 <link rel="stylesheet" href="../monitor-detail-v3.css"><link rel="stylesheet" href="../monitor-index.css"></head>
-<body><a class="skip" href="#main">본문으로 이동</a><header><a class="brand" href="../monitor-v3.html">connectable<span>모니터 선택의 기준</span></a><nav aria-label="주요 메뉴"><a href="../monitor-v3.html">검색·비교 화면</a><a href="../guides/monitor-buying.html">구매 가이드</a></nav></header>
+<body><a class="skip" href="#main">본문으로 이동</a><header><a class="brand" href="../monitor-v3.html">모니픽<span>모니터 선택의 기준</span></a><nav aria-label="주요 메뉴"><a href="../monitor-v3.html">검색·비교 화면</a><a href="../guides/monitor-buying.html">구매 가이드</a></nav></header>
 <main id="main"><p class="eyebrow">ALL MONITORS</p><h1>전체 모니터 사양·출처</h1><p class="intro">브랜드별 {len(products)}개 제품 문서. JavaScript 없이 읽을 수 있어요.</p>
-<aside><strong>로컬 검토용 · 한국 판매 SKU 동일성 미확인</strong><p>문서 지역과 구매할 모델을 대조하세요. 조사 내용은 사람 검토 완료나 호환성 보장이 아닙니다.</p></aside>
-<div class="static-product-groups">{''.join(sections)}</div><footer>Connectable · 공식 자료의 사양과 조건을 함께 확인하세요.</footer></main></body></html>'''
+<aside><strong>비공개 검수 중 · 한국 판매 SKU 동일성 미확인</strong><p>문서 지역과 구매할 모델을 대조하세요. 조사 내용은 사람 검토 완료나 호환성 보장이 아닙니다.</p></aside>
+<div class="static-product-groups">{''.join(sections)}</div><footer>모니픽 · 공식 자료의 사양과 조건을 함께 확인하세요.</footer></main></body></html>'''
 
 def build(source=SOURCE, output=OUTPUT, check=False):
     data=official(load(source))

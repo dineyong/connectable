@@ -114,6 +114,9 @@ def render_record(record):
 
 
 def render(data):
+    from scripts.site_branding import social_metadata
+    page_title = "모니터 10종, 공식 자료 더 살펴보기 — 모니픽"
+    description = "모니픽의 모니터 10종 공식 사양 재확인 자료. 확인값과 미확인 항목, 조건 및 공식 출처를 구분합니다."
     from scripts.validate_monitor10_supplement import validate
     errors = validate(data)
     if errors:
@@ -122,13 +125,13 @@ def render(data):
     count = sum(len(r['confirmed']) for r in records)
     index = ''.join(f'<a href="#{esc(r["id"])}"><span>{i:02d}</span>{esc(r["selection_model"])}</a>' for i, r in enumerate(records, 1))
     return f'''<!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="모니터 10종의 공식 사양 재확인 자료. 확인값과 미확인 항목, 조건 및 공식 출처를 구분합니다."><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>모니터 10종, 공식 자료 더 살펴보기 — Connectable</title><link rel="stylesheet" href="monitor-v3.css"><link rel="stylesheet" href="monitor10-review.css"></head>
-<body><a class="skip" href="#model-index">모델 목록으로 건너뛰기</a><header><div class="header-inner"><a class="brand" href="monitor-v3.html">Connectable.</a><nav aria-label="주 메뉴"><a href="monitor-v3.html">모니터 찾기</a><a href="#model-index" aria-current="page">공식 자료 보강</a><a href="tech-news.html">테크 소식</a></nav><span class="preview-label">LOCAL PREVIEW</span></div></header>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="{description}"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>{page_title}</title>{social_metadata(page_title, description)}<link rel="stylesheet" href="monitor-v3.css"><link rel="stylesheet" href="monitor10-review.css"></head>
+<body><a class="skip" href="#model-index">모델 목록으로 건너뛰기</a><header><div class="header-inner"><a class="brand" href="monitor-v3.html">모니픽</a><nav aria-label="주 메뉴"><a href="monitor-v3.html">모니터 찾기</a><a href="#model-index" aria-current="page">공식 자료 보강</a><a href="tech-news.html">테크 소식</a></nav><span class="preview-label">비공개 검수 중</span></div></header>
 <main class="m10-main"><section class="m10-hero"><p class="eyebrow">A LITTLE MORE CERTAINTY</p><h1>같은 모델명도,<br>조건까지 확인합니다.</h1><p>모니터 10종의 공식 원문을 다시 살펴봤어요.<br>확인한 사양은 출처와 함께, 남은 질문은 그대로 남겼습니다.</p><div class="m10-metrics"><span><strong>{len(records)}</strong>개 모델</span><span><strong>{count}</strong>개 재확인 항목</span><span><strong>출처별</strong>적용 범위 유지</span></div></section>
 <aside class="m10-notice" aria-label="자료의 검토 범위"><strong>기존 비교 자료를 보완하는 별도 조사 페이지입니다.</strong><p>한국 판매 SKU·리비전의 동일성이나 호환성 승인을 뜻하지 않습니다. 원본 30종에 자동 병합하지 않았으며, 사용자 후기·가격·판매 순위는 이 자료에 포함하지 않습니다.</p></aside>
 <nav class="m10-index" id="model-index" aria-label="모델 바로가기"><h2>모델 바로가기</h2><div>{index}</div></nav>
 {''.join(render_record(r) for r in records)}
-<section class="m10-bottom"><h2>확인하지 못한 것은, 미확인으로.</h2><p>미확인은 미지원이 아닙니다. 문서가 다르게 말하면 하나를 골라 확정하지 않습니다. 수치가 같아도 입력 방향·화면 모드·지역이 다르면 별도로 읽어주세요.</p><a href="monitor-v3.html">← 모니터 탐색으로 돌아가기</a></section></main><footer><a class="brand" href="monitor-v3.html">Connectable.</a><p>더 명확한 비교, 더 나은 선택.</p><p>로컬 조사 자료 · 공개 승인 보류</p></footer></body></html>
+<section class="m10-bottom"><h2>확인하지 못한 것은, 미확인으로.</h2><p>미확인은 미지원이 아닙니다. 문서가 다르게 말하면 하나를 골라 확정하지 않습니다. 수치가 같아도 입력 방향·화면 모드·지역이 다르면 별도로 읽어주세요.</p><a href="monitor-v3.html">← 모니터 탐색으로 돌아가기</a></section></main><footer><a class="brand" href="monitor-v3.html">모니픽</a><p>더 명확한 비교, 더 나은 선택.</p><p>공식 자료 보강 · 공개 승인 보류</p></footer></body></html>
 '''
 
 

@@ -13,7 +13,7 @@ test('monitor search has a visible persistent label instead of a placeholder-onl
 
 test('local preview warning belongs to a named landmark without changing release status', async ({ page }) => {
   await page.goto('/monitor-v3.html');
-  await expect(page.getByRole('region', { name: '로컬 미리보기 안내' })).toContainText('한국 SKU와 호환성 검토 전');
+  await expect(page.getByRole('region', { name: '비공개 검수 안내' })).toContainText('한국 SKU와 호환성 검토 전');
   const results = await new AxeBuilder({ page }).withRules(['region']).analyze();
   expect(results.violations).toEqual([]);
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
