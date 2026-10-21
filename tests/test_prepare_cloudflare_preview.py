@@ -62,3 +62,18 @@ class CloudflarePreviewTests(unittest.TestCase):
             self.assertFalse((site / name).exists())
         self.assertEqual((site / 'index.html').read_bytes(), (WEB / 'monitor-v3.html').read_bytes())
         self.assertTrue((site / '404.html').is_file())
+
+    def test_http_diagnostics_are_opt_in_and_manifest_bound(self):
+        manifest = prepare_cloudflare(self.output, include_http_check=True)
+        self.assertTrue(manifest['http_check_included'])
+        for name in ['__preview_http_check.html', '__preview_http_check.js']:
+            target = self.output / 'site' / name
+            self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(), manifest['files'][name])
+        page = (self.output / 'site' / '__preview_http_check.html').read_text()
+        self.assertIn('noindex,nofollow', page)
+        self.assertIn("connect-src 'self'", page)
+
+    def test_default_package_excludes_http_diagnostics(self):
+        manifest = prepare_cloudflare(self.output)
+        self.assertFalse(manifest['http_check_included'])
+        self.assertFalse(list((self.output / 'site').glob('__preview_http_check.*')))
