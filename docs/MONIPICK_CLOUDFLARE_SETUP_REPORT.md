@@ -1,5 +1,28 @@
 # 모니픽 Cloudflare 설정 준비 · 2026-10-22
 
+## 인증 후 설정 진행 · 2026-10-22
+
+아래 내용은 본문의 최초 준비 기록 이후 수행한 후속 설정이다. 이전의 미생성·권한 대기 표기는 당시 상태이며 이 절이 현재 진행 상태다.
+
+- 사용자 직접 인증 후 GitHub 연동 완료를 확인했다. 허용된 저장소 목록에는 connectable 하나가 표시됐다.
+- Git integration 방식으로 `monipick` Pages 프로젝트를 생성했다. 초기 빌드 명령은 `exit 1`, 출력은 `cloudflare-preview/site`로 지정했다. 기존 작업 커밋 `c55b9d3`을 clone한 뒤 실패하도록 의도한 설정이며 실제 서비스 결함이나 테스트 실패를 숨기는 목적이 아니다. 프로젝트 화면에서 `No production deployment yet`, `No deployment available`을 확인했다.
+- Production branch는 `codex/monipick-cloudflare-preparation`이며 자동 production 배포를 Disabled로 저장했다. main은 사용하지 않는다.
+- Pages의 Restrict previews를 적용했다. Access 앱은 `*.monipick.pages.dev`를 보호하며 정책의 Include Emails는 현재 소유자 계정 이메일 하나다. 주소 자체는 보고서에 저장하지 않는다. 다른 사용자·도메인·Everyone·Bypass를 추가하지 않았다.
+- 인증 없는 curl 요청에서 검수용 alias의 `/`, `/monitor-v3-data.js`, `/monitors/`, `/not-a-real-product`가 모두 HTTP 302로 `monipick-pages.cloudflareaccess.com` 로그인으로 이동했다. 이는 업로드 전 접근 장벽 확인이며 배포 후 실제 자산 보호를 다시 확인해야 한다. 초기 Python urllib 확인은 curl과 다른 403 응답을 반환해 결론 근거로 쓰지 않았다.
+- 기본 `monipick.pages.dev`는 같은 경로에서 522를 반환했다. 서비스 정상 응답이나 Access 보호 성공으로 해석하지 않는다. **기본 주소는 Access 보호 범위 밖이므로 실제 콘텐츠를 production으로 배포하지 않는다.**
+- 빌드 명령을 다음 조건식으로 변경했다. Preview 자동 배포는 아래 브랜치 하나만 포함하는 Custom branches로 제한했다. PR build comments도 Disabled로 저장했다.
+
+```sh
+if [ "$CF_PAGES_BRANCH" = "codex/monipick-private-preview" ]; then python3 -m scripts.prepare_cloudflare_preview --output cloudflare-preview; else exit 1; fi
+```
+
+- [공식 빌드 문서](https://developers.cloudflare.com/pages/configuration/build-configuration/)의 `CF_PAGES_BRANCH`를 사용한다. 로컬 격리 검사에서 main, production 기준 브랜치, 임의 다른 브랜치는 모두 exit 1로 중단되고 출력 폴더가 생기지 않았다. 이 검사는 원격 콘솔 권한 자체를 잠그는 보안 경계는 아니다.
+- `codex/monipick-private-preview`에 검증 커밋을 push해 인증이 필요한 preview 환경만 준비 중이다. 실제 공개 도메인 연결, main merge, 색인·광고·쿠팡·유료 플랜·Workers/D1 생성은 수행하지 않았다.
+- Cloudflare 대시보드가 GitHub push event 연동 저하 안내를 표시했다. 안내 표시를 특정 장애 원인의 확정 증거로 취급하지 않으며, 빌드 수신/실행/완료는 별도로 확인한다.
+- 준비 코드 [GitHub CI 39624161587](https://github.com/dineyong/connectable/actions/runs/39624161587)는 성공했다. 로그 기준 Python 621개·브라우저 208개 통과다. 로컬 222개와의 차이는 보존한 미커밋 사용자 테스트 14개다. 사용자 변경을 임의 포함해 CI 숫자를 맞추지 않았다.
+
+인증된 원격 화면, 실제 호스트의 헤더·404·asset 검수 결과는 검수 배포 완료 뒤 아래 후속 기록에 추가한다. 현재 로컬 테스트 통과를 원격 서비스 전체 검수 완료로 승격하지 않는다.
+
 ## 결정과 실제 상태
 
 사용자는 monipick.com 구매를 알렸고 모니픽 호스팅을 Cloudflare로 선택했다. Vercel Pro는 보류한다. 이번 지시는 Cloudflare 설정을 이어가되 **실제 공개 전에 검수 결과를 먼저 제시**하는 것이다. 알리쿠폰파인드의 호스팅·Railway·DNS는 이 작업 대상이 아니다.
