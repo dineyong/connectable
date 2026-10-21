@@ -1,5 +1,18 @@
 # 모니픽 Cloudflare 설정 준비 · 2026-10-22
 
+## 자동 후속 검수 · 2026-10-22 01:26 KST
+
+아래 인증 후 준비 기록보다 이 절의 실제 수신 결과가 최신이다.
+
+- GitHub 공식 summary API는 Webhook 지연 incident를 여전히 investigating으로 반환했다. 전면 복구됐다고 판단하지 않는다. 다만 Cloudflare에는 두 개의 **Preview 성공 배포가 도착**했다.
+- 검수 기준은 `017997b0daba402f1d6e448db520e3b057a85894`, deployment `b0bd1ac3-dea5-475a-8fec-b365b27bbc82`, 고유 URL [b0bd1ac3.monipick.pages.dev](https://b0bd1ac3.monipick.pages.dev/)이다. 상세 화면에서 Preview, success, 한국 시각 00:41, 빌드 15초를 직접 확인했다. 로그에서 조건부 빌드, 59파일 후보 검사, header rule 1개 파싱, 자산 58파일 업로드를 확인했다. `_headers`는 제어 파일이므로 후보 파일 수와 업로드 자산 수는 다르다.
+- 지연 전달된 이전 커밋 c55b9d3의 Preview `69d8c37e`도 존재한다. out-of-order 전달 가능성을 고려해 브랜치 alias만 최신 소스의 증거로 쓰지 않고 위 고유 URL을 검수 대상으로 고정한다. 두 커밋 간 사이트 코드/데이터는 같다.
+- 두 고유 URL과 검수 alias 각각의 root, JS 데이터, 목록, 존재하지 않는 경로 및 ASUS PA279CRV 상세 직접 경로를 비인증 curl로 확인했다. 전부 HTTP 302로 Access 로그인 호스트에 이동했다. origin의 404나 성공 응답으로 해석하지 않는다.
+- 기본 monipick.pages.dev root는 현재 HTTP 404다. 운영 배포 목록은 `No production deployment yet`이며 실제 production 콘텐츠가 생겼다는 증거가 없다. DNS/Custom domain 연결과 공개 전환은 하지 않았다.
+- [검수 커밋 CI](https://github.com/dineyong/connectable/actions/runs/39626621911)는 success다. 기존 코드가 바뀌지 않아 전체 테스트를 다시 실행하지 않았다.
+- **남은 사용자 조치:** 고유 URL을 열면 Cloudflare Access가 별도의 이메일 로그인 코드를 요구한다. Cloudflare 대시보드 로그인과 이 사이트의 Access 세션은 별개다. 로그인 창만 열었으며 이메일/코드 입력·코드 발송·메일함 열람·토큰 생성·인증 우회를 하지 않았다. 사용자에게 계정 이메일로 직접 로그인하도록 안내한다.
+- 인증된 화면·검색/비교/상세 동선, 실제 origin 200/404, 실제 자산 응답 보안 헤더는 아직 확인 불가다. 로컬 테스트나 Access 로그인 응답으로 통과 처리하지 않는다. 사용자가 Access 로그인한 뒤 비공개 검수를 계속한다.
+
 ## 인증 후 설정 진행 · 2026-10-22
 
 아래 내용은 본문의 최초 준비 기록 이후 수행한 후속 설정이다. 이전의 미생성·권한 대기 표기는 당시 상태이며 이 절이 현재 진행 상태다.
