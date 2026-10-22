@@ -1,0 +1,58 @@
+[
+  {
+    "host": "bd395c6b.monipick.pages.dev",
+    "path": "/",
+    "status": "HTTP/2 302 ",
+    "redirect_host": "monipick-pages.cloudflareaccess.com",
+    "exit": 0
+  },
+  {
+    "host": "bd395c6b.monipick.pages.dev",
+    "path": "/monitor-v3.js",
+    "status": "HTTP/2 302 ",
+    "redirect_host": "monipick-pages.cloudflareaccess.com",
+    "exit": 0
+  },
+  {
+    "host": "bd395c6b.monipick.pages.dev",
+    "path": "/monitors/asus-pa279crv/",
+    "status": "HTTP/2 302 ",
+    "redirect_host": "monipick-pages.cloudflareaccess.com",
+    "exit": 0
+  },
+  {
+    "host": "bd395c6b.monipick.pages.dev",
+    "path": "/information",
+    "status": "HTTP/2 302 ",
+    "redirect_host": "monipick-pages.cloudflareaccess.com",
+    "exit": 0
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/",
+    "status": "HTTP/2 302 ",
+    "redirect_host": "monipick-pages.cloudflareaccess.com",
+    "exit": 0
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/monitor-v3.js",
+    "status": "HTTP/2 302 ",
+    "redirect_host": "monipick-pages.cloudflareaccess.com",
+    "exit": 0
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/monitors/asus-pa279crv/",
+    "status": "HTTP/2 302 ",
+    "redirect_host": "monipick-pages.cloudflareaccess.com",
+    "exit": 0
+  },
+  {
+    "host": "codex-monipick-private-previ.monipick.pages.dev",
+    "path": "/information",
+    "status": "HTTP/2 302 ",
+    "redirect_host": "monipick-pages.cloudflareaccess.com",
+    "exit": 0
+  }
+]
