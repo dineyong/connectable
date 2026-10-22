@@ -69,3 +69,7 @@ python3 -m scripts.prepare_monipick_release --output /tmp/monipick-release-prep-
 이번 기준 코드와 CI는 Git 이력으로 고정하고, 향후 운영 배포 ID·SHA·시각·파일 manifest를 별도 기록한다. 이번에는 운영 배포가 없으므로 “실제 롤백 성공”을 주장하지 않는다. 공개 후 결함이 생기면 승인 범위의 Pages 배포 복원으로 대응하며 원본 데이터나 관련 없는 변경을 reset/강제 push로 되돌리지 않는다.
 
 남은 사용자 결정: 최종 공개 승인. 사진·남은 SKU·댓글·광고·실시간 뉴스는 첫 공개의 추가 필수 조건으로 늘리지 않는다.
+
+## 공개용 빌드 후속 준비 · 2026-10-23
+
+[공개용 빌드 가이드](MONIPICK_PUBLIC_BUILD_GUIDE.md)가 공개 형식 출력과 전환안의 최신 기준이다. 기존 prepare_monipick_release의 비활성 초안과 보호 후보 계약은 보존한다. 새 build_monipick_public_candidate는 별도 로컬 출력에 metadata/문구/사이트맵/헤더/redirect를 적용하지만 승인 flag를 해제하거나 Cloudflare 설정을 변경하지 않는다. 실제 도메인 연결·운영 배포·검색 제출은 최종 승인까지 보류한다. 비공개 검수에는 기존 prepare_cloudflare_preview만 사용한다.

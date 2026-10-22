@@ -49,6 +49,10 @@ jobs:
         run: python3 -m scripts.prepare_launch_preview --output "${RUNNER_TEMP}/connectable-launch-preview"
       - name: Build inactive Monipick release drafts (no deployment)
         run: python3 -m scripts.prepare_monipick_release --output "${RUNNER_TEMP}/monipick-release-drafts"
+      - name: Build unapproved public-format candidate (no deployment)
+        run: python3 -m scripts.build_monipick_public_candidate --output "${RUNNER_TEMP}/monipick-public-candidate"
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
+      - name: Check public-format candidate under generated CSP (loopback only)
+        run: npx playwright test --config playwright.release.config.js --workers=2
