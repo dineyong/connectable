@@ -12,6 +12,8 @@ from scripts.prepare_cloudflare_preview import prepare_cloudflare
 from scripts.prepare_launch_preview import ASSETS, WEB
 
 ORIGIN = 'https://monipick.com'
+CONTACT_EMAIL = 'contact@monipick.com'
+CONTACT_DELIVERY_STATUS = 'PENDING_DESTINATION_VERIFICATION'
 EXCLUDED = {'404.html', 'tech-news.html', 'monitor10-review.html'}
 CSP = ("default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; "
        "connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; "
@@ -41,18 +43,19 @@ def release_plan(web):
             'sitemap_candidate': source not in EXCLUDED,
         })
     return {'status': 'INACTIVE_DRAFT', 'origin': ORIGIN, 'analytics_enabled': False,
-            'contact_email': None, 'publication_authorized': False, 'indexing_authorized': False,
-            'blockers': ['CONTACT_EMAIL_PENDING', 'FINAL_PUBLICATION_APPROVAL_PENDING'],
+            'contact_email': CONTACT_EMAIL, 'contact_delivery_status': CONTACT_DELIVERY_STATUS, 'publication_authorized': False, 'indexing_authorized': False,
+            'blockers': ['CONTACT_ROUTING_PENDING', 'FINAL_PUBLICATION_APPROVAL_PENDING'],
             'pages': pages}
 
 
 def validate_plan(plan):
     if (plan.get('status') != 'INACTIVE_DRAFT' or plan.get('origin') != ORIGIN or
-            plan.get('analytics_enabled') is not False or plan.get('contact_email') is not None or
+            plan.get('analytics_enabled') is not False or plan.get('contact_email') != CONTACT_EMAIL or
+            plan.get('contact_delivery_status') != CONTACT_DELIVERY_STATUS or
             plan.get('publication_authorized') is not False or
             plan.get('indexing_authorized') is not False):
         raise ValueError('draft must preserve pending contact, analytics exclusion and approval holds')
-    if plan.get('blockers') != ['CONTACT_EMAIL_PENDING', 'FINAL_PUBLICATION_APPROVAL_PENDING']:
+    if plan.get('blockers') != ['CONTACT_ROUTING_PENDING', 'FINAL_PUBLICATION_APPROVAL_PENDING']:
         raise ValueError('missing release blockers')
     routes, sources = set(), set()
     for page in plan['pages']:
@@ -119,7 +122,7 @@ def prepare_release(output, web=WEB):
         (drafts / name).write_text(text, encoding='utf-8')
     manifest.update({
         'purpose': 'INACTIVE_PUBLIC_RELEASE_PREPARATION', 'planned_origin': ORIGIN,
-        'analytics_enabled': False, 'contact_email': None,
+        'analytics_enabled': False, 'contact_email': CONTACT_EMAIL, 'contact_delivery_status': CONTACT_DELIVERY_STATUS,
         'publication_authorized': False, 'indexing_authorized': False,
         'blockers': plan['blockers'], 'activation_drafts_outside_document_root': True,
         'draft_files': {name: hashlib.sha256((drafts / name).read_bytes()).hexdigest()

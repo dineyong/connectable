@@ -1,6 +1,6 @@
 # 모니픽 운영·공개 전환 준비
 
-기준: 2026-10-22. 통계 미도입은 사용자 결정이다. 이메일과 실제 공개 승인은 대기한다.
+기준: 2026-10-22. 통계 미도입은 사용자 결정이다. 운영 주소는 contact@monipick.com으로 확정했다. 전달 대상 Gmail·수신 검증과 실제 공개 승인은 대기한다.
 
 ## 현재 기능과 운영 범위
 
@@ -10,9 +10,9 @@
 - 호스팅/Access의 운영·보안 로그는 방문 통계 스크립트와 별개다. “개인정보를 전혀 처리하지 않는다”는 포괄적인 문구를 쓰지 않는다. 공개 전 실제 로그 설정·처리 범위와 안내를 대조한다.
 - 해외 공식 문서·한국 SKU 미확인·부분 검토·충돌을 그대로 표시한다. 공개 승인과 공식 사양의 검토 승인, 기기 호환성 승인, 이미지 사용권은 서로 다르다.
 
-## 이메일이 정해지기 전
+## 이메일 전달 연결 전
 
-[화면 안내](../web/information.html#corrections)는 연락처 준비 중이라고 표시한다. 가짜 주소·mailto·문의 폼을 만들지 않는다. 이메일을 받으면 공개할 주소인지 확인하고 안내에 반영한다. 운영자 개인정보·연락처를 저장소나 기존 계정에서 임의 추출하지 않는다.
+[화면 안내](../web/information.html#corrections)는 운영 주소 contact@monipick.com과 연결 준비 중 상태를 구분한다. 수신 검증 전에는 mailto·문의 폼을 만들거나 접수를 시작했다고 표시하지 않는다. 사용자가 운영 Gmail을 제공하면 Cloudflare의 전달 대상 인증과 실제 수신 테스트를 진행한다. 운영자 개인정보·연락처를 저장소나 기존 계정에서 임의 추출하지 않는다.
 
 정정 요청 안내에는 제품/SKU·페이지 URL·항목·공식 근거 URL과 위치를 요구하며 불필요한 개인정보를 보내지 않도록 안내했다. 처리 시간이나 자동 반영을 약속하지 않는다.
 
@@ -41,7 +41,7 @@ python3 -m scripts.prepare_monipick_release --output /tmp/monipick-release-prep-
 | `activation-drafts/robots.txt.proposed` | 향후 승인된 사이트맵 안내 | 비활성 |
 | `activation-drafts/_headers.proposed` | CSP·프레임·nosniff·referrer·권한·일부 noindex | 비활성 |
 | `activation-drafts/_redirects.proposed` | 기존 탐색 주소 두 개를 홈으로 통합하는 301안 | 비활성 |
-| `manifest.json` | 파일 hash·통계 제외·이메일 null·공개/색인 승인 false | 문서 루트 밖 |
+| `manifest.json` | 파일 hash·통계 제외·운영 주소 확정·수신 검증 대기·공개/색인 승인 false | 문서 루트 밖 |
 
 **출력 디렉터리 전체나 activation-drafts를 배포하면 안 된다.** 현재 Cloudflare 빌드는 기존 `prepare_cloudflare_preview`와 검수 브랜치만 허용하며 이 새 생성기로 바꾸지 않는다. 이 도구는 공개 전환 버튼이나 승인 우회 기능을 제공하지 않는다.
 
@@ -57,7 +57,7 @@ python3 -m scripts.prepare_monipick_release --output /tmp/monipick-release-prep-
 
 ## 실제 공개 전환 시 필요한 별도 단계 — 이번에는 미실행
 
-1. 사용자가 공개 이메일을 정한다. 정정 창구·운영 안내를 확정하고 호스팅의 실제 로그 범위를 대조한다.
+1. 사용자가 운영 Gmail을 만들고 전달 연결·수신 검증을 완료한다. 정정 창구·운영 안내를 확정하고 호스팅의 실제 로그 범위를 대조한다.
 2. 검수한 공개 후보 SHA·페이지 목록·남은 미확인을 제시하고 **최종 공개 승인**을 받는다.
 3. 승인 범위에서만 별도 릴리스 커밋/출력물을 확정한다. 위 초안의 metadata/robots/헤더/리다이렉트와 공개용 문구를 일관되게 적용하고 검증한다. 현재 noindex 검증기를 느슨하게 바꿔 통과시키지 않는다.
 4. Cloudflare production 기준 브랜치·빌드 명령·출력 경로를 명시적으로 설정하고 도메인·HTTPS·대표 호스트 이동을 검사한다. 기존 Access 검수본은 계속 보호한다. main 병합은 공개 승인과 별도의 Git 작업이다.
@@ -68,4 +68,4 @@ python3 -m scripts.prepare_monipick_release --output /tmp/monipick-release-prep-
 
 이번 기준 코드와 CI는 Git 이력으로 고정하고, 향후 운영 배포 ID·SHA·시각·파일 manifest를 별도 기록한다. 이번에는 운영 배포가 없으므로 “실제 롤백 성공”을 주장하지 않는다. 공개 후 결함이 생기면 승인 범위의 Pages 배포 복원으로 대응하며 원본 데이터나 관련 없는 변경을 reset/강제 push로 되돌리지 않는다.
 
-운영 전 별도 확인: 정정 이메일, 최종 공개 승인. 사진·남은 SKU·댓글·광고·실시간 뉴스는 첫 공개의 추가 필수 조건으로 늘리지 않는다.
+운영 전 별도 확인: Gmail 전달 대상과 실제 수신, 최종 공개 승인. 사진·남은 SKU·댓글·광고·실시간 뉴스는 첫 공개의 추가 필수 조건으로 늘리지 않는다.
