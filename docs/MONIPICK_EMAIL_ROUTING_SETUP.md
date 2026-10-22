@@ -2,6 +2,20 @@
 
 기준일: 2026-10-22. 작업 브랜치 `codex/monipick-cloudflare-preparation`.
 
+## 실제 연결 후속 결과 · 2026-10-22
+
+이 절이 아래 준비 당시 기록보다 최신이다. 사용자 지정 Gmail이 Cloudflare에서 이미 Verified였으므로 인증 요청을 중복 발송하지 않았다. 전달 대상의 실제 개인 주소는 공개 저장소에 저장하지 않는다.
+
+- monipick.com의 Email Routing Activate를 수행해 메일용 MX 3개·SPF/DKIM TXT를 적용했다. 공개 DNS에서도 MX 3개와 SPF/DKIM 존재를 확인했다. 웹사이트용 DNS/Custom domain·Pages production·Access·색인·유료 플랜은 변경하지 않았다.
+- `contact@monipick.com` → 사용자 지정 인증 Gmail 규칙 한 개를 저장하고 **Active**를 확인했다. Catch-all은 Disabled 유지다. 도메인 Overview는 확인 시 Syncing 표시였으므로 규칙 Active와 동기화 표시를 혼동하지 않는다.
+- 연결된 Gmail에서 수신 주소로 테스트 메일 한 건을 발송했다. 확인 번호는 `MP-20261023-001`이며 번호의 날짜 문자열은 실제 발송일의 근거로 쓰지 않는다. 실제 발송은 2026-10-22 14:36:57 UTC다.
+- 테스트 원문은 Gmail에서 SENT로만 확인됐고, 별도로 Cloudflare의 Gmail 중복 처리 안내 메일이 **INBOX에 도착**했다. 원문을 받은 것으로 대신 처리하지 않는다. 이 안내는 같은 계정에서 보낸 메일은 Gmail이 중복으로 숨길 수 있으므로 다른 발신 계정으로 시험하도록 설명한다.
+- Cloudflare Activity log에서 해당 고유 제목의 원래 테스트 건이 `Forwarded`로 처리된 것을 추가 확인했다. 이는 전달 처리 증거이며 원문이 Gmail INBOX에 별도로 표시됐다는 증거와는 다르다.
+- 사용자에게 다른 이메일에서 ‘모니픽 외부 수신 테스트’ 제목으로 보내도록 요청했다. 외부 테스트 원문·전달 로그 확인 전까지 `ROUTING_CONFIGURED_DELIVERY_TEST_PENDING` 및 공개 보류를 유지한다. 단순 발송 성공이나 DNS 등록을 실제 원문 수신 완료로 승격하지 않는다.
+- 관련 Python 17개·내부 경로 검증 및 운영 안내 브라우저 회귀를 실행한다. 새 토큰·Workers·유료 발송 기능을 만들지 않았다. 원본 데이터와 사용자 변경은 보존한다.
+
+## 아래 내용은 연결 전 준비 이력
+
 ## 확정과 대기 상태
 
 - 사용자 확정 운영 주소: **contact@monipick.com**.

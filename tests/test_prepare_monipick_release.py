@@ -39,7 +39,7 @@ class ReleasePreparationTests(unittest.TestCase):
 
     def test_selected_email_does_not_imply_verified_routing_or_publication(self):
         self.assertEqual(self.manifest['contact_email'], 'contact@monipick.com')
-        self.assertEqual(self.manifest['contact_delivery_status'], 'PENDING_DESTINATION_VERIFICATION')
+        self.assertEqual(self.manifest['contact_delivery_status'], 'ROUTING_CONFIGURED_DELIVERY_TEST_PENDING')
         for flag in ['deployment_authorized', 'publication_authorized', 'indexing_authorized', 'analytics_enabled']:
             self.assertIs(self.manifest[flag], False)
         self.assertEqual(self.manifest['blockers'], ['CONTACT_ROUTING_PENDING', 'FINAL_PUBLICATION_APPROVAL_PENDING'])

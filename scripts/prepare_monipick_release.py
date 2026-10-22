@@ -13,7 +13,7 @@ from scripts.prepare_launch_preview import ASSETS, WEB
 
 ORIGIN = 'https://monipick.com'
 CONTACT_EMAIL = 'contact@monipick.com'
-CONTACT_DELIVERY_STATUS = 'PENDING_DESTINATION_VERIFICATION'
+CONTACT_DELIVERY_STATUS = 'ROUTING_CONFIGURED_DELIVERY_TEST_PENDING'
 EXCLUDED = {'404.html', 'tech-news.html', 'monitor10-review.html'}
 CSP = ("default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; "
        "connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; "
