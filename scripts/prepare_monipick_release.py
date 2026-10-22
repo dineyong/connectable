@@ -13,7 +13,7 @@ from scripts.prepare_launch_preview import ASSETS, WEB
 
 ORIGIN = 'https://monipick.com'
 CONTACT_EMAIL = 'contact@monipick.com'
-CONTACT_DELIVERY_STATUS = 'ROUTING_CONFIGURED_DELIVERY_TEST_PENDING'
+CONTACT_DELIVERY_STATUS = 'VERIFIED_EXTERNAL_RECEIPT'
 EXCLUDED = {'404.html', 'tech-news.html', 'monitor10-review.html'}
 CSP = ("default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; "
        "connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; "
@@ -44,7 +44,7 @@ def release_plan(web):
         })
     return {'status': 'INACTIVE_DRAFT', 'origin': ORIGIN, 'analytics_enabled': False,
             'contact_email': CONTACT_EMAIL, 'contact_delivery_status': CONTACT_DELIVERY_STATUS, 'publication_authorized': False, 'indexing_authorized': False,
-            'blockers': ['CONTACT_ROUTING_PENDING', 'FINAL_PUBLICATION_APPROVAL_PENDING'],
+            'blockers': ['FINAL_PUBLICATION_APPROVAL_PENDING'],
             'pages': pages}
 
 
@@ -54,8 +54,8 @@ def validate_plan(plan):
             plan.get('contact_delivery_status') != CONTACT_DELIVERY_STATUS or
             plan.get('publication_authorized') is not False or
             plan.get('indexing_authorized') is not False):
-        raise ValueError('draft must preserve pending contact, analytics exclusion and approval holds')
-    if plan.get('blockers') != ['CONTACT_ROUTING_PENDING', 'FINAL_PUBLICATION_APPROVAL_PENDING']:
+        raise ValueError('draft must preserve verified contact, analytics exclusion and publication holds')
+    if plan.get('blockers') != ['FINAL_PUBLICATION_APPROVAL_PENDING']:
         raise ValueError('missing release blockers')
     routes, sources = set(), set()
     for page in plan['pages']:

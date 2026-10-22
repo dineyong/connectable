@@ -2,6 +2,16 @@
 
 기준일: 2026-10-22. 작업 브랜치 `codex/monipick-cloudflare-preparation`.
 
+## 외부 발신 원문 수신 확인 완료 · 2026-10-22
+
+아래의 외부 테스트 대기 기록은 이 절의 실제 확인 결과로 해소됐다.
+
+- 사용자가 다른 Gmail에서 발송한 테스트 원문을 연결된 운영 Gmail의 **INBOX**에서 확인했다. 요청했던 제목과 달라 처음 제목 검색에서는 나오지 않았으나 contact@monipick.com 수신 조건으로 찾아 발신 계정과 전달 경로를 대조했다.
+- Gmail 메시지 메타데이터에서 수신 주소 contact@monipick.com, Delivered-To/X-Forwarded-To의 지정 운영 계정 일치, cloudflare-email.net 릴레이를 거친 Received 경로를 확인했다. Gmail 최종 수신 헤더 시각은 2026-10-22 23:50 KST경이다. SPF/DKIM/DMARC pass도 해당 수신 헤더에서 확인했다.
+- Cloudflare의 중복 안내 메일이나 최초 SENT 메시지를 성공 근거로 삼지 않고, **다른 발신 계정의 원문 INBOX 도착**을 최종 근거로 사용했다. 개인 발신/수신 주소·메일 본문·원본 헤더·메시지 ID는 공개 저장소에 저장하지 않았다.
+- 공개 준비의 contact_delivery_status를 `VERIFIED_EXTERNAL_RECEIPT`로 갱신하고 연락처 관련 공개 전 조건만 해소했다. `publication_authorized=false`, `indexing_authorized=false`, `analytics_enabled=false`와 `FINAL_PUBLICATION_APPROVAL_PENDING`은 유지한다.
+- 운영 안내 초안에 실제 테스트한 contact 메일 링크를 반영했다. 기존 비공개 검수 배포·production·DNS 웹사이트 연결·검색 허용은 변경하지 않았다. 이 성공은 이번 경로/시점의 수신 확인이며 향후 모든 발신자의 전송이나 도메인 주소의 발신 기능을 보장하지 않는다.
+
 ## 실제 연결 후속 결과 · 2026-10-22
 
 이 절이 아래 준비 당시 기록보다 최신이다. 사용자 지정 Gmail이 Cloudflare에서 이미 Verified였으므로 인증 요청을 중복 발송하지 않았다. 전달 대상의 실제 개인 주소는 공개 저장소에 저장하지 않는다.

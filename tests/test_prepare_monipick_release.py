@@ -37,12 +37,12 @@ class ReleasePreparationTests(unittest.TestCase):
         self.assertIn('no-store', (site / '_headers').read_text())
         self.assertIn('비공개 검수 중', (site / 'index.html').read_text())
 
-    def test_selected_email_does_not_imply_verified_routing_or_publication(self):
+    def test_verified_email_receipt_does_not_imply_publication(self):
         self.assertEqual(self.manifest['contact_email'], 'contact@monipick.com')
-        self.assertEqual(self.manifest['contact_delivery_status'], 'ROUTING_CONFIGURED_DELIVERY_TEST_PENDING')
+        self.assertEqual(self.manifest['contact_delivery_status'], 'VERIFIED_EXTERNAL_RECEIPT')
         for flag in ['deployment_authorized', 'publication_authorized', 'indexing_authorized', 'analytics_enabled']:
             self.assertIs(self.manifest[flag], False)
-        self.assertEqual(self.manifest['blockers'], ['CONTACT_ROUTING_PENDING', 'FINAL_PUBLICATION_APPROVAL_PENDING'])
+        self.assertEqual(self.manifest['blockers'], ['FINAL_PUBLICATION_APPROVAL_PENDING'])
         for field, value in [('analytics_enabled', True), ('publication_authorized', True),
                              ('indexing_authorized', True), ('contact_delivery_status', 'VERIFIED'), ('contact_email', 'invented@example.com'),
                              ('origin', 'https://example.com'), ('blockers', [])]:
