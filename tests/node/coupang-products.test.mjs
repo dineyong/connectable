@@ -13,7 +13,7 @@ test('GET HMAC includes exact encoded query and UTC timestamp',async()=>{
  assert.equal(await signSearch('test-access','test-secret',query,new Date('2026-10-24T01:02:03Z')),`CEA algorithm=HmacSHA256, access-key=test-access, signed-date=261024T010203Z, signature=${sig}`);
 });
 test('manual item/variant matching never picks the first search result',async()=>{
- const result=await queryProduct({model,match,env,fetcher:async(url,init)=>{assert.equal(new URL(url).origin,'https://api-gateway.coupang.com');assert.equal(init.redirect,'error');assert.equal(init.cache,undefined);assert.equal(init.headers['Cache-Control'],'no-store');return Response.json({rCode:'0',data:{productData:[{...product,productId:999},product]}});}});
+ const result=await queryProduct({model,match,env,fetcher:async(url,init)=>{assert.equal(new URL(url).origin,'https://api-gateway.coupang.com');assert.equal(init.redirect,'manual');assert.equal(init.cache,undefined);assert.equal(init.headers['Cache-Control'],'no-store');return Response.json({rCode:'0',data:{productData:[{...product,productId:999},product]}});}});
  assert.equal(result.status,200);assert.deepEqual(Object.keys(result.product),['productId','productName','productImage','productUrl']);assert.equal(result.product.productImage,product.productImage);
 });
 test('missing review, missing key, option change and accessory are refused',async()=>{

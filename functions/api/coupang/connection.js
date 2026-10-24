@@ -18,7 +18,7 @@ export async function handleConnection(request,env,{fetcher=fetch,now=Date.now()
   const query=new URLSearchParams({keyword:'MSI MD271UL',limit:'1'}).toString();
   const auth=await signSearch(env.COUPANG_PARTNERS_ACCESS_KEY,env.COUPANG_PARTNERS_SECRET_KEY,query,new Date(now));
   stage='REQUEST';
-  const response=await fetcher('https://api-gateway.coupang.com'+SEARCH_PATH+'?'+query,{method:'GET',headers:{Authorization:auth,Accept:'application/json','Cache-Control':'no-store'},redirect:'error',signal:AbortSignal.timeout(10000)});
+  const response=await fetcher('https://api-gateway.coupang.com'+SEARCH_PATH+'?'+query,{method:'GET',headers:{Authorization:auth,Accept:'application/json','Cache-Control':'no-store'},redirect:'manual',signal:AbortSignal.timeout(10000)});
   if(!response.ok){await response.body?.cancel();return reply(424,'API_AUTH_NOT_VERIFIED',{upstreamStatus:response.status});}
   stage='RESPONSE';
   const reader=response.body.getReader();const bytes=[];let size=0;
