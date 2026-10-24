@@ -12,11 +12,13 @@ from pathlib import Path
 
 from scripts.build_monipick_public_candidate import build_candidate, expected_artifacts, digest
 from scripts.prepare_cloudflare_preview import prepare_cloudflare
+from scripts.prepare_monipick_content_candidate import polished_artifacts, build_content_candidate
 
 PRODUCTION_BRANCH='codex/monipick-production'
 PREVIEW_BRANCH='codex/monipick-private-preview'
 APPROVAL=Path(__file__).resolve().parents[1]/'deploy/monipick-public-release.json'
 SEARCH_VERIFICATION=APPROVAL.with_name('monipick-search-verification.json')
+CONTENT_APPROVAL=APPROVAL.with_name('monipick-content-release.json')
 NAVER_PROOF='naverb7d1be496d4d21a4cf88c23246e48079.html'
 
 
@@ -56,6 +58,21 @@ def validate_approval(record,hashes):
         raise ValueError('served content differs from user-reviewed release; new review required')
 
 
+def read_content_approval():
+    return json.loads(CONTENT_APPROVAL.read_text())
+
+
+def validate_content_approval(record, baseline, hashes):
+    if (not isinstance(record,dict) or record.get('approval_status')!='USER_APPROVED' or
+            record.get('origin')!='https://monipick.com' or
+            record.get('reviewed_candidate_commit')!='89dd4ec' or
+            record.get('baseline_content_fingerprint')!=baseline['approved_content_fingerprint'] or
+            any(record.get(k) is not False for k in ('advertising_enabled','analytics_enabled','main_merge_authorized')) or
+            record.get('approved_content_fingerprint')!=content_fingerprint(hashes)):
+        raise ValueError('content polish differs from separately user-approved candidate')
+    date.fromisoformat(record['approved_on'])
+
+
 def build_for_branch(branch,output):
     if branch==PREVIEW_BRANCH:
         return prepare_cloudflare(output,include_http_check=True)
@@ -68,8 +85,12 @@ def build_for_branch(branch,output):
     proofs=search_verification_artifacts(read_search_verification())
     if set(proofs)&set(expected):
         raise ValueError('ownership proof cannot replace reviewed files')
-    manifest=build_candidate(output)
-    validate_approval(approval,manifest['files'])
+    _,content=polished_artifacts()
+    hashes={n:digest(v) for n,v in content.items()}
+    content_approval=read_content_approval()
+    validate_content_approval(content_approval,approval,hashes)
+    manifest=build_content_candidate(output)
+    validate_content_approval(content_approval,approval,manifest['files'])
     for name,content in proofs.items():
         (Path(output)/'site'/name).write_bytes(content)
     proof_hashes={name:digest(value) for name,value in proofs.items()}
@@ -79,9 +100,10 @@ def build_for_branch(branch,output):
         'purpose':'AUTHORIZED_MONIPICK_PUBLIC_RELEASE','domain':'monipick.com',
         'deployment_authorized':True,'publication_authorized':True,'indexing_authorized':True,
         'advertising_enabled':False,'analytics_enabled':False,'blockers':[],
-        'approval_date':approval['approved_on'],
-        'reviewed_candidate_commit':approval['reviewed_candidate_commit'],
-        'approved_content_fingerprint':approval['approved_content_fingerprint'],
+        'approval_date':content_approval['approved_on'],
+        'reviewed_candidate_commit':content_approval['reviewed_candidate_commit'],
+        'baseline_approved_content_fingerprint':approval['approved_content_fingerprint'],
+        'approved_content_fingerprint':content_approval['approved_content_fingerprint'],
     })
     (Path(output)/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     return manifest
