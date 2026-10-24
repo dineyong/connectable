@@ -85,7 +85,9 @@ def sitemap(plan):
         if page['sitemap_candidate']:
             url = ET.SubElement(root, '{http://www.sitemaps.org/schemas/sitemap/0.9}url')
             ET.SubElement(url, '{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text = page['proposed_canonical']
-    return ET.tostring(root, encoding='unicode', xml_declaration=True) + '\n'
+    # Explicit spelling keeps the reviewed bytes identical across macOS/Python 3.9
+    # and Linux/Python 3.12, independent of locale's UTF-8/utf-8 spelling.
+    return ET.tostring(root, encoding='UTF-8', xml_declaration=True).decode('utf-8') + '\n'
 
 
 def proposed_headers(plan):

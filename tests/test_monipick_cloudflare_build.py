@@ -62,6 +62,17 @@ class CloudflareReleaseTests(unittest.TestCase):
             build.build_for_branch(build.PRODUCTION_BRANCH,self.output)
         self.assertFalse(self.output.exists())
 
+    def test_sitemap_encoding_is_independent_of_locale(self):
+        from scripts.prepare_monipick_release import sitemap,release_plan
+        from scripts.prepare_launch_preview import WEB
+        plan=release_plan(WEB)
+        values=[]
+        for spelling in ['UTF-8','utf-8','cp949']:
+            with patch('locale.getpreferredencoding',return_value=spelling):
+                values.append(sitemap(plan))
+        self.assertTrue(all(v==values[0] for v in values))
+        self.assertTrue(values[0].startswith("<?xml version='1.0' encoding='UTF-8'?>"))
+
     def test_existing_output_is_not_overwritten(self):
         self.output.mkdir();(self.output/'keep').write_text('keep')
         with self.assertRaises(ValueError):build.build_for_branch(build.PRODUCTION_BRANCH,self.output)
