@@ -38,8 +38,8 @@ def normalize_links(text, source, routes):
     return re.sub(r'(\bhref\s*=\s*)([\"\x27])(.*?)(\2)',replace,text,flags=re.I)
 
 
-def reviewed_summaries():
-    data=json.loads(EDITORIAL.read_text())
+def reviewed_summaries(editorial=EDITORIAL):
+    data=json.loads(Path(editorial).read_text())
     if data.get('status')!='EDITORIAL_CANDIDATE':
         raise ValueError('editorial candidate status required')
     products={p['id']:p for p in official(load(FACTS))['products']}
