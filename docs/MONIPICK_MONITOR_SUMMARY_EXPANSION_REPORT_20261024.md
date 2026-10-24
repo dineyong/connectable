@@ -84,7 +84,9 @@
 
 화면은 1440px 데스크톱과 390px 모바일에서 직접 캡처하여 확인했다. 설명 블록 배경은 흰색, padding은 각각 24px/18px이고 가로 넘침이 없었다.
 
-이전 운영 코드 `5bf48c9`의 CI [40060034062](https://github.com/dineyong/connectable/actions/runs/40060034062)는 성공 상태임을 확인했다. 이번 브랜치 원격 CI는 push 후 별도 기록한다.
+이전 운영 코드 `5bf48c9`의 CI [40060034062](https://github.com/dineyong/connectable/actions/runs/40060034062)는 성공 상태임을 확인했다. 이번 구현 커밋은 [`26d2a6697e898909406e5d6b5b9b686ae1c4b88a`](https://github.com/dineyong/connectable/commit/26d2a6697e898909406e5d6b5b9b686ae1c4b88a)이며 작업 브랜치에 push했다.
+
+이번 원격 CI [40061331322](https://github.com/dineyong/connectable/actions/runs/40061331322)는 **SUCCESS**다. 로그에서 Python **679건**(66.080초), 브라우저 **212 + 10 + 14 + 18 = 254건** 통과를 확인했다. CI 완료 후 이 결과만 문서 커밋으로 기록하며, 코드가 바뀌지 않아 `[skip ci]`로 중복 실행을 피한다. 운영 브랜치/main 병합이나 배포는 하지 않았다.
 
 ## 로컬 검토
 
