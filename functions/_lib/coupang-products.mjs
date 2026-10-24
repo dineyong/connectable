@@ -32,7 +32,7 @@ export async function queryProduct({model,match,env,fetcher=fetch,now=new Date()
   const query=params.toString();
   try{
     const authorization=await signSearch(env.COUPANG_PARTNERS_ACCESS_KEY,env.COUPANG_PARTNERS_SECRET_KEY,query,now);
-    const response=await fetcher(API_ORIGIN+SEARCH_PATH+'?'+query,{method:'GET',headers:{Authorization:authorization,Accept:'application/json'},redirect:'error',cache:'no-store',signal:AbortSignal.timeout(10000)});
+    const response=await fetcher(API_ORIGIN+SEARCH_PATH+'?'+query,{method:'GET',headers:{Authorization:authorization,Accept:'application/json','Cache-Control':'no-store'},redirect:'error',signal:AbortSignal.timeout(10000)});
     if(!response.ok)return {status:response.status===429?429:502,code:response.status===429?'UPSTREAM_RATE_LIMITED':'UPSTREAM_UNAVAILABLE'};
     const max=256*1024;const chunks=[];let length=0;const reader=response.body.getReader();
     while(true){const {done,value}=await reader.read();if(done)break;length+=value.byteLength;if(length>max){await reader.cancel();return {status:502,code:'INVALID_UPSTREAM_RESPONSE'};}chunks.push(value);}
