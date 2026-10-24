@@ -70,7 +70,8 @@ def handler_for(output, validator=validate_candidate):
             content=target.read_bytes()
             self.send_response(status)
             types={'.html':'text/html; charset=utf-8','.js':'application/javascript',
-                   '.css':'text/css; charset=utf-8','.xml':'application/xml','.txt':'text/plain; charset=utf-8'}
+                   '.css':'text/css; charset=utf-8','.xml':'application/xml','.txt':'text/plain; charset=utf-8',
+                   '.png':'image/png','.svg':'image/svg+xml','.ico':'image/vnd.microsoft.icon'}
             self.send_header('Content-Type',types.get(target.suffix,'application/octet-stream'))
             self.send_header('Content-Length',str(len(content)))
             for key,value in read_headers(site,path).items(): self.send_header(key,value)
