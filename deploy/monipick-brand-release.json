@@ -1,0 +1,13 @@
+{
+  "approval_status": "USER_APPROVED",
+  "approved_on": "2026-10-24",
+  "origin": "https://monipick.com",
+  "reviewed_candidate_commit": "99762c055366822627ed47f664437e48f2feac27",
+  "baseline_content_fingerprint": "e7849b28dbecdd9ca86c85fd6ead9565f39b1419986722345dffd160c4d3673c",
+  "approved_content_fingerprint": "e43814c382c91960fc8db1b10c1d3f1b3fc2ffdf6f10b560e63440c07d236281",
+  "advertising_enabled": false,
+  "analytics_enabled": false,
+  "main_merge_authorized": false,
+  "compatibility_approval_authorized": false,
+  "scope": "User approved displayed local 8886 structured data, shared brand image and favicon for production; preserve reviewed body, design, product facts, indexing scope and protected previews."
+}

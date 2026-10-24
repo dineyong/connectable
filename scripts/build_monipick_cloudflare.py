@@ -20,6 +20,7 @@ APPROVAL=Path(__file__).resolve().parents[1]/'deploy/monipick-public-release.jso
 SEARCH_VERIFICATION=APPROVAL.with_name('monipick-search-verification.json')
 CONTENT_APPROVAL=APPROVAL.with_name('monipick-content-release.json')
 SEO_APPROVAL=APPROVAL.with_name('monipick-seo-release.json')
+BRAND_APPROVAL=APPROVAL.with_name('monipick-brand-release.json')
 NAVER_PROOF='naverb7d1be496d4d21a4cf88c23246e48079.html'
 
 
@@ -90,6 +91,22 @@ def validate_seo_approval(record,baseline,hashes):
     date.fromisoformat(record['approved_on'])
 
 
+def read_brand_approval():
+    return json.loads(BRAND_APPROVAL.read_text())
+
+
+def validate_brand_approval(record,baseline,hashes):
+    if (not isinstance(record,dict) or record.get('approval_status')!='USER_APPROVED' or
+            record.get('origin')!='https://monipick.com' or
+            record.get('reviewed_candidate_commit')!='99762c055366822627ed47f664437e48f2feac27' or
+            record.get('baseline_content_fingerprint')!=baseline['approved_content_fingerprint'] or
+            any(record.get(k) is not False for k in ('advertising_enabled','analytics_enabled',
+                'main_merge_authorized','compatibility_approval_authorized')) or
+            record.get('approved_content_fingerprint')!=content_fingerprint(hashes)):
+        raise ValueError('brand metadata differs from separately user-reviewed candidate')
+    date.fromisoformat(record['approved_on'])
+
+
 def build_for_branch(branch,output):
     if branch==PREVIEW_BRANCH:
         return prepare_cloudflare(output,include_http_check=True)
@@ -107,13 +124,17 @@ def build_for_branch(branch,output):
     content_approval=read_content_approval()
     validate_content_approval(content_approval,approval,hashes)
     # Preserve both earlier release gates, then authorize only the new reviewed bytes.
-    from scripts.prepare_monipick_seo_review import review_artifacts,build_review
+    from scripts.prepare_monipick_seo_review import review_artifacts
     _,seo=review_artifacts()
     seo_hashes={n:digest(v) for n,v in seo.items() if n not in proofs}
     seo_approval=read_seo_approval()
     validate_seo_approval(seo_approval,content_approval,seo_hashes)
-    manifest=build_review(output)
-    validate_seo_approval(seo_approval,content_approval,{n:v for n,v in manifest['files'].items() if n not in proofs})
+    from scripts.prepare_monipick_brand_review import brand_artifacts,build_brand_review
+    _,brand=brand_artifacts()
+    brand_approval=read_brand_approval()
+    validate_brand_approval(brand_approval,seo_approval,{n:digest(v) for n,v in brand.items() if n not in proofs})
+    manifest=build_brand_review(output)
+    validate_brand_approval(brand_approval,seo_approval,{n:v for n,v in manifest['files'].items() if n not in proofs})
     for name,content in proofs.items():
         (Path(output)/'site'/name).write_bytes(content)
     proof_hashes={name:digest(value) for name,value in proofs.items()}
@@ -123,12 +144,13 @@ def build_for_branch(branch,output):
         'purpose':'AUTHORIZED_MONIPICK_PUBLIC_RELEASE','domain':'monipick.com',
         'deployment_authorized':True,'publication_authorized':True,'indexing_authorized':True,
         'advertising_enabled':False,'analytics_enabled':False,'blockers':[],
-        'approval_date':seo_approval['approved_on'],
-        'reviewed_candidate_commit':seo_approval['reviewed_candidate_commit'],
+        'approval_date':brand_approval['approved_on'],
+        'reviewed_candidate_commit':brand_approval['reviewed_candidate_commit'],
+        'seo_baseline_reviewed_candidate_commit':seo_approval['reviewed_candidate_commit'],
         'content_baseline_reviewed_candidate_commit':content_approval['reviewed_candidate_commit'],
         'baseline_approved_content_fingerprint':approval['approved_content_fingerprint'],
-        'previous_approved_content_fingerprint':content_approval['approved_content_fingerprint'],
-        'approved_content_fingerprint':seo_approval['approved_content_fingerprint'],
+        'previous_approved_content_fingerprint':seo_approval['approved_content_fingerprint'],
+        'approved_content_fingerprint':brand_approval['approved_content_fingerprint'],
     })
     (Path(output)/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     return manifest

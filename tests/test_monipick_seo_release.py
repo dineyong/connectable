@@ -9,7 +9,8 @@ from scripts import prepare_monipick_seo_review as review
 
 class SeoReleaseTests(unittest.TestCase):
     def test_production_bytes_equal_reviewed_candidate_including_all_summaries(self):
-        _,expected=review.review_artifacts()
+        from scripts.prepare_monipick_brand_review import brand_artifacts
+        _,expected=brand_artifacts()
         with tempfile.TemporaryDirectory() as tmp:
             out=Path(tmp)/'release';manifest=build.build_for_branch(build.PRODUCTION_BRANCH,out)
             self.assertEqual(manifest['files'],{n:build.digest(v) for n,v in expected.items()})
