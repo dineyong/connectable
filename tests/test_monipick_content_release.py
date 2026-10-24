@@ -39,3 +39,16 @@ class ApprovedContentReleaseTests(unittest.TestCase):
             return plan,artifacts
         with tempfile.TemporaryDirectory() as tmp,patch.object(build,'polished_artifacts',side_effect=changed),self.assertRaises(ValueError):
             build.build_for_branch(build.PRODUCTION_BRANCH,Path(tmp)/'release')
+
+    def test_security_and_no_transform_share_one_global_rule(self):
+        from scripts.prepare_monipick_content_candidate import polished_artifacts
+        _,artifacts=polished_artifacts()
+        text=artifacts['_headers'].decode()
+        self.assertEqual(text.splitlines().count('/*'),1)
+        lines=text.splitlines();start=lines.index('/*');rule=[]
+        for line in lines[start+1:]:
+            if line and not line[0].isspace(): break
+            rule.append(line)
+        rule='\n'.join(rule)
+        for required in ['no-transform','X-Frame-Options: DENY','Permissions-Policy:',"script-src 'self'",'X-Content-Type-Options: nosniff']:
+            self.assertIn(required,rule)
