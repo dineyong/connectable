@@ -1,0 +1,190 @@
+{
+  "status": "EDITORIAL_CANDIDATE",
+  "basis": "Existing validated official fact records; no new manufacturer checks or compatibility approval.",
+  "products": [
+    {
+      "product_id": "monitor:dell-u2724de",
+      "description": "27형 QHD·최대 120Hz, Thunderbolt와 USB-C 포트를 구분하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면에 IPS Black 패널, 최대 120Hz로 표기된 모델입니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "panel": {
+              "value": "IPS Black",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "refresh": {
+              "value": 120,
+              "unit": "Hz",
+              "qualifier": "UP_TO"
+            }
+          }
+        },
+        {
+          "summary": "Thunderbolt 4의 업스트림은 영상·데이터용으로 기록돼 있습니다. 별도 USB-C 업스트림은 데이터 전용이므로 같은 영상 입력으로 보지 마세요.",
+          "expected_facts": {
+            "thunderbolt": {
+              "value": {
+                "version": 4,
+                "upstream_video_data": 1,
+                "downstream": 1,
+                "downstream_pd_w": 15
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "usb_c": {
+              "value": {
+                "data_only_upstream": 1,
+                "downstream": 1,
+                "version": "3.2 Gen2"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED"
+            }
+          }
+        }
+      ],
+      "caution": "여러 입력의 동시 사용 조건과 한국 판매 SKU 동일성은 미확인입니다. 최대 주사율을 모든 연결에서 보장하지 않습니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions"
+      ]
+    },
+    {
+      "product_id": "monitor:asus-pa279crv",
+      "description": "27형 4K·최대 60Hz, USB-C 영상 입력과 공급 전력 96W 표기를 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 3840×2160 IPS 화면이며 최대 주사율은 60Hz로 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "refresh": {
+              "value": 60,
+              "unit": "Hz",
+              "qualifier": "UP_TO"
+            }
+          }
+        },
+        {
+          "summary": "USB-C 1개에 DP Alt Mode와 PD 공급 전력 96W가 표기돼 있습니다. 연결 기기의 실제 충전량을 보장하는 값은 아닙니다.",
+          "expected_facts": {
+            "usb_c": {
+              "value": {
+                "count": 1,
+                "mode": "DP Alt Mode"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "pd_supply": {
+              "value": 96,
+              "unit": "W",
+              "qualifier": "MANUFACTURER_STATED"
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성, 입력별 동시 사용 조건, 실제 기기 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions"
+      ]
+    },
+    {
+      "product_id": "monitor:msi-modern-md271ul",
+      "description": "27형 4K·최대 60Hz, USB-C 영상 입력과 공급 전력 65W 표기를 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 3840×2160 IPS 화면이며 최대 주사율은 60Hz로 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "refresh": {
+              "value": 60,
+              "unit": "Hz",
+              "qualifier": "UP_TO"
+            }
+          }
+        },
+        {
+          "summary": "USB-C 1개에 DP Alternate와 PD 공급 전력 65W가 기록돼 있습니다. USB-C가 있다는 사실만으로 USB 허브나 KVM 지원을 판단하지 않습니다.",
+          "expected_facts": {
+            "usb_c": {
+              "value": {
+                "count": 1,
+                "mode": "DP Alternate"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED"
+            },
+            "pd_supply": {
+              "value": 65,
+              "unit": "W",
+              "qualifier": "MANUFACTURER_STATED"
+            }
+          }
+        }
+      ],
+      "caution": "USB 허브·KVM 지원과 한국 판매 SKU 동일성은 미확인입니다. 실제 충전·영상 동작은 연결 조건을 따로 확인해야 합니다.",
+      "required_missing_fields": [
+        "usb_hub",
+        "kvm",
+        "korean_sku_identity"
+      ]
+    }
+  ]
+}

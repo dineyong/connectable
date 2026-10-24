@@ -26,8 +26,8 @@ def read_headers(site, path):
     return result
 
 
-def handler_for(output):
-    errors=validate_candidate(output)
+def handler_for(output, validator=validate_candidate):
+    errors=validator(output)
     if errors: raise ValueError('; '.join(errors))
     site=(Path(output)/'site').resolve()
     redirects={}
