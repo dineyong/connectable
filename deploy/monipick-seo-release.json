@@ -1,0 +1,13 @@
+{
+  "approval_status": "USER_APPROVED",
+  "approved_on": "2026-10-24",
+  "origin": "https://monipick.com",
+  "reviewed_candidate_commit": "6b933d1cae75f64ae84ea096b1274ab50597c2d9",
+  "baseline_content_fingerprint": "0e1e72327bf45dd03ec6901a487a7ef3141009ad1c1920742f1a90c35821e732",
+  "approved_content_fingerprint": "e7849b28dbecdd9ca86c85fd6ead9565f39b1419986722345dffd160c4d3673c",
+  "advertising_enabled": false,
+  "analytics_enabled": false,
+  "main_merge_authorized": false,
+  "compatibility_approval_authorized": false,
+  "scope": "User explicitly approved the displayed 30-model SEO review for production: preserve existing three summaries, add remaining 27 evidence-bound descriptions, breadcrumbs and direct guide/correction links. Preserve facts, ownership proof, ads/analytics OFF, main unmerged and protected previews."
+}

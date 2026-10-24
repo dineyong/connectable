@@ -19,6 +19,7 @@ PREVIEW_BRANCH='codex/monipick-private-preview'
 APPROVAL=Path(__file__).resolve().parents[1]/'deploy/monipick-public-release.json'
 SEARCH_VERIFICATION=APPROVAL.with_name('monipick-search-verification.json')
 CONTENT_APPROVAL=APPROVAL.with_name('monipick-content-release.json')
+SEO_APPROVAL=APPROVAL.with_name('monipick-seo-release.json')
 NAVER_PROOF='naverb7d1be496d4d21a4cf88c23246e48079.html'
 
 
@@ -73,6 +74,22 @@ def validate_content_approval(record, baseline, hashes):
     date.fromisoformat(record['approved_on'])
 
 
+def read_seo_approval():
+    return json.loads(SEO_APPROVAL.read_text())
+
+
+def validate_seo_approval(record,baseline,hashes):
+    if (not isinstance(record,dict) or record.get('approval_status')!='USER_APPROVED' or
+            record.get('origin')!='https://monipick.com' or
+            record.get('reviewed_candidate_commit')!='6b933d1cae75f64ae84ea096b1274ab50597c2d9' or
+            record.get('baseline_content_fingerprint')!=baseline['approved_content_fingerprint'] or
+            any(record.get(k) is not False for k in ('advertising_enabled','analytics_enabled',
+                'main_merge_authorized','compatibility_approval_authorized')) or
+            record.get('approved_content_fingerprint')!=content_fingerprint(hashes)):
+        raise ValueError('SEO release differs from the separately reviewed 30-model candidate')
+    date.fromisoformat(record['approved_on'])
+
+
 def build_for_branch(branch,output):
     if branch==PREVIEW_BRANCH:
         return prepare_cloudflare(output,include_http_check=True)
@@ -89,8 +106,14 @@ def build_for_branch(branch,output):
     hashes={n:digest(v) for n,v in content.items()}
     content_approval=read_content_approval()
     validate_content_approval(content_approval,approval,hashes)
-    manifest=build_content_candidate(output)
-    validate_content_approval(content_approval,approval,manifest['files'])
+    # Preserve both earlier release gates, then authorize only the new reviewed bytes.
+    from scripts.prepare_monipick_seo_review import review_artifacts,build_review
+    _,seo=review_artifacts()
+    seo_hashes={n:digest(v) for n,v in seo.items() if n not in proofs}
+    seo_approval=read_seo_approval()
+    validate_seo_approval(seo_approval,content_approval,seo_hashes)
+    manifest=build_review(output)
+    validate_seo_approval(seo_approval,content_approval,{n:v for n,v in manifest['files'].items() if n not in proofs})
     for name,content in proofs.items():
         (Path(output)/'site'/name).write_bytes(content)
     proof_hashes={name:digest(value) for name,value in proofs.items()}
@@ -100,10 +123,12 @@ def build_for_branch(branch,output):
         'purpose':'AUTHORIZED_MONIPICK_PUBLIC_RELEASE','domain':'monipick.com',
         'deployment_authorized':True,'publication_authorized':True,'indexing_authorized':True,
         'advertising_enabled':False,'analytics_enabled':False,'blockers':[],
-        'approval_date':content_approval['approved_on'],
-        'reviewed_candidate_commit':content_approval['reviewed_candidate_commit'],
+        'approval_date':seo_approval['approved_on'],
+        'reviewed_candidate_commit':seo_approval['reviewed_candidate_commit'],
+        'content_baseline_reviewed_candidate_commit':content_approval['reviewed_candidate_commit'],
         'baseline_approved_content_fingerprint':approval['approved_content_fingerprint'],
-        'approved_content_fingerprint':content_approval['approved_content_fingerprint'],
+        'previous_approved_content_fingerprint':content_approval['approved_content_fingerprint'],
+        'approved_content_fingerprint':seo_approval['approved_content_fingerprint'],
     })
     (Path(output)/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
     return manifest
