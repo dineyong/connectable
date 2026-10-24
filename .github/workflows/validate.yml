@@ -51,6 +51,8 @@ jobs:
         run: python3 -m scripts.prepare_monipick_release --output "${RUNNER_TEMP}/monipick-release-drafts"
       - name: Build unapproved public-format candidate (no deployment)
         run: python3 -m scripts.build_monipick_public_candidate --output "${RUNNER_TEMP}/monipick-public-candidate"
+      - name: Verify user-approved production files locally (no deployment)
+        run: CF_PAGES_BRANCH=codex/monipick-production python3 -m scripts.build_monipick_cloudflare --output "${RUNNER_TEMP}/monipick-authorized-production"
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e

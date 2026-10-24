@@ -1,0 +1,14 @@
+{
+  "approval_status": "USER_APPROVED",
+  "approved_on": "2026-10-24",
+  "origin": "https://monipick.com",
+  "production_branch": "codex/monipick-production",
+  "reviewed_candidate_commit": "9afa091b7a8d7eea5799a308e5f213a7caa93af3",
+  "source_baseline_commit": "ad7a40ae986f2d06c7b3a9cd6ce8c6131c56fe35",
+  "approved_content_fingerprint": "df71388fbe44404e224592f13096cf862970076366af35fd1bee1eb053723bf0",
+  "advertising_enabled": false,
+  "analytics_enabled": false,
+  "main_merge_authorized": false,
+  "compatibility_approval_authorized": false,
+  "scope": "Publish the reviewed monitor comparison site and connect monipick.com HTTPS; preserve unknown facts and protected previews."
+}
