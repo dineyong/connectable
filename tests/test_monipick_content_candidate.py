@@ -73,3 +73,10 @@ class ContentPolishTests(unittest.TestCase):
             with self.assertRaises(ValueError):content.build_content_candidate(output)
             p=output/'manifest.json';m=json.loads(p.read_text());m['publication_authorized']=True;p.write_text(json.dumps(m))
             self.assertTrue(content.validate_content_candidate(output))
+
+    def test_changed_assets_have_content_versions_for_returning_visitors(self):
+        _,artifacts=content.polished_artifacts()
+        version=content.digest(artifacts['monitor-detail-v3.css'])[:12]
+        self.assertIn('monitor-detail-v3.css?v='+version,artifacts['monitors/asus-pa279crv/index.html'].decode())
+        version=content.digest(artifacts['monitor-v3.js'])[:12]
+        self.assertIn('monitor-v3.js?v='+version,artifacts['index.html'].decode())

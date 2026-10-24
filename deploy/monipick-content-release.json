@@ -4,9 +4,9 @@
   "origin": "https://monipick.com",
   "reviewed_candidate_commit": "89dd4ec",
   "baseline_content_fingerprint": "df71388fbe44404e224592f13096cf862970076366af35fd1bee1eb053723bf0",
-  "approved_content_fingerprint": "665042d51aecd72c2ff51249c6c6be0ea30313860e9abea28cc691be48c7e8a8",
+  "approved_content_fingerprint": "0e1e72327bf45dd03ec6901a487a7ef3141009ad1c1920742f1a90c35821e732",
   "advertising_enabled": false,
   "analytics_enabled": false,
   "main_merge_authorized": false,
-  "scope": "User approved the displayed content-polish design for production: direct internal links and three evidence-bound product summaries only; keep ads/analytics disabled and main unmerged. The explicit analytics-OFF instruction also authorizes a no-transform cache directive preventing CDN automatic analytics injection; rendered design and data remain identical."
+  "scope": "User approved the displayed content-polish design for production: direct internal links and three evidence-bound product summaries only; keep ads/analytics disabled and main unmerged. The explicit analytics-OFF instruction also authorizes a no-transform cache directive preventing CDN automatic analytics injection; rendered design and data remain identical. Changed CSS/JS receive content-hash query versions to deliver the approved design to returning browsers."
 }

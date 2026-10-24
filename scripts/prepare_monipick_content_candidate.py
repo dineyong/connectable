@@ -102,6 +102,17 @@ def polished_artifacts():
     artifacts['_headers']=artifacts['_headers'].replace(b'/*\n', b'/*\n  Cache-Control: public, max-age=0, must-revalidate, no-transform\n',1)
     # Single known dynamic local-document link in the reviewed application script.
     artifacts['monitor-v3.js']=artifacts['monitor-v3.js'].replace(b'href="monitor10-review.html#',b'href="/monitor10-review#')
+    # Content-address changed assets so already-open browsers cannot retain the old UI.
+    versions={n:digest(artifacts[n])[:12] for n in ('monitor-v3.js','monitor-detail-v3.css')}
+    for name,content in list(artifacts.items()):
+        if not name.endswith('.html'): continue
+        def version_asset(match):
+            value=unescape(match[3]);url=urlsplit(urljoin(ORIGIN+'/'+name,value))
+            path=url.path.lstrip('/')
+            if url.netloc!='monipick.com' or path not in versions: return match[0]
+            value=urlunsplit(('', '',urlsplit(value).path,'v='+versions[path],url.fragment))
+            return match[1]+match[2]+escape(value,quote=True)+match[2]
+        artifacts[name]=re.sub(r'(\b(?:href|src)\s*=\s*)([\"\x27])(.*?)(\2)',version_asset,content.decode('utf-8'),flags=re.I).encode('utf-8')
     return plan,artifacts
 
 
