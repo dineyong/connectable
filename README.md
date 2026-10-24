@@ -4,6 +4,8 @@
 
 ## 현재 제품 목표와 진행 기준
 
+[27종 설명 확장 검토본](docs/MONIPICK_MONITOR_SUMMARY_EXPANSION_REPORT_20261024.md): 기존 3종과 합쳐 30종 설명. 운영 배포와는 별도이며 원본 사양·미확인·충돌·광고/통계 비활성을 유지합니다.
+
 - **현재 기준:** [제품 방향 v3](docs/PRODUCT_DIRECTION_V3.md) — 2026-10-10 사용자 승인.
 - **진행바·다음 작업:** [v3 진행 계획](docs/MONITOR_COMPARISON_V3_ROADMAP.md), 단계 **1/6 완료**.
 - **승인한 디자인 방향:** [목업 이미지](docs/design/monitor-comparison-v3-concept.png). 제품과 숫자는 디자인 예시입니다.

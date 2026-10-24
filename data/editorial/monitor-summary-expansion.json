@@ -1,0 +1,2945 @@
+{
+  "status": "EDITORIAL_CANDIDATE",
+  "basis": "Existing validated official records; no new direct checks, compatibility approval, or production authorization.",
+  "products": [
+    {
+      "product_id": "monitor:asus-vg27aq",
+      "description": "ASUS VG27AQ: 27형 2560×1440 IPS, 최대 165Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-vg27aq"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-vg27aq"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-vg27aq"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-vg27aq"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 165Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 165,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-vg27aq"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "HDMI 2.0 2개와 DisplayPort 1.2 1개가 기록돼 있습니다. 입력 포트가 다르면 가능한 영상 조건도 따로 확인하세요.",
+          "expected_facts": {
+            "hdmi": {
+              "value": {
+                "version": "2.0",
+                "count": 2
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:asus-vg27aq"
+              ]
+            },
+            "displayport": {
+              "value": {
+                "version": "1.2",
+                "count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:asus-vg27aq"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "ASUS",
+        "display_model": "VG27AQ",
+        "region": "US",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:asus-xg27aqdmg",
+      "description": "ASUS XG27AQDMG: 26.5형 2560×1440 WOLED, 최대 240Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "26.5형 2560×1440 화면과 WOLED 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 26.5,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-xg27aqdmg-overview-20261011"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-xg27aqdmg"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-xg27aqdmg"
+              ]
+            },
+            "panel": {
+              "value": "WOLED",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-xg27aqdmg"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 240Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 240,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-xg27aqdmg-overview-20261011"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "DisplayPort 1.4의 DSC 표기와 HDMI 2.0 2개가 기록돼 있습니다. DSC 표기를 연결 기기의 실제 협상 성공으로 해석하지 않습니다.",
+          "expected_facts": {
+            "displayport": {
+              "value": {
+                "version": "1.4",
+                "dsc": true,
+                "count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:asus-xg27aqdmg"
+              ]
+            },
+            "hdmi": {
+              "value": {
+                "version": "2.0",
+                "count": 2
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:asus-xg27aqdmg"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "ASUS",
+        "display_model": "XG27AQDMG",
+        "region": "US",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:asus-pg32ucdm",
+      "description": "ASUS PG32UCDM: 31.5형 3840×2160 QD-OLED, 최대 240Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "31.5형 3840×2160 화면과 QD-OLED 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 31.5,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-pg32ucdm"
+              ]
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-pg32ucdm"
+              ]
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-pg32ucdm"
+              ]
+            },
+            "panel": {
+              "value": "QD-OLED",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-pg32ucdm-overview-20261011"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 240Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 240,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-pg32ucdm-overview-20261011"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "USB-C DP Alt Mode, PD 공급 전력 90W와 KVM 지원이 표기돼 있습니다. 실제 충전량이나 모든 기기에서의 KVM 동작을 보장하는 값은 아닙니다.",
+          "expected_facts": {
+            "usb_c": {
+              "value": {
+                "count": 1,
+                "mode": "DP Alt Mode"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:asus-pg32ucdm"
+              ]
+            },
+            "pd_supply": {
+              "value": 90,
+              "unit": "W",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "USB_C",
+              "source_refs": [
+                "src:asus-pg32ucdm",
+                "src:asus-pg32ucdm-overview-20261011"
+              ]
+            },
+            "kvm": {
+              "value": true,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "MULTI_SOURCE",
+              "source_refs": [
+                "src:asus-pg32ucdm-overview-20261011"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "ASUS",
+        "display_model": "PG32UCDM",
+        "region": "US",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:asus-pa278qv",
+      "description": "ASUS PA278QV: 27형 2560×1440 IPS, 최대 75Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-pa278qv"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-pa278qv"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-pa278qv"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-pa278qv"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 75Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 75,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-pa278qv"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "스탠드는 높이 150mm 조절과 피벗이 표기돼 있습니다. HDMI 1.4와 DisplayPort 1.2가 기록돼 있으며 USB-C 지원은 미확인입니다.",
+          "expected_facts": {
+            "stand": {
+              "value": {
+                "tilt_deg": [
+                  -5,
+                  35
+                ],
+                "swivel_deg": [
+                  -90,
+                  90
+                ],
+                "pivot_deg": [
+                  -90,
+                  90
+                ],
+                "height_mm": 150
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "STAND",
+              "source_refs": [
+                "src:asus-pa278qv"
+              ]
+            },
+            "hdmi": {
+              "value": {
+                "version": "1.4",
+                "count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:asus-pa278qv"
+              ]
+            },
+            "displayport": {
+              "value": {
+                "version": "1.2",
+                "count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:asus-pa278qv"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "usb_c"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "ASUS",
+        "display_model": "PA278QV",
+        "region": "SG",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:asus-pa248qv",
+      "description": "ASUS PA248QV: 24.1형 1920×1200 IPS, 최대 75Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "24.1형 1920×1200 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 24.1,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-pa248qv"
+              ]
+            },
+            "width": {
+              "value": 1920,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-pa248qv"
+              ]
+            },
+            "height": {
+              "value": 1200,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-pa248qv"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-pa248qv"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 75Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 75,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-pa248qv"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "스탠드 높이 130mm 조절과 피벗, HDMI 1.4·DisplayPort 1.2 입력이 기록돼 있습니다. USB-C 지원은 미확인입니다.",
+          "expected_facts": {
+            "stand": {
+              "value": {
+                "tilt_deg": [
+                  -5,
+                  35
+                ],
+                "swivel_deg": [
+                  -90,
+                  90
+                ],
+                "pivot_deg": [
+                  -90,
+                  90
+                ],
+                "height_mm": 130
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "STAND",
+              "source_refs": [
+                "src:asus-pa248qv"
+              ]
+            },
+            "hdmi": {
+              "value": {
+                "version": "1.4",
+                "count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:asus-pa248qv"
+              ]
+            },
+            "displayport": {
+              "value": {
+                "version": "1.2",
+                "count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:asus-pa248qv"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "usb_c"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "ASUS",
+        "display_model": "PA248QV",
+        "region": "US",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:asus-va24ehf",
+      "description": "ASUS VA24EHF: 23.8형 1920×1080 IPS, 최대 100Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "23.8형 1920×1080 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 23.8,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-va24ehf"
+              ]
+            },
+            "width": {
+              "value": 1920,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-va24ehf"
+              ]
+            },
+            "height": {
+              "value": 1080,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:asus-va24ehf"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-va24ehf"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 100Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 100,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:asus-va24ehf"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "HDMI 1.4 1개가 기록돼 있습니다. 스탠드의 높이 조절은 지원하지 않는 것으로 명시돼 있어 기울기 조절과 구분해야 합니다.",
+          "expected_facts": {
+            "hdmi": {
+              "value": {
+                "version": "1.4",
+                "count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:asus-va24ehf"
+              ]
+            },
+            "stand": {
+              "value": {
+                "tilt_deg": [
+                  -5,
+                  23
+                ],
+                "height_adjustment": false
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "STAND",
+              "source_refs": [
+                "src:asus-va24ehf"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "ASUS",
+        "display_model": "VA24EHF",
+        "region": "Global",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:benq-pd2705u",
+      "description": "BenQ PD2705U: 27형 3840×2160 IPS, 제조사 표기 60Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 3840×2160 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-pd2705u"
+              ]
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:benq-pd2705u"
+              ]
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:benq-pd2705u"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-pd2705u"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 제조사 표기 60Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 60,
+              "unit": "Hz",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-pd2705u"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "USB-C 업스트림에 DP Alt Mode·데이터 기능과 PD 공급 전력 65W가 표기돼 있습니다. KVM 지원도 기록돼 있지만 실제 조합별 동작은 따로 확인해야 합니다.",
+          "expected_facts": {
+            "usb_c": {
+              "value": {
+                "upstream_count": 1,
+                "mode": "DP Alt Mode + data",
+                "downstream_count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:benq-pd2705u"
+              ]
+            },
+            "pd_supply": {
+              "value": 65,
+              "unit": "W",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "USB_C_UPSTREAM",
+              "source_refs": [
+                "src:benq-pd2705u"
+              ]
+            },
+            "kvm": {
+              "value": true,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "MULTI_SOURCE",
+              "source_refs": [
+                "src:benq-pd2705u"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "BenQ",
+        "display_model": "PD2705U",
+        "region": "CA",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:benq-pd2725u",
+      "description": "BenQ PD2725U: 27형 3840×2160 IPS, 제조사 표기 60Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 3840×2160 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-pd2725u"
+              ]
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:benq-pd2725u"
+              ]
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:benq-pd2725u"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-pd2725u"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 제조사 표기 60Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 60,
+              "unit": "Hz",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-pd2725u"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "Thunderbolt 3 업스트림·다운스트림 각 1개가 기록돼 있습니다. PD 65W는 업스트림 기준이며 다운스트림의 15W 표기와 구분합니다.",
+          "expected_facts": {
+            "thunderbolt": {
+              "value": {
+                "version": 3,
+                "upstream": 1,
+                "downstream": 1,
+                "downstream_pd_w": 15
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:benq-pd2725u"
+              ]
+            },
+            "pd_supply": {
+              "value": 65,
+              "unit": "W",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "THUNDERBOLT3_UPSTREAM",
+              "source_refs": [
+                "src:benq-pd2725u"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "BenQ",
+        "display_model": "PD2725U",
+        "region": "CA",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:benq-ex2710q",
+      "description": "BenQ EX2710Q: 27형 2560×1440 IPS, 제조사 표기 165Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-ex2710q"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:benq-ex2710q"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:benq-ex2710q"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-ex2710q"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 제조사 표기 165Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 165,
+              "unit": "Hz",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-ex2710q"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "HDMI 2.0 2개와 DisplayPort 1.4 입력 1개가 기록돼 있습니다. HDR10·DisplayHDR400 표기는 실제 HDR 화질의 실측 평가가 아닙니다.",
+          "expected_facts": {
+            "hdmi": {
+              "value": {
+                "version": "2.0",
+                "count": 2
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:benq-ex2710q"
+              ]
+            },
+            "displayport": {
+              "value": {
+                "version": "1.4",
+                "input_count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:benq-ex2710q"
+              ]
+            },
+            "hdr": {
+              "value": "HDR10; DisplayHDR400",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-ex2710q"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "usb_c",
+        "pd_supply"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "BenQ",
+        "display_model": "EX2710Q",
+        "region": "CA",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:benq-gw2790qt",
+      "description": "BenQ GW2790QT: 27형 2560×1440 IPS, 제조사 표기 75Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-gw2790qt"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:benq-gw2790qt"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:benq-gw2790qt"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-gw2790qt"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 제조사 표기 75Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 75,
+              "unit": "Hz",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-gw2790qt"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "USB-C 업스트림에 DP Alt Mode·데이터 기능과 PD 공급 전력 65W가 표기돼 있습니다. 실제 충전 여부는 연결 기기와 케이블 조건도 확인해야 합니다.",
+          "expected_facts": {
+            "usb_c": {
+              "value": {
+                "upstream_count": 1,
+                "mode": "DP Alt Mode + Data",
+                "downstream_count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:benq-gw2790qt"
+              ]
+            },
+            "pd_supply": {
+              "value": 65,
+              "unit": "W",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "USB_C_UPSTREAM",
+              "source_refs": [
+                "src:benq-gw2790qt"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "BenQ",
+        "display_model": "GW2790QT",
+        "region": "CA",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:benq-gw2490",
+      "description": "BenQ GW2490: 23.8형 1920×1080 IPS, 제조사 표기 100Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "23.8형 1920×1080 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 23.8,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-gw2490"
+              ]
+            },
+            "width": {
+              "value": 1920,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:benq-gw2490"
+              ]
+            },
+            "height": {
+              "value": 1080,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:benq-gw2490"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-gw2490"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 제조사 표기 100Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 100,
+              "unit": "Hz",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:benq-gw2490"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "HDMI 1.4 2개와 DisplayPort 1.2 입력 1개가 기록돼 있습니다. USB-C와 PD 공급 지원 여부는 아직 확인하지 못했습니다.",
+          "expected_facts": {
+            "hdmi": {
+              "value": {
+                "version": "1.4",
+                "count": 2
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:benq-gw2490"
+              ]
+            },
+            "displayport": {
+              "value": {
+                "version": "1.2",
+                "input_count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:benq-gw2490"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "usb_c",
+        "pd_supply"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "BenQ",
+        "display_model": "GW2490",
+        "region": "US",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:lg-27gp850-b",
+      "description": "LG 27GP850-B: 27형 2560×1440 IPS, 최대 165Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27gp850-b"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-27gp850-b"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-27gp850-b"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27gp850-b"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 165Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 165,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27gp850-b"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "HDMI 2.0 2개와 DisplayPort 1.4 1개가 기록돼 있습니다. USB-C는 공식 기록에서 미지원으로 명시돼 있으며 단순 미확인과 구분합니다.",
+          "expected_facts": {
+            "hdmi": {
+              "value": {
+                "count": 2,
+                "version": "2.0"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:lg-27gp850-b",
+                "src:lg-27gp850-b:recheck-20261011"
+              ]
+            },
+            "displayport": {
+              "value": {
+                "count": 1,
+                "version": "1.4"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:lg-27gp850-b",
+                "src:lg-27gp850-b:recheck-20261011"
+              ]
+            },
+            "usb_c": {
+              "value": false,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:lg-27gp850-b:recheck-20261011"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "LG",
+        "display_model": "27GP850-B",
+        "region": "ES",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:lg-27gr83q-b",
+      "description": "LG 27GR83Q-B: 27형 2560×1440 IPS, 최대 240Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27gr83q-b"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-27gr83q-b"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-27gr83q-b"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27gr83q-b"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 240Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 240,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27gr83q-b"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "DisplayPort 1.4의 DSC 표기와 HDMI 2개가 기록돼 있습니다. HDMI 버전은 미확인이므로 포트 수만으로 규격이나 가능한 주사율을 판단하지 않습니다.",
+          "expected_facts": {
+            "displayport": {
+              "value": {
+                "count": 1,
+                "version": "1.4",
+                "dsc": true
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:lg-27gr83q-b"
+              ]
+            },
+            "hdmi": {
+              "value": {
+                "count": 2,
+                "version": null
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:lg-27gr83q-b"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "hdmi.version"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "LG",
+        "display_model": "27GR83Q-B",
+        "region": "GB",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:lg-27gs95qe-b",
+      "description": "LG 27GS95QE-B: 26.5형 2560×1440 OLED, 최대 240Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "26.5형 2560×1440 화면과 OLED 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 26.5,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27gs95qe-b"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-27gs95qe-b"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-27gs95qe-b"
+              ]
+            },
+            "panel": {
+              "value": "OLED",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27gs95qe-b"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 240Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 240,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27gs95qe-b"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "HDMI 2.1과 DSC가 표기된 DisplayPort 1.4 입력이 기록돼 있습니다. HDMI 포트 수는 미확인으로 남겨두고, HDR 표기를 실측 성능으로 바꾸지 않습니다.",
+          "expected_facts": {
+            "hdmi": {
+              "value": {
+                "version": "2.1",
+                "count": null
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:lg-27gs95qe-b"
+              ]
+            },
+            "displayport": {
+              "value": {
+                "version": "1.4",
+                "dsc": true,
+                "count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:lg-27gs95qe-b"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "hdmi.count"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "LG",
+        "display_model": "27GS95QE-B",
+        "region": "GB",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:lg-32gs95ue-b",
+      "description": "LG 32GS95UE-B: 31.5형 3840×2160 OLED, 최대 240Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "31.5형 3840×2160 화면과 OLED 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 31.5,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-32gs95ue-b"
+              ]
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-32gs95ue-b"
+              ]
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-32gs95ue-b"
+              ]
+            },
+            "panel": {
+              "value": "OLED",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-32gs95ue-b"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 240Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 240,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-32gs95ue-b"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "듀얼 모드는 3840×2160 최대 240Hz와 1920×1080 최대 480Hz의 대안 모드로 기록돼 있습니다. 4K 480Hz나 두 모드의 동시 출력으로 합치지 않습니다.",
+          "expected_facts": {
+            "dual_mode": {
+              "value": {
+                "modes": [
+                  {
+                    "width": 3840,
+                    "height": 2160,
+                    "refresh_hz": 240
+                  },
+                  {
+                    "width": 1920,
+                    "height": 1080,
+                    "refresh_hz": 480
+                  }
+                ]
+              },
+              "unit": null,
+              "qualifier": "UP_TO",
+              "scope": "ALTERNATIVE_PANEL_MODES",
+              "source_refs": [
+                "src:lg-32gs95ue-b"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "LG",
+        "display_model": "32GS95UE-B",
+        "region": "CA",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:lg-27up850k-w",
+      "description": "LG 27UP850K-W: 27형 3840×2160 IPS, 최대 60Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 3840×2160 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27up850k-w"
+              ]
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-27up850k-w"
+              ]
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-27up850k-w"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27up850k-w"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 60Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 60,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-27up850k-w"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "DisplayPort 1.4 1개와 HDMI 2개가 기록돼 있습니다. HDMI 버전은 미확인이며 PD 전력은 공식 표기 충돌이 남아 있어 이 요약에서 확정하지 않습니다.",
+          "expected_facts": {
+            "displayport": {
+              "value": {
+                "count": 1,
+                "version": "1.4"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:lg-27up850k-w"
+              ]
+            },
+            "hdmi": {
+              "value": {
+                "count": 2,
+                "version": null
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:lg-27up850k-w"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다. 공식 자료 간 표기 충돌이 남아 있습니다. 아래 원문별 차이를 확인하세요.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "hdmi.version"
+      ],
+      "expected_conflict_notes": [
+        "CONFLICT_REVIEW 2026-10-11: UK 상세 사양과 본문 PD 90W, 갤러리 대체텍스트 96W가 충돌. 기존 사양표 기반 90W는 유지하되 96W로 변경하지 않음. 본문에 다른 모델 27UP85NP도 등장하므로 제품별 명시 필드만 사용. 한국 SKU 및 실제 충전 보장 없음."
+      ],
+      "expected_identity": {
+        "manufacturer": "LG",
+        "display_model": "27UP850K-W",
+        "region": "GB",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:lg-34wq75c-b-aus",
+      "description": "LG 34WQ75C-B.AUS: 34.14형 3440×1440 IPS, 최대 60Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "34.14형 3440×1440 화면과 IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 34.14,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-34wq75c-b-aus"
+              ]
+            },
+            "width": {
+              "value": 3440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-34wq75c-b-aus"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:lg-34wq75c-b-aus"
+              ]
+            },
+            "panel": {
+              "value": "IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-34wq75c-b-aus"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 60Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 60,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:lg-34wq75c-b-aus"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "KVM 지원과 USB-C의 데이터 기능이 기록돼 있습니다. USB-C 데이터 표기만으로 영상 모드를 확정하지 않으며, HDMI·DisplayPort 버전도 미확인입니다.",
+          "expected_facts": {
+            "kvm": {
+              "value": true,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "MULTI_SOURCE",
+              "source_refs": [
+                "src:lg-34wq75c-b-aus"
+              ]
+            },
+            "usb_c": {
+              "value": {
+                "count": 1,
+                "data": true
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:lg-34wq75c-b-aus"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "hdmi.version",
+        "displayport.version"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "LG",
+        "display_model": "34WQ75C-B.AUS",
+        "region": "US",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:msi-mag-274qrf-qd-e2",
+      "description": "MSI MAG 274QRF QD E2: 27형 2560×1440 Rapid IPS, 최대 180Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면과 Rapid IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:msi-mag-274qrf-qd-e2"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:msi-mag-274qrf-qd-e2"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:msi-mag-274qrf-qd-e2"
+              ]
+            },
+            "panel": {
+              "value": "Rapid IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:msi-mag-274qrf-qd-e2"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 180Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 180,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:msi-mag-274qrf-qd-e2"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "USB-C DP alt, PD 공급 전력 65W와 KVM 지원이 표기돼 있습니다. 색역·포장 중량의 공식 표기 충돌은 별도 안내에 유지합니다.",
+          "expected_facts": {
+            "usb_c": {
+              "value": {
+                "count": 1,
+                "mode": "DP alt"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:msi-mag-274qrf-qd-e2"
+              ]
+            },
+            "pd_supply": {
+              "value": 65,
+              "unit": "W",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "USB_C",
+              "source_refs": [
+                "src:msi-mag-274qrf-qd-e2"
+              ]
+            },
+            "kvm": {
+              "value": true,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "MULTI_SOURCE",
+              "source_refs": [
+                "src:msi-mag-274qrf-qd-e2:recheck-20261011"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다. 공식 자료 간 표기 충돌이 남아 있습니다. 아래 원문별 차이를 확인하세요.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [
+        "CONFLICT_REVIEW 색역: 기존 공식 사양 페이지 DCI-P3 98%(CIE1976)와 한국어 V1.1 설명서 인쇄19–20쪽의 95%(CIE1976)가 다르다. 기존 문서값을 보존하고 어느 값이 적용되는지 미확인으로 유지한다.",
+        "CONFLICT_REVIEW 포장 포함 중량: 공식 사양 페이지 GW 8.6kg, 한국어 설명서 인쇄20쪽 Gross 13.3kg으로 다르다. 본체 Net 6.05kg와 구분하며 포장 중량을 신규 fact로 채택하지 않는다."
+      ],
+      "expected_identity": {
+        "manufacturer": "MSI",
+        "display_model": "MAG 274QRF QD E2",
+        "region": "Global",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:msi-mpg-321urx-qd-oled",
+      "description": "MSI MPG 321URX QD-OLED: 31.5형 3840×2160 QD-OLED, 최대 240Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "31.5형 3840×2160 화면과 QD-OLED 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 31.5,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:msi-mpg-321urx-qd-oled"
+              ]
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:msi-mpg-321urx-qd-oled"
+              ]
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:msi-mpg-321urx-qd-oled"
+              ]
+            },
+            "panel": {
+              "value": "QD-OLED",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:msi-mpg-321urx-qd-oled"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 240Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 240,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:msi-mpg-321urx-qd-oled"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "USB-C DP alt, PD 공급 전력 90W와 KVM 지원이 표기돼 있습니다. HDMI 2.1 2개도 기록돼 있지만 모든 연결의 동시 동작을 보장하지 않습니다.",
+          "expected_facts": {
+            "usb_c": {
+              "value": {
+                "count": 1,
+                "mode": "DP alt"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:msi-mpg-321urx-qd-oled"
+              ]
+            },
+            "pd_supply": {
+              "value": 90,
+              "unit": "W",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "USB_C",
+              "source_refs": [
+                "src:msi-mpg-321urx-qd-oled"
+              ]
+            },
+            "kvm": {
+              "value": true,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "MULTI_SOURCE",
+              "source_refs": [
+                "src:msi-mpg-321urx-qd-oled:recheck-20261011"
+              ]
+            },
+            "hdmi": {
+              "value": {
+                "count": 2,
+                "version": "2.1"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:msi-mpg-321urx-qd-oled"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "MSI",
+        "display_model": "MPG 321URX QD-OLED",
+        "region": "Global",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:gigabyte-m27q-rev-1-0",
+      "description": "Gigabyte M27Q rev.1.0: 27형 2560×1440 SS IPS, 최대 170Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면과 SS IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:gigabyte-m27q-rev-1-0"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:gigabyte-m27q-rev-1-0"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:gigabyte-m27q-rev-1-0"
+              ]
+            },
+            "panel": {
+              "value": "SS IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:gigabyte-m27q-rev-1-0"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 170Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 170,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:gigabyte-m27q-rev-1-0"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "기록된 제품은 M27Q rev.1.0입니다. KVM 지원과 USB-C 1개가 기록돼 있지만 USB-C 영상 모드·PD 공급 전력은 미확인입니다. 다른 리비전으로 사양을 옮기지 않습니다.",
+          "expected_facts": {
+            "kvm": {
+              "value": true,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "MULTI_SOURCE",
+              "source_refs": [
+                "src:gigabyte-m27q-rev-1-0"
+              ]
+            },
+            "usb_c": {
+              "value": {
+                "count": 1,
+                "video_mode": null
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:gigabyte-m27q-rev-1-0"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "usb_c.video_mode",
+        "pd_supply"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "Gigabyte",
+        "display_model": "M27Q rev.1.0",
+        "region": "Global",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:gigabyte-m28u",
+      "description": "Gigabyte M28U: 28형 3840×2160 SS IPS, 최대 144Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "28형 3840×2160 화면과 SS IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 28,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:gigabyte-m28u"
+              ]
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:gigabyte-m28u"
+              ]
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:gigabyte-m28u"
+              ]
+            },
+            "panel": {
+              "value": "SS IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:gigabyte-m28u"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 144Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 144,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:gigabyte-m28u"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "HDMI 2.1 2개, DSC가 표기된 DisplayPort 1.4 1개와 KVM 지원이 기록돼 있습니다. USB-C 영상 모드·PD 공급 전력은 미확인입니다.",
+          "expected_facts": {
+            "hdmi": {
+              "value": {
+                "count": 2,
+                "version": "2.1"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:gigabyte-m28u"
+              ]
+            },
+            "displayport": {
+              "value": {
+                "count": 1,
+                "version": "1.4",
+                "dsc": true
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:gigabyte-m28u"
+              ]
+            },
+            "kvm": {
+              "value": true,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "MULTI_SOURCE",
+              "source_refs": [
+                "src:gigabyte-m28u"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "usb_c.video_mode",
+        "pd_supply"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "Gigabyte",
+        "display_model": "M28U",
+        "region": "Global",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:gigabyte-m32u",
+      "description": "Gigabyte M32U: 31.5형 3840×2160 SS IPS, 최대 144Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "31.5형 3840×2160 화면과 SS IPS 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 31.5,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:gigabyte-m32u"
+              ]
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:gigabyte-m32u"
+              ]
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:gigabyte-m32u"
+              ]
+            },
+            "panel": {
+              "value": "SS IPS",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:gigabyte-m32u"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 144Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 144,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:gigabyte-m32u"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "HDMI 2.1 2개, DSC가 표기된 DisplayPort 1.4 1개와 KVM 지원이 기록돼 있습니다. USB-C 영상 모드·PD 공급 전력은 미확인입니다.",
+          "expected_facts": {
+            "hdmi": {
+              "value": {
+                "count": 2,
+                "version": "2.1"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:gigabyte-m32u"
+              ]
+            },
+            "displayport": {
+              "value": {
+                "count": 1,
+                "version": "1.4",
+                "dsc": true
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:gigabyte-m32u"
+              ]
+            },
+            "kvm": {
+              "value": true,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "MULTI_SOURCE",
+              "source_refs": [
+                "src:gigabyte-m32u"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "usb_c.video_mode",
+        "pd_supply"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "Gigabyte",
+        "display_model": "M32U",
+        "region": "Global",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:aoc-q27g3xmn",
+      "description": "AOC Q27G3XMN: 27형 2560×1440 VA, 최대 180Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면과 VA 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:aoc-q27g3xmn"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:aoc-q27g3xmn"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:aoc-q27g3xmn"
+              ]
+            },
+            "panel": {
+              "value": "VA",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:aoc-q27g3xmn"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 180Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 180,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:aoc-q27g3xmn"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "로컬 디밍 336개 구역과 DisplayHDR1000 표기가 기록돼 있습니다. 구역 수나 인증 표기만으로 실제 HDR 화질을 평가하지 않습니다.",
+          "expected_facts": {
+            "local_dimming_zones": {
+              "value": 336,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "BACKLIGHT",
+              "source_refs": [
+                "src:aoc-q27g3xmn"
+              ]
+            },
+            "hdr": {
+              "value": "DisplayHDR1000",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:aoc-q27g3xmn"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "AOC",
+        "display_model": "Q27G3XMN",
+        "region": "US",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:samsung-s32cg554eu-ls32cg554euxen",
+      "description": "Samsung S32CG554EU (LS32CG554EUXEN): 32형 2560×1440 VA, 최대 165Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "32형 2560×1440 화면과 VA 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 32,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:samsung-s32cg554eu-ls32cg554euxen"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:samsung-s32cg554eu-ls32cg554euxen"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:samsung-s32cg554eu-ls32cg554euxen"
+              ]
+            },
+            "panel": {
+              "value": "VA",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:samsung-s32cg554eu-ls32cg554euxen"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 165Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 165,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:samsung-s32cg554eu-ls32cg554euxen"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "기록된 지역 모델은 LS32CG554EUXEN입니다. DisplayPort 1.2 1개가 있으며 USB-C는 공식 기록에서 미지원입니다. HDMI 버전은 미확인입니다.",
+          "expected_facts": {
+            "displayport": {
+              "value": {
+                "count": 1,
+                "version": "1.2"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:samsung-s32cg554eu-ls32cg554euxen"
+              ]
+            },
+            "usb_c": {
+              "value": false,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:samsung-s32cg554eu-ls32cg554euxen"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "hdmi.version"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "Samsung",
+        "display_model": "S32CG554EU (LS32CG554EUXEN)",
+        "region": "DE",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:samsung-s65uc-ls34c650ueexxy",
+      "description": "Samsung S65UC (LS34C650UEEXXY): 34형 3440×1440 VA, 최대 100Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "34형 3440×1440 화면과 VA 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 34,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:samsung-s65uc-ls34c650ueexxy"
+              ]
+            },
+            "width": {
+              "value": 3440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:samsung-s65uc-ls34c650ueexxy"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:samsung-s65uc-ls34c650ueexxy"
+              ]
+            },
+            "panel": {
+              "value": "VA",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:samsung-s65uc-ls34c650ueexxy"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 100Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 100,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:samsung-s65uc-ls34c650ueexxy"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "기록된 지역 모델은 LS34C650UEEXXY입니다. KVM과 PD 공급 전력 90W가 표기돼 있으나 USB-C 영상 모드는 미확인입니다. 한국 판매 SKU로 동일시하지 않습니다.",
+          "expected_facts": {
+            "kvm": {
+              "value": true,
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "MULTI_SOURCE",
+              "source_refs": [
+                "src:samsung-s65uc-ls34c650ueexxy"
+              ]
+            },
+            "pd_supply": {
+              "value": 90,
+              "unit": "W",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "USB_C",
+              "source_refs": [
+                "src:samsung-s65uc-ls34c650ueexxy"
+              ]
+            },
+            "usb_c": {
+              "value": {
+                "count": 1,
+                "video_mode": null
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:samsung-s65uc-ls34c650ueexxy"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results",
+        "usb_c.video_mode"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "Samsung",
+        "display_model": "S65UC (LS34C650UEEXXY)",
+        "region": "AU",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:dell-u2724d",
+      "description": "Dell U2724D: 27형 2560×1440 IPS Black, 최대 120Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "27형 2560×1440 화면과 IPS Black 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 27,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:dell-u2724d"
+              ]
+            },
+            "width": {
+              "value": 2560,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:dell-u2724d"
+              ]
+            },
+            "height": {
+              "value": 1440,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:dell-u2724d"
+              ]
+            },
+            "panel": {
+              "value": "IPS Black",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:dell-u2724d"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 120Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 120,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:dell-u2724d"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "USB-C 업스트림은 데이터 전용입니다. HDMI의 2.1 표기에는 TMDS 조건이 함께 기록돼 있어 FRL 지원으로 확장 해석하지 않습니다.",
+          "expected_facts": {
+            "usb_c": {
+              "value": {
+                "data_only_upstream": 1,
+                "downstream": 1,
+                "version": "3.2 Gen2"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:dell-u2724d"
+              ]
+            },
+            "hdmi": {
+              "value": {
+                "version": "2.1",
+                "count": 1,
+                "signalling": "TMDS, not inferred FRL"
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:dell-u2724d"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "Dell",
+        "display_model": "U2724D",
+        "region": "US",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    },
+    {
+      "product_id": "monitor:dell-aw3225qf",
+      "description": "Dell AW3225QF: 31.6형 3840×2160 QD-OLED, 최대 240Hz. 입력 조건과 미확인 항목을 함께 확인하세요.",
+      "claims": [
+        {
+          "summary": "31.6형 3840×2160 화면과 QD-OLED 패널이 기록돼 있습니다.",
+          "expected_facts": {
+            "size": {
+              "value": 31.6,
+              "unit": "inch",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:dell-aw3225qf"
+              ]
+            },
+            "width": {
+              "value": 3840,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:dell-aw3225qf"
+              ]
+            },
+            "height": {
+              "value": 2160,
+              "unit": "px",
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "NATIVE_RESOLUTION",
+              "source_refs": [
+                "src:dell-aw3225qf"
+              ]
+            },
+            "panel": {
+              "value": "QD-OLED",
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:dell-aw3225qf"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "주사율은 최대 240Hz입니다. 입력·설정별 조건은 상세 자료에서 확인해야 하며 모든 포트의 동일한 출력이나 동시 사용을 보장하지 않습니다.",
+          "expected_facts": {
+            "refresh": {
+              "value": 240,
+              "unit": "Hz",
+              "qualifier": "UP_TO",
+              "scope": "PANEL",
+              "source_refs": [
+                "src:dell-aw3225qf"
+              ]
+            }
+          }
+        },
+        {
+          "summary": "HDMI 2.1 2개에 FRL·eARC 1개가, DisplayPort 1.4에는 DSC가 표기돼 있습니다. USB-C는 다운스트림 표기이며 노트북 영상 입력으로 해석하지 않습니다.",
+          "expected_facts": {
+            "hdmi": {
+              "value": {
+                "version": "2.1",
+                "count": 2,
+                "frl": true,
+                "earc_count": 1
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:dell-aw3225qf"
+              ]
+            },
+            "displayport": {
+              "value": {
+                "version": "1.4",
+                "count": 1,
+                "dsc": true
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:dell-aw3225qf"
+              ]
+            },
+            "usb_c": {
+              "value": {
+                "downstream": 1,
+                "version": "3.2 Gen1",
+                "bc12": true
+              },
+              "unit": null,
+              "qualifier": "MANUFACTURER_STATED",
+              "scope": "PORT",
+              "source_refs": [
+                "src:dell-aw3225qf"
+              ]
+            }
+          }
+        }
+      ],
+      "caution": "한국 판매 SKU 동일성·입력별 동시 사용 조건·실물 연결 결과는 미확인입니다.",
+      "required_missing_fields": [
+        "korean_sku_identity",
+        "per_input_simultaneous_conditions",
+        "physical_test_results"
+      ],
+      "expected_conflict_notes": [],
+      "expected_identity": {
+        "manufacturer": "Dell",
+        "display_model": "AW3225QF",
+        "region": "US",
+        "variant_status": "EXACT_DOCUMENT_MODEL"
+      }
+    }
+  ]
+}

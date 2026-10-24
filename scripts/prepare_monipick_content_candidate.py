@@ -38,8 +38,8 @@ def normalize_links(text, source, routes):
     return re.sub(r'(\bhref\s*=\s*)([\"\x27])(.*?)(\2)',replace,text,flags=re.I)
 
 
-def reviewed_summaries():
-    data=json.loads(EDITORIAL.read_text())
+def reviewed_summaries(editorial=EDITORIAL):
+    data=json.loads(Path(editorial).read_text())
     if data.get('status')!='EDITORIAL_CANDIDATE':
         raise ValueError('editorial candidate status required')
     products={p['id']:p for p in official(load(FACTS))['products']}
@@ -50,6 +50,8 @@ def reviewed_summaries():
         product=products[pid]
         if not set(item['required_missing_fields']).issubset(product['missing_fields']):
             raise ValueError('editorial uncertainty changed; review caution')
+        if 'expected_conflict_notes' in item and item['expected_conflict_notes']!=[n for n in product['notes'] if n.startswith('CONFLICT_REVIEW ')]:
+            raise ValueError('editorial conflict changed; review required')
         source_map={s['id']:s for s in product['source_refs']}
         facts={}
         for fact in product['facts']: facts.setdefault(fact['property'],[]).append(fact)
@@ -60,7 +62,7 @@ def reviewed_summaries():
             refs=set()
             for prop,value in claim['expected_facts'].items():
                 matches=facts.get(prop,[])
-                if len(matches)!=1 or any(matches[0][key]!=expected for key,expected in value.items()) or set(value)!={'value','unit','qualifier'}:
+                if len(matches)!=1 or any(matches[0][key]!=expected for key,expected in value.items()) or set(value) not in ({'value','unit','qualifier'},{'value','unit','qualifier','scope','source_refs'}):
                     raise ValueError('editorial fact changed or ambiguous: '+pid+'/'+prop)
                 fact=matches[0]
                 if fact['qualifier']=='UNKNOWN' or not fact['source_refs']:
