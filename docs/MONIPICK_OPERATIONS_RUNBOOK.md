@@ -1,5 +1,7 @@
 # 모니픽 운영·공개 전환 준비
 
+> 2026-10-24 최신 상태: 사용자가 확인한 후보의 실제 공개를 승인했고 monipick.com 운영 배포·HTTPS 연결을 완료했다. [공개 결과](MONIPICK_PUBLIC_LAUNCH_REPORT_20261024.md)와 [운영 공개 기준](MONIPICK_PRODUCTION_OPERATIONS.md)을 우선한다. 광고·통계는 비활성, main은 미병합이다. 아래 승인 대기/미적용 설명은 이전 준비 단계 이력이며 후보 빌더 자체의 미승인 계약은 계속 유지한다.
+
 기준: 2026-10-22. 통계 미도입은 사용자 결정이다. contact@monipick.com의 Gmail 전달 연결과 외부 발신 계정 원문의 INBOX 수신 확인을 완료했다. 실제 공개 승인은 대기한다. [연결·테스트 기록](MONIPICK_EMAIL_ROUTING_SETUP.md)의 최신 후속 결과를 따른다.
 
 ## 현재 기능과 운영 범위

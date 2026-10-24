@@ -1,0 +1,1310 @@
+[
+  {
+    "path": "/404",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/404",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": "noindex, follow",
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "noindex,follow"
+    ],
+    "canonical": []
+  },
+  {
+    "path": "/guides/monitor-buying",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/guides/monitor-buying",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/guides/monitor-buying"
+    ]
+  },
+  {
+    "path": "/information",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/information",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": false,
+    "edge_transform": "CLOUDFLARE_EMAIL_OBFUSCATION",
+    "normalized_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/information"
+    ]
+  },
+  {
+    "path": "/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/"
+    ]
+  },
+  {
+    "path": "/monitor10-review",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor10-review",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": "noindex, follow",
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "noindex,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitor10-review"
+    ]
+  },
+  {
+    "path": "/monitors/aoc-q27g3xmn/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/aoc-q27g3xmn/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/aoc-q27g3xmn/"
+    ]
+  },
+  {
+    "path": "/monitors/asus-pa248qv/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/asus-pa248qv/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/asus-pa248qv/"
+    ]
+  },
+  {
+    "path": "/monitors/asus-pa278qv/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/asus-pa278qv/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/asus-pa278qv/"
+    ]
+  },
+  {
+    "path": "/monitors/asus-pa279crv/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/asus-pa279crv/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/asus-pa279crv/"
+    ]
+  },
+  {
+    "path": "/monitors/asus-pg32ucdm/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/asus-pg32ucdm/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/asus-pg32ucdm/"
+    ]
+  },
+  {
+    "path": "/monitors/asus-va24ehf/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/asus-va24ehf/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/asus-va24ehf/"
+    ]
+  },
+  {
+    "path": "/monitors/asus-vg27aq/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/asus-vg27aq/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/asus-vg27aq/"
+    ]
+  },
+  {
+    "path": "/monitors/asus-xg27aqdmg/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/asus-xg27aqdmg/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/asus-xg27aqdmg/"
+    ]
+  },
+  {
+    "path": "/monitors/benq-ex2710q/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/benq-ex2710q/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/benq-ex2710q/"
+    ]
+  },
+  {
+    "path": "/monitors/benq-gw2490/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/benq-gw2490/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/benq-gw2490/"
+    ]
+  },
+  {
+    "path": "/monitors/benq-gw2790qt/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/benq-gw2790qt/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/benq-gw2790qt/"
+    ]
+  },
+  {
+    "path": "/monitors/benq-pd2705u/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/benq-pd2705u/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/benq-pd2705u/"
+    ]
+  },
+  {
+    "path": "/monitors/benq-pd2725u/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/benq-pd2725u/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/benq-pd2725u/"
+    ]
+  },
+  {
+    "path": "/monitors/dell-aw3225qf/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/dell-aw3225qf/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/dell-aw3225qf/"
+    ]
+  },
+  {
+    "path": "/monitors/dell-u2724d/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/dell-u2724d/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/dell-u2724d/"
+    ]
+  },
+  {
+    "path": "/monitors/dell-u2724de/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/dell-u2724de/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/dell-u2724de/"
+    ]
+  },
+  {
+    "path": "/monitors/gigabyte-m27q-rev-1-0/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/gigabyte-m27q-rev-1-0/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/gigabyte-m27q-rev-1-0/"
+    ]
+  },
+  {
+    "path": "/monitors/gigabyte-m28u/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/gigabyte-m28u/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/gigabyte-m28u/"
+    ]
+  },
+  {
+    "path": "/monitors/gigabyte-m32u/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/gigabyte-m32u/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/gigabyte-m32u/"
+    ]
+  },
+  {
+    "path": "/monitors/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/"
+    ]
+  },
+  {
+    "path": "/monitors/lg-27gp850-b/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/lg-27gp850-b/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/lg-27gp850-b/"
+    ]
+  },
+  {
+    "path": "/monitors/lg-27gr83q-b/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/lg-27gr83q-b/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/lg-27gr83q-b/"
+    ]
+  },
+  {
+    "path": "/monitors/lg-27gs95qe-b/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/lg-27gs95qe-b/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/lg-27gs95qe-b/"
+    ]
+  },
+  {
+    "path": "/monitors/lg-27up850k-w/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/lg-27up850k-w/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/lg-27up850k-w/"
+    ]
+  },
+  {
+    "path": "/monitors/lg-32gs95ue-b/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/lg-32gs95ue-b/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/lg-32gs95ue-b/"
+    ]
+  },
+  {
+    "path": "/monitors/lg-34wq75c-b-aus/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/lg-34wq75c-b-aus/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/lg-34wq75c-b-aus/"
+    ]
+  },
+  {
+    "path": "/monitors/msi-mag-274qrf-qd-e2/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/msi-mag-274qrf-qd-e2/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/msi-mag-274qrf-qd-e2/"
+    ]
+  },
+  {
+    "path": "/monitors/msi-modern-md271ul/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/msi-modern-md271ul/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/msi-modern-md271ul/"
+    ]
+  },
+  {
+    "path": "/monitors/msi-mpg-321urx-qd-oled/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/msi-mpg-321urx-qd-oled/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/msi-mpg-321urx-qd-oled/"
+    ]
+  },
+  {
+    "path": "/monitors/samsung-s32cg554eu-ls32cg554euxen/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/samsung-s32cg554eu-ls32cg554euxen/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/samsung-s32cg554eu-ls32cg554euxen/"
+    ]
+  },
+  {
+    "path": "/monitors/samsung-s65uc-ls34c650ueexxy/",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/samsung-s65uc-ls34c650ueexxy/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "index,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/monitors/samsung-s65uc-ls34c650ueexxy/"
+    ]
+  },
+  {
+    "path": "/tech-news",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/tech-news",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": "noindex, follow",
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true,
+    "robots": [
+      "noindex,follow"
+    ],
+    "canonical": [
+      "https://monipick.com/tech-news"
+    ]
+  },
+  {
+    "path": "/guides/monitor-buying.css",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/guides/monitor-buying.css",
+    "headers": {
+      "content-type": "text/css; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-detail-v3.css",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-detail-v3.css",
+    "headers": {
+      "content-type": "text/css; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-index.css",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-index.css",
+    "headers": {
+      "content-type": "text/css; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-local-comments.css",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-local-comments.css",
+    "headers": {
+      "content-type": "text/css; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-local-comments.js",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-local-comments.js",
+    "headers": {
+      "content-type": "application/javascript",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-purpose.css",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-purpose.css",
+    "headers": {
+      "content-type": "text/css; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-review-links-data.js",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-review-links-data.js",
+    "headers": {
+      "content-type": "application/javascript",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-review-links.css",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-review-links.css",
+    "headers": {
+      "content-type": "text/css; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-search.js",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-search.js",
+    "headers": {
+      "content-type": "application/javascript",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-v3-data.js",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-v3-data.js",
+    "headers": {
+      "content-type": "application/javascript",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-v3.css",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-v3.css",
+    "headers": {
+      "content-type": "text/css; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-v3.js",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-v3.js",
+    "headers": {
+      "content-type": "application/javascript",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor-value-format.js",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor-value-format.js",
+    "headers": {
+      "content-type": "application/javascript",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/monitor10-review.css",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitor10-review.css",
+    "headers": {
+      "content-type": "text/css; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/product-news-data.js",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/product-news-data.js",
+    "headers": {
+      "content-type": "application/javascript",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/product-news.js",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/product-news.js",
+    "headers": {
+      "content-type": "application/javascript",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/robots.txt",
+    "headers": {
+      "content-type": "text/plain; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/sitemap.xml",
+    "headers": {
+      "content-type": "application/xml",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=0, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/tech-news-data.js",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/tech-news-data.js",
+    "headers": {
+      "content-type": "application/javascript",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/tech-news.css",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/tech-news.css",
+    "headers": {
+      "content-type": "text/css; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/tech-news.js",
+    "status": 200,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/tech-news.js",
+    "headers": {
+      "content-type": "application/javascript",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "public, max-age=14400, must-revalidate"
+    },
+    "failures": [],
+    "exact_body_match": true
+  },
+  {
+    "path": "/__monipick_missing_20261024",
+    "status": 404,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/__monipick_missing_20261024",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "no-store"
+    },
+    "failures": [],
+    "robots": [
+      "noindex,follow"
+    ],
+    "canonical": []
+  },
+  {
+    "path": "/monitors/__monipick_missing_20261024/",
+    "status": 404,
+    "tls_verified": true,
+    "final_url": "https://monipick.com/monitors/__monipick_missing_20261024/",
+    "headers": {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "x-content-type-options": "nosniff",
+      "x-frame-options": "DENY",
+      "referrer-policy": "strict-origin-when-cross-origin",
+      "permissions-policy": "camera=(), microphone=(), geolocation=()",
+      "x-robots-tag": null,
+      "cache-control": "no-store"
+    },
+    "failures": [],
+    "robots": [
+      "noindex,follow"
+    ],
+    "canonical": []
+  }
+]

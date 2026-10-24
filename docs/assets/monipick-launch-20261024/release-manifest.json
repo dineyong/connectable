@@ -1,0 +1,377 @@
+{
+  "purpose": "AUTHORIZED_MONIPICK_PUBLIC_RELEASE",
+  "planned_origin": "https://monipick.com",
+  "domain": "monipick.com",
+  "deployment_authorized": true,
+  "publication_authorized": true,
+  "indexing_authorized": true,
+  "analytics_enabled": false,
+  "blockers": [],
+  "contact_email": "contact@monipick.com",
+  "contact_delivery_status": "VERIFIED_EXTERNAL_RECEIPT",
+  "pages": [
+    {
+      "source": "404.html",
+      "source_sha256": "5f0bad5982c1588b39d06aa09c0c714153bd89b1b5ce0667588c0bd1356ecee0",
+      "route": "/404",
+      "proposed_canonical": null,
+      "proposed_robots": "noindex,follow",
+      "sitemap_candidate": false
+    },
+    {
+      "source": "guides/monitor-buying.html",
+      "source_sha256": "28a669b62b6cf727382498422068e602dcfb6328c4d15ac68c71d81fa81bdb7d",
+      "route": "/guides/monitor-buying",
+      "proposed_canonical": "https://monipick.com/guides/monitor-buying",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "information.html",
+      "source_sha256": "ef7d169b3a6ae70ea3806ad9e2a14b3db0b7e2d84a15ecd65d52736342496864",
+      "route": "/information",
+      "proposed_canonical": "https://monipick.com/information",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitor-v3.html",
+      "source_sha256": "a7a08fb1c9b7c31dd061c485fbef346736b621edc9a536d3023547756a15984a",
+      "route": "/",
+      "proposed_canonical": "https://monipick.com/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitor10-review.html",
+      "source_sha256": "17c17f075d3058f40b6e64c6073ac32fdd38e0bf2b5911c33e178e9c61e95ddf",
+      "route": "/monitor10-review",
+      "proposed_canonical": "https://monipick.com/monitor10-review",
+      "proposed_robots": "noindex,follow",
+      "sitemap_candidate": false
+    },
+    {
+      "source": "monitors/aoc-q27g3xmn/index.html",
+      "source_sha256": "e8b8e15721891f7ade35df324d251d21193cf661b01c00ea9e81b298848b47a6",
+      "route": "/monitors/aoc-q27g3xmn/",
+      "proposed_canonical": "https://monipick.com/monitors/aoc-q27g3xmn/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/asus-pa248qv/index.html",
+      "source_sha256": "10f8541402da4d29c505ad07f00e11993927198a69378c7a546feb1afef132ba",
+      "route": "/monitors/asus-pa248qv/",
+      "proposed_canonical": "https://monipick.com/monitors/asus-pa248qv/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/asus-pa278qv/index.html",
+      "source_sha256": "6c525b155dbe367dedbb1249b5dadb65e54a7f23ae7c71c0fe384e0ded2c1578",
+      "route": "/monitors/asus-pa278qv/",
+      "proposed_canonical": "https://monipick.com/monitors/asus-pa278qv/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/asus-pa279crv/index.html",
+      "source_sha256": "331f7aee285e9b63353aed7684730ca9416cb11c86b64f5a90d42373d198a7d3",
+      "route": "/monitors/asus-pa279crv/",
+      "proposed_canonical": "https://monipick.com/monitors/asus-pa279crv/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/asus-pg32ucdm/index.html",
+      "source_sha256": "5d51f5723dfb694e97d30f9bc34e38acf1a9cf45b40941b7781aad30fa7754c4",
+      "route": "/monitors/asus-pg32ucdm/",
+      "proposed_canonical": "https://monipick.com/monitors/asus-pg32ucdm/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/asus-va24ehf/index.html",
+      "source_sha256": "9148f6ddd85a8941667f7f20d5523fda8fdd6dbfb3cf1c4963a5cb9a2f8c3548",
+      "route": "/monitors/asus-va24ehf/",
+      "proposed_canonical": "https://monipick.com/monitors/asus-va24ehf/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/asus-vg27aq/index.html",
+      "source_sha256": "436cbee3c2a0a2c44172ade8ef612592493b7aec55c8b8bb3eff9419ab3e8c64",
+      "route": "/monitors/asus-vg27aq/",
+      "proposed_canonical": "https://monipick.com/monitors/asus-vg27aq/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/asus-xg27aqdmg/index.html",
+      "source_sha256": "d25b3d59ebd397a53426743dc7875e9a639d13ead02ed88f97905b0b37e88e46",
+      "route": "/monitors/asus-xg27aqdmg/",
+      "proposed_canonical": "https://monipick.com/monitors/asus-xg27aqdmg/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/benq-ex2710q/index.html",
+      "source_sha256": "325d3160d2fd72489a0355cbdd3e0baacf90232a580e9c3c6d1b5b1074ed48a2",
+      "route": "/monitors/benq-ex2710q/",
+      "proposed_canonical": "https://monipick.com/monitors/benq-ex2710q/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/benq-gw2490/index.html",
+      "source_sha256": "6628293f14c9a565ff6605c4250e0ea4f374acf64591a070a9595e5515fdf151",
+      "route": "/monitors/benq-gw2490/",
+      "proposed_canonical": "https://monipick.com/monitors/benq-gw2490/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/benq-gw2790qt/index.html",
+      "source_sha256": "2229a21f7870cabc77ace5e1ce0bbc92373ffb764df61c1abde0e98476af6576",
+      "route": "/monitors/benq-gw2790qt/",
+      "proposed_canonical": "https://monipick.com/monitors/benq-gw2790qt/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/benq-pd2705u/index.html",
+      "source_sha256": "462d1967cd21edae2575a29da2f0357f5e79bf0dab96c341ed4ea90c3c491849",
+      "route": "/monitors/benq-pd2705u/",
+      "proposed_canonical": "https://monipick.com/monitors/benq-pd2705u/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/benq-pd2725u/index.html",
+      "source_sha256": "03916505c9ee0c05fa38553880cbafb4787ace7c0b8368ee3887928883139db7",
+      "route": "/monitors/benq-pd2725u/",
+      "proposed_canonical": "https://monipick.com/monitors/benq-pd2725u/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/dell-aw3225qf/index.html",
+      "source_sha256": "c593edbb00420caf085babd4c0fe70025515bd3b820c43f28f8d151c54509162",
+      "route": "/monitors/dell-aw3225qf/",
+      "proposed_canonical": "https://monipick.com/monitors/dell-aw3225qf/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/dell-u2724d/index.html",
+      "source_sha256": "3cda989a1aad28c1767857b24817515f76bef291fa0cc96fa8b0db5633195f8a",
+      "route": "/monitors/dell-u2724d/",
+      "proposed_canonical": "https://monipick.com/monitors/dell-u2724d/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/dell-u2724de/index.html",
+      "source_sha256": "8e70e525bc0fb5cc9c3071b3c898cd494143fa1417c3b17564be1ddbd7826ad6",
+      "route": "/monitors/dell-u2724de/",
+      "proposed_canonical": "https://monipick.com/monitors/dell-u2724de/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/gigabyte-m27q-rev-1-0/index.html",
+      "source_sha256": "654bc88de1637fecd825e96a5dfc1d0ba3632b40694be979d5fe703ac41df742",
+      "route": "/monitors/gigabyte-m27q-rev-1-0/",
+      "proposed_canonical": "https://monipick.com/monitors/gigabyte-m27q-rev-1-0/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/gigabyte-m28u/index.html",
+      "source_sha256": "fc1678fd562599767a50c7c143aad36ddf1beef350da8d8a4865bf3a710ef219",
+      "route": "/monitors/gigabyte-m28u/",
+      "proposed_canonical": "https://monipick.com/monitors/gigabyte-m28u/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/gigabyte-m32u/index.html",
+      "source_sha256": "baa7e65149868ba1aa79adf73cbe488d82cadc22a448f7c80b90faa89e41b494",
+      "route": "/monitors/gigabyte-m32u/",
+      "proposed_canonical": "https://monipick.com/monitors/gigabyte-m32u/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/index.html",
+      "source_sha256": "aa3b02ad537744bd83801f043614664ab6a0f8837cb82db2cbcd95d4b05f4c01",
+      "route": "/monitors/",
+      "proposed_canonical": "https://monipick.com/monitors/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/lg-27gp850-b/index.html",
+      "source_sha256": "fee5a2404c384ce77700d9d47e8805b0ea3d88f00e7a3bb99d81f5544a396a7f",
+      "route": "/monitors/lg-27gp850-b/",
+      "proposed_canonical": "https://monipick.com/monitors/lg-27gp850-b/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/lg-27gr83q-b/index.html",
+      "source_sha256": "52f37bbbcda73d8c11bdc7f840c456d3c4af3b6da7f78d15a87e1dabfa575645",
+      "route": "/monitors/lg-27gr83q-b/",
+      "proposed_canonical": "https://monipick.com/monitors/lg-27gr83q-b/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/lg-27gs95qe-b/index.html",
+      "source_sha256": "415b9e45a4a9bcbee9b8fda3e65f2c2025cd677dfbe17ee981145d69d5f88974",
+      "route": "/monitors/lg-27gs95qe-b/",
+      "proposed_canonical": "https://monipick.com/monitors/lg-27gs95qe-b/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/lg-27up850k-w/index.html",
+      "source_sha256": "417496f3bc126e60b7e751d5df2b2f4ca6d3e744e55df5ce439cd7484e07d861",
+      "route": "/monitors/lg-27up850k-w/",
+      "proposed_canonical": "https://monipick.com/monitors/lg-27up850k-w/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/lg-32gs95ue-b/index.html",
+      "source_sha256": "ff4d77c3ec6e38a883194fc911ddf724dff2f319d5fd24308322f17a7215f35a",
+      "route": "/monitors/lg-32gs95ue-b/",
+      "proposed_canonical": "https://monipick.com/monitors/lg-32gs95ue-b/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/lg-34wq75c-b-aus/index.html",
+      "source_sha256": "cd462594af87395f34e2812c1d74904bbebad768e0fac02a95ccc1be9127a93a",
+      "route": "/monitors/lg-34wq75c-b-aus/",
+      "proposed_canonical": "https://monipick.com/monitors/lg-34wq75c-b-aus/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/msi-mag-274qrf-qd-e2/index.html",
+      "source_sha256": "db8d372cf692f10ff9d1c7452df9013ed63e59f99af45125604d3aa4d35cd642",
+      "route": "/monitors/msi-mag-274qrf-qd-e2/",
+      "proposed_canonical": "https://monipick.com/monitors/msi-mag-274qrf-qd-e2/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/msi-modern-md271ul/index.html",
+      "source_sha256": "394c0bd1598523cd1b6eb3dd11404ef8f8bba322626886bfd3ba83f0f44ffaa9",
+      "route": "/monitors/msi-modern-md271ul/",
+      "proposed_canonical": "https://monipick.com/monitors/msi-modern-md271ul/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/msi-mpg-321urx-qd-oled/index.html",
+      "source_sha256": "a8890220fe2e91caa29f9269cdae52cde198052e6392c54e8ba5d919e32e62f9",
+      "route": "/monitors/msi-mpg-321urx-qd-oled/",
+      "proposed_canonical": "https://monipick.com/monitors/msi-mpg-321urx-qd-oled/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/samsung-s32cg554eu-ls32cg554euxen/index.html",
+      "source_sha256": "53563b385861a294732472b663881806d37af254afdeb011b3be35f3e5fc6457",
+      "route": "/monitors/samsung-s32cg554eu-ls32cg554euxen/",
+      "proposed_canonical": "https://monipick.com/monitors/samsung-s32cg554eu-ls32cg554euxen/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "monitors/samsung-s65uc-ls34c650ueexxy/index.html",
+      "source_sha256": "ff26b142ea80dfe70712ca744d46306c3ec81c0a421b6bab7a65d5b291a7bb20",
+      "route": "/monitors/samsung-s65uc-ls34c650ueexxy/",
+      "proposed_canonical": "https://monipick.com/monitors/samsung-s65uc-ls34c650ueexxy/",
+      "proposed_robots": "index,follow",
+      "sitemap_candidate": true
+    },
+    {
+      "source": "tech-news.html",
+      "source_sha256": "cb97d3491567caccce784bb7da4539e90fade0950f059fe00d5f61b48eff37ae",
+      "route": "/tech-news",
+      "proposed_canonical": "https://monipick.com/tech-news",
+      "proposed_robots": "noindex,follow",
+      "sitemap_candidate": false
+    }
+  ],
+  "files": {
+    "404.html": "ba5b68e2029d8ef19d66ef9cc5049eaab2b8dd1895fde13752f06faff0797b52",
+    "_headers": "b998332dc1bdc71d5b241a76ac55768b5d38be8c56a6065f13ceff4da035a5d4",
+    "_redirects": "932ad9ad9508495a5f595a527b818bff7fa71933132bc51e61cebd462f092647",
+    "guides/monitor-buying.css": "198129173c767cffcb0cde82bc1742a955faf6e767bf301bacb15992808f3f5a",
+    "guides/monitor-buying.html": "50128f2a5db01874d4e57db536d7536301a3df5c89c68a6e0d7eb1c9622e8f46",
+    "index.html": "310f843f3164bcbd57b0ae7501e218ca4de2cf1068132eb0e46b67fb8fee4075",
+    "information.html": "15781513f3434338719e7a296bcbde49820bd16181378d627ea0b5196ad9fb6b",
+    "monitor-detail-v3.css": "b0010cb8ac7b33e49ee796f28251dcf39b75b372465550ed4a0093fa4ae68918",
+    "monitor-index.css": "3e96b9750d47ced3c8d42243d66a4ef3a3e3268206c94d8691292ce37cd48327",
+    "monitor-local-comments.css": "e13a39f1bf346ce04b19e51bfafa89b768b612294bc149d05e9604cafbf59a49",
+    "monitor-local-comments.js": "4f7b6a9a71c3e664adc966435c8e25871e59a0886b28f3f3fb0e4e5f0b25dc6b",
+    "monitor-purpose.css": "cf1b68987899ebec462c2bc929681954f647194a999cfceffd690ca29935a15e",
+    "monitor-review-links-data.js": "3c0d9e7409b1945bb9da3d7c087e64136c11a7163bf55d6f75e03c8dc7bbef73",
+    "monitor-review-links.css": "73c4952b18d83173d62e9e9aabbe1a9a0bec20728593c0c7d8b4d37b95da97a1",
+    "monitor-search.js": "3c32f1f4d8c9985412cc37b119d5afd33cd165285e8c815a6262fd55ddec94fe",
+    "monitor-v3-data.js": "3461a2c3f94c176e171693668d578218309d4f1f79ea89d7fd991a3fa4de9a44",
+    "monitor-v3.css": "60864150e8d2bc49449e257df9bfa72ee54d17e24570c044887a367a1ccdd14d",
+    "monitor-v3.html": "310f843f3164bcbd57b0ae7501e218ca4de2cf1068132eb0e46b67fb8fee4075",
+    "monitor-v3.js": "081eed3f36af1eb7fa03e1ce06d1f0496299cc8538d7e731c37df38032e8d5c0",
+    "monitor-value-format.js": "ee0ce0248dcd425d89baca8c3fe5e2829a36b6a5e22b1730a4c932b94e98faee",
+    "monitor10-review.css": "65386a936e457b58dfb2d87a9fa84c120548b2ceaf8a97b825946349608ba0e1",
+    "monitor10-review.html": "55c213438ba04ab861ac3673d7256099aefabcda95ce11a1b4a3296b93fe2ff6",
+    "monitors/aoc-q27g3xmn/index.html": "e308986fa08e20e035a39592910cedb93bba6cb89171480ad3a8cbee59739d71",
+    "monitors/asus-pa248qv/index.html": "5fcd99969f774d4583661f9342e478587f58382b67a2dc7a2b6318f7efb8acb5",
+    "monitors/asus-pa278qv/index.html": "0e242637b58c563124a88ba267daaf8adbba55be84154ae332ba4aeac3fdb910",
+    "monitors/asus-pa279crv/index.html": "c834dc5a9f49c75b2e08e80bc322923bb6dc1baff74993aef760d2621e63afc7",
+    "monitors/asus-pg32ucdm/index.html": "0621375d4c7e5e31ede1592963c10340de36ab73a828a667c12c620f37ea2241",
+    "monitors/asus-va24ehf/index.html": "551a90115dd4c44817f012285b00de3fee9915f1bda3a07ffef3ade92ddbdad8",
+    "monitors/asus-vg27aq/index.html": "940ae05e5289698bf8ea56bb3da004729ed56438ec28cab83f0af37d7ad66682",
+    "monitors/asus-xg27aqdmg/index.html": "61f3b986c834e2699110c7d40179556b8b1ab72ce426c10ec60111fc4aa2aa37",
+    "monitors/benq-ex2710q/index.html": "4bf21aecd9d3ab979fbaa7de5743316fc5faaae3e45e3e54e01ab28b4a95c030",
+    "monitors/benq-gw2490/index.html": "0437db9c46f93161b6b09abd43ecb7f923af0edce5e2260d99600846bf391acb",
+    "monitors/benq-gw2790qt/index.html": "3d29040e78f07c39123fa396f6447abb3368371381620ca9143d0f2d5a45254f",
+    "monitors/benq-pd2705u/index.html": "c338b6475d19c5b458d762b89d2a2997d7200a303d1fee347d9009c07e70cb82",
+    "monitors/benq-pd2725u/index.html": "ed7f5aa185d57f5ef5bb43f84c0cfcde317f284d0e4653461d7b84abc68bfa66",
+    "monitors/dell-aw3225qf/index.html": "80cdbec440f8799c503c62f3e3bf2186fcd408013fc50b50387bdff44bd40b3c",
+    "monitors/dell-u2724d/index.html": "d5df62969617c9228e568ede3cdb8a89d814eafe29cf92581c0dcd269e911f20",
+    "monitors/dell-u2724de/index.html": "0044589a29c29f13d06230ce5e6e5f82c059e4eeb30d6edaed0fd6c5e48ce584",
+    "monitors/gigabyte-m27q-rev-1-0/index.html": "9cb93f8ee848701e32c212c4a59850eb736fdd94ce4aca7615459eb78f17a879",
+    "monitors/gigabyte-m28u/index.html": "fc41bf0f30128d6568f7a561a762288ff85cfbbcde3aa7d44be6f30661f8feff",
+    "monitors/gigabyte-m32u/index.html": "a3846fe7217ce58829f2d5f0c9ad5a10659faf4b0f324609b115e07469f22f84",
+    "monitors/index.html": "eacef635c063fed1a219584c5da7d81eb976929a04fe7e1747439997b8e0b897",
+    "monitors/lg-27gp850-b/index.html": "ebab2ef088a95190a31da1950c7389b79ccc3e83abd252bd3dd9e220d87a2ab8",
+    "monitors/lg-27gr83q-b/index.html": "c94d088c71fff00aa9daed618f00ac0f2cc0b7c7b5aef5b96a6f22473adaad69",
+    "monitors/lg-27gs95qe-b/index.html": "0190c3c92181ed682c9d6250b5706f43f922cb375ae672c2698df1b40beecb8d",
+    "monitors/lg-27up850k-w/index.html": "a84e1428b1950723bf5f3fbba5b47e13a6a65429bf7d3b9898f2f59590608171",
+    "monitors/lg-32gs95ue-b/index.html": "7dc36a39ef62909bf6d45c8129a752e78bd08810a9b38da2bd2a685b0a267609",
+    "monitors/lg-34wq75c-b-aus/index.html": "6541c40f15f556bc3bacbaea5783908bf9b93b69f5c1190b5c37f90163d31058",
+    "monitors/msi-mag-274qrf-qd-e2/index.html": "4a0f3d6034c746dd39055e4cb5f891b102d1de0b75fee0e700c274117aa25851",
+    "monitors/msi-modern-md271ul/index.html": "c10d5709cc983793863e0cd936a0dc5bd342ed993cb3dd5b14d81804b519dfe0",
+    "monitors/msi-mpg-321urx-qd-oled/index.html": "8d6a740d7b6e52843756d3bdabc6ceda0d90310a499c8818045c16873f212ec3",
+    "monitors/samsung-s32cg554eu-ls32cg554euxen/index.html": "59128532d447a6fbd41e2686c2ff84cfcf0888c79e4a63078527560e054f28fb",
+    "monitors/samsung-s65uc-ls34c650ueexxy/index.html": "33d0c4efb4f605ddcf7cd9efcea66d50d07915f0f05bfb7b916d5aeac408523b",
+    "product-news-data.js": "c1004a58f84106df0b2f512c864bab835c0efbbb0018b0b4c976836ab146e3e0",
+    "product-news.js": "5b6010f234c48502efe693d53635ba77bb6b062703328e3c7fb0450bfe287d0e",
+    "robots.txt": "bfb3891b81586ae96a69eccde9285b97e8d03a0b639fdf895276c6c02c482845",
+    "sitemap.xml": "f32734531409c8173e0dd4ff6459d2d106e9ec2ca3ab1b4fad00d0752e290011",
+    "tech-news-data.js": "97d89ab250ad29de42c5f4e92e88862d0c973faae36d196d88bab7bb2fced0b9",
+    "tech-news.css": "49afdda2233eb6dfa19356707df37f86508d5c66489fb9393f5ca38c26af5dc4",
+    "tech-news.html": "036fc4eaac2e4bbeca0cf28784a058840f604d70af27b00efb34d19235452cba",
+    "tech-news.js": "e9ef17dcf2805bdae85495731ff0194007f4bc936caaea4b2d25ac66b374b61d"
+  },
+  "advertising_enabled": false,
+  "approval_date": "2026-10-24",
+  "reviewed_candidate_commit": "9afa091b7a8d7eea5799a308e5f213a7caa93af3",
+  "approved_content_fingerprint": "df71388fbe44404e224592f13096cf862970076366af35fd1bee1eb053723bf0"
+}

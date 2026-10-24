@@ -1,0 +1,65 @@
+[
+  {
+    "url": "http://monipick.com/",
+    "status": "HTTP/1.1 301 Moved Permanently",
+    "location": "https://monipick.com/",
+    "x_robots_tag": null,
+    "exit": 0
+  },
+  {
+    "url": "https://monipick.com/monitor-v3.html?q=4k",
+    "status": "HTTP/2 301 ",
+    "location": "/?q=4k",
+    "x_robots_tag": null,
+    "exit": 0
+  },
+  {
+    "url": "https://monipick.com/information.html",
+    "status": "HTTP/2 308 ",
+    "location": "/information",
+    "x_robots_tag": null,
+    "exit": 0
+  },
+  {
+    "url": "https://monipick.pages.dev/",
+    "status": "HTTP/2 200 ",
+    "location": "",
+    "x_robots_tag": "noindex, nofollow",
+    "exit": 0
+  },
+  {
+    "url": "https://bd395c6b.monipick.pages.dev/",
+    "status": "HTTP/2 302 ",
+    "location": "https://monipick-pages.cloudflareaccess.com/[login]",
+    "x_robots_tag": null,
+    "exit": 0
+  },
+  {
+    "url": "https://codex-monipick-private-previ.monipick.pages.dev/",
+    "status": "HTTP/2 302 ",
+    "location": "https://monipick-pages.cloudflareaccess.com/[login]",
+    "x_robots_tag": null,
+    "exit": 0
+  },
+  {
+    "url": "https://monipick.com/_headers",
+    "status": "HTTP/2 404 ",
+    "location": "",
+    "x_robots_tag": null,
+    "exit": 0
+  },
+  {
+    "url": "https://monipick.com/manifest.json",
+    "status": "HTTP/2 404 ",
+    "location": "",
+    "x_robots_tag": null,
+    "exit": 0
+  },
+  {
+    "url": "https://monipick.com/data/research/user_questions.csv",
+    "status": "HTTP/2 404 ",
+    "location": "",
+    "x_robots_tag": null,
+    "exit": 0
+  }
+]
