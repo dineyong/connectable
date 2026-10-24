@@ -26,6 +26,10 @@ export async function handleConnection(request,env,{fetcher=fetch,now=Date.now()
   const raw=new Uint8Array(size);let i=0;for(const b of bytes){raw.set(b,i);i+=b.length;}
   const data=JSON.parse(new TextDecoder().decode(raw));
   return data.rCode==='0'?reply(200,'API_AUTHENTICATED'):reply(424,'API_AUTH_NOT_VERIFIED',{stage:'API_RESULT'});
- }catch{return reply(424,'API_AUTH_NOT_VERIFIED',{stage});}
+ }catch(error){
+  const message=String(error?.message||'').toLowerCase();
+  const reason=message.includes('timeout')?'TIMEOUT':message.includes('cache')?'CACHE_OPTION':message.includes('redirect')?'REDIRECT':message.includes('abortsignal')?'ABORT_SIGNAL':message.includes('fetch')?'FETCH':message.includes('header')?'HEADER':'OTHER';
+  return reply(424,'API_AUTH_NOT_VERIFIED',{stage,reason});
+ }
 }
 export const onRequest=({request,env})=>handleConnection(request,env);
