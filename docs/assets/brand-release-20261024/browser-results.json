@@ -1,0 +1,437 @@
+[
+  {
+    "route": "/",
+    "width": 1280,
+    "pixelsMatchReviewed": true,
+    "overflow": false,
+    "errors": [],
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://monipick.com/#website",
+            "url": "https://monipick.com/",
+            "name": "모니픽",
+            "inLanguage": "ko-KR"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://monipick.com/#webpage",
+            "url": "https://monipick.com/",
+            "name": "모니픽 — 나에게 맞는 모니터 찾기",
+            "description": "모니픽에서 모니터의 크기·해상도·주사율·연결 기능을 비교하고 공식 출처와 미확인 조건을 확인하세요.",
+            "inLanguage": "ko-KR",
+            "isPartOf": {
+              "@id": "https://monipick.com/#website"
+            }
+          }
+        ]
+      }
+    ],
+    "share": "https://monipick.com/assets/brand/monipick-share-v1.png",
+    "shareSize": [
+      1200,
+      630
+    ],
+    "icons": [
+      "https://monipick.com/assets/brand/favicon.svg",
+      "https://monipick.com/assets/brand/favicon-48.png",
+      "https://monipick.com/assets/brand/favicon-192.png",
+      "https://monipick.com/favicon.ico",
+      "https://monipick.com/assets/brand/favicon-180.png"
+    ]
+  },
+  {
+    "route": "/monitors/dell-u2724d/",
+    "width": 1280,
+    "pixelsMatchReviewed": true,
+    "overflow": false,
+    "errors": [],
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://monipick.com/monitors/dell-u2724d/#webpage",
+            "url": "https://monipick.com/monitors/dell-u2724d/",
+            "name": "Dell U2724D 사양·출처 | 모니픽",
+            "description": "Dell U2724D: 27형 2560×1440, 최대 120Hz. 데이터 전용 USB-C·HDMI TMDS 조건 확인.",
+            "inLanguage": "ko-KR",
+            "isPartOf": {
+              "@id": "https://monipick.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://monipick.com/monitors/dell-u2724d/#breadcrumb"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://monipick.com/monitors/dell-u2724d/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "홈",
+                "item": "https://monipick.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "전체 모니터",
+                "item": "https://monipick.com/monitors/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Dell U2724D",
+                "item": "https://monipick.com/monitors/dell-u2724d/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "share": "https://monipick.com/assets/brand/monipick-share-v1.png",
+    "shareSize": [
+      1200,
+      630
+    ],
+    "icons": [
+      "https://monipick.com/assets/brand/favicon.svg",
+      "https://monipick.com/assets/brand/favicon-48.png",
+      "https://monipick.com/assets/brand/favicon-192.png",
+      "https://monipick.com/favicon.ico",
+      "https://monipick.com/assets/brand/favicon-180.png"
+    ]
+  },
+  {
+    "route": "/guides/monitor-buying",
+    "width": 1280,
+    "pixelsMatchReviewed": true,
+    "overflow": false,
+    "errors": [],
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://monipick.com/guides/monitor-buying#webpage",
+            "url": "https://monipick.com/guides/monitor-buying",
+            "name": "모니터 구매 가이드 — 해상도·주사율·USB-C | 모니픽",
+            "description": "모니터를 고를 때 확인할 해상도와 배율, 주사율 조건, USB-C 영상과 충전의 차이를 알아보세요.",
+            "inLanguage": "ko-KR",
+            "isPartOf": {
+              "@id": "https://monipick.com/#website"
+            }
+          }
+        ]
+      }
+    ],
+    "share": "https://monipick.com/assets/brand/monipick-share-v1.png",
+    "shareSize": [
+      1200,
+      630
+    ],
+    "icons": [
+      "https://monipick.com/assets/brand/favicon.svg",
+      "https://monipick.com/assets/brand/favicon-48.png",
+      "https://monipick.com/assets/brand/favicon-192.png",
+      "https://monipick.com/favicon.ico",
+      "https://monipick.com/assets/brand/favicon-180.png"
+    ]
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "pixelsMatchReviewed": true,
+    "overflow": false,
+    "errors": [],
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://monipick.com/#website",
+            "url": "https://monipick.com/",
+            "name": "모니픽",
+            "inLanguage": "ko-KR"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://monipick.com/#webpage",
+            "url": "https://monipick.com/",
+            "name": "모니픽 — 나에게 맞는 모니터 찾기",
+            "description": "모니픽에서 모니터의 크기·해상도·주사율·연결 기능을 비교하고 공식 출처와 미확인 조건을 확인하세요.",
+            "inLanguage": "ko-KR",
+            "isPartOf": {
+              "@id": "https://monipick.com/#website"
+            }
+          }
+        ]
+      }
+    ],
+    "share": "https://monipick.com/assets/brand/monipick-share-v1.png",
+    "shareSize": [
+      1200,
+      630
+    ],
+    "icons": [
+      "https://monipick.com/assets/brand/favicon.svg",
+      "https://monipick.com/assets/brand/favicon-48.png",
+      "https://monipick.com/assets/brand/favicon-192.png",
+      "https://monipick.com/favicon.ico",
+      "https://monipick.com/assets/brand/favicon-180.png"
+    ]
+  },
+  {
+    "route": "/monitors/dell-u2724d/",
+    "width": 390,
+    "pixelsMatchReviewed": true,
+    "overflow": false,
+    "errors": [],
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://monipick.com/monitors/dell-u2724d/#webpage",
+            "url": "https://monipick.com/monitors/dell-u2724d/",
+            "name": "Dell U2724D 사양·출처 | 모니픽",
+            "description": "Dell U2724D: 27형 2560×1440, 최대 120Hz. 데이터 전용 USB-C·HDMI TMDS 조건 확인.",
+            "inLanguage": "ko-KR",
+            "isPartOf": {
+              "@id": "https://monipick.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://monipick.com/monitors/dell-u2724d/#breadcrumb"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://monipick.com/monitors/dell-u2724d/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "홈",
+                "item": "https://monipick.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "전체 모니터",
+                "item": "https://monipick.com/monitors/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Dell U2724D",
+                "item": "https://monipick.com/monitors/dell-u2724d/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "share": "https://monipick.com/assets/brand/monipick-share-v1.png",
+    "shareSize": [
+      1200,
+      630
+    ],
+    "icons": [
+      "https://monipick.com/assets/brand/favicon.svg",
+      "https://monipick.com/assets/brand/favicon-48.png",
+      "https://monipick.com/assets/brand/favicon-192.png",
+      "https://monipick.com/favicon.ico",
+      "https://monipick.com/assets/brand/favicon-180.png"
+    ]
+  },
+  {
+    "route": "/guides/monitor-buying",
+    "width": 390,
+    "pixelsMatchReviewed": true,
+    "overflow": false,
+    "errors": [],
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://monipick.com/guides/monitor-buying#webpage",
+            "url": "https://monipick.com/guides/monitor-buying",
+            "name": "모니터 구매 가이드 — 해상도·주사율·USB-C | 모니픽",
+            "description": "모니터를 고를 때 확인할 해상도와 배율, 주사율 조건, USB-C 영상과 충전의 차이를 알아보세요.",
+            "inLanguage": "ko-KR",
+            "isPartOf": {
+              "@id": "https://monipick.com/#website"
+            }
+          }
+        ]
+      }
+    ],
+    "share": "https://monipick.com/assets/brand/monipick-share-v1.png",
+    "shareSize": [
+      1200,
+      630
+    ],
+    "icons": [
+      "https://monipick.com/assets/brand/favicon.svg",
+      "https://monipick.com/assets/brand/favicon-48.png",
+      "https://monipick.com/assets/brand/favicon-192.png",
+      "https://monipick.com/favicon.ico",
+      "https://monipick.com/assets/brand/favicon-180.png"
+    ]
+  },
+  {
+    "route": "/",
+    "width": 320,
+    "pixelsMatchReviewed": true,
+    "overflow": false,
+    "errors": [],
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://monipick.com/#website",
+            "url": "https://monipick.com/",
+            "name": "모니픽",
+            "inLanguage": "ko-KR"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://monipick.com/#webpage",
+            "url": "https://monipick.com/",
+            "name": "모니픽 — 나에게 맞는 모니터 찾기",
+            "description": "모니픽에서 모니터의 크기·해상도·주사율·연결 기능을 비교하고 공식 출처와 미확인 조건을 확인하세요.",
+            "inLanguage": "ko-KR",
+            "isPartOf": {
+              "@id": "https://monipick.com/#website"
+            }
+          }
+        ]
+      }
+    ],
+    "share": "https://monipick.com/assets/brand/monipick-share-v1.png",
+    "shareSize": [
+      1200,
+      630
+    ],
+    "icons": [
+      "https://monipick.com/assets/brand/favicon.svg",
+      "https://monipick.com/assets/brand/favicon-48.png",
+      "https://monipick.com/assets/brand/favicon-192.png",
+      "https://monipick.com/favicon.ico",
+      "https://monipick.com/assets/brand/favicon-180.png"
+    ]
+  },
+  {
+    "route": "/monitors/dell-u2724d/",
+    "width": 320,
+    "pixelsMatchReviewed": true,
+    "overflow": false,
+    "errors": [],
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://monipick.com/monitors/dell-u2724d/#webpage",
+            "url": "https://monipick.com/monitors/dell-u2724d/",
+            "name": "Dell U2724D 사양·출처 | 모니픽",
+            "description": "Dell U2724D: 27형 2560×1440, 최대 120Hz. 데이터 전용 USB-C·HDMI TMDS 조건 확인.",
+            "inLanguage": "ko-KR",
+            "isPartOf": {
+              "@id": "https://monipick.com/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://monipick.com/monitors/dell-u2724d/#breadcrumb"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://monipick.com/monitors/dell-u2724d/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "홈",
+                "item": "https://monipick.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "전체 모니터",
+                "item": "https://monipick.com/monitors/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Dell U2724D",
+                "item": "https://monipick.com/monitors/dell-u2724d/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "share": "https://monipick.com/assets/brand/monipick-share-v1.png",
+    "shareSize": [
+      1200,
+      630
+    ],
+    "icons": [
+      "https://monipick.com/assets/brand/favicon.svg",
+      "https://monipick.com/assets/brand/favicon-48.png",
+      "https://monipick.com/assets/brand/favicon-192.png",
+      "https://monipick.com/favicon.ico",
+      "https://monipick.com/assets/brand/favicon-180.png"
+    ]
+  },
+  {
+    "route": "/guides/monitor-buying",
+    "width": 320,
+    "pixelsMatchReviewed": true,
+    "overflow": false,
+    "errors": [],
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://monipick.com/guides/monitor-buying#webpage",
+            "url": "https://monipick.com/guides/monitor-buying",
+            "name": "모니터 구매 가이드 — 해상도·주사율·USB-C | 모니픽",
+            "description": "모니터를 고를 때 확인할 해상도와 배율, 주사율 조건, USB-C 영상과 충전의 차이를 알아보세요.",
+            "inLanguage": "ko-KR",
+            "isPartOf": {
+              "@id": "https://monipick.com/#website"
+            }
+          }
+        ]
+      }
+    ],
+    "share": "https://monipick.com/assets/brand/monipick-share-v1.png",
+    "shareSize": [
+      1200,
+      630
+    ],
+    "icons": [
+      "https://monipick.com/assets/brand/favicon.svg",
+      "https://monipick.com/assets/brand/favicon-48.png",
+      "https://monipick.com/assets/brand/favicon-192.png",
+      "https://monipick.com/favicon.ico",
+      "https://monipick.com/assets/brand/favicon-180.png"
+    ]
+  }
+]
