@@ -12,7 +12,8 @@ class ApprovedContentReleaseTests(unittest.TestCase):
             output=Path(temp)/'release'
             m=build.build_for_branch(build.PRODUCTION_BRANCH,output)
             self.assertEqual(m['content_baseline_reviewed_candidate_commit'],'89dd4ec')
-            self.assertEqual(m['reviewed_candidate_commit'],build.read_seo_approval()['reviewed_candidate_commit'])
+            self.assertEqual(m['reviewed_candidate_commit'],build.read_brand_approval()['reviewed_candidate_commit'])
+            self.assertEqual(m['seo_baseline_reviewed_candidate_commit'],build.read_seo_approval()['reviewed_candidate_commit'])
             self.assertIn('model-highlights',(output/'site/monitors/asus-pa279crv/index.html').read_text())
             self.assertNotIn('href="../../monitor-v3.html"',(output/'site/monitors/asus-pa279crv/index.html').read_text())
             self.assertNotEqual(m['approved_content_fingerprint'],m['baseline_approved_content_fingerprint'])
