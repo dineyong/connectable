@@ -1,0 +1,21 @@
+{
+  "requests": 61,
+  "status_and_exact_body_passed": 61,
+  "strict_all_header_passed": 59,
+  "security_header_failures": [],
+  "cache_policy_warnings": [
+    {
+      "url": "https://monipick.com/summary-recheck-missing-20261024",
+      "cache-control": "no-store",
+      "note": "Cloudflare 404 response omits no-transform; other checked headers/body/status pass"
+    },
+    {
+      "url": "https://monipick.com/monitors/summary-recheck-missing-20261024/",
+      "cache-control": "no-store",
+      "note": "Cloudflare 404 response omits no-transform; other checked headers/body/status pass"
+    }
+  ],
+  "internal_links_checked": 428,
+  "link_errors": [],
+  "product_summaries": 30
+}

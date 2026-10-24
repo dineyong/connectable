@@ -1,0 +1,29 @@
+{
+  "host_isolation": [
+    {
+      "url": "https://12f2f5ab.monipick.pages.dev/",
+      "status": 403,
+      "redirect_host": null,
+      "robots": null
+    },
+    {
+      "url": "https://codex-monipick-private-previ.monipick.pages.dev/",
+      "status": 403,
+      "redirect_host": null,
+      "robots": null
+    },
+    {
+      "url": "https://monipick.pages.dev/",
+      "status": 403,
+      "redirect_host": null,
+      "robots": null
+    }
+  ],
+  "product_api": {
+    "status_line": "HTTP/2 503 ",
+    "body": {
+      "code": "INTEGRATION_NOT_ENABLED"
+    },
+    "no_store": true
+  }
+}
