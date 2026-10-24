@@ -1,0 +1,9 @@
+{
+  "approval_status": "USER_APPROVED",
+  "approved_on": "2026-10-24",
+  "origin": "https://monipick.com",
+  "scope": "User requested Naver registration and sitemap submission; only official ownership file is added. Existing release fingerprint, advertising and analytics holds remain unchanged.",
+  "files": {
+    "naverb7d1be496d4d21a4cf88c23246e48079.html": "naver-site-verification: naverb7d1be496d4d21a4cf88c23246e48079.html"
+  }
+}

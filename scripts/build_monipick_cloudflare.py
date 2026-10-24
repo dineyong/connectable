@@ -16,10 +16,28 @@ from scripts.prepare_cloudflare_preview import prepare_cloudflare
 PRODUCTION_BRANCH='codex/monipick-production'
 PREVIEW_BRANCH='codex/monipick-private-preview'
 APPROVAL=Path(__file__).resolve().parents[1]/'deploy/monipick-public-release.json'
+SEARCH_VERIFICATION=APPROVAL.with_name('monipick-search-verification.json')
+NAVER_PROOF='naverb7d1be496d4d21a4cf88c23246e48079.html'
 
 
 def read_approval():
     return json.loads(APPROVAL.read_text())
+
+
+def read_search_verification():
+    return json.loads(SEARCH_VERIFICATION.read_text())
+
+
+def search_verification_artifacts(record):
+    # Explicit user-requested ownership proof only. No paths, redirects, scripts,
+    # new origins, or changes to the reviewed UI may enter through this record.
+    expected={NAVER_PROOF:'naver-site-verification: '+NAVER_PROOF}
+    if (not isinstance(record,dict) or record.get('approval_status')!='USER_APPROVED' or
+            record.get('origin')!='https://monipick.com' or
+            record.get('files')!=expected):
+        raise ValueError('unapproved search ownership proof')
+    date.fromisoformat(record['approved_on'])
+    return {name:value.encode('utf-8') for name,value in expected.items()}
 
 
 def content_fingerprint(hashes):
@@ -47,8 +65,16 @@ def build_for_branch(branch,output):
     expected={name:digest(value) for name,value in artifacts.items()}
     approval=read_approval()
     validate_approval(approval,expected)
+    proofs=search_verification_artifacts(read_search_verification())
+    if set(proofs)&set(expected):
+        raise ValueError('ownership proof cannot replace reviewed files')
     manifest=build_candidate(output)
     validate_approval(approval,manifest['files'])
+    for name,content in proofs.items():
+        (Path(output)/'site'/name).write_bytes(content)
+    proof_hashes={name:digest(value) for name,value in proofs.items()}
+    manifest['files'].update(proof_hashes)
+    manifest['search_verification_files']=proof_hashes
     manifest.update({
         'purpose':'AUTHORIZED_MONIPICK_PUBLIC_RELEASE','domain':'monipick.com',
         'deployment_authorized':True,'publication_authorized':True,'indexing_authorized':True,
