@@ -66,3 +66,15 @@ Pages Metrics의 Web Analytics는 disabled였고 계정 Web Analytics 목록에�
 - 후속 문서·증거 커밋은 배포 SHA와 분리한다. 코드 변경이 없어 전체 검사를 중복 실행하지 않도록 해당 문서 커밋에만 [skip ci]를 사용한다. 자동 운영 배포 Disabled이므로 문서 push로 다시 배포하지 않는다.
 
 현재 남은 필수 사용자 조치는 없다. 대표 3종 외의 제품 설명 확대, 실제 검색 색인 보고서 관찰, 브랜드 공유 이미지 등은 후속 작업이며 이번 공개 반영의 필수 조건으로 추가하지 않는다.
+
+## 최종 검수 갱신 — 재방문 자산 캐시
+
+위 3bb2e69는 보안 헤더 복구 기준점이다. 이후 실제 기존 방문 브라우저에서는 과거 CSS가 캐시돼 새 설명 영역에 흰색 배경/패딩이 적용되지 않는 것을 발견했다. 일반 새로고침만으로 해소됐다고 가정하지 않고, 5bf48c9에서 변경된 두 자산의 href/src에 내용 hash query를 추가했다. 새 CSS/JS 내용이 바뀌면 버전이 결정적으로 갱신된다. 제품 URL·canonical·sitemap·근거값·디자인 자체는 바꾸지 않는다. 신규 회귀 테스트에서 CSS/JS의 실제 hash와 문서의 버전 주소가 일치함을 검사한다.
+
+- **최종 운영 SHA: 5bf48c973507fd343261ed1db997d2e90fd4911b**.
+- **최종 배포: dd03fd26-9bef-40ff-8692-db8e614e98c4**.
+- **최종 61개 승인 fingerprint: 0e1e72327bf45dd03ec6901a487a7ef3141009ad1c1920742f1a90c35821e732**. 위 manifest/http-final/화면 증거를 이 버전으로 갱신했다.
+- 실제 브라우저 CSS 주소 monitor-detail-v3.css?v=38ff42df7eb5, 홈 JS monitor-v3.js?v=b844006ea60f 확인.
+- 데스크톱 computed background rgb(255,255,255)/padding 24px, 390px 모바일 background rgb(255,255,255)/padding 18px, scrollWidth 375 확인. 이전 잘못된/작게 캡처된 이미지도 최종 화면으로 교체해 직접 열람했다.
+- 최종 배포 HTTP 60개 재검사: 실패 0. 최종 404 및 홈·제품의 실제 DOM에서 Cloudflare beacon 없음 확인. RUM OFF 및 자동 운영 배포 Disabled 유지.
+- 관련 회귀 22개 통과. [최종 운영 CI 40060034062](https://github.com/dineyong/connectable/actions/runs/40060034062)는 **success**. Python **670개**, 기존 브라우저 212개 + 공개 CSP 10개 + 새 후보 14개, 합계 **236개** 통과했다.
