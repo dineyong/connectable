@@ -7,3 +7,9 @@ test-results/
 # Local tech-news refresh cache; committed research snapshot remains read-only.
 data/news/.runtime-tech-news.json
 data/news/.runtime-tech-news.tmp
+
+# Runtime secrets; never put Coupang keys in public assets or committed config.
+.dev.vars
+.dev.vars.*
+.env.local
+.env.*.local
