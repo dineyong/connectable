@@ -17,6 +17,7 @@ class ApprovedContentReleaseTests(unittest.TestCase):
             self.assertNotEqual(m['approved_content_fingerprint'],m['baseline_approved_content_fingerprint'])
             self.assertFalse(m['analytics_enabled']); self.assertFalse(m['advertising_enabled'])
             self.assertTrue((output/'site'/build.NAVER_PROOF).exists())
+            self.assertIn('no-transform',(output/'site/_headers').read_text())
 
     def test_missing_and_invalid_content_approval_fail_closed(self):
         record=build.read_content_approval()

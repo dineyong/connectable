@@ -22,3 +22,13 @@
 신규 승인 테스트 3개: 실제 승인 후보만 운영 빌드, 승인 누락·변형·광고/통계/main 활성화 거부, 임의 CSS 추가 거부. 기존 후보와 검수본의 승인 보류를 해제하지 않는다.
 
 배포 SHA·ID·CI·실제 검증은 실행 후 아래 기록한다.
+
+## Cloudflare 자동 삽입 발견 및 차단
+
+실제 브라우저에서는 Cloudflare beacon.min.js가 DOM에 삽입돼 있었다. 기본 curl 검사에서는 나타나지 않았다. 따라서 ‘원본에 분석 코드 없음’ 또는 기본 HTTP 바이트 검사만으로 실제 브라우저의 통계 비활성을 확정할 수 없다. 이번 배포 전부터 존재했는지·실제로 전송됐는지·CSP 차단됐는지는 별도이며 이번 관측으로 과거 수집 여부를 단정하지 않는다.
+
+Pages Metrics의 Web Analytics는 disabled였고 계정 Web Analytics 목록에는 다른 프로젝트만 등록돼 있었다. 다른 프로젝트의 설정을 변경하거나 데이터를 삭제하지 않았다. 사용자 통계 OFF 지시를 확실히 적용하기 위해 공식 문서가 설명하는 public, no-transform 캐시 지시를 추가한다. 기존 max-age=0, must-revalidate는 유지한다. 공개된 운영 이메일과 보안 CSP를 바꾸지 않는다. 보안 정책을 완화해 beacon을 허용하지 않는다.
+
+공식 근거: [Cloudflare Web Analytics 자동 삽입과 no-transform](https://developers.cloudflare.com/web-analytics/get-started/), [RUM beacon](https://developers.cloudflare.com/speed/observatory/rum-beacon/). 이것은 사이트 전면 디자인 변경이 아니라 사용자가 명시한 통계 비활성을 위한 응답 정책이다.
+
+시각적 후보 89dd4ec의 61개 fingerprint는 위 6acf…이며, 이번 요청의 통계 OFF 조건을 위해 _headers의 Cache-Control만 추가한 최종 61개 fingerprint는 70eaba02874115d5cdfd30ca122653dc481b3caf7e5b3a4272194ff17b29cff6다. 승인 기록에 범위와 새 fingerprint를 함께 기록한다. 디자인·제품 데이터·출처는 그대로다. 새 배포 후 실제 브라우저에서 삽입 부재를 다시 확인한다.

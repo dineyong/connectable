@@ -98,6 +98,8 @@ def polished_artifacts():
             text=text.replace('<aside>', '<aside aria-label="사양 적용 범위">').replace('<aside class="source-conflict">', '<aside class="source-conflict" aria-label="공식 자료 표기 차이">')
         artifacts[name]=text.encode('utf-8')
     artifacts['monitor-detail-v3.css']+=b'\n.model-highlights{padding:24px;border:1px solid #dce5de;border-radius:18px;background:#fff}.model-highlights h2{margin-top:0}.model-highlights ul{padding-left:22px}.model-highlights li{padding-left:6px;margin-bottom:18px}.model-highlights li p{margin:6px 0}.model-highlights li a{font-size:12px}.model-highlights>p{font-size:14px}@media(max-width:600px){.model-highlights{padding:18px}.model-highlights h2{font-size:20px}}\n'
+    # Enforce the user's analytics-OFF instruction at the CDN transformation boundary.
+    artifacts['_headers']+=b'/*\n  Cache-Control: public, max-age=0, must-revalidate, no-transform\n'
     # Single known dynamic local-document link in the reviewed application script.
     artifacts['monitor-v3.js']=artifacts['monitor-v3.js'].replace(b'href="monitor10-review.html#',b'href="/monitor10-review#')
     return plan,artifacts

@@ -62,7 +62,7 @@ class ContentPolishTests(unittest.TestCase):
             self.assertNotIn('href="../../monitor-v3.html"',detail)
             self.assertIn('href="/monitor10-review#',(output/'site/monitor-v3.js').read_text())
             for name,value in baseline.items():
-                if not name.endswith('.html') and name not in ('monitor-v3.js','monitor-detail-v3.css'):self.assertEqual((output/'site'/name).read_bytes(),value)
+                if not name.endswith('.html') and name not in ('monitor-v3.js','monitor-detail-v3.css','_headers'):self.assertEqual((output/'site'/name).read_bytes(),value)
             self.assertEqual(content.FACTS.read_bytes(),before)
             (output/'site/monitors/asus-pa279crv/index.html').write_text(detail.replace('96W','100W'))
             self.assertTrue(content.validate_content_candidate(output))
